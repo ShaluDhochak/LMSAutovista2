@@ -1,0 +1,14 @@
+<application>
+  <component name="IntentionManagerSettings">
+    <ignoreAction name="Java/Annotations/Edit method contract" />
+    <ignoreAction name="Android/Insert App Indexing API Code" />
+    <ignoreAction name="Java/Declaration/Move initializer to constructor" />
+    <ignoreAction name="Java/Refactorings/Introduce local variable" />
+    <ignoreAction name="Android/Override Resource in Other Configuration..." />
+    <ignoreAction name="Java/Control Flow/Create switch statement" />
+    <ignoreAction name="Java/Annotations/Add Annotation" />
+    <ignoreAction name="Java/Declaration/Move assignment to field declaration" />
+    <ignoreAction name="Java/Refactorings/Encapsulate field" />
+    <ignoreAction name="Android/Add library dependency" />
+  </component>
+</application>
