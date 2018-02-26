@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_location_wise"
+            android:title="@string/nav_location_wise"
+            android:icon="@drawable/dashboard"
+            />
+
+        <item
+            android:id="@+id/nav_calling_task"
+            android:icon="@drawable/leads"
+            android:title="@string/nav_calling_task"
+            />
+
+        <item
+            android:id="@+id/nav_tracker"
+            android:icon="@drawable/tranfer"
+            android:title="@string/nav_tracker" />
+
+        <item
+            android:id="@+id/nav_lead_management_lead"
+            android:icon="@drawable/call_center"
+            android:title="@string/nav_lead_management_lead"
+            android:visible="true"
+            />
+
+        <item
+            android:id="@+id/nav_add_lead"
+            android:title="@string/nav_add_lead"
+            />
+
+        <item
+            android:id="@+id/nav_assign_lead"
+            android:title="@string/nav_assign_lead"
+            />
+
+        <item
+            android:id="@+id/nav_assign_new_lead"
+            android:title="  >    New Lead" />
+
+        <item
+            android:id="@+id/nav_assign_transferred_lead"
+            android:title="  >    Transferred Lead" />
+
+        <item
+            android:id="@+id/nav_customer_operation"
+            android:icon="@drawable/name"
+            android:title="@string/nav_customer_operation"
+            />
+
+        <item
+            android:id="@+id/nav_search_customer"
+            android:title="@string/nav_search_customer" />
+
+        <item
+            android:id="@+id/nav_edit_customer"
+            android:title="@string/nav_edit_customer" />
+
+    </group>
+    <item android:title="Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_change_password"
+                android:title="@string/nav_change_password" />
+            <item
+                android:id="@+id/nav_register_MobileNo"
+                android:title="@string/nav_register_mobileno" />
+            <item
+                android:id="@+id/nav_logout"
+                android:title="@string/action_logout" />
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.lmsautovista.View.Activity.UnassignedDashboardLeadActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity__lead"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="0dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/header_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+            <include
+                layout="@layout/header_withback_btn_layout"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/totalLead_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4sp"
+            android:layout_below="@id/header_LinearLayout"
+            >
+
+        <RelativeLayout
+            android:id="@+id/totalLead_RelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        >
+
+            <TextView
+                android:id="@+id/totalLeadHeading_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Leads:"
+                android:textSize="14sp"
+                android:textColor="@color/darkBlueWebsite"
+                android:layout_margin="10dp"/>
+
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/headingNoRecord_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totalLead_cardView"
+            android:text="No Record Found"
+            android:textSize="14sp"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlueWebsite"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/notificationLead_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totalLead_cardView"
+            android:layout_above="@+id/nextPreviousBtnNotification_linearlayout"
+            />
+
+        <LinearLayout
+            android:id="@+id/nextPreviousBtnNotification_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/loadMoreNotification_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="load more"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/loadLessNotification_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="load Less"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

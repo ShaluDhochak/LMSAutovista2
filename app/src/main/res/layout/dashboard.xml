@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/separator_view"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/dark_grey"/>
+
+    <LinearLayout
+        android:id="@+id/rowCountLead_linearLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/countHeading_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Count"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/darkBlueWebsite"
+            />
+
+        <View
+            android:id="@+id/separatorBelow_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/countHeading_tv"
+            android:background="@color/dark_grey"
+            />
+
+        <TextView
+            android:id="@+id/unassignedLead_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="unassignedLead"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+            android:layout_margin="5dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/separatorBelow_view"
+
+            />
+        <View
+            android:id="@+id/separatorBelowUnassigned_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/unassignedLead_tv"
+            android:background="@color/dark_grey"
+            />
+
+
+        <TextView
+            android:id="@+id/newLead_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="unassignedLead"
+            android:textSize="15sp"
+            android:layout_below="@+id/separatorBelowUnassigned_view"
+            android:layout_margin="5dp"
+            android:paddingLeft="15dp"
+            android:textAlignment="center"
+            />
+        <View
+            android:id="@+id/separatorBelowNew_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/newLead_tv"
+            android:background="@color/dark_grey"
+            />
+        <TextView
+            android:id="@+id/callTodayLead_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="unassignedLead"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:paddingLeft="15dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/separatorBelowNew_view"
+            />
+        <TextView
+            android:id="@+id/separatorBelowCallToday_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/callTodayLead_tv"
+            android:background="@color/dark_grey"
+            />
+        <TextView
+            android:id="@+id/pendingNewLead_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="unassignedLead"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:paddingLeft="15dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/separatorBelowCallToday_view"
+            />
+
+        <View
+            android:id="@+id/separatorBelowPending_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/pendingNewLead_tv"
+            android:background="@color/dark_grey"
+            />
+        <TextView
+            android:id="@+id/pendingFollowUpLead_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="unassignedLead"
+            android:textSize="15sp"
+            android:layout_margin="5dp"
+            android:paddingLeft="15dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/separatorBelowPending_view"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">LMSAutovista</string>
+
+    <string name="userID">User ID</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--String for navigation Drawer-->
+    <string name="nav_location_wise">Dashboard</string>
+    <string name="nav_calling_task">Calling Task</string>
+    <string name="nav_lead_management_lead">Lead Management</string>
+    <string name="nav_customer_operation">Customer Operation</string>
+    <string name="nav_search_customer">Search Customer</string>
+    <string name="nav_edit_customer">Edit Customer</string>
+    <string name="nav_tracker">Tracker</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+
+    <string name="nav_change_password">Change Password</string>
+    <string name="nav_register_mobileno">Register MobileNo</string>
+    <string name="action_logout">Logout</string>
+    <string name="nav_assign_lead">Assign Lead</string>
+    <string name="nav_assign_new_lead">>    New Lead</string>
+    <string name="nav_assign_transferred_lead">>    Transferred Lead</string>
+
+    <string name="nav_add_lead">Add New Lead</string>
+
+    <!--String for Dashboard Count-->
+    <string name="heading">Heading</string>
+    <string name="Details">Details</string>
+    <string name="interested_in">Interested In</string>
+    <string name="feedbackStatus">Feedback Status</string>
+    <string name="NotMentioned">Not Mentioned</string>
+    <string name="nextActionHeading">Next Action</string>
+    <string name="currentUser">Current User</string>
+    <string name="calldate">Call Date</string>
+    <string name="nfd">Next FollowUp Date</string>
+    <string name="Remark">Remark</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
