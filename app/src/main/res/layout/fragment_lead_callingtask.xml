@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_lead_frame">
+
+    <FrameLayout
+        android:id="@+id/frame_lead"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/activity_lead"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="0dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/leadHeading_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkBlueWebsite"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/leadTextHeading_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Lead Source"
+                    android:textSize="15dp"
+                    android:textColorHint="@color/colorPlatinum"
+                    android:textColor="@color/colorPlatinum"
+                    android:textAlignment="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:inputType="textNoSuggestions"
+                    android:backgroundTint="@android:color/transparent"
+                    />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/search_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_margin="10dp">
+
+
+            <RelativeLayout
+                android:id="@+id/search_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/leadHeading_RelativeLayout"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search_button"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/search_EditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/search_button"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="15sp"
+                    android:imeOptions="actionSearch"
+                    android:hint="@string/searchLeads"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textColorHint="@color/edittextcolor"
+                    android:inputType="textNoSuggestions"
+                    android:backgroundTint="@android:color/transparent"
+                    />
+                <View
+                    android:id="@+id/searchSeparator_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dark_grey"
+                    android:layout_below="@+id/search_EditText"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+                <TextView
+                    android:id="@+id/searchViaDateHeading_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Leads:"
+                    android:textSize="14sp"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/searchSeparator_View"/>
+
+            </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/headingNoRecord_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_cardView"
+                android:text="No Record Found"
+                android:textSize="14sp"
+                android:background="@drawable/outline_blue_curved_rectangle"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/darkBlueWebsite"
+                android:visibility="gone"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/customerDetails_ListView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/headingNoRecord_TextView"
+                android:layout_above="@+id/nextPreviousBtn_linearlayout"
+                />
+
+            <LinearLayout
+                android:id="@+id/nextPreviousBtn_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/loadMoreAllLead_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="load more"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:id="@+id/loadLessAllLead_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="load Less"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

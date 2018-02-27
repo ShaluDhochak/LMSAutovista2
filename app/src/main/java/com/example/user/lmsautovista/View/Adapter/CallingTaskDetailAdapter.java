@@ -1,8 +1,8 @@
 package com.example.user.lmsautovista.View.Adapter;
 
 /*
-  Created by Shalu Dhochak on 2/21/2018.
-*/
+  Created by Shalu Dhochak on 2/27/2018.
+ */
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
@@ -18,24 +19,24 @@ import com.example.user.lmsautovista.View.Activity.DashboardCountDetailActivity;
 
 import java.util.List;
 
-public class NewDashboardDetailAdapter extends RecyclerView.Adapter<NewDashboardDetailAdapter.MyViewHolder>{
+public class CallingTaskDetailAdapter extends RecyclerView.Adapter<CallingTaskDetailAdapter.MyViewHolder>{
 
     private List<DashboardLeadDetailBean.Lead_Details> dashboardList;
     Context context;
 
-    public NewDashboardDetailAdapter(Context context,List<DashboardLeadDetailBean.Lead_Details> dashboardList){
+    public CallingTaskDetailAdapter(Context context,List<DashboardLeadDetailBean.Lead_Details> dashboardList){
         this.context = context;
         this.dashboardList = dashboardList;
     }
 
     @Override
-    public NewDashboardDetailAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CallingTaskDetailAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.followup_detail_listview, parent, false);
-        return new NewDashboardDetailAdapter.MyViewHolder(itemView);
+        return new CallingTaskDetailAdapter.MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(NewDashboardDetailAdapter.MyViewHolder holder,final int position) {
+    public void onBindViewHolder(CallingTaskDetailAdapter.MyViewHolder holder,final int position) {
         final DashboardLeadDetailBean.Lead_Details bean = dashboardList.get(position);
 
         holder.leadName_TextView.setText(bean.getName().toString());
@@ -51,6 +52,10 @@ public class NewDashboardDetailAdapter extends RecyclerView.Adapter<NewDashboard
         }else {
             holder.interestInString_TextView.setText(bean.getLead_source());
         }
+
+        holder.customerDetails_ImageView.setVisibility(View.VISIBLE);
+        holder.addFollowUp_ImageView.setVisibility(View.VISIBLE);
+        holder.imageTextSeparator.setVisibility(View.VISIBLE);
 
         holder.leadName_TextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +78,8 @@ public class NewDashboardDetailAdapter extends RecyclerView.Adapter<NewDashboard
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView leadName_TextView,leadContactNo_TextView,interestInString_TextView,leadDateString_TextView,statusString_TextView;
+        View imageTextSeparator;
+        ImageView customerDetails_ImageView,addFollowUp_ImageView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -83,7 +90,9 @@ public class NewDashboardDetailAdapter extends RecyclerView.Adapter<NewDashboard
             leadDateString_TextView = (TextView) itemView.findViewById(R.id.leadDateString_TextView);
             statusString_TextView = (TextView) itemView.findViewById(R.id.statusString_TextView);
 
+            imageTextSeparator = (View) itemView.findViewById(R.id.imageTextSeparator);
+                    customerDetails_ImageView = (ImageView) itemView.findViewById(R.id.customerDetails_ImageView);
+                    addFollowUp_ImageView = (ImageView) itemView.findViewById(R.id.addFollowUp_ImageView);
         }
     }
 }
-

@@ -52,13 +52,10 @@ public class DashboardDetailPresenter implements IPresenter.IDashboardDetailPres
                                 try {
                                      view.ShowDashboardDetailCount(res);
                                 } catch (Exception e) {
-
                                 }
                                 view.dismissProgressDialog();
-
                             } else {
                                 view.dismissProgressDialog();
-
                             }
                         }
                     },
@@ -75,9 +72,7 @@ public class DashboardDetailPresenter implements IPresenter.IDashboardDetailPres
             view.dismissProgressDialog();
             e.printStackTrace();
         }
-
     }
-
 
     @Override
     public void getNewDashboardDetailList(Context context) {
@@ -105,13 +100,10 @@ public class DashboardDetailPresenter implements IPresenter.IDashboardDetailPres
                                 try {
                                     view.ShowDashboardDetailCount(res);
                                 } catch (Exception e) {
-
                                 }
                                 view.dismissProgressDialog();
-
                             } else {
                                 view.dismissProgressDialog();
-
                             }
                         }
                     },

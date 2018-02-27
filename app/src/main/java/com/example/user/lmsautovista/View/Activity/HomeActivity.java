@@ -1,6 +1,5 @@
 package com.example.user.lmsautovista.View.Activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -14,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.user.lmsautovista.R;
+import com.example.user.lmsautovista.View.Fragment.CallingTaskFragment;
 import com.example.user.lmsautovista.View.Fragment.DashboardFragment;
 
 import butterknife.BindView;
@@ -108,6 +108,25 @@ public class HomeActivity extends AppCompatActivity
     }
 
 
+    public void callingTashFragment(){
+        toolbar_title.setText("Calling Task");
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(4).setVisible(false);
+
+        navigationView.getMenu().getItem(5).setVisible(false);
+        navigationView.getMenu().getItem(6).setVisible(false);
+        navigationView.getMenu().getItem(7).setVisible(false);
+
+        navigationView.getMenu().getItem(9).setVisible(false);
+        navigationView.getMenu().getItem(10).setVisible(false);
+
+        CallingTaskFragment cfragment = new CallingTaskFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, cfragment);
+        dtransaction.commit();
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -116,12 +135,11 @@ public class HomeActivity extends AppCompatActivity
 
         switch (item.getItemId()) {
             case R.id.nav_location_wise:
-                 dashboardFragment();
+                dashboardFragment();
                 closeDrawer();
                 break;
             case R.id.nav_calling_task:
-                Intent addContactIntent = new Intent(HomeActivity.this, CallingTaskActivity.class);
-                startActivity(addContactIntent);
+                callingTashFragment();
                 closeDrawer();
                 break;
             case R.id.nav_tracker:

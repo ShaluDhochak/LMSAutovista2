@@ -28,4 +28,10 @@ public interface IView {
         void dismissProgressDialog();
         void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject);
     }
+
+    interface CallingTaskView{
+        void showProgressDialog();
+        void dismissProgressDialog();
+        void ShowCallingTaskDetail(DashboardLeadDetailBean jsonObject);
+    }
 }
