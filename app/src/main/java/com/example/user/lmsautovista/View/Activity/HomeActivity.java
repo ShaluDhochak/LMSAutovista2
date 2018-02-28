@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.user.lmsautovista.R;
@@ -34,6 +35,10 @@ public class HomeActivity extends AppCompatActivity
     @BindView(R.id.toolbar_title)
     TextView toolbar_title;
 
+
+    public View navHeader;
+    public TextView deptName1_tv,userName_tv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,13 +51,23 @@ public class HomeActivity extends AppCompatActivity
 
     private void initialiseUI(){
         setSupportActionBar(toolbar);
+        navHeader = navigationView.getHeaderView(0);
+        userName_tv = (TextView) navHeader.findViewById(R.id.userName_tv);
+        deptName1_tv = (TextView) navHeader.findViewById(R.id.deptName1_tv);
+
+        //SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, "")
+        userName_tv.setText("Admin");
+        deptName1_tv.setText("Admin");
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        dashboardFragment();
+
         navigationView.setNavigationItemSelectedListener(this);
+
        // dashboardFragment();
 
 
@@ -71,6 +86,8 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home, menu);
+
+
         return true;
     }
 
@@ -78,12 +95,19 @@ public class HomeActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_finance) {
+
+            deptName1_tv.setText("Finance");
+            return true;
+        }else if(id == R.id.action_insurance) {
+            deptName1_tv.setText("Finance");
+            return true;
+        }else if(id == R.id.action_accessories) {
+            deptName1_tv.setText("Finance");
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     public void dashboardFragment() {
 

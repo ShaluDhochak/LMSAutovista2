@@ -9,7 +9,9 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_finance">Finance</string>
+    <string name="action_insurance">Insurance</string>
+    <string name="action_accessories">Accessories</string>
 
     <!--String for navigation Drawer-->
     <string name="nav_location_wise">Dashboard</string>
