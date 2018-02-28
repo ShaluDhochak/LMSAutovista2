@@ -10,5 +10,6 @@
     <ignoreAction name="Java/Declaration/Move assignment to field declaration" />
     <ignoreAction name="Java/Refactorings/Encapsulate field" />
     <ignoreAction name="Android/Add library dependency" />
+    <ignoreAction name="XML/Add Xsi schema location for external resource" />
   </component>
 </application>
