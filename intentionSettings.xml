@@ -11,5 +11,6 @@
     <ignoreAction name="Java/Refactorings/Encapsulate field" />
     <ignoreAction name="Android/Add library dependency" />
     <ignoreAction name="XML/Add Xsi schema location for external resource" />
+    <ignoreAction name="Java/Imports/Add Single-Member Static Import" />
   </component>
 </application>
