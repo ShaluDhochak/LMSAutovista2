@@ -266,6 +266,54 @@ public class DashboardDetailPresenter implements IPresenter.IDashboardDetailPres
         }
     }
 
+    @Override
+    public void getAllLeadCallingTaskList(Context context) {
+        try {
+            view.showProgressDialog();
+
+            Map<String, String> map = new HashMap<>();
+            map.put("process_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, ""));
+            map.put("process_name", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_NAME, ""));
+            map.put("user_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.USER_ID, ""));
+            map.put("role", SharedPreferenceManager.getInstance(context).getPreference(Constants.ROLE_ID, ""));
+            map.put("page", "-1");
+
+            String url = Constants.BASE_URL + Constants.ALL_LAED_CALLING_TASK;
+            GSONRequest<DashboardLeadDetailBean> dashboardGsonRequest = new GSONRequest<DashboardLeadDetailBean>(
+                    Request.Method.POST,
+                    url,
+                    DashboardLeadDetailBean.class, map,
+                    new com.android.volley.Response.Listener<DashboardLeadDetailBean>() {
+                        @Override
+                        public void onResponse(DashboardLeadDetailBean res) {
+                            view.dismissProgressDialog();
+                            if (!(res.getLead_details_count().equals("0")))
+                            {
+                                try {
+                                    view.ShowDashboardDetailCount(res);
+                                } catch (Exception e) {
+                                }
+                                view.dismissProgressDialog();
+                            } else {
+                                view.dismissProgressDialog();
+                            }
+                        }
+                    },
+                    new com.android.volley.Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            view.dismissProgressDialog();
+                        }
+                    });
+            view.dismissProgressDialog();
+            dashboardGsonRequest.setShouldCache(false);
+            Utilities.getRequestQueue(context).add(dashboardGsonRequest);
+        } catch (Exception e) {
+            view.dismissProgressDialog();
+            e.printStackTrace();
+        }
+    }
+
 
 }
 

@@ -1,7 +1,7 @@
 package com.example.user.lmsautovista.Utils;
 
-/**
- * Created by User on 2/17/2018.
+/*
+  Created by Shalu Dhochak on 2/17/2018.
  */
 
 public interface Constants {
@@ -18,19 +18,29 @@ public interface Constants {
     String NEW_LEAD_DETAIL = "select_new_lead";
     //api for Call Today lead
     String CALL_TODAY_DASHBOARD = "select_today_followup_lead";
-
     //api for Pending All Lead
     String PENDING_NEW_LEAD_DASHBOARD = "select_pending_new_lead";
     //Api for Pending Followup Lead
     String PENDING_FOLLOW_UP_LEAD_DASHBOARD = "select_pending_followup_lead";
+    //Api for All Lead
+    String ALL_LAED_CALLING_TASK = "select_all_followup_lead";
+
+    //api for Select Feedback
+    String SELECT_FEEDBACK = "select_feedback";
+    //api for Select_NextAction
+    String SELECT_NEXTACTION = "select_next_action_feedback";
 
 
     // Utils
     String USERPREFERENCE = "LMSfis_Preference";
     String USER_EMAIL = "email";
     String USER_PASSWORD = "password";
-    String ROLE_ID = "role_id";
+    String ROLE_ID = "role";
+    String PROCESS_ID_initial = "process_id";
+    String PROCESS_NAME_INITIAL = "process_name";
     String PROCESS_ID = "process_id";
     String PROCESS_NAME = "process_name";
     String USER_ID = "id";
+    String USER_NAME = "username";
+    String LOCATION ="location";
 }

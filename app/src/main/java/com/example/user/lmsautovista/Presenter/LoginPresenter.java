@@ -88,18 +88,25 @@ public class LoginPresenter  implements IPresenter.ILoginPresenter{
             sharedPreferenceManager.savePreference(Constants.USER_EMAIL, email);
             sharedPreferenceManager.savePreference(Constants.USER_PASSWORD, password);
 
-            sharedPreferenceManager.savePreference(Constants.PROCESS_ID, jsonObject.getUser_detail().get(0).getProcess_id());
-            sharedPreferenceManager.savePreference(Constants.PROCESS_NAME, jsonObject.getUser_detail().get(0).getProcess_name());
+            sharedPreferenceManager.savePreference(Constants.LOCATION, jsonObject.getUser_detail().get(0).getLocation());
+            sharedPreferenceManager.savePreference(Constants.USER_NAME, jsonObject.getSession_data().get(0).getUsername());
+            sharedPreferenceManager.savePreference(Constants.PROCESS_ID_initial, jsonObject.getUser_detail().get(0).getProcess_id());
+            sharedPreferenceManager.savePreference(Constants.PROCESS_NAME_INITIAL, jsonObject.getUser_detail().get(0).getProcess_name());
             sharedPreferenceManager.savePreference(Constants.USER_ID, jsonObject.getUser_detail().get(0).getId());
             sharedPreferenceManager.savePreference(Constants.ROLE_ID, jsonObject.getUser_detail().get(0).getRole());
+        } catch (Exception e) {
+        }
+    }
 
-            // sharedPreferenceManager.savePreference(Constants.PROCESS_ID, String.valueOf(jsonArray.getString("process_id")));
-           // sharedPreferenceManager.savePreference(Constants.PROCESS_NAME, String.valueOf(jsonArray.getString("process_name")));
-
-            // sharedPreferenceManager.savePreference(Constants.USER_ID, String.valueOf(jsonArray.getString("id")));
-           // sharedPreferenceManager.savePreference(Constants.ROLE_ID, String.valueOf(jsonArray.getString("role")));
+    @Override
+    public void saveProcessInfo(String process_id, String process_name, SharedPreferenceManager sharedPreferenceManager) {
+        try {
+            sharedPreferenceManager.savePreference(Constants.PROCESS_ID, process_id);
+            sharedPreferenceManager.savePreference(Constants.PROCESS_NAME, process_name);
 
         } catch (Exception e) {
         }
     }
+
+
 }

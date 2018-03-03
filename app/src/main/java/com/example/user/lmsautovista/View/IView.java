@@ -6,6 +6,8 @@ package com.example.user.lmsautovista.View;
 
 import com.example.user.lmsautovista.Model.DashboardCountBean;
 import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
+import com.example.user.lmsautovista.Model.FeedbackListBean;
+import com.example.user.lmsautovista.Model.NextActionListBean;
 
 public interface IView {
 
@@ -29,9 +31,10 @@ public interface IView {
         void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject);
     }
 
-    interface CallingTaskView{
+    interface TrackerView{
         void showProgressDialog();
         void dismissProgressDialog();
-        void ShowCallingTaskDetail(DashboardLeadDetailBean jsonObject);
+        void showFeedbackView(FeedbackListBean jsonObject);
+        void showNextActionView(NextActionListBean jsonObject);
     }
 }

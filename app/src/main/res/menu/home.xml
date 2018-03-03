@@ -9,9 +9,9 @@
         android:title="@string/action_finance"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_insurance"
+        android:id="@+id/action_service"
         android:orderInCategory="100"
-        android:title="@string/action_insurance"
+        android:title="@string/action_service"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_accessories"

@@ -80,6 +80,11 @@ public class LoginActivity extends AppCompatActivity implements IView.LoginView{
 
     @Override
     public void loginSuccess() {
+        /*  Intent intent = new Intent(this, HomeActivity.class);
+        intent.putExtra("process_id");
+        intent.putExtra("bean", dashboardCount.get(position));
+        startActivity(intent);
+        */
         startActivity(new Intent(this, HomeActivity.class));
         finish();
     }

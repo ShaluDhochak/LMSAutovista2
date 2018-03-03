@@ -13,8 +13,8 @@ public interface IPresenter {
     interface ILoginPresenter {
         void checkLogin(String emailId, String password, Context context);
         void saveUserInfo(String email, String password, LoginBean jsonObject, SharedPreferenceManager sharedPreferenceManager);
+        void saveProcessInfo(String process_id, String process_name, SharedPreferenceManager sharedPreferenceManager);
     }
-
 
     interface IDashboardPresenter{
         void getDashboardList(Context context);
@@ -27,6 +27,12 @@ public interface IPresenter {
         void getCallTodayDashboardDetailList(Context context);
         void getPendingNewDashboardDetailList(Context context);
         void getPendingFollowUpDashboardDetailList(Context context);
+        void getAllLeadCallingTaskList(Context context);
+    }
+
+    interface ITrackerPresenter{
+        void getCompaniesList(Context context);
+        void getNextActionList(Context context, String selectedCompany);
     }
 
 }
