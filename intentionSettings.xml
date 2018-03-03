@@ -12,5 +12,6 @@
     <ignoreAction name="Android/Add library dependency" />
     <ignoreAction name="XML/Add Xsi schema location for external resource" />
     <ignoreAction name="Java/Imports/Add Single-Member Static Import" />
+    <ignoreAction name="Java/Declaration/Split Declaration" />
   </component>
 </application>
