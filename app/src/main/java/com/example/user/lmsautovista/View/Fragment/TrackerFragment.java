@@ -176,7 +176,6 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         nextActionTracker_Spinner.setAdapter(companiesArrayAdapter);
     }
 
-
     public void getDataTypeDetails(){
         ArrayList<String> referralTypesArrayList = new ArrayList<>();
         referralTypesArrayList.add("Select Date Type");
