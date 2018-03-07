@@ -33,6 +33,8 @@ public interface IPresenter {
     interface ITrackerPresenter{
         void getCompaniesList(Context context);
         void getNextActionList(Context context, String selectedCompany);
+
+        void getSearchTRackerList(Context context);
     }
 
 }

@@ -36,6 +36,9 @@
     <!--String for Dashboard Count-->
     <string name="heading">Heading</string>
     <string name="Details">Details</string>
+    <string name="ServiceDetail">Service Detail</string>
+    <string name="financeDetail">Finance Detail</string>
+    <string name="accessoriesDetail">Accessories Detail</string>
     <string name="interested_in">Interested In</string>
     <string name="feedbackStatus">Feedback Status</string>
     <string name="NotMentioned">Not Mentioned</string>
@@ -52,6 +55,34 @@
     <string name="DateFrom">Date From</string>
     <string name="DateTo">Date To</string>
     <string name="reset">Reset</string>
+
+    <!--String for tracker details-->
+    <string name="carModel">Car Model</string>
+    <string name="regNo">Reg No</string>
+    <string name="bankName">Bank Name</string>
+    <string name="loanType">Loan Type</string>
+    <string name="roi">ROI</string>
+    <string name="losNo">Los No</string>
+    <string name="tenure">Tenure</string>
+    <string name="amount">Amount</string>
+    <string name="dealerDsa">Dealer DSA</string>
+    <string name="cen">Collection Executive Name</string>
+    <string name="pickupDate">PickUp Date</string>
+    <string name="loginDate">Login Date</string>
+    <string name="loanStatus">Loan Status</string>
+    <string name="approvedDate">Approved Date</string>
+    <string name="disburseDate">Disburse Date</string>
+    <string name="disburseAmount">Disburse Amount</string>
+    <string name="processingFee">Processing Fee</string>
+    <string name="emi">EMI</string>
+
+    <string name="accessoriesList">Accessories List</string>
+    <string name="accessoriesPrice">Accessories Price</string>
+
+    <string name="km">KM</string>
+    <string name="serviceType">Service Type</string>
+    <string name="pickUpRequired">PickUp Required</string>
+    <string name="pickUpDate">PickUp Date</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -1,0 +1,1554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.lmsautovista.View.Activity.TrackerDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/header_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/header_withback_btn_layout"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/header_LinearLayout">
+
+            <RelativeLayout
+                android:id="@+id/activityTrackerDetail_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/nameTrackerDetail_cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/TrackerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/refreshAndTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/TrackerDetails_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="3"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="10dp"
+                                android:text="@string/heading"
+                                android:textColor="@color/darkBlueWebsite"
+                                android:textSize="15sp"
+                                />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/leadnameTrackerDetail_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/refreshAndTrackerDetails_LinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/leadnameTrackerDetail_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/name" />
+
+                            <TextView
+                                android:id="@+id/leadnameTrackerDetail_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@id/leadnameTrackerDetail_ImageView"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Name"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/leadContactnoTrackerDetail_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadnameTrackerDetail_LinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/leadContactnoTrackerDetail_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/contact_no" />
+
+                            <TextView
+                                android:id="@+id/leadContactnoTrackerDetail_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@id/leadContactnoTrackerDetail_ImageView"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="ContactNo"
+                                android:inputType="number"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/leadEnqIDTrackerDetail_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="engid"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/addressTrackerDetail_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadContactnoTrackerDetail_LinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/addressTrackerDetail_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/address" />
+
+                            <TextView
+                                android:id="@+id/addressTrackerDetail_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@+id/addressTrackerDetail_ImageView"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Address"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/emailIdTrackerDetail_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/addressTrackerDetail_LinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/emailIdTrackerDetail_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/email" />
+
+                            <TextView
+                                android:id="@+id/emailIdTrackerDetail_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@+id/emailIdTrackerDetail_ImageView"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="EmailId"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/leadDateTrackerDetail_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/emailIdTrackerDetail_LinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/leadDateTrackerDetail_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/calendar" />
+
+                            <TextView
+                                android:id="@+id/leadDateTrackerDetail_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@+id/leadDateTrackerDetail_ImageView"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Lead Date"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/DetailTrackerDescription_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameTrackerDetail_cardView"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/detailsTracker_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/detailTracker_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/Details"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/leadSourceTrackerDetails_RelativeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/detailTracker_TextView"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/leadSourceTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="3"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="@string/interested_in"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/leadSourceTrackerString_TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/currentUserTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadSourceTrackerDetails_RelativeLayout"
+                            android:orientation="horizontal"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/currentUserTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="3"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/feedbackStatus"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/currentUserTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/feedbackStatusTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/currentUserTrackerDetails_LinearLayout"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/feedbackStatusTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="3"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/nextActionHeading"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/feedbackStatusTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nextActionTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/feedbackStatusTrackerDetails_LinearLayout"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/nextActionTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="3"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/currentUser"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/nextActionTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/eagernessTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nextActionTrackerDetails_LinearLayout"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/eagernessTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="3"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/calldate"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/eagernessTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nfdTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/eagernessTrackerDetails_LinearLayout"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/nfdTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="3"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/nfd"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/nfdTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/remarkTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nfdTrackerDetails_LinearLayout"
+                            android:weightSum="5">
+
+                            <TextView
+                                android:id="@+id/remarkTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="3"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/Remark"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/remarkTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/serviceDetailTrackerDescription_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/DetailTrackerDescription_relativeLayout"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/serviceDetailsTracker_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/serviceDetailTracker_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/ServiceDetail"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/carModelServiceTrackerDetails_RelativeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/serviceDetailTracker_TextView"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/carModelServiceTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="@string/carModel"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/carModelServiceTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/regNoServiceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/carModelServiceTrackerDetails_RelativeLayout"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/regNoServiceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/regNo"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/regNoServiceTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/kmServiceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/regNoServiceTrackerDetails_LinearLayout"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/kmServiceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/km"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/kmServiceTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/serviceTypeTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/kmServiceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/serviceTypeTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/serviceType"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/serviceTypeTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/PickUpRequiredServiceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/serviceTypeTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/PickUpRequiredServiceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/pickUpRequired"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/PickUpRequiredServiceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pickUpDateTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/PickUpRequiredServiceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/pickUpDateTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/pickUpDate"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/pickUpDateTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/accessoriesDetailTrackerDescription_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serviceDetailTrackerDescription_relativeLayout"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/accessoriesDetailsTracker_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/accessoriesDetailTracker_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/accessoriesDetail"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/carModelAccessoriesTrackerDetails_RelativeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/accessoriesDetailTracker_TextView"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/carModelAccessoriesTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="@string/carModel"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/carModelAccessoriesTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/regNoAccessoriesTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/carModelAccessoriesTrackerDetails_RelativeLayout"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/regNoAccessoriesTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/regNo"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/regNoAccessoriesTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/accessoriesListTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/regNoAccessoriesTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/accessoriesListTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/accessoriesList"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/accessoriesListTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/accessoriesPriceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/accessoriesListTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/accessoriesPriceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/accessoriesPrice"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/accessoriesPriceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/financeDetailTrackerDescription_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/accessoriesDetailTrackerDescription_relativeLayout"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/financeDetailsTracker_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/financeDetailTracker_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/financeDetail"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/carModelFinanceTrackerDetails_RelativeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/financeDetailTracker_TextView"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/carModelFinanceTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="@string/carModel"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/carModelFinanceTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/regNoFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/carModelFinanceTrackerDetails_RelativeLayout"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/regNoFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/regNo"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/regNoFinanceTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bankNameFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/regNoFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/bankNameFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/bankName"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/bankNameFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                        android:id="@+id/loanTypeTrackerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bankNameFinanceTrackerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/loanTypeTrackerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/loanType"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/loanTypeTrackerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/roiFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/loanTypeTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/roiFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/roi"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/roiFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/losNoFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/roiFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/losNoFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/losNo"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/losNoFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tenureFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/losNoFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/tenureFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/tenure"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tenureFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/amountFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tenureFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/amountFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/amount"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/amountFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/dealerDsaFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/amountFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/dealerDsaFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/dealerDsa"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/dealerDsaFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/cenFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dealerDsaFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/cenFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/cen"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/cenFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pickUpDateFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cenFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/pickUpDateFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/pickupDate"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/pickUpDateFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/loginDateFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/pickUpDateFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/loginDateFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/loginDate"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/loginDateFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/loanStatusFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/loginDateFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/loanStatusFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/loanStatus"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/loanStatusFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/approvedDateFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/loanStatusFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/approvedDateFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/approvedDate"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/approvedDateFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/disburseDateFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/approvedDateFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/disburseDateFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/disburseDate"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/disburseDateFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/disburseAmountFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/disburseDateFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/disburseAmountFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/disburseAmount"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/disburseAmountFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                        android:id="@+id/processingFeeFinanceTrackerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/disburseAmountFinanceTrackerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/processingFeeFinanceTrackerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/processingFee"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/processingFeeFinanceTrackerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/emiFinanceTrackerDetails_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/processingFeeFinanceTrackerDetails_LinearLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/emiFinanceTrackerDetailsHeading_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingBottom="10dp"
+                                android:text="@string/emi"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/emiFinanceTrackerDetailsString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="@string/NotMentioned"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>
+

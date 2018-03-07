@@ -30,7 +30,8 @@
         <activity android:name=".View.Activity.PendingNewLeadActivity" />
         <activity android:name=".View.Activity.PendingFollowUpDashboardActivity" />
         <activity android:name=".View.Activity.DashboardCountDetailActivity" />
-        <activity android:name=".View.Activity.CustomerDetailActivity"></activity>
+        <activity android:name=".View.Activity.CustomerDetailActivity" />
+        <activity android:name=".View.Activity.TrackerDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -90,7 +90,7 @@ public class DashboardCountDetailActivity extends AppCompatActivity {
             interestedInNotificationString_TextView.setText(bean.getLead_source());
         }
 
-       feedbackStatusNotificationDetails_TextView.setText(bean.getFeedbackStatus());
+        feedbackStatusNotificationDetails_TextView.setText(bean.getFeedbackStatus());
         nextActionNotificationDetailsString_TextView.setText(bean.getNextAction());
 
         if ((bean.getAssign_to_cse().equals("0")) && (!(bean.getAssign_by_cse_tl().equals("0")))) {

@@ -3,6 +3,8 @@ package com.example.user.lmsautovista.View.Fragment;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,13 +13,16 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.user.lmsautovista.Model.FeedbackListBean;
 import com.example.user.lmsautovista.Model.NextActionListBean;
+import com.example.user.lmsautovista.Model.SearchTrackerListBean;
 import com.example.user.lmsautovista.Presenter.TrackerPresenter;
 import com.example.user.lmsautovista.R;
+import com.example.user.lmsautovista.View.Adapter.TrackerSearchListAdapter;
 import com.example.user.lmsautovista.View.IView;
 
 import java.util.ArrayList;
@@ -26,6 +31,7 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.OnItemSelected;
 
 public class TrackerFragment extends Fragment implements IView.TrackerView{
@@ -55,30 +61,39 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
     @BindView(R.id.trackerList_listView)
     RecyclerView trackerList_listView;
 
-    ProgressDialog progressDialog;
+    @BindView(R.id.resetTracker_Button)
+    Button resetTracker_Button;
 
+    @BindView(R.id.trackerSpinner_LinearLayout)
+    LinearLayout trackerSpinner_LinearLayout;
+
+    ProgressDialog progressDialog;
     TrackerPresenter trackerPresenter;
 
     ArrayList<String> nextActionArrayList = new ArrayList<>();
-
-
-    String selectedFeedback, selectedFeedbackId, selectedNextAction, selectedNextActionId;
-    String selectedDateType, selectedDateTypeId;
+    ArrayList<SearchTrackerListBean.User_Details> dashboardCountList = new ArrayList<SearchTrackerListBean.User_Details>();
 
     Map<String,String> nextActionMap = new HashMap<>();
     Map<String,String> feedbackMap = new HashMap<>();
 
+    String selectedFeedback, selectedFeedbackId, selectedNextAction, selectedNextActionId;
+    String selectedDateType, selectedDateTypeId;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_tracker, container, false);
 
         ButterKnife.bind(this, view);
+
+        trackerList_listView.setVisibility(View.GONE);
+        resetTracker_Button.setVisibility(View.GONE);
+        trackerSpinner_LinearLayout.setVisibility(View.VISIBLE);
+
         trackerPresenter= new TrackerPresenter(this);
-        nextActionArrayList.add("Select Next Action");
         trackerPresenter.getCompaniesList(getActivity());
         nextActionArrayList.add("Select Next Action");
+        selectedFeedback = "Select Feedback";
         trackerPresenter.getNextActionList(getActivity(), selectedFeedback);
 
         getDataTypeDetails();
@@ -86,12 +101,22 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         return view;
     }
 
-    private void initialiseUI(){
+    @OnClick(R.id.searchTracker_Button)
+    public void searcTrackerButton(){
+        trackerList_listView.setVisibility(View.VISIBLE);
+        resetTracker_Button.setVisibility(View.VISIBLE);
+        trackerSpinner_LinearLayout.setVisibility(View.GONE);
+        searchTracker();
+    }
 
+    public void searchTracker(){
+        trackerPresenter.getSearchTRackerList(getActivity());
+    }
+
+    private void initialiseUI(){
       //  addContactPresenter = new TrackerPresenter(getActivity());
       //  addContactPresenter.getCompaniesList(this);
     }
-
 
     @Override
     public void showProgressDialog() {
@@ -120,7 +145,6 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         }
     }
 
-
     @OnItemSelected(R.id.nextActionTracker_Spinner)
     public void nextActionSelected(Spinner spinner, int position)
     {
@@ -136,6 +160,7 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
             }
         }
     }
+
     @Override
     public void showFeedbackView(FeedbackListBean jsonObject) {
         ArrayList<String> feedbackArrayList = new ArrayList<>();
@@ -174,6 +199,19 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_textview,nextActionArrayList);
         companiesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         nextActionTracker_Spinner.setAdapter(companiesArrayAdapter);
+    }
+
+    @Override
+    public void showTrackerListView(SearchTrackerListBean jsonObject) {
+        dashboardCountList.clear();
+        dashboardCountList.addAll(jsonObject.getUser_details());
+        //searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
+
+        TrackerSearchListAdapter dashboardAdapter = new TrackerSearchListAdapter(getActivity(),jsonObject.getUser_details());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        trackerList_listView.setLayoutManager(mLayoutManager);
+        trackerList_listView.setItemAnimator(new DefaultItemAnimator());
+        trackerList_listView.setAdapter(dashboardAdapter);
     }
 
     public void getDataTypeDetails(){

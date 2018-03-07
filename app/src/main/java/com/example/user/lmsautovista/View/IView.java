@@ -8,6 +8,7 @@ import com.example.user.lmsautovista.Model.DashboardCountBean;
 import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
 import com.example.user.lmsautovista.Model.FeedbackListBean;
 import com.example.user.lmsautovista.Model.NextActionListBean;
+import com.example.user.lmsautovista.Model.SearchTrackerListBean;
 
 public interface IView {
 
@@ -36,5 +37,6 @@ public interface IView {
         void dismissProgressDialog();
         void showFeedbackView(FeedbackListBean jsonObject);
         void showNextActionView(NextActionListBean jsonObject);
+        void showTrackerListView(SearchTrackerListBean jsonObject);
     }
 }
