@@ -13,5 +13,6 @@
     <ignoreAction name="XML/Add Xsi schema location for external resource" />
     <ignoreAction name="Java/Imports/Add Single-Member Static Import" />
     <ignoreAction name="Java/Declaration/Split Declaration" />
+    <ignoreAction name="Language Injection/Inject language or reference" />
   </component>
 </application>
