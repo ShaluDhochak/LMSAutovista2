@@ -18,7 +18,6 @@ public interface IPresenter {
 
     interface IDashboardPresenter{
         void getDashboardList(Context context);
-
     }
 
     interface IDashboardDetailPresnter{
@@ -33,8 +32,12 @@ public interface IPresenter {
     interface ITrackerPresenter{
         void getCompaniesList(Context context);
         void getNextActionList(Context context, String selectedCompany);
+        void getCampaignList(Context context);
+        void getSearchTRackerList(Context context, String campaignName, String feedback, String nextAction, String dateType, String fromdate, String todate);
+    }
 
-        void getSearchTRackerList(Context context);
+    interface IAddNewLeadOresenter{
+        void saveNewLeadInfo(String fname, String email, String address, String assign, String contact_no, String comment, String lead_source, String assign_by, String username, String process_name, Context context);
     }
 
 }

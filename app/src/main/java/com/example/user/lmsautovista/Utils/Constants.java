@@ -2,7 +2,7 @@ package com.example.user.lmsautovista.Utils;
 
 /*
   Created by Shalu Dhochak on 2/17/2018.
- */
+*/
 
 public interface Constants {
     // API
@@ -31,7 +31,11 @@ public interface Constants {
     String SELECT_NEXTACTION = "select_next_action_feedback";
     //api for Search Tracker
     String SEARCH_TRACKER = "select_lead_tracker";
+    //api for Campaign Lead Source List
+    String SELECT_LEAD_SOURCE = "select_lead_source";
 
+    //api for Add New Lead
+    String ADD_NEW_LEAD = "add_customer";
 
     // Utils
     String USERPREFERENCE = "LMSfis_Preference";

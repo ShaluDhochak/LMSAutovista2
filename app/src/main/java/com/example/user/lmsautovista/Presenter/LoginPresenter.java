@@ -19,7 +19,7 @@ import java.util.Map;
  * Created by User on 2/17/2018.
  */
 
-public class LoginPresenter  implements IPresenter.ILoginPresenter{
+public class LoginPresenter implements IPresenter.ILoginPresenter{
 
     IView.LoginView view;
     String role, status;
@@ -27,7 +27,6 @@ public class LoginPresenter  implements IPresenter.ILoginPresenter{
     public LoginPresenter(IView.LoginView loginView) {
         this.view = loginView;
     }
-
 
     @Override
     public void checkLogin(final String emailId, final String password, final Context context) {

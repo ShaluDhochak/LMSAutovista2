@@ -84,6 +84,11 @@
     <string name="pickUpRequired">PickUp Required</string>
     <string name="pickUpDate">PickUp Date</string>
 
+    <!--Add New Lead String-->
+    <string name="lead_details">Lead Details</string>
+    <string name="submit">Submit</string>
+    <string name="group">Group</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

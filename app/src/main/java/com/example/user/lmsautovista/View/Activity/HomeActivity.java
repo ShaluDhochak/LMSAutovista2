@@ -18,6 +18,7 @@ import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
 import com.example.user.lmsautovista.Presenter.LoginPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.Constants;
+import com.example.user.lmsautovista.View.Fragment.AddNewLeadFragment;
 import com.example.user.lmsautovista.View.Fragment.AllLeadFragment;
 import com.example.user.lmsautovista.View.Fragment.CallingTaskFragment;
 import com.example.user.lmsautovista.View.Fragment.DashboardFragment;
@@ -159,8 +160,8 @@ public class HomeActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    public void dashboardFragment() {
-
+    public void dashboardFragment()
+    {
         toolbar_title.setText("Dashboard");
         navigationView.getMenu().getItem(0).setChecked(true);
 
@@ -174,14 +175,31 @@ public class HomeActivity extends AppCompatActivity
         navigationView.getMenu().getItem(9).setVisible(false);
         navigationView.getMenu().getItem(10).setVisible(false);
 
-
         DashboardFragment dfragment = new DashboardFragment();
         FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
         dtransaction.replace(R.id.fragment_Container, dfragment);
         dtransaction.commit();
-
     }
 
+    public void addNewLeadFragment(){
+        toolbar_title.setText("Dashboard");
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(4).setVisible(false);
+
+        navigationView.getMenu().getItem(5).setVisible(false);
+        navigationView.getMenu().getItem(6).setVisible(false);
+        navigationView.getMenu().getItem(7).setVisible(false);
+
+        navigationView.getMenu().getItem(9).setVisible(false);
+        navigationView.getMenu().getItem(10).setVisible(false);
+
+        AddNewLeadFragment addNewLeadfragment = new AddNewLeadFragment();
+        FragmentTransaction addNewLeadtransaction = getSupportFragmentManager().beginTransaction();
+        addNewLeadtransaction.replace(R.id.fragment_Container, addNewLeadfragment);
+        addNewLeadtransaction.commit();
+    }
 
     public void callingTashFragment(){
       //  toolbar_title.setText("Calling Task");
@@ -279,7 +297,7 @@ public class HomeActivity extends AppCompatActivity
 
                 navigationView.getMenu().getItem(9).setVisible(false);
                 navigationView.getMenu().getItem(10).setVisible(false);
-
+                addNewLeadFragment();
                 closeDrawer();
                 break;
 

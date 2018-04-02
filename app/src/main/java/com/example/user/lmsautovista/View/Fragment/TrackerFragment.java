@@ -1,23 +1,25 @@
 package com.example.user.lmsautovista.View.Fragment;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.user.lmsautovista.Model.FeedbackListBean;
+import com.example.user.lmsautovista.Model.LeadSourceBean;
 import com.example.user.lmsautovista.Model.NextActionListBean;
 import com.example.user.lmsautovista.Model.SearchTrackerListBean;
 import com.example.user.lmsautovista.Presenter.TrackerPresenter;
@@ -26,8 +28,7 @@ import com.example.user.lmsautovista.View.Adapter.TrackerSearchListAdapter;
 import com.example.user.lmsautovista.View.IView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Calendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -69,14 +70,15 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
 
     ProgressDialog progressDialog;
     TrackerPresenter trackerPresenter;
+    DatePickerDialog datePickerDialog;
 
     ArrayList<String> nextActionArrayList = new ArrayList<>();
     ArrayList<SearchTrackerListBean.User_Details> dashboardCountList = new ArrayList<SearchTrackerListBean.User_Details>();
 
-    Map<String,String> nextActionMap = new HashMap<>();
-    Map<String,String> feedbackMap = new HashMap<>();
+    ArrayList<String> campaignNameArrayList = new ArrayList<>();
+   // ArrayList<LeadSourceBean.Select_Lead_Source> campaignCountList = new ArrayList<LeadSourceBean.Select_Lead_Source>();
 
-    String selectedFeedback, selectedFeedbackId, selectedNextAction, selectedNextActionId;
+    String selectedFeedback, selectedFeedbackId, selectedNextAction, selectedNextActionId, selectedCampaignName, selectedCampaignNameId;
     String selectedDateType, selectedDateTypeId;
 
     @Override
@@ -96,9 +98,48 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         selectedFeedback = "Select Feedback";
         trackerPresenter.getNextActionList(getActivity(), selectedFeedback);
 
+        trackerPresenter.getCampaignList(getActivity());
+
         getDataTypeDetails();
         initialiseUI();
         return view;
+    }
+
+    @OnClick(R.id.fromDateTracker_TextView)
+    public void fromDateButton(){
+        final Calendar fromdatecalenderObject = Calendar.getInstance();
+        int BookedYear = fromdatecalenderObject.get(Calendar.YEAR);
+        int BookedMonth = fromdatecalenderObject.get(Calendar.MONTH);
+        int BookedDay = fromdatecalenderObject.get(Calendar.DAY_OF_MONTH);
+
+        datePickerDialog = new DatePickerDialog(getActivity(),
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) {
+                        fromDateTracker_TextView.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                    }
+                }, BookedYear, BookedMonth, BookedDay);
+        datePickerDialog.show();
+
+    }
+
+    @OnClick(R.id.toDateTracker_TextView)
+    public void toDateButton(){
+        final Calendar todatecalenderObject = Calendar.getInstance();
+        int toYear = todatecalenderObject.get(Calendar.YEAR);
+        int toMonth = todatecalenderObject.get(Calendar.MONTH);
+        int toDay = todatecalenderObject.get(Calendar.DAY_OF_MONTH);
+
+        datePickerDialog = new DatePickerDialog(getActivity(),
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) {
+                        toDateTracker_TextView.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                    }
+                }, toYear, toMonth, toDay);
+        datePickerDialog.show();
     }
 
     @OnClick(R.id.searchTracker_Button)
@@ -110,7 +151,10 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
     }
 
     public void searchTracker(){
-        trackerPresenter.getSearchTRackerList(getActivity());
+        String fromdate = fromDateTracker_TextView.getText().toString();
+        String toDate = toDateTracker_TextView.getText().toString();
+
+        trackerPresenter.getSearchTRackerList(getActivity(),selectedCampaignNameId, selectedFeedbackId, selectedNextActionId, selectedDateTypeId,fromdate, toDate );
     }
 
     private void initialiseUI(){
@@ -132,17 +176,34 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
     public void companyNameSelected(Spinner spinner, int position)
     {
         selectedFeedback = spinner.getSelectedItem().toString();
+        if (selectedFeedback.equals("Select Feedback")){
+            selectedFeedbackId = "";
+        }else if (!(selectedFeedback.equals("Select Feedback"))){
+            selectedFeedbackId = selectedFeedback;
+        }else {
+            selectedFeedbackId = "";
+        }
+       // selectedFeedbackId = selectedFeedback;
 
-        for (Map.Entry<String, String> e : feedbackMap.entrySet()) {
+        trackerPresenter.getNextActionList(getActivity(), selectedFeedback);
+       /* for (Map.Entry<String, String> e : feedbackMap.entrySet()) {
             Object key = e.getKey();
             Object value = e.getValue();
             if(value.equals(selectedFeedback)) {
-                selectedFeedbackId = (String) key;
+                selectedFeedbackId = (String) value;
                 Log.i("Selected CSE : ",selectedFeedbackId);
+                if (selectedFeedback.equals("Select Feedback")){
+                    selectedFeedbackId = "";
+                }else if (!(selectedFeedback.equals("Select Feedback"))){
+                    selectedFeedbackId = selectedFeedback;
+                }else {
+                    selectedFeedbackId = "";
+                }
 
                 trackerPresenter.getNextActionList(getActivity(), selectedFeedback);
             }
         }
+        */
     }
 
     @OnItemSelected(R.id.nextActionTracker_Spinner)
@@ -150,15 +211,65 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
     {
         selectedNextAction = spinner.getSelectedItem().toString();
 
-        for (Map.Entry<String, String> e : nextActionMap.entrySet()) {
+        if (selectedNextAction.equals("Select Next Action")){
+            selectedNextActionId = "";
+        }else if (!(selectedNextAction.equals("Select Next Action"))){
+            selectedNextActionId = selectedNextAction;
+        }else {
+            selectedNextActionId = "";
+        }
+    //    selectedNextActionId = selectedNextAction;
+
+       /* for (Map.Entry<String, String> e : nextActionMap.entrySet()) {
             Object key = e.getKey();
             Object value = e.getValue();
             if(value.equals(selectedNextAction)) {
-                selectedNextActionId = (String) key;
+                selectedNextActionId = (String) value;
                 Log.i("Selected CSE : ",selectedNextActionId);
 
+                if (selectedNextAction.equals("Select Next Action")){
+                    selectedNextActionId = "";
+                }else if (!(selectedNextAction.equals("Select Next Action"))){
+                    selectedNextActionId = selectedNextAction;
+                }else {
+                    selectedNextActionId = "";
+                }
             }
         }
+        */
+    }
+
+    @OnItemSelected(R.id.campaignNameTracker_Spinner)
+    public void campaignNameSelected(Spinner spinner, int position)
+    {
+        selectedCampaignName = spinner.getSelectedItem().toString();
+
+        if (selectedCampaignName.equals("Select Campaign Name")){
+            selectedCampaignNameId = "";
+        }else if (selectedCampaignName.equals("All")){
+            selectedCampaignNameId = "All";
+        }else{
+            selectedCampaignNameId = selectedCampaignName;
+        }
+       // selectedCampaignNameId = selectedCampaignName;
+
+      /*  for (Map.Entry<String, String> e : campaignNameMap.entrySet()) {
+            Object key = e.getKey();
+            Object value = e.getValue();
+            if(value.equals(selectedCampaignName)) {
+                selectedCampaignNameId = (String) value;
+                Log.i("Selected CSE : ",selectedCampaignNameId);
+
+                if (selectedCampaignName.equals("Select Campaign Name")){
+                    selectedCampaignNameId = "";
+                }else if (selectedCampaignName.equals("All")){
+                    selectedCampaignNameId = "All";
+                }else{
+                    selectedCampaignNameId = selectedCampaignName;
+                }
+            }
+        }
+        */
     }
 
     @Override
@@ -169,7 +280,6 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         {
             try {
                 feedbackArrayList.add(jsonObject.getSelect_feedback().get(i).getFeedbackStatusName());
-                feedbackMap.put(jsonObject.getSelect_feedback().get(i).getFeedbackStatusId(),jsonObject.getSelect_feedback().get(i).getFeedbackStatusName());
             }catch (Exception e)
             {
                 e.printStackTrace();
@@ -189,8 +299,7 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         {
             try {
                 nextActionArrayList.add(jsonObject.getSelect_nextaction().get(i).getNextActionName());
-                nextActionMap.put(jsonObject.getSelect_nextaction().get(i).getMapId(),jsonObject.getSelect_nextaction().get(i).getNextActionName());
-            }catch (Exception e)
+             }catch (Exception e)
             {
                 e.printStackTrace();
             }
@@ -214,6 +323,26 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
         trackerList_listView.setAdapter(dashboardAdapter);
     }
 
+    @Override
+    public void showCampignListView(LeadSourceBean jsonObject) {
+        campaignNameArrayList.clear();
+        campaignNameArrayList.add("Select Campaign Name");
+        campaignNameArrayList.add("All");
+        for(int i=0;i<jsonObject.getSelect_lead_source().size();i++)
+        {
+            try {
+                campaignNameArrayList.add(jsonObject.getSelect_lead_source().get(i).getLead_source_name());
+             }catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+        ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_textview,campaignNameArrayList);
+        companiesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        campaignNameTracker_Spinner.setAdapter(companiesArrayAdapter);
+    }
+
     public void getDataTypeDetails(){
         ArrayList<String> referralTypesArrayList = new ArrayList<>();
         referralTypesArrayList.add("Select Date Type");
@@ -227,7 +356,15 @@ public class TrackerFragment extends Fragment implements IView.TrackerView{
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedDateType = (String) parent.getItemAtPosition(position);
-                selectedDateTypeId = String.valueOf(position);
+           //     selectedDateTypeId = String.valueOf(position);
+
+                if (selectedDateType.equals("Select Date Type")){
+                    selectedDateTypeId = "";
+                }else if (selectedDateType.equals("Lead Date")){
+                    selectedDateTypeId = "Lead";
+                }else if (selectedDateType.equals("Call Date")){
+                    selectedDateTypeId = "Call";
+                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.lmsautovista.View.Activity.SplashActivity">
 
-
     <ImageView
         android:id="@+id/autovistaLogo_imgView"
         android:layout_width="wrap_content"

@@ -1,11 +1,13 @@
 package com.example.user.lmsautovista.Presenter;
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
 import com.example.user.lmsautovista.Model.FeedbackListBean;
+import com.example.user.lmsautovista.Model.LeadSourceBean;
 import com.example.user.lmsautovista.Model.NextActionListBean;
 import com.example.user.lmsautovista.Model.SearchTrackerListBean;
 import com.example.user.lmsautovista.Utils.Constants;
@@ -113,9 +115,51 @@ public class TrackerPresenter implements IPresenter.ITrackerPresenter{
     }
 
     @Override
-    public void getSearchTRackerList(Context context) {
+    public void getCampaignList(Context context) {
         try {
             view.showProgressDialog();
+
+            Map<String, String> map = new HashMap<>();
+            map.put("process_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, ""));
+
+            String url = Constants.BASE_URL + Constants.SELECT_LEAD_SOURCE;
+            GSONRequest<LeadSourceBean> dashboardGsonRequest = new GSONRequest<LeadSourceBean>(
+                    Request.Method.POST,
+                    url,
+                    LeadSourceBean.class, map,
+                    new com.android.volley.Response.Listener<LeadSourceBean>() {
+                        @Override
+                        public void onResponse(LeadSourceBean res) {
+                            view.dismissProgressDialog();
+                            if (!(res.getSelect_lead_source().equals("")))
+                            {
+                                view.showCampignListView(res);
+                            } else {
+                                view.dismissProgressDialog();
+                            }
+                        }
+                    },
+                    new com.android.volley.Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            view.dismissProgressDialog();
+                        }
+                    });
+            view.dismissProgressDialog();
+            dashboardGsonRequest.setShouldCache(false);
+            Utilities.getRequestQueue(context).add(dashboardGsonRequest);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void getSearchTRackerList(final Context context, String campaignName, String feedback, String nextAction, String dateType, String fromDate, String todate) {
+        try {
+            view.showProgressDialog();
+
+
 
             Map<String, String> map = new HashMap<>();
             map.put("process_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, ""));
@@ -124,12 +168,22 @@ public class TrackerPresenter implements IPresenter.ITrackerPresenter{
             map.put("role", SharedPreferenceManager.getInstance(context).getPreference(Constants.ROLE_ID, ""));
             map.put("page", "-1");
 
-            map.put("campaignName", "All");
-            map.put("feedback", "");
-            map.put("nextaction", "");
-            map.put("date_type", "Lead");
-            map.put("fromdate", "2017-11-01");
-            map.put("todate", "2018-03-02");
+            map.put("campaignName", "");
+            if (feedback.equals("Select Feedback")){
+                map.put("feedback", "");
+            }else
+            {
+                map.put("feedback","");
+            }
+
+            if (nextAction.equals("Select Next Action")){
+                map.put("nextaction", "");
+            }else {
+                map.put("nextaction", "");
+            }
+            map.put("date_type", dateType);
+            map.put("fromdate", fromDate);
+            map.put("todate", todate);
 
             String url = Constants.BASE_URL + Constants.SEARCH_TRACKER;
             GSONRequest<SearchTrackerListBean> dashboardGsonRequest = new GSONRequest<SearchTrackerListBean>(
@@ -140,15 +194,17 @@ public class TrackerPresenter implements IPresenter.ITrackerPresenter{
                         @Override
                         public void onResponse(SearchTrackerListBean res) {
                             view.dismissProgressDialog();
-                            if (!(res.getUser_details_count().equals("0")))
-                            {
-                                try {
+                            try {
+                                if (!(res.getUser_details_count().get(0).getCount().equals("0"))) {
+
                                     view.showTrackerListView(res);
-                                } catch (Exception e) {
+
+                                    view.dismissProgressDialog();
+                                } else {
+                                    view.dismissProgressDialog();
                                 }
-                                view.dismissProgressDialog();
-                            } else {
-                                view.dismissProgressDialog();
+                            }catch(Exception e){
+                                Toast.makeText(context, "null pointer exception", Toast.LENGTH_SHORT).show();
                             }
                         }
                     },

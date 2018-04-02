@@ -4,9 +4,11 @@ package com.example.user.lmsautovista.View;
   Created by User on 2/17/2018.
 */
 
+import com.example.user.lmsautovista.Model.AssignToBean;
 import com.example.user.lmsautovista.Model.DashboardCountBean;
 import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
 import com.example.user.lmsautovista.Model.FeedbackListBean;
+import com.example.user.lmsautovista.Model.LeadSourceBean;
 import com.example.user.lmsautovista.Model.NextActionListBean;
 import com.example.user.lmsautovista.Model.SearchTrackerListBean;
 
@@ -17,6 +19,17 @@ public interface IView {
         void dismissProgressDialog();
         void loginSuccess();
         void loginFailure(String message);
+    }
+
+    interface AddNewLeadView{
+        void showProgressDialog();
+        void dismissProgressDialog();
+        void addNewLeadSuccess();
+        void showLeadSource(LeadSourceBean jsonObject);
+        void showLocation();
+        void showAssignTo(AssignToBean jsonObject);
+
+        void addNewLeadFailure(String message);
     }
 
     interface DashboardView{
@@ -38,5 +51,6 @@ public interface IView {
         void showFeedbackView(FeedbackListBean jsonObject);
         void showNextActionView(NextActionListBean jsonObject);
         void showTrackerListView(SearchTrackerListBean jsonObject);
+        void showCampignListView(LeadSourceBean jsonObject);
     }
 }
