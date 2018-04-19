@@ -5,18 +5,28 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
 import com.example.user.lmsautovista.R;
-import com.example.user.lmsautovista.Utils.Constants;
+import com.example.user.lmsautovista.Utils.SessionManagement;
 
 public class SplashActivity extends AppCompatActivity {
+
+    // Session Manager Class
+    SessionManagement session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Handler handler = new Handler();
+        // Session class instance
+        session = new SessionManagement(getApplicationContext());
+
+        session.checkLogin();
+        if (session.isLoggedIn()){
+            launchLoginScreen();
+        }
+
+     /*   Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -27,6 +37,17 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 finish();
             }
-        }, 3000);
+        }, 3000);*/
     }
+
+    private void launchLoginScreen(){
+        int secondsDelayed = 1;
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                startActivity(new Intent(SplashActivity.this, HomeActivity.class));
+                finish();
+            }
+        }, secondsDelayed * 3000);
+    }
+
 }

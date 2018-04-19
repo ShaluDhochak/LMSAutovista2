@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
-import com.example.user.lmsautovista.Presenter.DashboardDetailPresenter;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
+import com.example.user.lmsautovista.Presenter.AllLeadCallingTaskPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
 import com.example.user.lmsautovista.View.Adapter.CallingTaskDetailAdapter;
@@ -24,11 +24,10 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
-public class AllLeadFragment extends Fragment implements IView.DashboardDetailView{
+public class AllLeadFragment extends Fragment implements IView.AllLeadCallingTaskView{
 
     ProgressDialog progressDialog;
-    DashboardDetailPresenter dashboardPresenter;
+    AllLeadCallingTaskPresenter allLeadCallingTaskPresenter;
 
     @BindView(R.id.customerDetails_ListView)
     RecyclerView customerDetails_ListView;
@@ -37,23 +36,19 @@ public class AllLeadFragment extends Fragment implements IView.DashboardDetailVi
     TextView searchViaDateHeading_TextView;
 
     View view;
-    ArrayList<DashboardLeadDetailBean.Lead_Details> dashboardCountList = new ArrayList<DashboardLeadDetailBean.Lead_Details>();
-
+    ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_lead_callingtask, container, false);
 
         ButterKnife.bind(this, view);
         initialiseUI();
         return view;
-
     }
 
     private void initialiseUI(){
-        dashboardPresenter = new DashboardDetailPresenter(this);
+        allLeadCallingTaskPresenter = new AllLeadCallingTaskPresenter(this);
 
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
@@ -61,30 +56,17 @@ public class AllLeadFragment extends Fragment implements IView.DashboardDetailVi
     }
 
     @Override
-    public void onResume() {
+    public void onResume(){
         super.onResume();
         if (NetworkUtilities.isInternet(getActivity())) {
-            dashboardPresenter.getAllLeadCallingTaskList(getActivity());
+            allLeadCallingTaskPresenter.getAllLeadCallingTaskList(getActivity());
         } else {
             Toast.makeText(getActivity(), "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
-    public void showProgressDialog() {
-        if (progressDialog != null && !progressDialog.isShowing())
-            progressDialog.show();
-    }
-
-    @Override
-    public void dismissProgressDialog() {
-        if (progressDialog != null && progressDialog.isShowing()) {
-            progressDialog.dismiss();
-        }
-    }
-
-    @Override
-    public void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject) {
+    public void showAllLeadDetails(CallingTaskNewLeadBean jsonObject) {
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());
         searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());

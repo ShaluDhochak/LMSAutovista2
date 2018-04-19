@@ -43,7 +43,12 @@ public class TrackerSearchListAdapter extends RecyclerView.Adapter<TrackerSearch
         holder.leadContactNo_TextView.setText(bean.getContact_no());
         holder.interestInString_TextView.setText(bean.getEnquiry_for());
         holder.leadDateString_TextView.setText(bean.getLead_date());
-        holder.statusString_TextView.setText(bean.getFeedbackStatus());
+
+        if (bean.getFeedbackStatus().equals("")) {
+            holder.statusString_TextView.setText("Not Mentioned");
+        }else{
+            holder.statusString_TextView.setText(bean.getFeedbackStatus());
+        }
 
         if (bean.getLead_source().equals("")){
             holder.interestInString_TextView.setText("Web");

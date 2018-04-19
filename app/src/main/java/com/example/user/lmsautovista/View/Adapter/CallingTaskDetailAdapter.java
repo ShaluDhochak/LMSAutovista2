@@ -2,7 +2,7 @@ package com.example.user.lmsautovista.View.Adapter;
 
 /*
   Created by Shalu Dhochak on 2/27/2018.
- */
+*/
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,18 +13,18 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.R;
-import com.example.user.lmsautovista.View.Activity.DashboardCountDetailActivity;
+import com.example.user.lmsautovista.View.Activity.CustomerDetailsActivity;
 
 import java.util.List;
 
 public class CallingTaskDetailAdapter extends RecyclerView.Adapter<CallingTaskDetailAdapter.MyViewHolder>{
 
-    private List<DashboardLeadDetailBean.Lead_Details> dashboardList;
+    private List<CallingTaskNewLeadBean.Lead_Details> dashboardList;
     Context context;
 
-    public CallingTaskDetailAdapter(Context context,List<DashboardLeadDetailBean.Lead_Details> dashboardList){
+    public CallingTaskDetailAdapter(Context context,List<CallingTaskNewLeadBean.Lead_Details> dashboardList){
         this.context = context;
         this.dashboardList = dashboardList;
     }
@@ -37,7 +37,7 @@ public class CallingTaskDetailAdapter extends RecyclerView.Adapter<CallingTaskDe
 
     @Override
     public void onBindViewHolder(CallingTaskDetailAdapter.MyViewHolder holder,final int position) {
-        final DashboardLeadDetailBean.Lead_Details bean = dashboardList.get(position);
+        final CallingTaskNewLeadBean.Lead_Details bean = dashboardList.get(position);
 
         holder.leadName_TextView.setText(bean.getName().toString());
         holder.leadContactNo_TextView.setText(bean.getContact_no());
@@ -60,12 +60,13 @@ public class CallingTaskDetailAdapter extends RecyclerView.Adapter<CallingTaskDe
         holder.leadName_TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DashboardCountDetailActivity.class);
+                Intent intent = new Intent(context, CustomerDetailsActivity.class);
                 intent.putExtra("position",position);
                 intent.putExtra("heading", "New Leads");
                 intent.putExtra("bean", dashboardList.get(position));
                 //  intent.putParcelableArrayListExtra("arrayList", );
                 context.startActivity(intent);
+
             }
         });
     }
@@ -91,8 +92,9 @@ public class CallingTaskDetailAdapter extends RecyclerView.Adapter<CallingTaskDe
             statusString_TextView = (TextView) itemView.findViewById(R.id.statusString_TextView);
 
             imageTextSeparator = (View) itemView.findViewById(R.id.imageTextSeparator);
-                    customerDetails_ImageView = (ImageView) itemView.findViewById(R.id.customerDetails_ImageView);
-                    addFollowUp_ImageView = (ImageView) itemView.findViewById(R.id.addFollowUp_ImageView);
+            customerDetails_ImageView = (ImageView) itemView.findViewById(R.id.customerDetails_ImageView);
+            addFollowUp_ImageView = (ImageView) itemView.findViewById(R.id.addFollowUp_ImageView);
+
         }
     }
 }

@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
-import com.example.user.lmsautovista.Presenter.DashboardDetailPresenter;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
+import com.example.user.lmsautovista.Presenter.NewLeadCallingTaskPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
 import com.example.user.lmsautovista.View.Adapter.CallingTaskDetailAdapter;
@@ -24,10 +24,10 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NewLeadNotificationFragment extends Fragment implements IView.DashboardDetailView{
+public class NewLeadNotificationFragment extends Fragment implements IView.NewLeadCallingTaskView{
 
     ProgressDialog progressDialog;
-    DashboardDetailPresenter dashboardPresenter;
+    NewLeadCallingTaskPresenter newLeadCallingTaskPresenter;
 
     @BindView(R.id.customerDetails_ListView)
     RecyclerView customerDetails_ListView;
@@ -36,7 +36,7 @@ public class NewLeadNotificationFragment extends Fragment implements IView.Dashb
     TextView searchViaDateHeading_TextView;
 
     View view;
-    ArrayList<DashboardLeadDetailBean.Lead_Details> dashboardCountList = new ArrayList<DashboardLeadDetailBean.Lead_Details>();
+    ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
 
     public NewLeadNotificationFragment() {
         // Required empty public constructor
@@ -54,7 +54,7 @@ public class NewLeadNotificationFragment extends Fragment implements IView.Dashb
     }
 
     private void initialiseUI(){
-        dashboardPresenter = new DashboardDetailPresenter(this);
+        newLeadCallingTaskPresenter = new NewLeadCallingTaskPresenter(this);
 
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
@@ -65,7 +65,7 @@ public class NewLeadNotificationFragment extends Fragment implements IView.Dashb
     public void onResume() {
         super.onResume();
         if (NetworkUtilities.isInternet(getActivity())) {
-            dashboardPresenter.getNewDashboardDetailList(getActivity());
+            newLeadCallingTaskPresenter.getNewCallingTaskList(getActivity());
         } else {
             Toast.makeText(getActivity(), "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
@@ -85,6 +85,21 @@ public class NewLeadNotificationFragment extends Fragment implements IView.Dashb
     }
 
     @Override
+    public void ShowNewLeadDetailCount(CallingTaskNewLeadBean jsonObject) {
+        dashboardCountList.clear();
+        dashboardCountList.addAll(jsonObject.getLead_details());
+        searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
+
+        CallingTaskDetailAdapter dashboardAdapter = new CallingTaskDetailAdapter(getActivity(),jsonObject.getLead_details());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        customerDetails_ListView.setLayoutManager(mLayoutManager);
+        customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
+        customerDetails_ListView.setAdapter(dashboardAdapter);
+    }
+
+
+    /*
+    @Override
     public void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject) {
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());
@@ -96,4 +111,6 @@ public class NewLeadNotificationFragment extends Fragment implements IView.Dashb
         customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
         customerDetails_ListView.setAdapter(dashboardAdapter);
     }
+
+    */
 }

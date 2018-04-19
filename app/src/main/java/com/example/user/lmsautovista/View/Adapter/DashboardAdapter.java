@@ -43,6 +43,8 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
 
         final DashboardCountBean.Dashboard_Count bean = dashboardCount.get(position);
 
+
+        holder.countHeading_tv.setText(bean.getFname() + " "+ bean.getLname());
         holder.newLead_tv.setText(bean.getNew_leads().toString());
         holder.callTodayLead_tv.setText(bean.getCall_today());
         holder.pendingFollowUpLead_tv.setText(bean.getPending_followup());
@@ -52,8 +54,6 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
         holder.newLead_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 Intent intent = new Intent(context, NewLeadDashboardActivity.class);
                 intent.putExtra("position",position);
                 intent.putExtra("bean", dashboardCount.get(position));
@@ -110,19 +110,18 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView pendingFollowUpLead_tv,unassignedLead_tv, newLead_tv,callTodayLead_tv,pendingNewLead_tv;
+        TextView pendingFollowUpLead_tv,unassignedLead_tv, newLead_tv,callTodayLead_tv,pendingNewLead_tv,countHeading_tv ;
 
         public MyViewHolder(View itemView) {
             super(itemView);
+
+            countHeading_tv = (TextView) itemView.findViewById(R.id.countHeading_tv);
 
             newLead_tv = (TextView) itemView.findViewById(R.id.newLead_tv);
             pendingFollowUpLead_tv = (TextView) itemView.findViewById(R.id.pendingFollowUpLead_tv);
             unassignedLead_tv = (TextView) itemView.findViewById(R.id.unassignedLead_tv);
             callTodayLead_tv = (TextView) itemView.findViewById(R.id.callTodayLead_tv);
             pendingNewLead_tv = (TextView) itemView.findViewById(R.id.pendingNewLead_tv);
-
-
-
         }
     }
 }

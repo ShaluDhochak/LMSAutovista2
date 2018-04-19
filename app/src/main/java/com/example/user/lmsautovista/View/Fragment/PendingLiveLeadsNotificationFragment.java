@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
-import com.example.user.lmsautovista.Presenter.DashboardDetailPresenter;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
+import com.example.user.lmsautovista.Presenter.PendingFollowUpPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
 import com.example.user.lmsautovista.View.Adapter.CallingTaskDetailAdapter;
@@ -25,10 +25,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class PendingLiveLeadsNotificationFragment extends Fragment implements IView.DashboardDetailView{
+public class PendingLiveLeadsNotificationFragment extends Fragment implements IView.PendingLiveCallingTaskView{
 
     ProgressDialog progressDialog;
-    DashboardDetailPresenter dashboardPresenter;
+    PendingFollowUpPresenter pendingFollowUpPresenter;
 
     @BindView(R.id.customerDetails_ListView)
     RecyclerView customerDetails_ListView;
@@ -37,8 +37,7 @@ public class PendingLiveLeadsNotificationFragment extends Fragment implements IV
     TextView searchViaDateHeading_TextView;
 
     View view;
-    ArrayList<DashboardLeadDetailBean.Lead_Details> dashboardCountList = new ArrayList<DashboardLeadDetailBean.Lead_Details>();
-
+    ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,7 +50,7 @@ public class PendingLiveLeadsNotificationFragment extends Fragment implements IV
     }
 
     private void initialiseUI(){
-        dashboardPresenter = new DashboardDetailPresenter(this);
+        pendingFollowUpPresenter = new PendingFollowUpPresenter(this);
 
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
@@ -62,27 +61,14 @@ public class PendingLiveLeadsNotificationFragment extends Fragment implements IV
     public void onResume() {
         super.onResume();
         if (NetworkUtilities.isInternet(getActivity())) {
-            dashboardPresenter.getPendingFollowUpDashboardDetailList(getActivity());
+            pendingFollowUpPresenter.getPendingCallingTaskList(getActivity());
         } else {
             Toast.makeText(getActivity(), "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
-    public void showProgressDialog() {
-        if (progressDialog != null && !progressDialog.isShowing())
-            progressDialog.show();
-    }
-
-    @Override
-    public void dismissProgressDialog() {
-        if (progressDialog != null && progressDialog.isShowing()) {
-            progressDialog.dismiss();
-        }
-    }
-
-    @Override
-    public void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject) {
+    public void showPendingLiveLeadDetails(CallingTaskNewLeadBean jsonObject) {
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());
         searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
@@ -93,4 +79,5 @@ public class PendingLiveLeadsNotificationFragment extends Fragment implements IV
         customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
         customerDetails_ListView.setAdapter(dashboardAdapter);
     }
+
 }

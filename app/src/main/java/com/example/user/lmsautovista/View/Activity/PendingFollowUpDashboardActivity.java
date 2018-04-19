@@ -9,7 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.Presenter.DashboardDetailPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
@@ -37,7 +37,7 @@ public class PendingFollowUpDashboardActivity extends AppCompatActivity implemen
     TextView totalLeadHeading_TextView;
 
 
-    ArrayList<DashboardLeadDetailBean.Lead_Details> dashboardCountList = new ArrayList<DashboardLeadDetailBean.Lead_Details>();
+    ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +83,7 @@ public class PendingFollowUpDashboardActivity extends AppCompatActivity implemen
     }
 
     @Override
-    public void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject) {
+    public void ShowDashboardDetailCount(CallingTaskNewLeadBean jsonObject) {
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());
         totalLeadHeading_TextView.setText("Total Leads: " + jsonObject.getLead_details_count().get(0).getCount_lead());

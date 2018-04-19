@@ -10,6 +10,7 @@ import java.util.ArrayList;
 */
 
 public class DashboardCountBean implements Parcelable {
+    public ArrayList<Dashboard_Count> dashboard_count;
 
     public ArrayList<Dashboard_Count> getDashboard_count() {
         return dashboard_count;
@@ -19,15 +20,10 @@ public class DashboardCountBean implements Parcelable {
         this.dashboard_count = dashboard_count;
     }
 
-    public ArrayList<Dashboard_Count> dashboard_count;
-
     public static class Dashboard_Count implements Parcelable {
-        String id;
-        String new_leads;
-        String unassigned_leads;
-        String call_today;
-        String pending_new_leads;
-        String pending_followup;
+
+        String id,role,location_name,fname,lname,unassigned_leads, new_leads;
+        String call_today,pending_new_leads,pending_followup;
 
         public String getId() {
             return id;
@@ -37,12 +33,36 @@ public class DashboardCountBean implements Parcelable {
             this.id = id;
         }
 
-        public String getNew_leads() {
-            return new_leads;
+        public String getRole() {
+            return role;
         }
 
-        public void setNew_leads(String new_leads) {
-            this.new_leads = new_leads;
+        public void setRole(String role) {
+            this.role = role;
+        }
+
+        public String getLocation_name() {
+            return location_name;
+        }
+
+        public void setLocation_name(String location_name) {
+            this.location_name = location_name;
+        }
+
+        public String getFname() {
+            return fname;
+        }
+
+        public void setFname(String fname) {
+            this.fname = fname;
+        }
+
+        public String getLname() {
+            return lname;
+        }
+
+        public void setLname(String lname) {
+            this.lname = lname;
         }
 
         public String getUnassigned_leads() {
@@ -51,6 +71,14 @@ public class DashboardCountBean implements Parcelable {
 
         public void setUnassigned_leads(String unassigned_leads) {
             this.unassigned_leads = unassigned_leads;
+        }
+
+        public String getNew_leads() {
+            return new_leads;
+        }
+
+        public void setNew_leads(String new_leads) {
+            this.new_leads = new_leads;
         }
 
         public String getCall_today() {
@@ -85,8 +113,12 @@ public class DashboardCountBean implements Parcelable {
         @Override
         public void writeToParcel(Parcel dest, int flags) {
             dest.writeString(this.id);
-            dest.writeString(this.new_leads);
+            dest.writeString(this.role);
+            dest.writeString(this.location_name);
+            dest.writeString(this.fname);
+            dest.writeString(this.lname);
             dest.writeString(this.unassigned_leads);
+            dest.writeString(this.new_leads);
             dest.writeString(this.call_today);
             dest.writeString(this.pending_new_leads);
             dest.writeString(this.pending_followup);
@@ -97,8 +129,12 @@ public class DashboardCountBean implements Parcelable {
 
         protected Dashboard_Count(Parcel in) {
             this.id = in.readString();
-            this.new_leads = in.readString();
+            this.role = in.readString();
+            this.location_name = in.readString();
+            this.fname = in.readString();
+            this.lname = in.readString();
             this.unassigned_leads = in.readString();
+            this.new_leads = in.readString();
             this.call_today = in.readString();
             this.pending_new_leads = in.readString();
             this.pending_followup = in.readString();

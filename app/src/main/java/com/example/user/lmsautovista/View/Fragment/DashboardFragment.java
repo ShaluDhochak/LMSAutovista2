@@ -6,12 +6,17 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.user.lmsautovista.Model.DashboardCountBean;
+import com.example.user.lmsautovista.Model.LocationDashboardBean;
+import com.example.user.lmsautovista.Model.LoginBean;
 import com.example.user.lmsautovista.Presenter.DashboardPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
@@ -19,11 +24,14 @@ import com.example.user.lmsautovista.View.Adapter.DashboardAdapter;
 import com.example.user.lmsautovista.View.IView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnItemSelected;
 
-public class DashboardFragment extends Fragment implements IView.DashboardView{
+public class DashboardFragment extends Fragment implements IView.LoginView{
 
     View view;
     ProgressDialog progressDialog;
@@ -32,10 +40,14 @@ public class DashboardFragment extends Fragment implements IView.DashboardView{
     @BindView(R.id.countLocationWise_ListView)
     RecyclerView countLocationWise_ListView;
 
+    @BindView(R.id.locationWiseDashboard_spinner)
+    Spinner locationWiseDashboard_spinner;
+
     ArrayList<DashboardCountBean.Dashboard_Count> dashboardCountList = new ArrayList<DashboardCountBean.Dashboard_Count>();
+    Map<String, String> locationMap = new HashMap<>();
+    String selectedLocationDashboard, selectedLocationDashboardId;
 
     public DashboardFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -57,7 +69,8 @@ public class DashboardFragment extends Fragment implements IView.DashboardView{
     public void onResume() {
         super.onResume();
         if (NetworkUtilities.isInternet(getActivity())) {
-            dashboardPresenter.getDashboardList(getActivity());
+            dashboardPresenter.getLocationSpinnerList(getActivity());
+            dashboardPresenter.getDashboardLocationList(selectedLocationDashboardId, getActivity());
         } else {
             Toast.makeText(getActivity(), "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
@@ -78,31 +91,18 @@ public class DashboardFragment extends Fragment implements IView.DashboardView{
     }
 
     @Override
-    public void showDailyAppointmentsCount(String new_lead, String unassigend_leads, String call_today, String pending_newLeads, String pending_followup) {
-        try {
-                try {
-                    DashboardCountBean.Dashboard_Count repsInfo = new DashboardCountBean.Dashboard_Count();
-                    repsInfo.setNew_leads(new_lead);
-                    repsInfo.setCall_today(unassigend_leads);
-                    repsInfo.setPending_followup(call_today);
-                    repsInfo.setPending_new_leads(pending_newLeads);
-                    repsInfo.setUnassigned_leads(pending_followup);
+    public void loginSuccess() {
 
-                    dashboardCountList.add(repsInfo);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+    }
 
+    @Override
+    public void loginFailure(String message) {
 
-            DashboardAdapter dashboardRepsAdapter = new DashboardAdapter(getActivity(),dashboardCountList);
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-            countLocationWise_ListView.setLayoutManager(mLayoutManager);
-            countLocationWise_ListView.setItemAnimator(new DefaultItemAnimator());
-            countLocationWise_ListView.setAdapter(dashboardRepsAdapter);
+    }
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @Override
+    public void showLocationList(LoginBean jsonObject) {
+
     }
 
     @Override
@@ -110,13 +110,53 @@ public class DashboardFragment extends Fragment implements IView.DashboardView{
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getDashboard_count());
 
-        DashboardAdapter dashboardRepsAdapter = new DashboardAdapter(getActivity(),jsonObject.getDashboard_count());
+        DashboardAdapter dashboardRepsAdapter = new DashboardAdapter(getActivity(), jsonObject.getDashboard_count());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         countLocationWise_ListView.setLayoutManager(mLayoutManager);
         countLocationWise_ListView.setItemAnimator(new DefaultItemAnimator());
         countLocationWise_ListView.setAdapter(dashboardRepsAdapter);
-
     }
 
+    @Override
+    public void showLocationDashboard(LocationDashboardBean locationObject) {
+        try {
+            ArrayList<String> locationDashboardArrayList = new ArrayList<>();
+            locationDashboardArrayList.add("Select Location");
+            if (locationObject.getSelect_location().size() > 0) {
+                for (int i = 0; i < locationObject.getSelect_location().size(); i++) {
+                    try {
+                        locationDashboardArrayList.add(locationObject.getSelect_location().get(i).getLocation());
+                        locationMap.put(locationObject.getSelect_location().get(i).getLocation_id(), locationObject.getSelect_location().get(i).getLocation());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            ArrayAdapter<String> locationDashboardArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, locationDashboardArrayList);
+            locationDashboardArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            locationWiseDashboard_spinner.setAdapter(locationDashboardArrayAdapter);
+        }catch (Exception e){
+
+        }
+    }
+
+    @OnItemSelected(R.id.locationWiseDashboard_spinner)
+    public void locationNameSelected(Spinner spinner, int position)
+    {
+        selectedLocationDashboard = spinner.getSelectedItem().toString();
+        for (Map.Entry<String, String> e : locationMap.entrySet()) {
+            Object key = e.getKey();
+            Object value = e.getValue();
+            if(value.equals(selectedLocationDashboard)) {
+                selectedLocationDashboardId = (String) key;
+                Log.i("Selected CSE : ",selectedLocationDashboardId);
+             //   loginPresenter.saveLocationInfo((String)key, (String) value, SharedPreferenceManager.getInstance(this));
+            }
+            dashboardPresenter.getDashboardLocationList(selectedLocationDashboardId, getActivity());
+
+        }
+
+    }
 
 }

@@ -2,56 +2,24 @@ package com.example.user.lmsautovista.Model;
 
 import java.util.ArrayList;
 
-/**
- * Created by User on 2/20/2018.
- */
+/*
+  Created by Shalu Dhochak on 2/20/2018.
+*/
 
 public class LoginBean {
-    int success;
-    public ArrayList<User_Detail> user_detail;
-    public ArrayList<Session_Data> session_data;
-    public ArrayList<Rights> rights;
 
     public int isSuccess() {
         return success;
     }
-
     public void setSuccess(int success) {
-        success = success;
+        this.success = success;
     }
 
-    public ArrayList<User_Detail> getUser_detail() {
-        return user_detail;
-    }
+    int success;
 
-    public void setUser_detail(ArrayList<User_Detail> user_detail) {
-        this.user_detail = user_detail;
-    }
+    public ArrayList<User_Details> user_detail;
 
-    public ArrayList<Session_Data> getSession_data() {
-        return session_data;
-    }
-
-    public void setSession_data(ArrayList<Session_Data> session_data) {
-        this.session_data = session_data;
-    }
-
-    public ArrayList<Rights> getRights() {
-        return rights;
-    }
-
-    public void setRights(ArrayList<Rights> rights) {
-        this.rights = rights;
-    }
-
-    public static class User_Detail{
-        String role;
-        String id;
-        String fname;
-        String lname;
-        String location;
-        String process_id;
-
+    public static class User_Details{
         public String getRole() {
             return role;
         }
@@ -84,14 +52,6 @@ public class LoginBean {
             this.lname = lname;
         }
 
-        public String getLocation() {
-            return location;
-        }
-
-        public void setLocation(String location) {
-            this.location = location;
-        }
-
         public String getProcess_id() {
             return process_id;
         }
@@ -108,15 +68,31 @@ public class LoginBean {
             this.process_name = process_name;
         }
 
-        String process_name;
+        public String getLocation_id() {
+            return location_id;
+        }
+
+        public void setLocation_id(String location_id) {
+            this.location_id = location_id;
+        }
+
+        public String getLocation() {
+            return location;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
+        }
+
+        String role,id,fname,lname,process_id,process_name,location_id,location;
+
     }
 
-    public static class Session_Data{
+    public ArrayList<Session_data> session_data;
+
+    public static class Session_data{
         String user_id;
-        String process_id;
         String username;
-        String role;
-        String process_name;
 
         public String getUser_id() {
             return user_id;
@@ -124,14 +100,6 @@ public class LoginBean {
 
         public void setUser_id(String user_id) {
             this.user_id = user_id;
-        }
-
-        public String getProcess_id() {
-            return process_id;
-        }
-
-        public void setProcess_id(String process_id) {
-            this.process_id = process_id;
         }
 
         public String getUsername() {
@@ -150,20 +118,99 @@ public class LoginBean {
             this.role = role;
         }
 
-        public String getProcess_name() {
-            return process_name;
+        public ArrayList<Process> getProcess() {
+            return process;
         }
 
-        public void setProcess_name(String process_name) {
-            this.process_name = process_name;
+        public void setProcess(ArrayList<Process> process) {
+            this.process = process;
         }
 
+        String role;
+        public ArrayList<Process> process;
 
+        public static class Process{
+            String process_id,process_name;
+
+            public String getProcess_id() {
+                return process_id;
+            }
+
+            public void setProcess_id(String process_id) {
+                this.process_id = process_id;
+            }
+
+            public String getProcess_name() {
+                return process_name;
+            }
+
+            public void setProcess_name(String process_name) {
+                this.process_name = process_name;
+            }
+
+            public ArrayList<Location> getLocation() {
+                return location;
+            }
+
+            public void setLocation(ArrayList<Location> location) {
+                this.location = location;
+            }
+
+            public ArrayList<Location> location;
+
+            public static class Location{
+                String location_id;
+                String location;
+
+                public String getLocation_id() {
+                    return location_id;
+                }
+
+                public void setLocation_id(String location_id) {
+                    this.location_id = location_id;
+                }
+
+                public String getLocation() {
+                    return location;
+                }
+
+                public void setLocation(String location) {
+                    this.location = location;
+                }
+
+            }
+        }
     }
 
-    public static class Rights{
-        String right_id,user_id,form_name,controller_name,view,insert,modify,delete;
+    public ArrayList<User_Details> getUser_detail() {
+        return user_detail;
+    }
 
+    public void setUser_detail(ArrayList<User_Details> user_detail) {
+        this.user_detail = user_detail;
+    }
+
+    public ArrayList<Session_data> getSession_data() {
+        return session_data;
+    }
+
+    public void setSession_data(ArrayList<Session_data> session_data) {
+        this.session_data = session_data;
+    }
+
+    public ArrayList<Rights> getRights() {
+        return rights;
+    }
+
+    public void setRights(ArrayList<Rights> rights) {
+        this.rights = rights;
+    }
+
+    public ArrayList<Rights> rights;
+
+    public static class Rights{
+
+        String right_id,user_id,form_name,controller_name,view,insert,modify,delete,process_id;
         public String getRight_id() {
             return right_id;
         }
@@ -228,20 +275,47 @@ public class LoginBean {
             this.delete = delete;
         }
 
+        public String getProcess_id() {
+            return process_id;
+        }
+
+        public void setProcess_id(String process_id) {
+            this.process_id = process_id;
+        }
+
     }
 
 }
 
+
 /*
  "success": 1,
     "user_detail": [
+        {
 
+        }
     ],
     "session_data": [
         {
-        }
-    ],
-    "rights": [
+            "": "1",
+            "": "Admin Autovista",
+            "": "1",
+            "process": [
+                {
+                    "": "6",
+                    "": "New Car",
+                    "location": [
+                        {
+                            "location_id": "1",
+                            "location": "Pune New Car"
+                        },
+
+ */
+
+/*
+  "rights": [
         {
+
         },
+
  */

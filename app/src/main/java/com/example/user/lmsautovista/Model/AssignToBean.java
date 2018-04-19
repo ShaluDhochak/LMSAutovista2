@@ -46,12 +46,5 @@ public class AssignToBean {
         String id,fname,lname;
     }
 
-    /*
-     "select_user": [
-        {
-            "": "194",
-            "": "swapna",
-            "": "D"
-        },
-     */
+
 }

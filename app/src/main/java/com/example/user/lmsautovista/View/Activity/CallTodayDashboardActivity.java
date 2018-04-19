@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.Presenter.DashboardDetailPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
@@ -35,14 +35,12 @@ public class CallTodayDashboardActivity extends AppCompatActivity implements IVi
     TextView lmsheading_TextView;
 
     @BindView(R.id.totalLeadHeading_TextView)
-            TextView totalLeadHeading_TextView;
+    TextView totalLeadHeading_TextView;
 
     @BindView(R.id.backButton_ImageView)
     ImageView backButton_ImageView;
 
-
-
-    ArrayList<DashboardLeadDetailBean.Lead_Details> dashboardCountList = new ArrayList<DashboardLeadDetailBean.Lead_Details>();
+    ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +61,6 @@ public class CallTodayDashboardActivity extends AppCompatActivity implements IVi
     @Override
     public void onResume() {
         super.onResume();
-
         if (NetworkUtilities.isInternet(this)) {
             dashboardPresenter.getCallTodayDashboardDetailList(CallTodayDashboardActivity.this);
         } else {
@@ -90,7 +87,7 @@ public class CallTodayDashboardActivity extends AppCompatActivity implements IVi
     }
 
     @Override
-    public void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject) {
+    public void ShowDashboardDetailCount(CallingTaskNewLeadBean jsonObject) {
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());
         totalLeadHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());

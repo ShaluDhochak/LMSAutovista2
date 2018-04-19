@@ -12,6 +12,8 @@
     <string name="action_finance">Finance</string>
     <string name="action_service">Service</string>
     <string name="action_accessories">Accessories</string>
+    <string name="action_newcar">New Car</string>
+    <string name="action_used_car">Used Car</string>
 
     <!--String for navigation Drawer-->
     <string name="nav_location_wise">Dashboard</string>
@@ -47,6 +49,53 @@
     <string name="calldate">Call Date</string>
     <string name="nfd">Next FollowUp Date</string>
     <string name="Remark">Remark</string>
+
+    <!-- String for fab-->
+    <string name="followUpDetails">FollowUp Details</string>
+    <string name="add_followup">Add FollowUp</string>
+    <string name="followUpBy">FollowUp By</string>
+    <string name="newModel">New Model</string>
+    <string name="newVariant">New Variant</string>
+    <string name="bookingWithinDays">Booking Within Days</string>
+
+
+    <!--String for New Car Tracker-->
+    <string name="leadSource">Lead Source</string>
+    <string name="assitanceRequired">Assitance Required</string>
+    <string name="customerLocation">Customer Location</string>
+    <string name="showroomLocation">Showroom Location</string>
+    <string name="cseName">CSE Name</string>
+    <string name="cseCallDate">CSE Call Date</string>
+    <string name="cseFeedback">CSE Feedback</string>
+    <string name="cseNextAction">CSE Next Action</string>
+    <string name="cseRemark">CSE Remark</string>
+    <string name="cseNFD">CSE NFD</string>
+    <string name="cseNFT">CSE NFT</string>
+    <string name="tdHvDate">TD HV Date</string>
+    <string name="dseName">DSE Name</string>
+    <string name="dseCallDate">DSE Call Date</string>
+    <string name="dseFeedback">DSE Feedback</string>
+    <string name="dseNextAction">DSE NextAction</string>
+    <string name="dseRemark">DSE Remark</string>
+    <string name="dseNFD">DSE NFD</string>
+    <string name="dseNFT">DSE NFT</string>
+    <string name="auditorName">Auditor Name</string>
+    <string name="auditorFollowUpDate">Auditor FollowUp Date</string>
+    <string name="followUpPending">FollowUp Pending</string>
+    <string name="callReceivesFromShowroom">Call Receives from Showroom</string>
+    <string name="fakeUpdation">Fake Updation</string>
+    <string name="serviceFeedback">Service Feedback</string>
+    <string name="auditorRemark">Auditor Remark</string>
+    <string name="buyerType">Buyer Type</string>
+    <string name="modelVariant">Model Variant</string>
+
+    <!--String for used car tracker-->
+    <string name="excehangeMakeModel">Exchange Make Model</string>
+    <string name="manufacturingYr">Manufacturing year</string>
+    <string name="ownership">Ownership</string>
+    <string name="budgetFrom">Budget From</string>
+    <string name="budgetTo">Budget To</string>
+    <string name="accidentalClaim">Accidental Claim</string>
 
     <!--String for calling task-->
     <string name="searchLeads">Search Leads</string>
@@ -88,6 +137,23 @@
     <string name="lead_details">Lead Details</string>
     <string name="submit">Submit</string>
     <string name="group">Group</string>
+
+    <!--Customer Details-->
+    <string name="customerDetails">Customer Details</string>
+    <!--Finance Details-->
+    <string name="modelName">Model Name</string>
+    <string name="registrationNo">Registration No</string>
+    <string name="service_center">Service Center</string>
+    <string name="car_model">Car Model</string>
+    <string name="service_type">Service Type</string>
+    <string name="kilometer">Kilometer</string>
+
+    <!--Change Password-->
+    <string name="change_password">Change Password</string>
+    <string name="login_here">Login Here!!</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="current_password">Current Password</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

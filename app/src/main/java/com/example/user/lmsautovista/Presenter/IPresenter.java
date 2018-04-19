@@ -14,10 +14,14 @@ public interface IPresenter {
         void checkLogin(String emailId, String password, Context context);
         void saveUserInfo(String email, String password, LoginBean jsonObject, SharedPreferenceManager sharedPreferenceManager);
         void saveProcessInfo(String process_id, String process_name, SharedPreferenceManager sharedPreferenceManager);
+        void saveLocationInfo(String location_id, String location_name, SharedPreferenceManager sharedPreferenceManager);
     }
 
     interface IDashboardPresenter{
         void getDashboardList(Context context);
+        void getLocationList(Context context);
+        void getLocationSpinnerList(Context context);
+        void getDashboardLocationList(String location_id ,Context context);
     }
 
     interface IDashboardDetailPresnter{
@@ -37,7 +41,33 @@ public interface IPresenter {
     }
 
     interface IAddNewLeadOresenter{
-        void saveNewLeadInfo(String fname, String email, String address, String assign, String contact_no, String comment, String lead_source, String assign_by, String username, String process_name, Context context);
+        void getAssignTo(String process, String location,Context context);
+        void getLocation(String process, Context context);
+        void getLeadSource(String process, Context context);
+    }
+
+    interface INewLeadCallingTaskPresenter{
+        void getNewCallingTaskList(Context context);
+    }
+
+    interface ITodayCallingTaskPresenter{
+        void getTodayCallingTaskList(Context context);
+    }
+
+    interface IPendingNewCallingTaskPresenter{
+        void getPendingCallingTaskList(Context context);
+    }
+
+    interface IPendingLiveCallingTaskPresenter{
+        void getPendingCallingTaskList(Context context);
+    }
+
+    interface IAllLeadCallingTaskPresenter{
+        void getAllLeadCallingTaskList(Context context);
+    }
+
+    interface ICustomerDetailsPresenter{
+        void getCustomerDetailsList(String enq_id,Context context);
     }
 
 }

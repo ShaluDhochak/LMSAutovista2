@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.R;
 
 import java.util.ArrayList;
@@ -50,10 +50,10 @@ public class DashboardCountDetailActivity extends AppCompatActivity {
     @BindView(R.id.remarkNotificationDetailsString_TextView)
     TextView remarkNotificationDetailsString_TextView;
 
-    DashboardLeadDetailBean.Lead_Details bean;
+    CallingTaskNewLeadBean.Lead_Details bean;
     String title;
     int position;
-    private ArrayList<DashboardLeadDetailBean.Lead_Details> allLeadsBeanList = new ArrayList<>();
+    private ArrayList<CallingTaskNewLeadBean.Lead_Details> allLeadsBeanList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

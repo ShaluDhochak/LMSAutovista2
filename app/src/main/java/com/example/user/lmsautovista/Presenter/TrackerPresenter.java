@@ -122,7 +122,7 @@ public class TrackerPresenter implements IPresenter.ITrackerPresenter{
             Map<String, String> map = new HashMap<>();
             map.put("process_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, ""));
 
-            String url = Constants.BASE_URL + Constants.SELECT_LEAD_SOURCE;
+            String url = Constants.BASE_URL + Constants.SELECT_LEAD_SOURCE_SPINNER;
             GSONRequest<LeadSourceBean> dashboardGsonRequest = new GSONRequest<LeadSourceBean>(
                     Request.Method.POST,
                     url,
@@ -159,8 +159,6 @@ public class TrackerPresenter implements IPresenter.ITrackerPresenter{
         try {
             view.showProgressDialog();
 
-
-
             Map<String, String> map = new HashMap<>();
             map.put("process_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, ""));
             map.put("process_name", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_NAME, ""));
@@ -195,14 +193,18 @@ public class TrackerPresenter implements IPresenter.ITrackerPresenter{
                         public void onResponse(SearchTrackerListBean res) {
                             view.dismissProgressDialog();
                             try {
-                                if (!(res.getUser_details_count().get(0).getCount().equals("0"))) {
-
+                               if (!(res.getUser_details_count().get(0).getLead_count().equals("0"))){
+                                   view.showTrackerListView(res);
+                                   view.dismissProgressDialog();
+                                }else{
+                                   view.dismissProgressDialog();
+                               }
+                              /*  if (!(res.getUser_details_count().get(0).getCount().equals("0"))) {
                                     view.showTrackerListView(res);
-
                                     view.dismissProgressDialog();
                                 } else {
                                     view.dismissProgressDialog();
-                                }
+                                }*/
                             }catch(Exception e){
                                 Toast.makeText(context, "null pointer exception", Toast.LENGTH_SHORT).show();
                             }

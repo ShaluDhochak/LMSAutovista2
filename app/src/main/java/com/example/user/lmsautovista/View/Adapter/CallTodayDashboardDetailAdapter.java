@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.View.Activity.DashboardCountDetailActivity;
 
@@ -20,10 +20,10 @@ import java.util.List;
 
 public class CallTodayDashboardDetailAdapter extends RecyclerView.Adapter<CallTodayDashboardDetailAdapter.MyViewHolder>{
 
-    private List<DashboardLeadDetailBean.Lead_Details> dashboardList;
+    private List<CallingTaskNewLeadBean.Lead_Details> dashboardList;
     Context context;
 
-    public CallTodayDashboardDetailAdapter(Context context,List<DashboardLeadDetailBean.Lead_Details> dashboardList){
+    public CallTodayDashboardDetailAdapter(Context context,List<CallingTaskNewLeadBean.Lead_Details> dashboardList){
         this.context = context;
         this.dashboardList = dashboardList;
     }
@@ -36,7 +36,7 @@ public class CallTodayDashboardDetailAdapter extends RecyclerView.Adapter<CallTo
 
     @Override
     public void onBindViewHolder(CallTodayDashboardDetailAdapter.MyViewHolder holder,final int position) {
-        final DashboardLeadDetailBean.Lead_Details bean = dashboardList.get(position);
+        final CallingTaskNewLeadBean.Lead_Details bean = dashboardList.get(position);
 
         holder.leadName_TextView.setText(bean.getName());
         holder.leadContactNo_TextView.setText(bean.getContact_no());

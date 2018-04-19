@@ -8,7 +8,10 @@ import android.content.Context;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
-import com.example.user.lmsautovista.Model.AddNewLeadBean;
+import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
+import com.example.user.lmsautovista.Model.AssignToBean;
+import com.example.user.lmsautovista.Model.LeadSourceBean;
+import com.example.user.lmsautovista.Model.LocationDashboardBean;
 import com.example.user.lmsautovista.Utils.Constants;
 import com.example.user.lmsautovista.Utils.GSONRequest;
 import com.example.user.lmsautovista.Utils.Utilities;
@@ -25,39 +28,31 @@ public class AddNewLeadPresenter implements IPresenter.IAddNewLeadOresenter{
     }
 
     @Override
-    public void saveNewLeadInfo(String fname, String email, String address, String assign, String contact_no, String comment, String lead_source, String assign_by, String username, String process_name, final Context context) {
+    public void getAssignTo(String process, String location, Context context) {
         try {
             view.showProgressDialog();
 
             Map<String, String> map = new HashMap<>();
-            map.put("fname", fname);
-            map.put("email", email);
-            map.put("address", address);
-            map.put("assign", assign);
-            map.put("contact_no", contact_no);
-            map.put("comment", comment);
-            map.put("lead_source", lead_source);
-            map.put("assign_by", assign_by);
-            map.put("username", username);
-            map.put("process_name", process_name);
+            map.put("process_id", process);
+            map.put("role", SharedPreferenceManager.getInstance(context).getPreference(Constants.ROLE_ID, ""));
+            map.put("location_id", location);
 
-            String url = Constants.BASE_URL + Constants.ADD_NEW_LEAD;
-            GSONRequest<AddNewLeadBean> loginGsonRequest = new GSONRequest<AddNewLeadBean>(
+            String url = Constants.BASE_URL + Constants.ASSIGN_TO_SPINNER;
+            GSONRequest<AssignToBean> dashboardGsonRequest = new GSONRequest<AssignToBean>(
                     Request.Method.POST,
                     url,
-                    AddNewLeadBean.class, map,
-                    new com.android.volley.Response.Listener<AddNewLeadBean>() {
+                    AssignToBean.class, map,
+                    new com.android.volley.Response.Listener<AssignToBean>() {
                         @Override
-                        public void onResponse(AddNewLeadBean res) {
+                        public void onResponse(AssignToBean res) {
                             view.dismissProgressDialog();
-                            if (res.getSuccess().equals("1"))
+                            if (res.getSelect_user().size()>0)
                             {
-
+                                view.showAssignTo(res);
                                 view.dismissProgressDialog();
-                                view.addNewLeadSuccess();
                             } else {
+                                view.showAssignTo(res);
                                 view.dismissProgressDialog();
-                                view.addNewLeadFailure("Unable to ");
                             }
                         }
                     },
@@ -68,8 +63,94 @@ public class AddNewLeadPresenter implements IPresenter.IAddNewLeadOresenter{
                         }
                     });
             view.dismissProgressDialog();
-            loginGsonRequest.setShouldCache(false);
-            Utilities.getRequestQueue(context).add(loginGsonRequest);
+            dashboardGsonRequest.setShouldCache(false);
+            Utilities.getRequestQueue(context).add(dashboardGsonRequest);
+        } catch (Exception e) {
+            view.dismissProgressDialog();
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void getLocation(String process, Context context) {
+        try {
+            view.showProgressDialog();
+
+            Map<String, String> map = new HashMap<>();
+            map.put("process_id", process);
+            map.put("role", SharedPreferenceManager.getInstance(context).getPreference(Constants.ROLE_ID, ""));
+            map.put("location_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.LOCATION_ID, ""));
+
+            String url = Constants.BASE_URL + Constants.DASHBOARD_LOCATION_SPINNER;
+            GSONRequest<LocationDashboardBean> dashboardGsonRequest = new GSONRequest<LocationDashboardBean>(
+                    Request.Method.POST,
+                    url,
+                    LocationDashboardBean.class, map,
+                    new com.android.volley.Response.Listener<LocationDashboardBean>() {
+                        @Override
+                        public void onResponse(LocationDashboardBean res) {
+                            view.dismissProgressDialog();
+                            if (res.getSelect_location().size()>0)
+                            {
+                                view.showLocation(res);
+                                view.dismissProgressDialog();
+                            } else {
+                                view.showLocation(res);
+                                view.dismissProgressDialog();
+                            }
+                        }
+                    },
+                    new com.android.volley.Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            view.dismissProgressDialog();
+                        }
+                    });
+            view.dismissProgressDialog();
+            dashboardGsonRequest.setShouldCache(false);
+            Utilities.getRequestQueue(context).add(dashboardGsonRequest);
+        } catch (Exception e) {
+            view.dismissProgressDialog();
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void getLeadSource(String process, Context context) {
+        try {
+            view.showProgressDialog();
+
+            Map<String, String> map = new HashMap<>();
+            map.put("process_id", process);
+
+            String url = Constants.BASE_URL + Constants.SELECT_LEAD_SOURCE_SPINNER;
+            GSONRequest<LeadSourceBean> dashboardGsonRequest = new GSONRequest<LeadSourceBean>(
+                    Request.Method.POST,
+                    url,
+                    LeadSourceBean.class, map,
+                    new com.android.volley.Response.Listener<LeadSourceBean>() {
+                        @Override
+                        public void onResponse(LeadSourceBean res) {
+                            view.dismissProgressDialog();
+                            if (res.getSelect_lead_source().size()>0)
+                            {
+                                view.showLeadSource(res);
+                                view.dismissProgressDialog();
+                            } else {
+                                view.showLeadSource(res);
+                                view.dismissProgressDialog();
+                            }
+                        }
+                    },
+                    new com.android.volley.Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            view.dismissProgressDialog();
+                        }
+                    });
+            view.dismissProgressDialog();
+            dashboardGsonRequest.setShouldCache(false);
+            Utilities.getRequestQueue(context).add(dashboardGsonRequest);
         } catch (Exception e) {
             view.dismissProgressDialog();
             e.printStackTrace();

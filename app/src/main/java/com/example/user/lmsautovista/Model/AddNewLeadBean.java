@@ -6,16 +6,18 @@ package com.example.user.lmsautovista.Model;
 
 public class AddNewLeadBean {
 
-    String success;
-    String message;
-
-    public String getSuccess() {
+    public int isSuccess() {
         return success;
     }
 
-    public void setSuccess(String success) {
+    public void setSuccess(int success) {
         this.success = success;
     }
+
+    int success;
+    String message;
+
+
 
     public String getMessage() {
         return message;

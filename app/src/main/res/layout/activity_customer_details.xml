@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/header_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/header_withback_btn_layout"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_LinearLayout"
+            android:orientation="vertical">
+
+            <include layout="@layout/customer_details_layout" />
+        </LinearLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/material_design_android_floating_action_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="bottom|end"
+            app:backgroundTint="@color/darkBlueWebsite"
+            app:menu_animationDelayPerItem="55"
+            app:menu_buttonSpacing="0dp"
+            app:menu_colorNormal="#08457E"
+            app:menu_colorPressed="#08457E"
+            app:menu_colorRipple="#99d4d4d4"
+            app:menu_fab_size="normal"
+            app:menu_icon="@drawable/car"
+            app:menu_labels_colorNormal="@color/lightGrey1"
+            app:menu_labels_colorPressed="#444"
+            app:menu_labels_colorRipple="#66efecec"
+            app:menu_labels_cornerRadius="3dp"
+            app:menu_labels_ellipsize="none"
+            app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+            app:menu_labels_margin="0dp"
+            app:menu_labels_maxLines="-1"
+            app:menu_labels_padding="8dp"
+            app:menu_labels_position="left"
+            app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+            app:menu_labels_showShadow="true"
+            app:menu_labels_singleLine="false"
+            app:menu_labels_textColor="@color/edittextcolor"
+            app:menu_labels_textSize="15sp"
+            app:menu_openDirection="up"
+            app:menu_shadowColor="@color/lightGrey1"
+            app:menu_shadowRadius="4dp"
+            app:menu_shadowXOffset="1dp"
+            app:menu_shadowYOffset="4dp"
+            app:menu_showShadow="true">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/followUpDetails_Notification_floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="@string/followUpDetails"
+                app:fab_size="mini"
+                android:visibility="gone"
+                android:src="@drawable/followup_phone"
+                app:fab_colorNormal="@color/darkBlueWebsite"
+                app:fab_colorPressed="@color/darkBlueWebsite" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/add_followUp_floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="@string/add_followup"
+                app:fab_size="mini"
+                android:src="@drawable/email"
+                app:fab_colorNormal="@color/darkBlueWebsite"
+                app:fab_colorPressed="@color/darkBlueWebsite" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

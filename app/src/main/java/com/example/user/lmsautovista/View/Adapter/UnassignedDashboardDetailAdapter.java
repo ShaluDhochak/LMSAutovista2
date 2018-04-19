@@ -12,18 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.user.lmsautovista.Model.DashboardLeadDetailBean;
+import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.R;
-import com.example.user.lmsautovista.View.Activity.DashboardCountDetailActivity;
+import com.example.user.lmsautovista.View.Activity.CustomerDetailsActivity;
 
 import java.util.List;
 
 public class UnassignedDashboardDetailAdapter extends RecyclerView.Adapter<UnassignedDashboardDetailAdapter.MyViewHolder>{
 
-    private List<DashboardLeadDetailBean.Lead_Details> dashboardList;
+    private List<CallingTaskNewLeadBean.Lead_Details> dashboardList;
     Context context;
 
-    public UnassignedDashboardDetailAdapter(Context context,List<DashboardLeadDetailBean.Lead_Details> dashboardList){
+    public UnassignedDashboardDetailAdapter(Context context,List<CallingTaskNewLeadBean.Lead_Details> dashboardList){
         this.context = context;
         this.dashboardList = dashboardList;
     }
@@ -36,7 +36,7 @@ public class UnassignedDashboardDetailAdapter extends RecyclerView.Adapter<Unass
 
     @Override
     public void onBindViewHolder(UnassignedDashboardDetailAdapter.MyViewHolder holder,final int position) {
-        final DashboardLeadDetailBean.Lead_Details bean = dashboardList.get(position);
+        final CallingTaskNewLeadBean.Lead_Details bean = dashboardList.get(position);
 
         holder.leadName_TextView.setText(bean.getName().toString());
         holder.leadContactNo_TextView.setText(bean.getContact_no());
@@ -55,12 +55,22 @@ public class UnassignedDashboardDetailAdapter extends RecyclerView.Adapter<Unass
         holder.leadName_TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DashboardCountDetailActivity.class);
+
+                Intent intent = new Intent(context, CustomerDetailsActivity.class);
+                intent.putExtra("position",position);
+                intent.putExtra("heading", "New Leads");
+                intent.putExtra("bean", dashboardList.get(position));
+                //  intent.putParcelableArrayListExtra("arrayList", );
+                context.startActivity(intent);
+
+                /*  Intent intent = new Intent(context, DashboardCountDetailActivity.class);
                 intent.putExtra("position",position);
                 intent.putExtra("heading", "Unassigned Leads");
                 intent.putExtra("bean", dashboardList.get(position));
                 //  intent.putParcelableArrayListExtra("arrayList", );
                 context.startActivity(intent);
+                */
+
             }
         });
     }
