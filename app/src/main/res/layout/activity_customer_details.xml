@@ -67,23 +67,22 @@
             app:menu_showShadow="true">
 
             <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/followUpDetails_Notification_floating_action_button"
+                android:id="@+id/followUpDetails_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:fab_label="@string/followUpDetails"
                 app:fab_size="mini"
-                android:visibility="gone"
-                android:src="@drawable/followup_phone"
+                android:src="@drawable/followup"
                 app:fab_colorNormal="@color/darkBlueWebsite"
                 app:fab_colorPressed="@color/darkBlueWebsite" />
 
             <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/add_followUp_floating_action_button"
+                android:id="@+id/add_followUp_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:fab_label="@string/add_followup"
                 app:fab_size="mini"
-                android:src="@drawable/email"
+                android:src="@drawable/phone_call"
                 app:fab_colorNormal="@color/darkBlueWebsite"
                 app:fab_colorPressed="@color/darkBlueWebsite" />
 

@@ -67,6 +67,10 @@ public class CallTodayDashboardActivity extends AppCompatActivity implements IVi
             Toast.makeText(CallTodayDashboardActivity.this, "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 
     @OnClick(R.id.backButton_ImageView)
     public void OnBackPressed(){

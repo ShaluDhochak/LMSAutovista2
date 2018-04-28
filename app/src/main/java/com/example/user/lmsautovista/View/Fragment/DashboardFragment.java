@@ -61,7 +61,6 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
         progressDialog.setCanceledOnTouchOutside(false);
-
         return view;
     }
 
@@ -137,7 +136,6 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
             locationDashboardArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             locationWiseDashboard_spinner.setAdapter(locationDashboardArrayAdapter);
         }catch (Exception e){
-
         }
     }
 

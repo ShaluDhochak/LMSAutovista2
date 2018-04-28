@@ -1,0 +1,600 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.user.lmsautovista.View.Fragment.DseDailyReportFragment">
+
+    <ScrollView
+        android:id="@+id/dseDailyReport_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <RelativeLayout
+            android:id="@+id/dseDailReport_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/dseDailyReport_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/outline_blue_curved_rectangle"
+                >
+
+                <TextView
+                    android:id="@+id/dateDseDailyReport_txtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:visibility="gone"
+                    />
+
+                <View
+                    android:id="@+id/separatorBelowDateDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/dateDseDailyReport_txtView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    />
+                <RelativeLayout
+                    android:id="@+id/walkInDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorBelowDateDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/walkInDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Walk-in :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/walkInCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/walkInDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/remarkWalkInDseDailyReport_cadView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4sp"
+                        app:cardElevation="4sp"
+                        android:layout_below="@+id/walkInDseDailyReport_txtView">
+
+                    <EditText
+                        android:id="@+id/remarkWalkInDseDailyReport_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:hint="Enter WalkIn Remark"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:textColor="@color/edittextcolor"
+                        android:padding="10dp"
+                        />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/separatorWalkInDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/walkInDseDailyReport_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/homeVisitDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorWalkInDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/homeVisitDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Home Visit :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/homeVisitCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/homeVisitDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/remarkhomeVisitDseDailyReport_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4sp"
+                        app:cardElevation="4sp"
+                        android:layout_below="@+id/homeVisitDseDailyReport_txtView">
+
+                    <EditText
+                        android:id="@+id/remarkhomeVisitDseDailyReport_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Enter Home Visit Remark"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:textColor="@color/edittextcolor"
+                        android:padding="10dp"
+                        />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/separatorHomeVisitDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/homeVisitDseDailyReport_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/bookingDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorHomeVisitDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/bookingDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Booking :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/bookingCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/bookingDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/remarkBookingDseDailyReport_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4sp"
+                        app:cardElevation="4sp"
+
+                        android:layout_below="@+id/bookingDseDailyReport_txtView">
+
+                    <EditText
+                        android:id="@+id/remarkBookingDseDailyReport_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Enter Booking Remark"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:textColor="@color/edittextcolor"
+                        android:padding="10dp"
+                        />
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/separatorBookingDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/bookingDseDailyReport_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/testDriveDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorBookingDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/testDriveDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Test Drive :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/testDriveCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/testDriveDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/remarkTestDriveDseDailyReport_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4sp"
+                        app:cardElevation="4sp"
+                        android:layout_below="@+id/testDriveDseDailyReport_txtView">
+
+                    <EditText
+                        android:id="@+id/remarkTestDriveDseDailyReport_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Enter Test Drive Remark"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:textColor="@color/edittextcolor"
+                        android:padding="10dp"
+                        />
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/separatorDeliveryDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/testDriveDseDailyReport_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/deliveryDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorDeliveryDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/deliveryDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Delivery :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/deliveryCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/deliveryDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/separatorEnquiryDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/deliveryDseDailyReport_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/enquiryDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorEnquiryDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/enquiryDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Enquiry :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/enquiryCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/enquiryDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/remarkEnquiryDseDailyReport_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4sp"
+                        app:cardElevation="4sp"
+                        android:layout_below="@+id/enquiryDseDailyReport_txtView">
+
+                    <EditText
+                        android:id="@+id/remarkEnquiryDseDailyReport_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Enter Enquiry Remark"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:textColor="@color/edittextcolor"
+                        android:padding="10dp"
+                        />
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/separatorGatePassDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/enquiryDseDailyReport_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/gatePassDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorGatePassDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/gatePassDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Gate Pass Issue :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="14sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/gatePassCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/gatePassDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/remarkGatePassDseDailyReport_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4sp"
+                        app:cardElevation="4sp"
+                        android:layout_below="@+id/gatePassDseDailyReport_txtView">
+                    <EditText
+                        android:id="@+id/remarkGatePassDseDailyReport_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Enter Gate Pass Remark"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:textColor="@color/edittextcolor"
+                        android:padding="10dp"
+                        />
+                    </android.support.v7.widget.CardView>
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/separatorEvaluationDseDailyReport_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/edittextcolor"
+                    android:layout_below="@+id/gatePassDseDailyReport_rl"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+                <RelativeLayout
+                    android:id="@+id/evaluationDseDailyReport_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separatorEvaluationDseDailyReport_view">
+
+                    <TextView
+                        android:id="@+id/evaluationDseDailyReport_txtView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Evaluation :"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="15sp"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/evaluationCountDseDailyReport_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/evaluationDseDailyReport_txtView"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Count"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:textColor="@color/edittextcolor"
+                        />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/remarkEvaluationDseDailyReport_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        app:cardCornerRadius="4sp"
+                        app:cardElevation="4sp"
+                        android:layout_below="@+id/evaluationDseDailyReport_txtView">
+                    <EditText
+                        android:id="@+id/remarkEvaluationDseDailyReport_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Enter Evaluation Remark"
+                        android:textSize="12sp"
+                        android:maxLines="4"
+                        android:textColor="@color/edittextcolor"
+                        android:padding="10dp"
+                        />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/addDSEDailyReportSubmit_LinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dseDailyReport_rl"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/addDSEDailyReportSubmit_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/remarkGatePassDseDailyReport_et"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    android:text="@string/submit"
+                    android:textAlignment="center"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="14dp" />
+                <Button
+                    android:id="@+id/resetDSEDailyReportLead_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    android:text="@string/reset"
+                    android:visibility="gone"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="14dp"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

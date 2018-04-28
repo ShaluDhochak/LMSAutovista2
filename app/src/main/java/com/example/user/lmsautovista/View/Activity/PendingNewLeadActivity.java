@@ -69,6 +69,11 @@ public class PendingNewLeadActivity extends AppCompatActivity implements IView.D
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
     public void showProgressDialog() {
         if (progressDialog != null && !progressDialog.isShowing())
             progressDialog.show();

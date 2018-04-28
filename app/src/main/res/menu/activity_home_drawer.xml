@@ -22,6 +22,35 @@
             android:title="@string/nav_tracker" />
 
         <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/search_lead"
+            android:title="@string/nav_report" />
+
+        <item
+            android:id="@+id/nav_Daily_Report"
+            android:title="@string/nav_daily_report" />
+        <item
+            android:id="@+id/nav_Monthly_Report"
+            android:title="@string/nav_monthly_report" />
+
+        <item
+            android:id="@+id/nav_Dsewise_report"
+            android:title="@string/nav_dseWise_report"
+            />
+        <item
+            android:id="@+id/nav_DseDailywise_report"
+            android:title="@string/nav_dseDailyWise_report"
+            />
+        <item
+            android:id="@+id/nav_DseDailyReportView_report"
+            android:title="@string/nav_dseDailyReportView"
+            />
+        <item
+            android:id="@+id/nav_Lead_report"
+            android:title="@string/nav_Lead_report"
+            />
+
+        <item
             android:id="@+id/nav_lead_management_lead"
             android:icon="@drawable/call_center"
             android:title="@string/nav_lead_management_lead"
@@ -45,6 +74,27 @@
         <item
             android:id="@+id/nav_assign_transferred_lead"
             android:title="  >    Transferred Lead" />
+
+        <item
+            android:id="@+id/nav_stock"
+            android:icon="@drawable/stock_car"
+            android:title="@string/nav_stock"
+            android:visible="true"
+            />
+        <item
+            android:id="@+id/nav_new_car_stock"
+            android:title="@string/nav_new_car_stock"
+            />
+        <item
+            android:id="@+id/nav_poc_stock"
+            android:title="@string/nav_poc_stock"
+            />
+
+        <item
+            android:id="@+id/nav_send_message"
+            android:icon="@drawable/add_message"
+            android:title="@string/nav_add_message"
+            />
 
         <item
             android:id="@+id/nav_customer_operation"

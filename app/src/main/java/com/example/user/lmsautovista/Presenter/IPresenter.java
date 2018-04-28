@@ -5,11 +5,12 @@ import android.content.Context;
 import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
 import com.example.user.lmsautovista.Model.LoginBean;
 
-/**
- * Created by User on 2/17/2018.
- */
+/*
+  Created by Shalu Dhochak on 2/17/2018.
+*/
 
 public interface IPresenter {
+
     interface ILoginPresenter {
         void checkLogin(String emailId, String password, Context context);
         void saveUserInfo(String email, String password, LoginBean jsonObject, SharedPreferenceManager sharedPreferenceManager);
@@ -66,8 +67,56 @@ public interface IPresenter {
         void getAllLeadCallingTaskList(Context context);
     }
 
+    interface INewCarStockViewPresenter{
+        void getnewCarStockList(String model,String location,String color,String fuelType, Context context);
+        void getNewCarStockList(Context context);
+        void getLocation(Context context);
+        void getFuelType(Context context);
+        void getColor(Context context);
+        void getModel(Context context);
+    }
+
+    interface IPOCCarStockViewPresenter{
+        void getPocCarStockList(String make,String model,String location,String color,String fuelType, Context context);
+        void getPocCarStockList(Context context);
+        void getLocation(Context context);
+        void getFuelType(Context context);
+        void getColor(Context context);
+        void getModel(String make,Context context);
+        void getMake(Context context);
+    }
+
     interface ICustomerDetailsPresenter{
         void getCustomerDetailsList(String enq_id,Context context);
+    }
+
+    interface IFollowUpDetailsPresenter{
+        void getFollowUpDetailsList(String enq_id, Context context);
+    }
+
+    interface IAddFollowUpPresenter{
+        void getFeedbackList(Context context);
+        void getNextActionList(Context context, String selectedFeedback);
+        void getNewCarModel(String make,Context context);
+        void getNewVariant(String model,Context context);
+        void getQuotationLocation(Context context);
+        void getQuotationDescription(String location,String model,Context context);
+        void getQuotataionModel(String location, Context context);
+        void getTransferProcess(Context context);
+        void getTransferLocation(String process,Context context);
+        void getTransferAssignTo(String process, String location, Context context);
+        void getUsedcarMake(Context context);
+        void getUsedCarModel(String make_id,Context context);
+        void getOldCarMake(Context context);
+        void getOldCarModel(String make_id, Context context);
+    }
+
+    interface ISearchCustomerPresenter{
+       void getSearchViaContactNoList(String contact_no,Context context);
+    }
+
+    interface IEditCustomerOperationPresenter{
+        void getEditCustomerList(String contact_no, Context context);
     }
 
 }

@@ -64,6 +64,11 @@ public class NewLeadDashboardActivity extends AppCompatActivity implements IView
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
         @Override
     public void showProgressDialog() {
         if (progressDialog != null && !progressDialog.isShowing())
@@ -89,4 +94,5 @@ public class NewLeadDashboardActivity extends AppCompatActivity implements IView
         notificationLead_ListView.setItemAnimator(new DefaultItemAnimator());
         notificationLead_ListView.setAdapter(dashboardAdapter);
     }
+
 }

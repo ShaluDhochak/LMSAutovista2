@@ -69,6 +69,18 @@ public class CallingTaskDetailAdapter extends RecyclerView.Adapter<CallingTaskDe
 
             }
         });
+
+        holder.customerDetails_ImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CustomerDetailsActivity.class);
+                intent.putExtra("position",position);
+                intent.putExtra("heading", "New Leads");
+                intent.putExtra("bean", dashboardList.get(position));
+                //  intent.putParcelableArrayListExtra("arrayList", );
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

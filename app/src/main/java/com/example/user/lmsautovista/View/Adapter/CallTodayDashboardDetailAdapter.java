@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.R;
-import com.example.user.lmsautovista.View.Activity.DashboardCountDetailActivity;
+import com.example.user.lmsautovista.View.Activity.CustomerDetailsActivity;
 
 import java.util.List;
 
@@ -55,11 +55,11 @@ public class CallTodayDashboardDetailAdapter extends RecyclerView.Adapter<CallTo
         holder.leadName_TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DashboardCountDetailActivity.class);
+                Intent intent = new Intent(context, CustomerDetailsActivity.class);
                 intent.putExtra("position",position);
-                intent.putExtra("heading", "Calling Today");
+                intent.putExtra("heading", "Call Today Leads");
                 intent.putExtra("bean", dashboardList.get(position));
-              //  intent.putParcelableArrayListExtra("arrayList", );
+                //  intent.putParcelableArrayListExtra("arrayList", );
                 context.startActivity(intent);
             }
         });

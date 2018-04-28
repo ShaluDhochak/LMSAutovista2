@@ -45,7 +45,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
     @BindView(R.id.loginhere_TextView)
     TextView loginhere_TextView;
 
-
     private static final String TAG_SUCCESS = "success";
 
     String current_password, user_id_pref;
@@ -64,10 +63,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
     private void initialiseUI(){
      //   SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(ChangePasswordActivity.this);
-
         current_password= SharedPreferenceManager.getInstance(ChangePasswordActivity.this).getPreference(Constants.USER_PASSWORD, "");
         user_id_pref = SharedPreferenceManager.getInstance(ChangePasswordActivity.this).getPreference(Constants.USER_ID, "");
-
     }
 
     @Override
@@ -79,13 +76,10 @@ public class ChangePasswordActivity extends AppCompatActivity {
         //  super.onBackPressed();
     }
 
-
     @OnClick(R.id.loginhere_TextView)
     public void loginHereMethod(){
         startActivity(new Intent(ChangePasswordActivity.this, LoginActivity.class));
-
     }
-
 
     @OnClick(R.id.changePassword_Button)
     public void changePasswordMethod(){
@@ -94,7 +88,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
             if (checkCorrectValidation())
                 new CreateNewLead().execute();
         }
-
     }
 
     public class CreateNewLead extends AsyncTask<String, JSONObject, JSONObject> {

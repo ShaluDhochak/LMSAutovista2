@@ -5,7 +5,7 @@ import android.content.Context;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
-import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
+import com.example.user.lmsautovista.Model.CustomerDetailsBean;
 import com.example.user.lmsautovista.Utils.Constants;
 import com.example.user.lmsautovista.Utils.GSONRequest;
 import com.example.user.lmsautovista.Utils.Utilities;
@@ -31,23 +31,18 @@ public class CustomerDetailsPresenter implements IPresenter.ICustomerDetailsPres
         try {
 
             Map<String, String> map = new HashMap<>();
-            map.put("process_id_session", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, ""));
-            map.put("process_name_session", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_NAME, ""));
-            map.put("user_id_session", SharedPreferenceManager.getInstance(context).getPreference(Constants.USER_ID, ""));
-            map.put("role_session", SharedPreferenceManager.getInstance(context).getPreference(Constants.ROLE_ID, ""));
-            map.put("page", "-1");
-            map.put("role", SharedPreferenceManager.getInstance(context).getPreference(Constants.ROLE_ID, ""));
-            map.put("user_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.USER_ID, ""));
+            map.put("process_id", SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, ""));
+            map.put("enq_id", enquiry_id);
 
-            String url = Constants.BASE_URL + Constants.NEW_LEAD_DETAIL;
-            GSONRequest<CallingTaskNewLeadBean> dashboardGsonRequest = new GSONRequest<CallingTaskNewLeadBean>(
+            String url = Constants.BASE_URL + Constants.CUSTOMER_DETAILS;
+            GSONRequest<CustomerDetailsBean> dashboardGsonRequest = new GSONRequest<CustomerDetailsBean>(
                     Request.Method.POST,
                     url,
-                    CallingTaskNewLeadBean.class, map,
-                    new com.android.volley.Response.Listener<CallingTaskNewLeadBean>() {
+                    CustomerDetailsBean.class, map,
+                    new com.android.volley.Response.Listener<CustomerDetailsBean>() {
                         @Override
-                        public void onResponse(CallingTaskNewLeadBean res) {
-                            if (!(res.getLead_details_count().equals("0")))
+                        public void onResponse(CustomerDetailsBean res) {
+                            if (res.getCustomer_details().size()>0)
                             {
                                 try{
                                     view.ShowCustomerDetailsList(res);

@@ -33,7 +33,13 @@
         <activity android:name=".View.Activity.CustomerDetailActivity" />
         <activity android:name=".View.Activity.TrackerDetailActivity" />
         <activity android:name=".View.Activity.CustomerDetailsActivity" />
-        <activity android:name=".View.Activity.ChangePasswordActivity"></activity>
+        <activity android:name=".View.Activity.ChangePasswordActivity" />
+        <activity android:name=".View.Activity.FollowUpDetailsActivity" />
+        <activity android:name=".View.Activity.AddFollowUpActivity" />
+        <activity android:name=".View.Activity.SearchLeadViaContactNoActivity" />
+        <activity android:name=".View.Activity.CheckFlowSearchActivity" />
+        <activity android:name=".View.Activity.EditCustomerListDetailActivity" />
+        <activity android:name=".View.Activity.EditCustomerDetailActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/leadSourceCardSearch_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/checkFlowBoxSearch_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Flow"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="10dp"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/edittextcolor"
+            />
+
+        <LinearLayout
+            android:id="@+id/leadNameSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/checkFlowBoxSearch_textView"
+            >
+            <TextView
+                android:id="@+id/leadNameSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/name"
+                android:text="@string/name"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+
+            <TextView
+                android:id="@+id/leadnameSearch_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leadEmailSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/leadNameSearch_linearlayout"
+            >
+            <TextView
+                android:id="@+id/leadEmailSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/email"
+                android:text="@string/email"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+
+            <TextView
+                android:id="@+id/leadEmailSearch_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leadContactnoSearch_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/leadEmailSearch_linearlayout"
+            >
+            <TextView
+                android:id="@+id/leadContactNoSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/contact_no"
+                android:text="@string/contact_no"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+
+            <TextView
+                android:id="@+id/leadContactnoSearch_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"  />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leadaddressSearch_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/leadContactnoSearch_LinearLayout"
+            >
+            <TextView
+                android:id="@+id/leadAddressSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/address"
+                android:text="@string/address"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+            <TextView
+                android:id="@+id/leadaddressSearch_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/leadEnqIDSearch_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:hint="engid"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leadSourceSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/leadaddressSearch_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/leadSourceSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/LeadSource"
+                android:text="@string/LeadSource"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/leadSourceSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/showroomLocationSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/leadSourceSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/showroomLocationSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/showroomLocation"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+            <TextView
+                android:id="@+id/showroomLocationSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cseNameSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/showroomLocationSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseNameSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/LeadSource"
+                android:text="@string/CseName"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/cseNameSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cseCallDateSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseNameSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseCallDateSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/CseCallDate"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/cseCallDateSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cseNextActionSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseCallDateSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseNextActionSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/CseNextAction"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/cseNextActionSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cseFeedBackSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseNextActionSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseFeedBackSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/CseFeedback"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/cseFeedBackSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cseRemarkSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseFeedBackSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseRemarkSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/CseRemark"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/cseRemarkSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cseTDHVDateSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseRemarkSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseTDHVDateSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tdHvDate"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/cseTDHVDateSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/dseNameSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseTDHVDateSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/dseNameSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dseName"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/dseNameSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dseCallDateSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseNameSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/dseCallDateSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dseCallDate"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+            <TextView
+                android:id="@+id/dseCallDateSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dseNextActionSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseCallDateSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/dseNextActionSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dseNextAction"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+            <TextView
+                android:id="@+id/dseNextActionSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dseFeedBackSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseNextActionSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/dseFeedBackSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dseFeedback"
+                android:textColor="@color/edittextcolor"
+                android:textSize="12sp"
+
+                />
+
+            <TextView
+                android:id="@+id/dseFeedBackSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dseRemarkSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseFeedBackSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/dseRemarkSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dseRemark"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/dseRemarkSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dseNFDSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseRemarkSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/dseNFDSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dseNfd"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/dseNFDSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bookingWithInDaysSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseNFDSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/bookingWithInDaysSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bookingWithinDays"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/bookingWithInDaysSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/buyerTypeSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/bookingWithInDaysSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/buyerTypeSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/buyerType"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/buyerTypeSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/modelVariantSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/buyerTypeSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/modelVariantSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/modelVariant"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/modelVariantSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exchangeMakeModelSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/modelVariantSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/exchangeMakeModelSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/exchangeMakeModel"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/exchangeMakeModelSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/manufacturingYearSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/exchangeMakeModelSearch_linearlayout"
+            >
+            <TextView
+                android:id="@+id/manufacturingYearSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/manufacturingYear"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/manufacturingYearSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separatorContactNoSearch_View"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey1"
+            android:layout_below="@+id/manufacturingYearSearch_linearlayout"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

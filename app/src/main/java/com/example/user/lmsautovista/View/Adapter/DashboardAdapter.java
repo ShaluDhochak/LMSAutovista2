@@ -43,7 +43,6 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
 
         final DashboardCountBean.Dashboard_Count bean = dashboardCount.get(position);
 
-
         holder.countHeading_tv.setText(bean.getFname() + " "+ bean.getLname());
         holder.newLead_tv.setText(bean.getNew_leads().toString());
         holder.callTodayLead_tv.setText(bean.getCall_today());

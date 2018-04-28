@@ -83,6 +83,11 @@ public class UnassignedDashboardLeadActivity extends AppCompatActivity implement
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
     public void ShowDashboardDetailCount(CallingTaskNewLeadBean jsonObject) {
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());

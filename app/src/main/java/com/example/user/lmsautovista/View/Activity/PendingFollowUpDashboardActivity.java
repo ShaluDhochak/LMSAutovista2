@@ -68,6 +68,10 @@ public class PendingFollowUpDashboardActivity extends AppCompatActivity implemen
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 
     @Override
     public void showProgressDialog() {

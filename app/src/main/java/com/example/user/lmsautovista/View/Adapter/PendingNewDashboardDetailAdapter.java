@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.R;
-import com.example.user.lmsautovista.View.Activity.DashboardCountDetailActivity;
+import com.example.user.lmsautovista.View.Activity.CustomerDetailsActivity;
 
 import java.util.List;
 
@@ -55,7 +55,7 @@ public class PendingNewDashboardDetailAdapter extends RecyclerView.Adapter<Pendi
         holder.leadName_TextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, DashboardCountDetailActivity.class);
+                Intent intent = new Intent(context, CustomerDetailsActivity.class);
                 intent.putExtra("position",position);
                 intent.putExtra("heading", "Pending New Leads");
                 intent.putExtra("bean", dashboardList.get(position));

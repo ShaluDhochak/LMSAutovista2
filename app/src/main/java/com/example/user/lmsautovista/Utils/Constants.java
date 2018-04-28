@@ -44,6 +44,46 @@ public interface Constants {
     //api for Add New Lead
     String ADD_NEW_LEAD = "add_customer";
 
+    //api for New car Stock
+    String NEW_CAR_STOCK = "new_car_stock";
+    String STOCK_FILTER = "new_stock_spinner";
+
+    //api for POC stock
+    String POC_CAR_STOCK = "poc_stock";
+    String POC_CAR_MODEL = "poc_stock_model";
+    String POC_STOCK_SPINNER = "poc_stock_spinner";
+
+    //api for Model
+    String MODEL_SPINNER = "select_car_model";
+    String VARAINT_SPINNER = "select_car_variant";
+    //api for make
+    String MAKE_SPINNER = "select_car_make";
+
+    //Api for Quotation
+    String QUOTATION_LOCATION= "quotation_location";
+    String QUOTATION_MODEL = "quotation_model_name";
+    String QUOATATION_DESCRIPTION = "quotation_description";
+
+    //api for Transfer
+    String TRANSFER_LOCATION = "select_transfer_location";
+    String TRANSFER_PROCESS= "all_process";
+    String TRANSFER_ASSIGN_TO = "select_transfer_to_user";
+
+    //api for Customer Details
+    String CUSTOMER_DETAILS = "customer_details";
+    String FOLLOWUP_DETAILS = "followup_details";
+    String ADD_FOLLOWUP_NEW_CAR = "insert_new_car_followup";
+    String ADD_FOLLOWUP_USED_CAR = "insert_used_car_followup";
+
+    //api for Search Customer
+    String CUSTOMER_SEARCH = "search_by_name_contact";
+    String EDIT_SEARCH_OPERATION = "update_customer";
+
+    //api for DSE_DAILY_REPORT_INSERT
+    String DSE_DAILY_REPORT_INSERT = "insert_dse_daily_report";
+    String DSE_DAILY_REPORT_VIEW = "daily_tracker_show_data";
+    String DSE_DAILY_REPORT_LOCATION = "daliy_dse_tracker_location";
+
     // Utils
     String USERPREFERENCE = "LMSfis_Preference";
     String USER_EMAIL = "email";
@@ -58,6 +98,5 @@ public interface Constants {
     String LOCATION_SESSION ="location";
     String LOCATION_ID = "location_id";
     String LOCATION_NAME = "location_name";
-
 
 }

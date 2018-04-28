@@ -71,6 +71,8 @@ public class NewLeadNotificationFragment extends Fragment implements IView.NewLe
         }
     }
 
+
+
     @Override
     public void showProgressDialog() {
         if (progressDialog != null && !progressDialog.isShowing())
