@@ -14,5 +14,6 @@
     <ignoreAction name="Java/Imports/Add Single-Member Static Import" />
     <ignoreAction name="Java/Declaration/Split Declaration" />
     <ignoreAction name="Language Injection/Inject language or reference" />
+    <ignoreAction name="Java/Declaration/Create field for parameter" />
   </component>
 </application>
