@@ -13,6 +13,11 @@ public class CustomerDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_customer_detail);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
 
 
 }

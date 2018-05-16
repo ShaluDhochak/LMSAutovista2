@@ -232,8 +232,6 @@ public class LoginPresenter implements IPresenter.ILoginPresenter{
 
                 }
             }
-
-
         } catch (Exception e) {
         }
     }
@@ -258,5 +256,49 @@ public class LoginPresenter implements IPresenter.ILoginPresenter{
         }
     }
 
+    @Override
+    public void getLocationList(Context context) {
+
+        try {
+            view.showProgressDialog();
+
+            Map<String, String> map = new HashMap<>();
+            map.put("username", SharedPreferenceManager.getInstance(context).getPreference(Constants.USER_EMAIL, ""));
+            map.put("password", SharedPreferenceManager.getInstance(context).getPreference(Constants.USER_PASSWORD, ""));
+
+            String url = Constants.BASE_URL + Constants.LOGIN_URL;
+            GSONRequest<LoginBean> dashboardGsonRequest = new GSONRequest<LoginBean>(
+                    Request.Method.POST,
+                    url,
+                    LoginBean.class, map,
+                    new com.android.volley.Response.Listener<LoginBean>() {
+                        @Override
+                        public void onResponse(LoginBean res) {
+                            view.dismissProgressDialog();
+                            if (!(res.getSession_data().equals("")))
+                            {
+                                view.showLocationList(res);
+
+                                view.dismissProgressDialog();
+                            } else {
+                                view.dismissProgressDialog();
+                                //view.("Unable to ");
+                            }
+                        }
+                    },
+                    new com.android.volley.Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            view.dismissProgressDialog();
+                        }
+                    });
+            view.dismissProgressDialog();
+            dashboardGsonRequest.setShouldCache(false);
+            Utilities.getRequestQueue(context).add(dashboardGsonRequest);
+        } catch (Exception e) {
+            view.dismissProgressDialog();
+            e.printStackTrace();
+        }
+    }
 
 }

@@ -125,7 +125,7 @@ public class POCStockFragment extends Fragment implements IView.PocCarStockView{
             @Override
             public void onClick(View v) {
                 altDialog.dismiss();
-                pocStockPresenter.getPocCarStockList(selectedLeadModelId,leadModelSpinner,leadLocationSpinner,colorFilterSpinner, fuelTypeSpinner, getActivity());
+                pocStockPresenter.getPocCarStockList(selectedMakeId,leadModelSpinner,leadLocationSpinner,colorFilterSpinner, fuelTypeSpinner, getActivity());
             }
         });
         builder.setView(view);
@@ -135,6 +135,7 @@ public class POCStockFragment extends Fragment implements IView.PocCarStockView{
 
     @Override
     public void showPOCCarStockList(POCarStockBean jsonObject) {
+        try{
         newStockList.clear();
         newStockList.addAll(jsonObject.getPoc_stock());
 
@@ -143,6 +144,8 @@ public class POCStockFragment extends Fragment implements IView.PocCarStockView{
         newCarStockFilterDetails_ListView.setLayoutManager(mLayoutManager);
         newCarStockFilterDetails_ListView.setItemAnimator(new DefaultItemAnimator());
         newCarStockFilterDetails_ListView.setAdapter(pocStockAdapter);
+        }catch(Exception e){
+        }
     }
 
     @Override

@@ -35,16 +35,21 @@ public class POCStockPresenter implements IPresenter.IPOCCarStockViewPresenter{
 
             Map<String, String> map = new HashMap<>();
 
+            if (make.equals("Make")){
+                map.put("make_id", "");
+            }else
+                map.put("make_id", make);
+
             if (model.equals("Model")){
-                map.put("model_id", "");
+                map.put("model", "");
             }else{
-                map.put("model_id", model);
+                map.put("model", model);
             }
 
             if (location.equals("Location")){
-                map.put("location", "");
+                map.put("stock_location", "");
             }else{
-                map.put("location", location);
+                map.put("stock_location", location);
             }
 
             if (fuelType.equals("Fuel Type")){
@@ -60,6 +65,7 @@ public class POCStockPresenter implements IPresenter.IPOCCarStockViewPresenter{
             }
 
             map.put("ageing","");
+            map.put("mfg_yr","" );
 
             String url = Constants.BASE_URL + Constants.POC_CAR_STOCK;
             GSONRequest<POCarStockBean> dashboardGsonRequest = new GSONRequest<POCarStockBean>(
@@ -75,6 +81,7 @@ public class POCStockPresenter implements IPresenter.IPOCCarStockViewPresenter{
                                 } catch (Exception e) {
                                 }
                             }else{
+                                iview.showPOCCarStockList(res);
                                 Toast.makeText(context, "No Record Found.", Toast.LENGTH_SHORT).show();
                             }
                         }

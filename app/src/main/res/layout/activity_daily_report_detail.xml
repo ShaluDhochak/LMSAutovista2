@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.user.lmsautovista.View.Activity.DailyReportDetailActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+
+    >
+    <RelativeLayout
+        android:id="@+id/headerReport_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/header_withback_btn_layout"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerReport_rl">
+
+        <RelativeLayout
+            android:id="@+id/reportDetails_RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/reportDetail_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="4dp"
+                >
+
+            <RelativeLayout
+                android:id="@+id/reportDetails1_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/reportDetails_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/reportLeadDetails_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="3"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/lead_details"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="15sp"
+                        />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/nameReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reportDetails_LinearLayout"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/nameReport_ImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/name" />
+
+                    <TextView
+                        android:id="@+id/nameReport_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/nameReport_ImageView"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Name"
+                        android:inputType="textNoSuggestions"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/emailReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nameReport_LinearLayout"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/emailReport_ImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/email" />
+
+                    <TextView
+                        android:id="@+id/emailReport_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/emailReport_ImageView"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Email"
+                        android:inputType="textNoSuggestions"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contactnoReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailReport_LinearLayout"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/contactnoReport_ImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/contact_no" />
+
+                    <TextView
+                        android:id="@+id/contactnoReport_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/contactnoReport_ImageView"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="ContactNo"
+                        android:inputType="number"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addressReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/contactnoReport_LinearLayout"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/addressReport_ImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/address" />
+
+                    <TextView
+                        android:id="@+id/addressReport_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/addressReport_ImageView"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Address"
+                        android:inputType="textNoSuggestions"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/enqIDReport_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="engid"
+                        android:inputType="textNoSuggestions"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/leadDateReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addressReport_LinearLayout"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/leadDateReport_ImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/calendar" />
+
+                    <TextView
+                        android:id="@+id/leadDateReport_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/leadDateReport_ImageView"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Lead Date"
+                        android:inputType="textNoSuggestions"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/detailedReport_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="10dp"
+
+                android:layout_below="@+id/reportDetail_cardView"
+                >
+
+            <RelativeLayout
+                android:id="@+id/detailedReport_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/detailReport1_RelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/inquiryReport_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:text="@string/MoreDetails"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/leadSourceDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detailReport1_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/leadSourceHeadingDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/leadSource"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/leadSourceStringDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/showroomLocationDeatils_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leadSourceDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/showroomLocationDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/showroomLocation"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/showroomLocationCustomerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:inputType="textNoSuggestions"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/cseNameReportDetails_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/showroomLocationDeatils_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseNameReportDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/cse_name"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseNameReportDetailsString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cseCallDateReportDetails_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseNameReportDetails_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseCallDateReportDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/CseCallDate"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseCallDateReportDetailsString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cseFeedbackReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseCallDateReportDetails_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseFeedbackReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/CseFeedback"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseFeedbackReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cseNextActionReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseFeedbackReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseNextActionReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/CseNextAction"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseNextActionReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cseRemarkReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseNextActionReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseRemarkReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/CseRemark"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseRemarkReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cseNFDReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseRemarkReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseNFDReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/cseNFD"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseNFDReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tdHvReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseNFDReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/tdHvReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/tdHvDate"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tdHvReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bookingWithInDaysReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tdHvReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/bookingWithInDaysReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/bookingWithinDays"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/bookingWithInDaysReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dseNameReportDetails_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bookingWithInDaysReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseNameReportDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/dseName"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseNameReportDetailsString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dseCallDateReportDetails_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseNameReportDetails_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseCallDateReportDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/dseCallDate"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseCallDateReportDetailsString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dseFeedbackReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseCallDateReportDetails_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseFeedbackReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/dseFeedback"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseFeedbackReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dseNextActionReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseFeedbackReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseNextActionReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/dseNextAction"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseNextActionReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dseRemarkReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseNextActionReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseRemarkReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/dseRemark"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseRemarkReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dseNFDReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseRemarkReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseNFDReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/dseNfd"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseNFDReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/buyerTypeReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseNFDReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/buyerTypeReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/buyerType"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/buyerTypeReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modelVariantReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buyerTypeReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/modelVariantReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/modelVariant"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/modelVariantReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exchangeModelVariantReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/modelVariantReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/exchangeModelVariantReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/exchangeMakeModel"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/exchangeModelVariantReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/manufacturingYearReport_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exchangeModelVariantReport_LinearLayout"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/manufacturingYearReportHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:paddingBottom="10dp"
+                        android:text="@string/manufacturingYear"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/manufacturingYearReportString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

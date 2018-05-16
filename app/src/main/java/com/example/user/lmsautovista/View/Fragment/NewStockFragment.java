@@ -124,6 +124,7 @@ public class NewStockFragment extends Fragment implements IView.NewCarStockView{
 
     @Override
     public void showNewCarStockList(NewCarStockBean jsonObject) {
+        try{
         newStockList.clear();
         newStockList.addAll(jsonObject.getNew_car_stock());
 
@@ -132,6 +133,8 @@ public class NewStockFragment extends Fragment implements IView.NewCarStockView{
         newCarStockFilterDetails_ListView.setLayoutManager(mLayoutManager);
         newCarStockFilterDetails_ListView.setItemAnimator(new DefaultItemAnimator());
         newCarStockFilterDetails_ListView.setAdapter(dashboardAdapter);
+        }catch(Exception e){
+        }
     }
 
     @Override

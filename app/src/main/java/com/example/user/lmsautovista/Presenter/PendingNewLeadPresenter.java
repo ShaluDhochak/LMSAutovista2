@@ -5,6 +5,7 @@ package com.example.user.lmsautovista.Presenter;
 */
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
@@ -27,7 +28,7 @@ public class PendingNewLeadPresenter implements IPresenter.IPendingNewCallingTas
     }
 
     @Override
-    public void getPendingCallingTaskList(Context context) {
+    public void getPendingCallingTaskList(final Context context) {
         try {
 
             Map<String, String> map = new HashMap<>();
@@ -47,7 +48,7 @@ public class PendingNewLeadPresenter implements IPresenter.IPendingNewCallingTas
                     new com.android.volley.Response.Listener<CallingTaskNewLeadBean>() {
                         @Override
                         public void onResponse(CallingTaskNewLeadBean res) {
-                            if (!(res.getLead_details_count().equals("0")))
+                            if (res.getLead_details().size()>0)
                             {
                                 try{
                                     view.ShowPendingLeadDetailCount(res);
@@ -55,7 +56,7 @@ public class PendingNewLeadPresenter implements IPresenter.IPendingNewCallingTas
                                 }
 
                             }else{
-
+                                Toast.makeText(context, "No Record Found for Pending New Lead", Toast.LENGTH_SHORT).show();
                             }
                         }
                     },

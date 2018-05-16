@@ -374,12 +374,12 @@ public class AddNewLeadFragment extends Fragment implements IView.AddNewLeadView
         for(int i=0;i<jsonObject.getSelect_lead_source().size();i++)
         {
             try {
-                leadSourceArrayList.add(jsonObject.getSelect_lead_source().get(i).getLead_source_name());
-                leadSourceMap.put(jsonObject.getSelect_lead_source().get(i).getId(),jsonObject.getSelect_lead_source().get(i).getLead_source_name());
-            }catch (Exception e)
-            {
-                e.printStackTrace();
-            }
+            leadSourceArrayList.add(jsonObject.getSelect_lead_source().get(i).getLead_source_name());
+            leadSourceMap.put(jsonObject.getSelect_lead_source().get(i).getId(),jsonObject.getSelect_lead_source().get(i).getLead_source_name());
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         }
 
         ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_textview, leadSourceArrayList);

@@ -5,6 +5,7 @@ package com.example.user.lmsautovista.Presenter;
 */
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
@@ -27,7 +28,7 @@ public class PendingFollowUpPresenter implements IPresenter.IPendingLiveCallingT
     }
 
     @Override
-    public void getPendingCallingTaskList(Context context) {
+    public void getPendingCallingTaskList(final Context context) {
         try {
 
             Map<String, String> map = new HashMap<>();
@@ -53,7 +54,7 @@ public class PendingFollowUpPresenter implements IPresenter.IPendingLiveCallingT
                                 } catch (Exception e) {
                                 }
                             }else{
-
+                                Toast.makeText(context, "No Record Found for Pending FollowUp", Toast.LENGTH_SHORT).show();
                             }
                         }
                     },

@@ -165,4 +165,14 @@ public class EditCustomerDetailActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @OnClick(R.id.backButton_ImageView)
+    public void backBtn(){
+        super.onBackPressed();
+    }
 }

@@ -16,12 +16,16 @@ public interface IPresenter {
         void saveUserInfo(String email, String password, LoginBean jsonObject, SharedPreferenceManager sharedPreferenceManager);
         void saveProcessInfo(String process_id, String process_name, SharedPreferenceManager sharedPreferenceManager);
         void saveLocationInfo(String location_id, String location_name, SharedPreferenceManager sharedPreferenceManager);
+        void getLocationList(Context context);
+
+
     }
 
     interface IDashboardPresenter{
+        void getDashboardHeaderLocationList(Context context);
+        void getDashboardProcessList(Context context);
         void getDashboardList(Context context);
-        void getLocationList(Context context);
-        void getLocationSpinnerList(Context context);
+        void getLocationSpinnerList(String location, String process,Context context);
         void getDashboardLocationList(String location_id ,Context context);
     }
 
@@ -53,6 +57,7 @@ public interface IPresenter {
 
     interface ITodayCallingTaskPresenter{
         void getTodayCallingTaskList(Context context);
+        void getCurrentTodayTaskList(final Context context);
     }
 
     interface IPendingNewCallingTaskPresenter{
@@ -64,7 +69,8 @@ public interface IPresenter {
     }
 
     interface IAllLeadCallingTaskPresenter{
-        void getAllLeadCallingTaskList(Context context);
+        void getAllLeadCallingTaskList(String page_no,Context context);
+        void getAllSearchedLeadCallingTask(String contact_n, String page_no,Context context);
     }
 
     interface INewCarStockViewPresenter{
@@ -119,4 +125,60 @@ public interface IPresenter {
         void getEditCustomerList(String contact_no, Context context);
     }
 
+    interface IAddMessagePresenter{
+        void getAddViewMessageList(Context context);
+    }
+
+    interface IAssignNewLeadPresenter{
+      void getAssignLocation(Context context);
+      void getAssignToList(String location_id, Context context);
+      void getCamapignList(Context context);
+    }
+
+    interface IAssignTransferLeadPresenter{
+        void getAssignLocation(Context context);
+        void getAssignFromList(String location_id, Context context);
+        void getAssignToList(String location_id,String fromUser,Context context);
+        void getAssignToLocation(Context context);
+        void getAssignCampaignList(String fromUser, Context context);
+    }
+
+    interface ICheckFlowCustomer{
+        void getCheckFlow(String enq_id, Context context);
+    }
+
+    interface IDailyReportPresenter{
+        void getSearchTRackerList(Context context, String currentDate);
+
+    }
+    interface IDSEDailyReportViewPresenter{
+        void getLocation(String process,Context context);
+        void getSearchViaContactNoList(String status, String location_id, String fromdate,Context context);
+
+    }
+
+    interface IDsewiseReportPresenter{
+        void getLocation( Context context);
+        void getSearchViaContactNoList(String location_id, String fromdate, String todate, Context context);
+
+    }
+
+    interface ILeadReportPresenter{
+        void getLeadLocation(Context context);
+        void getSearchVialOcationList(String location_id, String fromdate, String todate, Context context);
+
+    }
+
+    interface IMonthlyReportPresenter{
+        void getSearchTRackerList(Context context, String currentDate);
+    }
+
+    interface ISubmitMessagepresenter{
+        void getLocation( Context context);
+
+    }
+
+    interface  IViewMessagePresenter{
+        void getViewMessageList(Context context);
+    }
 }

@@ -104,8 +104,11 @@ public class DashboardCountDetailActivity extends AppCompatActivity {
             nfdNotificationDetailsString_TextView.setText(bean.getCse_nfd());
             remarkNotificationDetailsString_TextView.setText(bean.getCse_comment());
         }
-
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 
 }

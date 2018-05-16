@@ -4,17 +4,30 @@ package com.example.user.lmsautovista.View;
   Created by Shalu Dhochak on 2/17/2018.
 */
 
+import com.example.user.lmsautovista.Model.AssignLocationBean;
+import com.example.user.lmsautovista.Model.AssignNewLeadAssignUserBean;
+import com.example.user.lmsautovista.Model.AssignNewLeadCampaignBean;
 import com.example.user.lmsautovista.Model.AssignToBean;
+import com.example.user.lmsautovista.Model.AssignToUserBean;
+import com.example.user.lmsautovista.Model.AssignTransferLocationBean;
+import com.example.user.lmsautovista.Model.AssignTransferredCampignListBean;
 import com.example.user.lmsautovista.Model.CallingTaskNewLeadBean;
 import com.example.user.lmsautovista.Model.CarVariantBean;
+import com.example.user.lmsautovista.Model.CheckFlowTransferLeadDetailBean;
 import com.example.user.lmsautovista.Model.CustomerDetailsBean;
+import com.example.user.lmsautovista.Model.DSEDailyReportLocationBean;
+import com.example.user.lmsautovista.Model.DSEDailyReportViewBean;
+import com.example.user.lmsautovista.Model.DSEReportBean;
 import com.example.user.lmsautovista.Model.DashboardCountBean;
 import com.example.user.lmsautovista.Model.FeedbackListBean;
 import com.example.user.lmsautovista.Model.FollowUpDetailsBean;
+import com.example.user.lmsautovista.Model.FromUserAssignTransferBean;
+import com.example.user.lmsautovista.Model.LeadReportBean;
 import com.example.user.lmsautovista.Model.LeadSourceBean;
 import com.example.user.lmsautovista.Model.LocationDashboardBean;
 import com.example.user.lmsautovista.Model.LoginBean;
 import com.example.user.lmsautovista.Model.MakeBean;
+import com.example.user.lmsautovista.Model.MessageListBean;
 import com.example.user.lmsautovista.Model.ModelBean;
 import com.example.user.lmsautovista.Model.NewCarStockBean;
 import com.example.user.lmsautovista.Model.NewStockFilterBean;
@@ -30,6 +43,7 @@ import com.example.user.lmsautovista.Model.SearchCustomerBean;
 import com.example.user.lmsautovista.Model.SearchTrackerListBean;
 import com.example.user.lmsautovista.Model.TransferAssignToBean;
 import com.example.user.lmsautovista.Model.TransferLocationBean;
+import com.example.user.lmsautovista.Model.ViewMessageListBean;
 
 public interface IView {
 
@@ -41,6 +55,7 @@ public interface IView {
         void showLocationList(LoginBean jsonObject);
         void ShowDashboardCount(DashboardCountBean jsonObject);
         void showLocationDashboard(LocationDashboardBean jsonObject);
+        void showProcessDashboard(ProcessBean jsonObject);
     }
 
     interface AddNewLeadView{
@@ -151,5 +166,58 @@ public interface IView {
 
     interface EditCustomerListView{
         void showEditCustomerList(SearchCustomerBean jsonObject);
+    }
+    interface DSEDailyView{
+        void showLocation(DSEDailyReportLocationBean jsonObject);
+        void ShowDseDailyReportView(DSEDailyReportViewBean jsonObject);
+    }
+
+    interface IViewMessageView{
+        void showViewMessageList(ViewMessageListBean jsonObject);
+    }
+
+    interface IAddMessageView{
+        void showAddViewMessagelist(MessageListBean jsonObject);
+    }
+
+    interface ISubmitMessageView{
+        void showLocation(DSEDailyReportLocationBean jsonObject);
+    }
+
+    interface IDailyReportView{
+        void showTrackerListView(SearchTrackerListBean jsonObject);
+    }
+
+    interface IMonthlyReportView{
+        void showTrackerListView(SearchTrackerListBean jsonObject);
+    }
+
+    interface IDsewiseReportView{
+        void showLocation(DSEDailyReportLocationBean jsonObject);
+        void showDseWiseListView(DSEReportBean jsonObject);
+    }
+
+    interface ILeadReportView{
+        void showLocation(DSEDailyReportLocationBean jsonObject);
+        void showLeadReportView(LeadReportBean jsonObject);
+    }
+
+    interface IAssignNewLeadView{
+        void showAssignToLocation(AssignLocationBean jsonObject);
+        void showAssignToView(AssignNewLeadAssignUserBean jsonObject);
+        void showCampaignListView(AssignNewLeadCampaignBean jsonObject);
+
+    }
+
+    interface IAssignTransferredLeadView{
+        void showAssignTransferredLocation(AssignTransferLocationBean jsonObject);
+        void showAssignFromSpinnerView(FromUserAssignTransferBean jsonObject);
+        void showAssignToView(AssignToUserBean jsonObject);
+        void showAssignToLocationView(AssignTransferLocationBean jsonObject);
+        void showAssignCampaignlist(AssignTransferredCampignListBean jsonObject);
+    }
+
+    interface ICheckFlowView{
+        void showCheckFlow(CheckFlowTransferLeadDetailBean jsonObject);
     }
 }

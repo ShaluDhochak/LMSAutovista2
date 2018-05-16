@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.user.lmsautovista.Model.DashboardCountBean;
 import com.example.user.lmsautovista.Model.LocationDashboardBean;
 import com.example.user.lmsautovista.Model.LoginBean;
+import com.example.user.lmsautovista.Model.ProcessBean;
 import com.example.user.lmsautovista.Presenter.LoginPresenter;
 import com.example.user.lmsautovista.R;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
@@ -109,7 +110,7 @@ public class LoginActivity extends AppCompatActivity implements IView.LoginView{
         intent.putExtra("bean", dashboardCount.get(position));
         startActivity(intent);
         */
-        startActivity(new Intent(this, HomeActivity.class));
+        startActivity(new Intent(this, NavigationDrawer.class));
         finish();
     }
 
@@ -130,6 +131,11 @@ public class LoginActivity extends AppCompatActivity implements IView.LoginView{
 
     @Override
     public void showLocationDashboard(LocationDashboardBean jsonObject) {
+
+    }
+
+    @Override
+    public void showProcessDashboard(ProcessBean jsonObject) {
 
     }
 

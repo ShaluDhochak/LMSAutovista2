@@ -1,56 +1,12 @@
 package com.example.user.lmsautovista.View.Activity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.TextView;
-
-import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
-import com.example.user.lmsautovista.Model.DashboardCountBean;
-import com.example.user.lmsautovista.Model.LocationDashboardBean;
-import com.example.user.lmsautovista.Model.LoginBean;
-import com.example.user.lmsautovista.Presenter.DashboardPresenter;
-import com.example.user.lmsautovista.Presenter.LoginPresenter;
-import com.example.user.lmsautovista.R;
-import com.example.user.lmsautovista.Utils.Constants;
-import com.example.user.lmsautovista.Utils.SessionManagement;
-import com.example.user.lmsautovista.View.Fragment.AddNewLeadFragment;
-import com.example.user.lmsautovista.View.Fragment.AllLeadFragment;
-import com.example.user.lmsautovista.View.Fragment.CallingTaskFragment;
-import com.example.user.lmsautovista.View.Fragment.DashboardFragment;
-import com.example.user.lmsautovista.View.Fragment.DseDailyReportFragment;
-import com.example.user.lmsautovista.View.Fragment.EditCustomerFragment;
-import com.example.user.lmsautovista.View.Fragment.NewStockFragment;
-import com.example.user.lmsautovista.View.Fragment.POCStockFragment;
-import com.example.user.lmsautovista.View.Fragment.SearchCustomerFragment;
-import com.example.user.lmsautovista.View.Fragment.TrackerFragment;
-import com.example.user.lmsautovista.View.IView;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnItemSelected;
 
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, IView.LoginView {
-
+{
+    /*implements
+} NavigationView.OnNavigationItemSelectedListener, IView.LoginView {
 
     SessionManagement session;
 
@@ -71,7 +27,7 @@ public class HomeActivity extends AppCompatActivity
 
     public View navHeader;
     public TextView deptName1_tv,userName_tv;
-    String process_id, process_name, selectedLocationId, selectedLocation;
+    String process_id, process_name, selectedLocationId, selectedLocation, roleStr;
     LoginPresenter loginPresenter;
     DashboardPresenter dashboardPresenter;
 
@@ -92,9 +48,11 @@ public class HomeActivity extends AppCompatActivity
         initialiseUI();
     }
 
-    private void initialiseUI(){
+    public void initialiseUI(){
         setSupportActionBar(toolbar);
         navHeader = navigationView.getHeaderView(0);
+
+        roleStr = SharedPreferenceManager.getInstance(HomeActivity.this).getPreference(Constants.ROLE_ID, "");
 
         // Session class instance
         session = new SessionManagement(getApplicationContext());
@@ -111,6 +69,7 @@ public class HomeActivity extends AppCompatActivity
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
         dashboardPresenter.getLocationList(this);
 
         navigationView.setNavigationItemSelectedListener(this);
@@ -537,6 +496,193 @@ public class HomeActivity extends AppCompatActivity
 
     }
 
+    public void dailyReportFragment(){
+
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+
+
+        setReportMenuVisibility();
+
+        navigationView.getMenu().getItem(10).setVisible(false);
+        navigationView.getMenu().getItem(11).setVisible(false);
+
+        navigationView.getMenu().getItem(12).setVisible(false);
+        navigationView.getMenu().getItem(13).setVisible(false);
+        navigationView.getMenu().getItem(14).setVisible(false);
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+        String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("Daily Report");
+        DailyReportFragment dailyReportfragment = new DailyReportFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, dailyReportfragment);
+        dtransaction.commit();
+    }
+
+    public void monthlyReportFragment(){
+
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+
+        setReportMenuVisibility();
+
+        navigationView.getMenu().getItem(10).setVisible(false);
+        navigationView.getMenu().getItem(11).setVisible(false);
+
+        navigationView.getMenu().getItem(12).setVisible(false);
+        navigationView.getMenu().getItem(13).setVisible(false);
+        navigationView.getMenu().getItem(14).setVisible(false);
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+        String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("Monthly Report");
+        MonthlyReportFragment dailyReportfragment = new MonthlyReportFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, dailyReportfragment);
+        dtransaction.commit();
+    }
+
+    public void dseWiseReportFragment(){
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+
+
+        setReportMenuVisibility();
+
+        navigationView.getMenu().getItem(10).setVisible(false);
+        navigationView.getMenu().getItem(11).setVisible(false);
+
+        navigationView.getMenu().getItem(12).setVisible(false);
+        navigationView.getMenu().getItem(13).setVisible(false);
+        navigationView.getMenu().getItem(14).setVisible(false);
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+      //  String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("DSEWise Report");
+        DSEReportFragment dseReportfragment = new DSEReportFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, dseReportfragment);
+        dtransaction.commit();
+    }
+
+    public void leadReportFragment(){
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+
+
+        setReportMenuVisibility();
+
+        navigationView.getMenu().getItem(10).setVisible(false);
+        navigationView.getMenu().getItem(11).setVisible(false);
+
+        navigationView.getMenu().getItem(12).setVisible(false);
+        navigationView.getMenu().getItem(13).setVisible(false);
+        navigationView.getMenu().getItem(14).setVisible(false);
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+        String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("Lead Report");
+        LeadReportFragment leadReportfragment = new LeadReportFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, leadReportfragment);
+        dtransaction.commit();
+    }
+
+    public void dseDailyReport(){
+
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+
+
+        setReportMenuVisibility();
+
+        navigationView.getMenu().getItem(10).setVisible(false);
+        navigationView.getMenu().getItem(11).setVisible(false);
+
+        navigationView.getMenu().getItem(12).setVisible(false);
+        navigationView.getMenu().getItem(13).setVisible(false);
+        navigationView.getMenu().getItem(14).setVisible(false);
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+        String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("DSE Daily Report");
+        DseDailyReportFragment dseDailyReportfragment = new DseDailyReportFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, dseDailyReportfragment);
+        dtransaction.commit();
+
+    }
     public void dseDailyReportView(){
 
         navigationView.getMenu().getItem(0).setChecked(true);
@@ -547,35 +693,31 @@ public class HomeActivity extends AppCompatActivity
         navigationView.getMenu().getItem(2).setVisible(true);
 
         navigationView.getMenu().getItem(3).setVisible(true);
-        navigationView.getMenu().getItem(4).setVisible(true);
-        navigationView.getMenu().getItem(5).setVisible(true);
 
-        navigationView.getMenu().getItem(6).setVisible(true);
-        navigationView.getMenu().getItem(7).setVisible(true);
-        navigationView.getMenu().getItem(8).setVisible(true);
 
-        navigationView.getMenu().getItem(9).setVisible(true);
+        setReportMenuVisibility();
+
         navigationView.getMenu().getItem(10).setVisible(false);
         navigationView.getMenu().getItem(11).setVisible(false);
 
         navigationView.getMenu().getItem(12).setVisible(false);
         navigationView.getMenu().getItem(13).setVisible(false);
         navigationView.getMenu().getItem(14).setVisible(false);
-        navigationView.getMenu().getItem(15).setVisible(false);
+        navigationView.getMenu().getItem(15).setVisible(true);
         navigationView.getMenu().getItem(16).setVisible(false);
 
         navigationView.getMenu().getItem(17).setVisible(false);
-        navigationView.getMenu().getItem(18).setVisible(false);
-        navigationView.getMenu().getItem(19).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
         navigationView.getMenu().getItem(20).setVisible(false);
         navigationView.getMenu().getItem(21).setVisible(false);
 
         String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
 
-        toolbar_title.setText("DSE Daily Report");
-        DseDailyReportFragment dseDailyReportfragment = new DseDailyReportFragment();
+        toolbar_title.setText("DSE Daily Report View");
+        DseDailyReportViewFragment dseDailyReportViewfragment = new DseDailyReportViewFragment();
         FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
-        dtransaction.replace(R.id.fragment_Container, dseDailyReportfragment);
+        dtransaction.replace(R.id.fragment_Container, dseDailyReportViewfragment);
         dtransaction.commit();
 
     }
@@ -623,6 +765,109 @@ public class HomeActivity extends AppCompatActivity
 
     }
 
+    public void assignNewLeadFragment(){
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+
+        serDefaultReport();
+
+        setLeadManagementVisibility();
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+        String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("Assign New Lead");
+        AssignNewLeadFragment assignNewLeadfragment = new AssignNewLeadFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, assignNewLeadfragment);
+        dtransaction.commit();
+    }
+
+    public void assignTransferLeadFragment(){
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+
+        serDefaultReport();
+
+        setLeadManagementVisibility();
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+        String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("Assign Transfer Lead");
+        AssignTransferLeadFragment assignTransferLeadfragment = new AssignTransferLeadFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, assignTransferLeadfragment);
+        dtransaction.commit();
+    }
+
+    public void sendMessageCustomer(){
+        navigationView.getMenu().getItem(0).setChecked(true);
+
+        //   navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(0).setVisible(true);
+        navigationView.getMenu().getItem(1).setVisible(true);
+        navigationView.getMenu().getItem(2).setVisible(true);
+
+        navigationView.getMenu().getItem(3).setVisible(true);
+        navigationView.getMenu().getItem(4).setVisible(false);
+        navigationView.getMenu().getItem(5).setVisible(false);
+
+        navigationView.getMenu().getItem(6).setVisible(false);
+        navigationView.getMenu().getItem(7).setVisible(false);
+        navigationView.getMenu().getItem(8).setVisible(false);
+
+        navigationView.getMenu().getItem(9).setVisible(false);
+        navigationView.getMenu().getItem(10).setVisible(true);
+        navigationView.getMenu().getItem(11).setVisible(false);
+
+        navigationView.getMenu().getItem(12).setVisible(false);
+        navigationView.getMenu().getItem(13).setVisible(false);
+        navigationView.getMenu().getItem(14).setVisible(false);
+        navigationView.getMenu().getItem(15).setVisible(true);
+        navigationView.getMenu().getItem(16).setVisible(false);
+
+        navigationView.getMenu().getItem(17).setVisible(false);
+        navigationView.getMenu().getItem(18).setVisible(true);
+        navigationView.getMenu().getItem(19).setVisible(true);
+        navigationView.getMenu().getItem(20).setVisible(false);
+        navigationView.getMenu().getItem(21).setVisible(false);
+
+        String role = SharedPreferenceManager.getInstance(this).getPreference(Constants.ROLE_ID, "");
+
+        toolbar_title.setText("Send Message ");
+        AddMessageFragment addMessagefragment = new AddMessageFragment();
+        FragmentTransaction dtransaction = getSupportFragmentManager().beginTransaction();
+        dtransaction.replace(R.id.fragment_Container, addMessagefragment);
+        dtransaction.commit();
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -643,12 +888,7 @@ public class HomeActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_report:
-                navigationView.getMenu().getItem(4).setVisible(true);
-                navigationView.getMenu().getItem(5).setVisible(true);
-                navigationView.getMenu().getItem(6).setVisible(true);
-                navigationView.getMenu().getItem(7).setVisible(true);
-                navigationView.getMenu().getItem(8).setVisible(true);
-                navigationView.getMenu().getItem(9).setVisible(true);
+                setReportMenuVisibility();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -664,22 +904,44 @@ public class HomeActivity extends AppCompatActivity
 
             case R.id.nav_Daily_Report :
 
+                setReportMenuVisibility();
+                dailyReportFragment();
+                closeDrawer();
+
                 break;
             case R.id.nav_Monthly_Report :
 
+                setReportMenuVisibility();
+                closeDrawer();
+                monthlyReportFragment();
                 break;
 
             case R.id.nav_Dsewise_report :
 
+                setReportMenuVisibility();
+                closeDrawer();
+                dseWiseReportFragment();
                 break;
 
             case R.id.nav_DseDailywise_report :
-                navigationView.getMenu().getItem(4).setVisible(true);
-                navigationView.getMenu().getItem(5).setVisible(true);
-                navigationView.getMenu().getItem(6).setVisible(true);
-                navigationView.getMenu().getItem(7).setVisible(true);
-                navigationView.getMenu().getItem(8).setVisible(true);
-                navigationView.getMenu().getItem(9).setVisible(true);
+                setReportMenuVisibility();
+
+                navigationView.getMenu().getItem(16).setVisible(false);
+                navigationView.getMenu().getItem(17).setVisible(false);
+
+                navigationView.getMenu().getItem(11).setVisible(false);
+                navigationView.getMenu().getItem(12).setVisible(false);
+                navigationView.getMenu().getItem(13).setVisible(false);
+                navigationView.getMenu().getItem(14).setVisible(false);
+
+                navigationView.getMenu().getItem(20).setVisible(false);
+                navigationView.getMenu().getItem(21).setVisible(false);
+                closeDrawer();
+                dseDailyReport();
+                break;
+
+            case R.id.nav_DseDailyReportView_report :
+                setReportMenuVisibility();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -695,19 +957,14 @@ public class HomeActivity extends AppCompatActivity
                 dseDailyReportView();
                 break;
 
-            case R.id.nav_DseDailyReportView_report :
-
-                break;
-
             case R.id.nav_Lead_report:
+                setReportMenuVisibility();
+                closeDrawer();
+                leadReportFragment();
                 break;
+
             case R.id.nav_stock:
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
+                serDefaultReport();
 
                 navigationView.getMenu().getItem(16).setVisible(true);
                 navigationView.getMenu().getItem(17).setVisible(true);
@@ -732,13 +989,7 @@ public class HomeActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_lead_management_lead:
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
-
+                serDefaultReport();
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
 
@@ -753,12 +1004,7 @@ public class HomeActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_add_lead:
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
+                serDefaultReport();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -775,12 +1021,7 @@ public class HomeActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_assign_lead :
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
+                serDefaultReport();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -796,12 +1037,7 @@ public class HomeActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_assign_new_lead:
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
+                serDefaultReport();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -813,19 +1049,14 @@ public class HomeActivity extends AppCompatActivity
 
                 navigationView.getMenu().getItem(20).setVisible(false);
                 navigationView.getMenu().getItem(21).setVisible(false);
+                assignNewLeadFragment();
 
                 closeDrawer();
                 break;
 
             case R.id.nav_assign_transferred_lead :
 
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
-
+                serDefaultReport();
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
 
@@ -837,16 +1068,13 @@ public class HomeActivity extends AppCompatActivity
                 navigationView.getMenu().getItem(20).setVisible(false);
                 navigationView.getMenu().getItem(21).setVisible(false);
 
+                assignTransferLeadFragment();
+
                 closeDrawer();
                 break;
 
             case R.id.nav_customer_operation:
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
+                serDefaultReport();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -863,12 +1091,7 @@ public class HomeActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_search_customer:
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
+                serDefaultReport();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -885,12 +1108,8 @@ public class HomeActivity extends AppCompatActivity
                 closeDrawer();
                 break;
             case R.id.nav_edit_customer:
-                navigationView.getMenu().getItem(4).setVisible(false);
-                navigationView.getMenu().getItem(5).setVisible(false);
-                navigationView.getMenu().getItem(6).setVisible(false);
-                navigationView.getMenu().getItem(7).setVisible(false);
-                navigationView.getMenu().getItem(8).setVisible(false);
-                navigationView.getMenu().getItem(9).setVisible(false);
+
+                serDefaultReport();
 
                 navigationView.getMenu().getItem(16).setVisible(false);
                 navigationView.getMenu().getItem(17).setVisible(false);
@@ -917,6 +1136,24 @@ public class HomeActivity extends AppCompatActivity
                 // startActivity(new Intent(NavigationDrawer.this, LoginActivity.class));
                 drawer.closeDrawers();
                 break;
+
+            case R.id.nav_send_message:
+                serDefaultReport();
+
+                navigationView.getMenu().getItem(16).setVisible(false);
+                navigationView.getMenu().getItem(17).setVisible(false);
+
+                navigationView.getMenu().getItem(11).setVisible(false);
+                navigationView.getMenu().getItem(12).setVisible(false);
+                navigationView.getMenu().getItem(13).setVisible(false);
+                navigationView.getMenu().getItem(14).setVisible(false);
+
+                navigationView.getMenu().getItem(20).setVisible(true);
+                navigationView.getMenu().getItem(21).setVisible(true);
+                sendMessageCustomer();
+                closeDrawer();
+                break;
+
         }
 
 
@@ -924,6 +1161,65 @@ public class HomeActivity extends AppCompatActivity
         //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
        // drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void serDefaultReport(){
+        navigationView.getMenu().getItem(4).setVisible(false);
+        navigationView.getMenu().getItem(5).setVisible(false);
+        navigationView.getMenu().getItem(6).setVisible(false);
+        navigationView.getMenu().getItem(7).setVisible(false);
+        navigationView.getMenu().getItem(8).setVisible(false);
+        navigationView.getMenu().getItem(9).setVisible(false);
+    }
+
+    //Setting the right condition for report
+    public void setReportMenuVisibility(){
+        if (roleStr.equals("1")) {
+            navigationView.getMenu().findItem(R.id.nav_Daily_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Monthly_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Dsewise_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_DseDailywise_report).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_DseDailyReportView_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Lead_report).setVisible(true);
+        }else if (roleStr.equals("2")) { //manager
+            navigationView.getMenu().findItem(R.id.nav_Daily_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Monthly_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Dsewise_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_DseDailywise_report).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_DseDailyReportView_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Lead_report).setVisible(true);
+        }else if (roleStr.equals("3")) {
+            navigationView.getMenu().findItem(R.id.nav_Daily_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Monthly_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Dsewise_report).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_DseDailywise_report).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_DseDailyReportView_report).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_Lead_report).setVisible(false);
+        }else if (roleStr.equals("5")) {
+            navigationView.getMenu().findItem(R.id.nav_Daily_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Monthly_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Dsewise_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_DseDailywise_report).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_DseDailyReportView_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Lead_report).setVisible(true);
+        }else if (roleStr.equals("4")) {
+            navigationView.getMenu().findItem(R.id.nav_Daily_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Monthly_Report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Dsewise_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_DseDailywise_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_DseDailyReportView_report).setVisible(true);
+            navigationView.getMenu().findItem(R.id.nav_Lead_report).setVisible(false);
+        }
+    }
+
+    private void setLeadManagementVisibility(){
+        navigationView.getMenu().getItem(10).setVisible(true);
+        navigationView.getMenu().getItem(11).setVisible(true);
+
+        navigationView.getMenu().getItem(12).setVisible(true);
+        navigationView.getMenu().getItem(13).setVisible(true);
+        navigationView.getMenu().getItem(14).setVisible(true);
+
     }
 
     private void closeDrawer(){
@@ -1001,5 +1297,6 @@ public class HomeActivity extends AppCompatActivity
     public void showLocationDashboard(LocationDashboardBean jsonObject) {
 
     }
+    */
 }
 

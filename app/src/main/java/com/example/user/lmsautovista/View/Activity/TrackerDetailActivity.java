@@ -47,6 +47,9 @@ public class TrackerDetailActivity extends AppCompatActivity {
     @BindView(R.id.leadDateTrackerDetail_TextView)
     TextView leadDateTrackerDetail_TextView;
 
+    @BindView(R.id.leadBookingTrackerDetail_TextView)
+    TextView leadBookingTrackerDetail_TextView;
+
     //detail TextView
     @BindView(R.id.leadSourceTrackerString_TextView)
     TextView leadSourceTrackerString_TextView;
@@ -260,6 +263,8 @@ public class TrackerDetailActivity extends AppCompatActivity {
         position = TrackerDetailActivity.this.getIntent().getIntExtra("position", 0);
         title = TrackerDetailActivity.this.getIntent().getStringExtra("heading");
 
+        leadBookingTrackerDetail_TextView.setVisibility(GONE);
+
         if (process_id.equals("1")){
             newCarDetailTrackerDescription_relativeLayout.setVisibility(GONE);
             financeDetailTrackerDescription_relativeLayout.setVisibility(View.VISIBLE);
@@ -414,6 +419,11 @@ public class TrackerDetailActivity extends AppCompatActivity {
 
     @OnClick(R.id.backButton_ImageView)
     public void backbtn(){
+        super.onBackPressed();
+    }
+
+    @Override
+    public void onBackPressed() {
         super.onBackPressed();
     }
 }

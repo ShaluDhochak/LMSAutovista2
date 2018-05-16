@@ -1,8 +1,8 @@
 package com.example.user.lmsautovista.View.Fragment;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,8 +26,10 @@ import butterknife.ButterKnife;
 
 public class NewLeadNotificationFragment extends Fragment implements IView.NewLeadCallingTaskView{
 
-    ProgressDialog progressDialog;
     NewLeadCallingTaskPresenter newLeadCallingTaskPresenter;
+
+    @BindView(R.id.search_cardView)
+    CardView search_cardView;
 
     @BindView(R.id.customerDetails_ListView)
     RecyclerView customerDetails_ListView;
@@ -55,10 +57,8 @@ public class NewLeadNotificationFragment extends Fragment implements IView.NewLe
 
     private void initialiseUI(){
         newLeadCallingTaskPresenter = new NewLeadCallingTaskPresenter(this);
+        search_cardView.setVisibility(View.GONE);
 
-        progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading...");
-        progressDialog.setCanceledOnTouchOutside(false);
     }
 
     @Override
@@ -71,48 +71,29 @@ public class NewLeadNotificationFragment extends Fragment implements IView.NewLe
         }
     }
 
-
-
     @Override
     public void showProgressDialog() {
-        if (progressDialog != null && !progressDialog.isShowing())
-            progressDialog.show();
+
     }
 
     @Override
     public void dismissProgressDialog() {
-        if (progressDialog != null && progressDialog.isShowing()) {
-            progressDialog.dismiss();
-        }
+
     }
 
     @Override
     public void ShowNewLeadDetailCount(CallingTaskNewLeadBean jsonObject) {
-        dashboardCountList.clear();
-        dashboardCountList.addAll(jsonObject.getLead_details());
-        searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
+        try {
+            dashboardCountList.clear();
+            dashboardCountList.addAll(jsonObject.getLead_details());
+       //     searchViaDateHeading_TextView.setText("Total Leads: " + jsonObject.getLead_details_count().get(0).getCount_lead());
 
-        CallingTaskDetailAdapter dashboardAdapter = new CallingTaskDetailAdapter(getActivity(),jsonObject.getLead_details());
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        customerDetails_ListView.setLayoutManager(mLayoutManager);
-        customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
-        customerDetails_ListView.setAdapter(dashboardAdapter);
+            CallingTaskDetailAdapter dashboardAdapter = new CallingTaskDetailAdapter(getActivity(), jsonObject.getLead_details());
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+            customerDetails_ListView.setLayoutManager(mLayoutManager);
+            customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
+            customerDetails_ListView.setAdapter(dashboardAdapter);
+        }catch (Exception e){
+        }
     }
-
-
-    /*
-    @Override
-    public void ShowDashboardDetailCount(DashboardLeadDetailBean jsonObject) {
-        dashboardCountList.clear();
-        dashboardCountList.addAll(jsonObject.getLead_details());
-        searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
-
-        CallingTaskDetailAdapter dashboardAdapter = new CallingTaskDetailAdapter(getActivity(),jsonObject.getLead_details());
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        customerDetails_ListView.setLayoutManager(mLayoutManager);
-        customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
-        customerDetails_ListView.setAdapter(dashboardAdapter);
-    }
-
-    */
 }

@@ -58,6 +58,7 @@ public interface Constants {
     String VARAINT_SPINNER = "select_car_variant";
     //api for make
     String MAKE_SPINNER = "select_car_make";
+    String PROCESS = "all_process";
 
     //Api for Quotation
     String QUOTATION_LOCATION= "quotation_location";
@@ -78,11 +79,35 @@ public interface Constants {
     //api for Search Customer
     String CUSTOMER_SEARCH = "search_by_name_contact";
     String EDIT_SEARCH_OPERATION = "update_customer";
+    String CHECK_FLOW = "searchCustomer_flow";
 
     //api for DSE_DAILY_REPORT_INSERT
     String DSE_DAILY_REPORT_INSERT = "insert_dse_daily_report";
     String DSE_DAILY_REPORT_VIEW = "daily_tracker_show_data";
     String DSE_DAILY_REPORT_LOCATION = "daliy_dse_tracker_location";
+
+    //api for DSEWISE Report
+    String DSEWISE_REPORT = "dsewiseReport";
+    String LEAD_REPORT = "leadReport";
+
+    //api for view Message
+    String VIEW_MESSAGE = "message_home";
+    String DELETE_MESSAGE = "message_delete";
+    String MESSAGE_LIST = "message_list";
+    String ADD_MESSAGE= "message_insert";
+
+    //api for Assign New Lead
+    String ASSIGN_LOCATION_CAMPAIGN = "assign_new_lead_spinner";
+    String ASSIGN_ASSIGN_TO = "assign_new_lead_assign_user";
+    String ASSIGN_SUBMIT = "assign_new_lead_update";
+    String ASSIGN_LOCATION = "assign_new_lead_location";
+
+    //api for assign transfer lead
+    String ASSIGN_TRANSFER_SUBMIT = "assign_transferred_lead_update";
+    String ASSIGN_TRANSFER_CAMPAIGN_LIST= "assign_transferred_lead_check_lead";
+    String ASSIGN_TRANSFER_TO_USER= "assign_transferred_lead_to_user";
+    String ASSIGN_TRANSFER_FROM_USER = "assign_transferred_lead_from_user";
+    String ASSIGN_TRANSFER_LOCATION = "assign_transferred_lead_spinner";
 
     // Utils
     String USERPREFERENCE = "LMSfis_Preference";

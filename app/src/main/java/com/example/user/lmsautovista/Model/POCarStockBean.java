@@ -4,9 +4,12 @@ package com.example.user.lmsautovista.Model;
   Created by Shalu Dhochak on 4/21/2018.
 */
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
-public class POCarStockBean {
+public class POCarStockBean implements Parcelable {
     public ArrayList<Poc_stock> poc_stock;
 
     public ArrayList<Poc_stock> getPoc_stock() {
@@ -17,7 +20,7 @@ public class POCarStockBean {
         this.poc_stock = poc_stock;
     }
 
-    public static class Poc_stock{
+    public static class Poc_stock implements Parcelable {
         String make_name,submodel,color,fuel_type,owner,mfg_year,odo_meter,mileage,insurance_type,insurance_expiry_date,category;
         String vehicle_status,stock_location,expt_selling_price,stock_ageing,total_landing_cost,created_date;
 
@@ -124,6 +127,94 @@ public class POCarStockBean {
             this.created_date = created_date;
         }
 
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(this.make_name);
+            dest.writeString(this.submodel);
+            dest.writeString(this.color);
+            dest.writeString(this.fuel_type);
+            dest.writeString(this.owner);
+            dest.writeString(this.mfg_year);
+            dest.writeString(this.odo_meter);
+            dest.writeString(this.mileage);
+            dest.writeString(this.insurance_type);
+            dest.writeString(this.insurance_expiry_date);
+            dest.writeString(this.category);
+            dest.writeString(this.vehicle_status);
+            dest.writeString(this.stock_location);
+            dest.writeString(this.expt_selling_price);
+            dest.writeString(this.stock_ageing);
+            dest.writeString(this.total_landing_cost);
+            dest.writeString(this.created_date);
+        }
+
+        public Poc_stock() {
+        }
+
+        protected Poc_stock(Parcel in) {
+            this.make_name = in.readString();
+            this.submodel = in.readString();
+            this.color = in.readString();
+            this.fuel_type = in.readString();
+            this.owner = in.readString();
+            this.mfg_year = in.readString();
+            this.odo_meter = in.readString();
+            this.mileage = in.readString();
+            this.insurance_type = in.readString();
+            this.insurance_expiry_date = in.readString();
+            this.category = in.readString();
+            this.vehicle_status = in.readString();
+            this.stock_location = in.readString();
+            this.expt_selling_price = in.readString();
+            this.stock_ageing = in.readString();
+            this.total_landing_cost = in.readString();
+            this.created_date = in.readString();
+        }
+
+        public static final Parcelable.Creator<Poc_stock> CREATOR = new Parcelable.Creator<Poc_stock>() {
+            @Override
+            public Poc_stock createFromParcel(Parcel source) {
+                return new Poc_stock(source);
+            }
+
+            @Override
+            public Poc_stock[] newArray(int size) {
+                return new Poc_stock[size];
+            }
+        };
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeTypedList(this.poc_stock);
+    }
+
+    public POCarStockBean() {
+    }
+
+    protected POCarStockBean(Parcel in) {
+        this.poc_stock = in.createTypedArrayList(Poc_stock.CREATOR);
+    }
+
+    public static final Parcelable.Creator<POCarStockBean> CREATOR = new Parcelable.Creator<POCarStockBean>() {
+        @Override
+        public POCarStockBean createFromParcel(Parcel source) {
+            return new POCarStockBean(source);
+        }
+
+        @Override
+        public POCarStockBean[] newArray(int size) {
+            return new POCarStockBean[size];
+        }
+    };
 }

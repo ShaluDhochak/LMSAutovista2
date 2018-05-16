@@ -5,6 +5,7 @@ package com.example.user.lmsautovista.Presenter;
 */
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
@@ -26,7 +27,7 @@ public class NewLeadCallingTaskPresenter  implements IPresenter.INewLeadCallingT
     }
 
     @Override
-    public void getNewCallingTaskList(Context context) {
+    public void getNewCallingTaskList(final Context context) {
         try {
             view.showProgressDialog();
 
@@ -48,7 +49,7 @@ public class NewLeadCallingTaskPresenter  implements IPresenter.INewLeadCallingT
                         @Override
                         public void onResponse(CallingTaskNewLeadBean res) {
                             view.dismissProgressDialog();
-                            if (!(res.getLead_details_count().equals("0")))
+                            if (res.getLead_details().size()>0)
                             {
                                 try{
                                     view.ShowNewLeadDetailCount(res);
@@ -57,6 +58,7 @@ public class NewLeadCallingTaskPresenter  implements IPresenter.INewLeadCallingT
                                 view.dismissProgressDialog();
                             }else{
                                 view.dismissProgressDialog();
+                                Toast.makeText(context, "No Record Found", Toast.LENGTH_SHORT).show();
                             }
                         }
                     },

@@ -67,12 +67,13 @@
 
                         </LinearLayout>
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:id="@+id/leadnameTrackerDetail_LinearLayout"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/refreshAndTrackerDetails_LinearLayout"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:weightSum="4">
 
                             <ImageView
                                 android:id="@+id/leadnameTrackerDetail_ImageView"
@@ -81,7 +82,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_marginTop="5dp"
                                 android:paddingLeft="10dp"
-                                android:src="@drawable/name" />
+                                android:src="@drawable/name"
+                               />
 
                             <TextView
                                 android:id="@+id/leadnameTrackerDetail_TextView"
@@ -98,10 +100,31 @@
                                 android:paddingLeft="10dp"
                                 android:paddingTop="5dp"
                                 android:textColorHint="@color/edittextcolor"
-                                android:textSize="12sp" />
+                                android:textSize="12sp"
+                                android:layout_weight="3"/>
+                            <TextView
+                                android:id="@+id/leadBookingTrackerDetail_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toRightOf="@id/leadnameTrackerDetail_TextView"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="BookingwithinDays"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:layout_alignParentRight="true"
+                                android:textAlignment="center"
+                                android:gravity="right"
+                                android:textSize="12sp"
+                                android:layout_weight="1"/>
 
 
-                        </RelativeLayout>
+                        </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/leadContactnoTrackerDetail_LinearLayout"

@@ -193,11 +193,13 @@ public class TrackerPresenter implements IPresenter.ITrackerPresenter{
                         public void onResponse(SearchTrackerListBean res) {
                             view.dismissProgressDialog();
                             try {
-                               if (!(res.getUser_details_count().get(0).getLead_count().equals("0"))){
+                               if (res.getUser_details().size()>0){
                                    view.showTrackerListView(res);
                                    view.dismissProgressDialog();
                                 }else{
                                    view.dismissProgressDialog();
+                                   view.showTrackerListView(res);
+                                   Toast.makeText(context, "No Record Found", Toast.LENGTH_SHORT).show();
                                }
                               /*  if (!(res.getUser_details_count().get(0).getCount().equals("0"))) {
                                     view.showTrackerListView(res);

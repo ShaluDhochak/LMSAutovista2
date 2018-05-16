@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class UnassignedDashboardLeadActivity extends AppCompatActivity implements IView.DashboardDetailView{
 
@@ -35,9 +37,10 @@ public class UnassignedDashboardLeadActivity extends AppCompatActivity implement
     @BindView(R.id.totalLeadHeading_TextView)
     TextView totalLeadHeading_TextView;
 
+    @BindView(R.id.backButton_ImageView)
+    ImageView backButton_ImageView;
 
     ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +56,6 @@ public class UnassignedDashboardLeadActivity extends AppCompatActivity implement
         progressDialog = new ProgressDialog(UnassignedDashboardLeadActivity.this);
         progressDialog.setMessage("Loading...");
         progressDialog.setCanceledOnTouchOutside(false);
-
 
     }
 
@@ -84,6 +86,11 @@ public class UnassignedDashboardLeadActivity extends AppCompatActivity implement
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @OnClick(R.id.backButton_ImageView)
+    public void backBtn(){
         super.onBackPressed();
     }
 

@@ -15,6 +15,31 @@
     <string name="action_newcar">New Car</string>
     <string name="action_used_car">Used Car</string>
 
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+
+    <string-array name="nav_item_activity_titles">
+        <item>DashBoard</item>
+        <item>Calling Task</item>
+        <item>Customer Operation</item>
+        <item>Tracker</item>
+        <item>Daily Report</item>
+        <item>Monthly Report</item>
+        <item>DSEWise Report</item>
+        <item>Lead Report</item>
+        <item>Add New Lead</item>
+        <item>Assign New Lead</item>
+        <item>Assign Transferred Lead</item>
+        <item>Edit Customer Detail</item>
+        <item>New Car Stock</item>
+        <item>POC Stock</item>
+        <item>Send Message To DSE</item>
+        <item>DSE Daily Report</item>
+        <item>DSE Daily Report View</item>
+    </string-array>
+
+
     <!--String for navigation Drawer-->
     <string name="nav_location_wise">Dashboard</string>
     <string name="nav_calling_task">Calling Task</string>
@@ -262,6 +287,72 @@
 
     <!--Edit Customer-->
     <string name="editCustomerDetailHeading">Edit Customer Detail</string>
+
+    <!--Send message-->
+    <string name="listOfMessage">List of Message</string>
+    <string name="addMessageString">Add Message</string>
+
+    <string name="MoreDetails">More Details</string>
+    <string name="cse_name">CSE Name</string>
+
+    <!--Dse Lead  REPORT sTRING-->
+    <string name="pending_new">Pending New</string>
+    <string name="pending_followUp">Pending FollowUp</string>
+    <string name="bookedfrom_autovista">Booked From Autovista</string>
+    <string name="evaluation_alloted">Evaluation Allotted</string>
+
+    <string name="lost_to_competition_brand">Lost to Competition Brand</string>
+    <string name="color_and_model_available">Color and Model Available</string>
+    <string name="plan_cancelled">Plan Cancelled</string>
+    <string name="title_activity_check_flow_search">CheckFlowSearchActivity</string>
+
+    <!--Report Details -->
+    <string name="leadDetail">Lead Detail</string>
+
+    <!--LeadWise Report-->
+    <string name="total_leads">Total Leads</string>
+    <string name="total_unassigned_leads">Unassigned Leads</string>
+    <string name="total_pending_new_leads">Pending New Leads</string>
+    <string name="total_pending_followup_leads">Pending Followup Leads</string>
+    <string name="total_booking_30">Booking within 30 days</string>
+    <string name="total_booking_60">Booking within 60 days</string>
+    <string name="total_booking_greater_60">Booking within Greater than 60 days</string>
+
+    <string name="booked_from_autovista">Booked from Autovista</string>
+    <string name="home_visit">Home Visit</string>
+    <string name="showroom_visit">Showroom Visit</string>
+    <string name="test_drive">Test Drive</string>
+    <string name="evaluation_allotted">Evaluation Allotted</string>
+    <string name="deal">Deal</string>
+    <string name="undecided">Undecided</string>
+    <string name="not_interested">Not Interested</string>
+    <string name="already_booked_from_us">Already Booked From Us</string>
+    <string name="lost_to_codealer">Lost To Codealer</string>
+    <string name="color_model_availability">Colour and Model Availability</string>
+    <string name="budget_issue">Budget Issue</string>
+    <string name="nearest_dealership">Nearest Dealership Available</string>
+    <string name="outstation_purchase">Outstation Purchase</string>
+    <string name="plan_cancel">Plan Cancelled</string>
+
+    <!--Search Transsferrred Lead Details-->
+    <string name="assign_to">Assign To</string>
+    <string name="assign_by">Assign By</string>
+    <string name="transfer_date">Transfer Date</string>
+
+    <string name="FuelType">Fuel Type  </string>
+    <string name="VehicleStatus">Vehicle Status  </string>
+    <string name="CarMake"> Car Make</string>
+    <string name="Mileage">Mileage  </string>
+    <string name="OdoMeter">Odo Meter </string>
+    <string name="Insurance">Insurance  </string>
+    <string name="InsuranceExpiry">Insurance Expiry  </string>
+    <string name="Category">Category  </string>
+    <string name="StockLocation">Stock Location </string>
+    <string name="ExptSelling">Expt Selling  </string>
+    <string name="TotalPendingCost">Pending Cost </string>
+    <string name="Ageing">Ageing </string>
+    <string name="LastUpdate">Last Update </string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

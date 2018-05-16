@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.lmsautovista.View.Activity.DseWiseReportDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/dseLeadList_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:id="@+id/headerDseWiseReport_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/header_withback_btn_layout"/>
+        </LinearLayout>
+        <ScrollView
+            android:id="@+id/dseLeadList_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerDseWiseReport_LinearLayout">
+            <RelativeLayout
+                android:id="@+id/dseWiseReportHome_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/nameDseWiseLeadReport_txtView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:textAlignment="center"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="17sp"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    />
+                <View
+                    android:id="@+id/separator0_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/nameDseWiseLeadReport_txtView"
+                    android:background="@color/edittextcolor"
+                    />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/dseLeadList_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:layout_below="@+id/separator0_view"
+                    >
+
+                <LinearLayout
+                    android:id="@+id/dseLeadList_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/separator0_view"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/dseLeadDetailsReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/dseLeadsReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="3"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+                            android:text="@string/pending_new"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/dseLeadsValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/separator1_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/pendingFollowUpDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/pendingFollowUpDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/pending_followUp"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/pendingFollowUpDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator2_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+
+                        />
+                    <LinearLayout
+                        android:id="@+id/bookedFromAVDseLeadsReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/bookedFromAVDseLeadsReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/booked_from_autovista"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/bookedFromAVDseLeadsValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator3_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+
+                        />
+                    <LinearLayout
+                        android:id="@+id/homeVisitDseLeadsReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/homeVisitDseLeadsReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/home_visit"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/homeVisitDseLeadsValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator4_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/showroomVisitDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/showroomVisitDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/showroom_visit"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/showroomVisitDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator5_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+
+                        />
+                    <LinearLayout
+                        android:id="@+id/evaluationAlotDseReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/evaluationAlotDseReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/evaluation_allotted"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/evaluationAlotDseValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator6_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/testDriveDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/testDriveDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/test_drive"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/testDriveDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator7_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/followUpDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/followUpDseLeadHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/follow_up"
+                            android:textSize="14sp"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/followUpDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator8_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/undecidedDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/undecidedDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/undecided"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/undecidedDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator9_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/dealDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/dealDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/deal"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/dealDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator10_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/notInterestedDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/notInterestedDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/not_interested"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/notInterestedDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator11_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/lostCodealerDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/lostCodealerDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/lost_to_codealer"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/lostCodealerDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator12_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/lostCompetitorBrandDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/lostCompetitorBrandDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/lost_to_competition_brand"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/lostCompetitorBrandDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator13_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+                    <LinearLayout
+                        android:id="@+id/colorModelAvailableDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/colorModelAvailableDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/color_and_model_available"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/colorModelAvailableDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator14_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/budgetIssueDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/budgetIssueDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/budget_issue"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/budgetIssueDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/separator15_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/edittextcolor"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/planCancelledDseLeadReport_linearLayoout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+
+                        <TextView
+                            android:id="@+id/planCancelledDseLeadReportHeading_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="@string/plan_cancelled"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:layout_marginLeft="5dp"
+                            android:paddingLeft="5sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/planCancelledDseLeadValueReport_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="0"
+                            android:textAlignment="textEnd"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/edittextcolor"
+                            android:padding="3sp"
+                            android:paddingLeft="5sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

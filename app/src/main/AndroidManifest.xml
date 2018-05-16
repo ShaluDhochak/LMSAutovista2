@@ -39,7 +39,13 @@
         <activity android:name=".View.Activity.SearchLeadViaContactNoActivity" />
         <activity android:name=".View.Activity.CheckFlowSearchActivity" />
         <activity android:name=".View.Activity.EditCustomerListDetailActivity" />
-        <activity android:name=".View.Activity.EditCustomerDetailActivity"></activity>
+        <activity android:name=".View.Activity.EditCustomerDetailActivity" />
+        <activity android:name=".View.Activity.ViewMessageActivity" />
+        <activity android:name=".View.Activity.SubmitMessageActivity" />
+        <activity android:name=".View.Activity.DailyReportDetailActivity" />
+        <activity android:name=".View.Activity.DseWiseReportDetailActivity" />
+        <activity android:name=".View.Activity.NavigationDrawer" />
+        <activity android:name=".View.Activity.POCStockListDetailsActivity"></activity>
     </application>
 
 </manifest>

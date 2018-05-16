@@ -1,8 +1,8 @@
 package com.example.user.lmsautovista.View.Fragment;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -27,8 +27,10 @@ import butterknife.ButterKnife;
 
 public class PendingLiveLeadsNotificationFragment extends Fragment implements IView.PendingLiveCallingTaskView{
 
-    ProgressDialog progressDialog;
     PendingFollowUpPresenter pendingFollowUpPresenter;
+
+    @BindView(R.id.search_cardView)
+    CardView search_cardView;
 
     @BindView(R.id.customerDetails_ListView)
     RecyclerView customerDetails_ListView;
@@ -52,9 +54,7 @@ public class PendingLiveLeadsNotificationFragment extends Fragment implements IV
     private void initialiseUI(){
         pendingFollowUpPresenter = new PendingFollowUpPresenter(this);
 
-        progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading...");
-        progressDialog.setCanceledOnTouchOutside(false);
+        search_cardView.setVisibility(View.GONE);
     }
 
     @Override
@@ -69,15 +69,18 @@ public class PendingLiveLeadsNotificationFragment extends Fragment implements IV
 
     @Override
     public void showPendingLiveLeadDetails(CallingTaskNewLeadBean jsonObject) {
+        try{
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());
-        searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
+     //   searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
 
         CallingTaskDetailAdapter dashboardAdapter = new CallingTaskDetailAdapter(getActivity(),jsonObject.getLead_details());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         customerDetails_ListView.setLayoutManager(mLayoutManager);
         customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
         customerDetails_ListView.setAdapter(dashboardAdapter);
+        }catch(Exception e){
+        }
     }
 
 }

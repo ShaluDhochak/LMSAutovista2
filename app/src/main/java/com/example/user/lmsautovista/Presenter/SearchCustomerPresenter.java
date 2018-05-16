@@ -5,6 +5,7 @@ package com.example.user.lmsautovista.Presenter;
 */
 
 import android.content.Context;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
@@ -27,7 +28,7 @@ public class SearchCustomerPresenter implements IPresenter.ISearchCustomerPresen
     }
 
     @Override
-    public void getSearchViaContactNoList(String customer_no,Context context) {
+    public void getSearchViaContactNoList(String customer_no,final Context context) {
         try {
 
             Map<String, String> map = new HashMap<>();
@@ -49,6 +50,7 @@ public class SearchCustomerPresenter implements IPresenter.ISearchCustomerPresen
                                 } catch (Exception e) {
                                 }
                             }else{
+                                Toast.makeText(context, "No Record found", Toast.LENGTH_SHORT).show();
                                 iView.showSearchCustomerDetails(res);
                             }
                         }

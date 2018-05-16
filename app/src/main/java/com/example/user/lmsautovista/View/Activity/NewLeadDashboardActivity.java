@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class NewLeadDashboardActivity extends AppCompatActivity implements IView.DashboardDetailView{
 
@@ -34,6 +36,9 @@ public class NewLeadDashboardActivity extends AppCompatActivity implements IView
 
     @BindView(R.id.totalLeadHeading_TextView)
     TextView totalLeadHeading_TextView;
+
+    @BindView(R.id.backButton_ImageView)
+    ImageView backButton_ImageView;
 
     ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
 
@@ -66,6 +71,11 @@ public class NewLeadDashboardActivity extends AppCompatActivity implements IView
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @OnClick(R.id.backButton_ImageView)
+    public void backBtn(){
         super.onBackPressed();
     }
 

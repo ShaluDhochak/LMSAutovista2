@@ -30,6 +30,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static android.widget.Toast.makeText;
@@ -104,7 +105,7 @@ public class DseDailyReportFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view =  inflater.inflate(R.layout.fragment_dse_daily_report, container, false);
-
+        ButterKnife.bind(this, view);
         initialiseUI();
         // Inflate the layout for this fragment
         return view;
@@ -219,8 +220,8 @@ public class DseDailyReportFragment extends Fragment {
             evaluationCount = evaluationCountDseDailyReport_et.getText().toString();
             evaluationRemark = remarkEvaluationDseDailyReport_et.getText().toString();
 
-            userId = user_id;
-            userLocation = user_location;
+            userId = SharedPreferenceManager.getInstance(getActivity()).getPreference(Constants.USER_ID, "");
+            userLocation = SharedPreferenceManager.getInstance(getActivity()).getPreference(Constants.LOCATION_SESSION, "");
             process_id = SharedPreferenceManager.getInstance(getActivity()).getPreference(Constants.PROCESS_ID, "");
 
             pDialog = new ProgressDialog(getActivity());
@@ -253,8 +254,8 @@ public class DseDailyReportFragment extends Fragment {
             params.add(new BasicNameValuePair("evaluation_count", evaluationCount));
             params.add(new BasicNameValuePair("evaluation_remark", evaluationRemark));
 
-            params.add(new BasicNameValuePair("user_id", user_id));
-            params.add(new BasicNameValuePair("location", user_location));
+            params.add(new BasicNameValuePair("user_id", userId));
+            params.add(new BasicNameValuePair("location", userLocation));
             params.add(new BasicNameValuePair("process_id", process_id));
 
             String url_add_lead = Constants.BASE_URL + Constants.DSE_DAILY_REPORT_INSERT;

@@ -327,19 +327,14 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
         quotationLocArrayList.add("Location");
         quotationModelArrayList.add("Model");
 
-
         addFollowUpPresenter.getFeedbackList(this);
         addFollowUpPresenter.getNextActionList(this,"");
         addFollowUpPresenter.getQuotationLocation(this);
-
         addFollowUpPresenter.getQuotataionModel("0", this);
-
         addFollowUpPresenter.getQuotationDescription("0", "0", this);
 
         addFollowUpPresenter.getTransferProcess(this);
-
         addFollowUpPresenter.getTransferLocation("", this);
-
         addFollowUpPresenter.getTransferAssignTo("","", this);
 
         getBookingWithInDatsDetails();
@@ -370,7 +365,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
             buyerTypeAddFollowUp_Spinner.setVisibility(GONE);
             buyerType_cardView.setVisibility(GONE);
         }
-        //if process_id is 6(new  car) then newCarDetails_cardView.visibility visible
     }
 
     @Override
@@ -381,9 +375,15 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
     @OnClick(R.id.submitAddFollowUpDetails_Button)
     public void submitAddFollowUp() {
 
+
         if (process_shedPref.equals("6")) {
+
+
             new CreateNewCarFollowUp().execute();
+
         } else if (process_shedPref.equals("7")) {
+
+
             new CreateUsedCarFollowUp().execute();
         }
     }
@@ -511,7 +511,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 pDialog.dismiss();
                 if (!(response == null)) {
                     Toast.makeText(AddFollowUpActivity.this, "Data successfully Inserted.", Toast.LENGTH_SHORT).show();
-                    //Toast(getActivity(),"Data successfully Inserted.", Toast.LENGTH_SHORT).show();
                     ClearAllData();
                 }
                 else {
@@ -646,7 +645,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 pDialog.dismiss();
                 if (!(response == null)) {
                     Toast.makeText(AddFollowUpActivity.this, "Data successfully Inserted.", Toast.LENGTH_SHORT).show();
-                    //Toast(getActivity(),"Data successfully Inserted.", Toast.LENGTH_SHORT).show();
                     ClearAllData();
                 }
                 else {
@@ -969,7 +967,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 nftAddFollowUpDetails_TextView.setText(selectedHour + ":" + selectedMinute + ":00");
             }
         }, hour, minute, true);//Yes 24 hour time
-        // mTimePicker.setTitle("Select Time");
         mTimePicker.show();
     }
 
@@ -1027,7 +1024,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,newModelArrayList);
         companiesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         newCarModelDetails_Spinner.setAdapter(companiesArrayAdapter);
@@ -1046,7 +1042,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,newVariantArrayList);
         companiesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         newCarVariantDetails_Spinner.setAdapter(companiesArrayAdapter);
@@ -1067,7 +1062,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,quotationLocArrayList);
         companiesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         locationClickHereToSendQuotation_Spinner.setAdapter(companiesArrayAdapter);
@@ -1086,7 +1080,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,quotationDescriptionArraylist);
         companiesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         descriptionClickHereToSendQuotation_Spinner.setAdapter(companiesArrayAdapter);
@@ -1106,7 +1099,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> companiesArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,quotationModelArrayList);
         companiesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         carModelClickHereToSendQuotation_Spinner.setAdapter(companiesArrayAdapter);
@@ -1127,7 +1119,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> transferProcessArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,transferProcessArrayList);
         transferProcessArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         transferProcessAddFollowUpDetails_Spinner.setAdapter(transferProcessArrayAdapter);
@@ -1147,7 +1138,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> transferLocArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,transferLocArrayList);
         transferLocArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         transferlocationAddFollowUpDetails_Spinner.setAdapter(transferLocArrayAdapter);
@@ -1167,7 +1157,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> transferToArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,transferAssignToArrayList);
         transferToArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         assignToAddFollowUpDetails_Spinner.setAdapter(transferToArrayAdapter);
@@ -1188,7 +1177,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> transferToArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,carMakeArrayList);
         transferToArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         carMakeBuyUsedCarDetails_Spinner.setAdapter(transferToArrayAdapter);
@@ -1207,7 +1195,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-
         ArrayAdapter<String> transferToArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,carModelArrayList);
         transferToArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         carModelBuyUsedCarDetails_Spinner.setAdapter(transferToArrayAdapter);
@@ -1228,7 +1215,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                 e.printStackTrace();
             }
         }
-    //    oldCarMakeString, oldCarMakeStringId, oldCarModelString, oldCarModelStringId;
         ArrayAdapter<String> transferToArrayAdapter = new ArrayAdapter<String>(AddFollowUpActivity.this,R.layout.spinner_textview,oldCarMakeArrayList);
         transferToArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         carMakeOldCarDetails_Spinner.setAdapter(transferToArrayAdapter);
@@ -1309,9 +1295,7 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
         }else {
             selectedFeedbackId = "";
         }
-
         addFollowUpPresenter.getNextActionList(AddFollowUpActivity.this, selectedFeedback);
-
     }
 
     @OnItemSelected(R.id.nextActionAddFollowUpDetails_Spinner)
@@ -1353,15 +1337,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
     {
         selectedNewVariant = spinner.getSelectedItem().toString();
 
-       /* if (selectedNewVariant.equals("New Car Variant")){
-            selectedNewVariantID = "";
-        }else if (!(selectedNewVariant.equals("New Car Variant"))){
-            selectedNewVariantID = selectedNewVariant;
-        }else {
-            selectedNewVariantID = "";
-        }
-        */
-
         for (Map.Entry<String, String> e : newVariantMap.entrySet()) {
             Object key = e.getKey();
             Object value = e.getValue();
@@ -1382,14 +1357,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
     {
         selectedNewModel = spinner.getSelectedItem().toString();
 
-      /*  if (selectedNewModel.equals("New Car Model")){
-            selectedNewModelId = "";
-        }else if (!(selectedNewModel.equals("New Car Model"))){
-            selectedNewModelId = selectedNewModel;
-        }else {
-            selectedNewModelId = "";
-        }
-        */
         for (Map.Entry<String, String> e : newModelMap.entrySet()) {
             Object key = e.getKey();
             Object value = e.getValue();
@@ -1487,14 +1454,12 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
             if (selectedLocation.equals("Transfer Location To")) {
                 selectedLocationId = "";
                 addFollowUpPresenter.getTransferAssignTo(selectedProcessId,selectedLocationId, this);
-                //addFollowUpPresenter.getTransferLocation(selectedProcessId, this);
             } else {
                 if (value.equals(selectedLocation)) {
                     selectedLocationId = (String) key;
                     Log.i("Selected Model : ", selectedLocationId);
                     addFollowUpPresenter.getTransferAssignTo(selectedProcessId,selectedLocationId, this);
-                  //  addFollowUpPresenter.getTransferLocation(selectedProcessId, this);
-                }
+                 }
             }
         }
     }
@@ -1509,13 +1474,10 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
             Object value = e.getValue();
             if (selectedTransferTo.equals("Transfer Location To")) {
                 selectedTransferToId = "";
-                //addFollowUpPresenter.getTransferLocation(selectedProcessId, this);
             } else {
                 if (value.equals(selectedTransferTo)) {
                     selectedTransferToId = (String) key;
                     Log.i("Selected Model : ", selectedTransferToId);
-
-                    //  addFollowUpPresenter.getTransferLocation(selectedProcessId, this);
                 }
             }
         }
@@ -1580,7 +1542,6 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
             }
             addFollowUpPresenter.getOldCarModel(oldCarMakeStringId,this);
         }
-
     }
 
     @OnItemSelected(R.id.carModelOldCarDetails_Spinner)
@@ -1599,9 +1560,7 @@ public class AddFollowUpActivity extends AppCompatActivity implements IView.AddF
                     Log.i("Selected Model: ", oldCarModelStringId);
                 }
             }
-
         }
-
     }
 
     private void ClearAllData(){

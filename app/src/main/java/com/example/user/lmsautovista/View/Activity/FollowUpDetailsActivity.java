@@ -76,6 +76,7 @@ public class FollowUpDetailsActivity extends AppCompatActivity implements IView.
         customerDetailsIntent.putParcelableArrayListExtra("arrayList",getIntent().getParcelableArrayListExtra("arrayList"));
         startActivity(customerDetailsIntent);
     }
+
     @OnClick(R.id.add_followUpDetails_fab)
     public void onClickFollowUpDetails(){
         Intent followUpDetailsIntent = new Intent(FollowUpDetailsActivity.this, AddFollowUpActivity.class);
@@ -95,5 +96,10 @@ public class FollowUpDetailsActivity extends AppCompatActivity implements IView.
         followupBasedonBookingId_rv.setLayoutManager(mLayoutManager);
         followupBasedonBookingId_rv.setItemAnimator(new DefaultItemAnimator());
         followupBasedonBookingId_rv.setAdapter(dashboardAdapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

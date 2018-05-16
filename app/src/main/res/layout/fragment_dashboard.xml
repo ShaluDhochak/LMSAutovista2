@@ -4,15 +4,32 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.lmsautovista.View.Fragment.DashboardFragment">
 
+<ScrollView
+    android:id="@+id/scrollView_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
     <RelativeLayout
         android:id="@+id/location_rl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/headerDashboard_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/process_header_layout"/>
+        </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/locationwiseDashboard_Relativelayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_below="@+id/headerDashboard_rl"
             >
 
             <TextView
@@ -25,6 +42,7 @@
                 android:textSize="20sp"
                 android:layout_margin="10dp"
                 android:padding="10dp"
+                android:visibility="gone"
                 />
 
             <Spinner
@@ -32,7 +50,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-
                 />
 
         </LinearLayout>
@@ -199,6 +216,21 @@
 
         </RelativeLayout>
 
+        <TextView
+            android:id="@+id/viewMessage_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click here to View Message"
+            android:textSize="15sp"
+            android:textColor="@color/darkBlueWebsite"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_below="@+id/leadList_lineralayout"
+
+            />
+
     </RelativeLayout>
+
+</ScrollView>
 
 </FrameLayout>

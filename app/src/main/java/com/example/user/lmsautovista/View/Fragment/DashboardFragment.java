@@ -12,13 +12,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.lmsautovista.Manager.SharedPreferenceManager;
 import com.example.user.lmsautovista.Model.DashboardCountBean;
 import com.example.user.lmsautovista.Model.LocationDashboardBean;
 import com.example.user.lmsautovista.Model.LoginBean;
+import com.example.user.lmsautovista.Model.ProcessBean;
 import com.example.user.lmsautovista.Presenter.DashboardPresenter;
+import com.example.user.lmsautovista.Presenter.LoginPresenter;
 import com.example.user.lmsautovista.R;
+import com.example.user.lmsautovista.Utils.Constants;
 import com.example.user.lmsautovista.Utils.NetworkUtilities;
 import com.example.user.lmsautovista.View.Adapter.DashboardAdapter;
 import com.example.user.lmsautovista.View.IView;
@@ -29,6 +34,7 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import butterknife.OnItemSelected;
 
 public class DashboardFragment extends Fragment implements IView.LoginView{
@@ -36,6 +42,7 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
     View view;
     ProgressDialog progressDialog;
     DashboardPresenter dashboardPresenter;
+    LoginPresenter loginPresenter;
 
     @BindView(R.id.countLocationWise_ListView)
     RecyclerView countLocationWise_ListView;
@@ -43,9 +50,30 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
     @BindView(R.id.locationWiseDashboard_spinner)
     Spinner locationWiseDashboard_spinner;
 
+    @BindView(R.id.viewMessage_textView)
+    TextView viewMessage_textView;
+
+    @BindView(R.id.toolbarProcess_spinner)
+    Spinner toolbarProcess_spinner;
+
+    @BindView(R.id.toolbarLocation_spinner)
+    Spinner toolbarLocation_spinner;
+
+    @BindView(R.id.toolbarProcess_tv)
+    TextView toolbarProcess_tv;
+
+    @BindView(R.id.toolbarLocation_tv)
+    TextView toolbarLocation_tv;
+
+
     ArrayList<DashboardCountBean.Dashboard_Count> dashboardCountList = new ArrayList<DashboardCountBean.Dashboard_Count>();
     Map<String, String> locationMap = new HashMap<>();
-    String selectedLocationDashboard, selectedLocationDashboardId;
+    Map<String, String> processMap = new HashMap<>();
+    Map<String, String> locationToolMap = new HashMap<>();
+    String selectedLocationDashboard, selectedLocationDashboardId = "";
+    String selectedProcessDashboard, selectedProcessDashboardId = "";
+    String selectedLocToolDashboard, selectedLocToolDashboardId = "";
+    String rolestr;
 
     public DashboardFragment() {
     }
@@ -56,7 +84,11 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
         view  =inflater.inflate(R.layout.fragment_dashboard, container, false);
         ButterKnife.bind(this, view);
 
+        viewMessage_textView.setVisibility(View.GONE);
+        toolbarProcess_tv.setVisibility(View.GONE);
+        toolbarLocation_tv.setVisibility(View.GONE);
         dashboardPresenter = new DashboardPresenter(this);
+        loginPresenter = new LoginPresenter(this);
 
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
@@ -67,12 +99,37 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
     @Override
     public void onResume() {
         super.onResume();
+        rolestr = SharedPreferenceManager.getInstance(getActivity()).getPreference(Constants.ROLE_ID, "");
+        checkRole();
         if (NetworkUtilities.isInternet(getActivity())) {
-            dashboardPresenter.getLocationSpinnerList(getActivity());
-            dashboardPresenter.getDashboardLocationList(selectedLocationDashboardId, getActivity());
+
+            dashboardPresenter.getDashboardProcessList(getActivity());
+            dashboardPresenter.getDashboardHeaderLocationList(getActivity());
+            dashboardPresenter.getLocationSpinnerList("","",getActivity());
+            dashboardPresenter.getDashboardLocationList("", getActivity());
         } else {
             Toast.makeText(getActivity(), "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void checkRole(){
+        if (rolestr.equals("1")){
+            viewMessage_textView.setVisibility(View.GONE);
+        }else if(rolestr.equals("2")){
+            viewMessage_textView.setVisibility(View.GONE);
+        }else if (rolestr.equals("3")){
+            viewMessage_textView.setVisibility(View.GONE);
+        }else if (rolestr.equals("4")){
+            viewMessage_textView.setVisibility(View.VISIBLE);
+        }else if (rolestr.equals("5")){
+            viewMessage_textView.setVisibility(View.VISIBLE);
+        }
+
+    }
+
+    @OnClick(R.id.viewMessage_textView)
+    public void messageList(){
+
     }
 
     @Override
@@ -99,9 +156,53 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
 
     }
 
+    @OnItemSelected(R.id.toolbarLocation_spinner)
+    public void locationToolNameSelected(Spinner spinner, int position)
+    {
+        selectedLocToolDashboard = spinner.getSelectedItem().toString();
+        for (Map.Entry<String, String> e : locationToolMap.entrySet()) {
+            Object key = e.getKey();
+            Object value = e.getValue();
+            if(value.equals(selectedLocToolDashboard)) {
+                selectedLocToolDashboardId = (String) key;
+                Log.i("Selected CSE : ",selectedLocToolDashboardId);
+
+                toolbarLocation_tv.setVisibility(View.VISIBLE);
+                toolbarLocation_tv.setText("Selected Location : " + selectedLocToolDashboard);
+                loginPresenter.saveLocationInfo((String)key, (String) value, SharedPreferenceManager.getInstance(getActivity()));
+                // dashboardPresenter.getLocationSpinnerList(selectedLocationId, this);
+            }
+            dashboardPresenter.getLocationSpinnerList(selectedLocToolDashboardId,selectedProcessDashboardId,getActivity());
+        }
+    }
+
     @Override
     public void showLocationList(LoginBean jsonObject) {
+        try {
+            ArrayList<String> locationProArrayList = new ArrayList<>();
+            locationProArrayList.clear();
+            locationProArrayList.add("Select Location");
+            if (jsonObject.getSession_data().get(0).getProcess().size() > 0) {
+                for (int i = 0; i < jsonObject.getSession_data().get(0).getProcess().size(); i++) {
+                    if (jsonObject.getSession_data().get(0).getProcess().get(i).getProcess_id().equals(SharedPreferenceManager.getInstance(getActivity()).getPreference(Constants.PROCESS_ID, ""))) {
+                        for (int j = 0; j < jsonObject.getSession_data().get(0).getProcess().get(i).getLocation().size(); j++) {
+                            try {
+                                locationProArrayList.add(jsonObject.getSession_data().get(0).getProcess().get(i).getLocation().get(j).getLocation());
+                                locationToolMap.put(jsonObject.getSession_data().get(0).getProcess().get(i).getLocation().get(j).getLocation_id(), jsonObject.getSession_data().get(0).getProcess().get(i).getLocation().get(j).getLocation());
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
 
+            ArrayAdapter<String> locationArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_white_text, locationProArrayList);
+            locationArrayAdapter.setDropDownViewResource(R.layout.spinner_checked_textview);
+            toolbarLocation_spinner.setAdapter(locationArrayAdapter);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -139,6 +240,52 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
         }
     }
 
+    @Override
+    public void showProcessDashboard(ProcessBean jsonObject) {
+        try {
+            ArrayList<String> processDashboardArrayList = new ArrayList<>();
+            processDashboardArrayList.add("Select Process");
+            if (jsonObject.getAll_process().size() > 0) {
+                for (int i = 0; i < jsonObject.getAll_process().size(); i++) {
+                    try {
+                        processDashboardArrayList.add(jsonObject.getAll_process().get(i).getProcess_name());
+                        processMap.put(jsonObject.getAll_process().get(i).getProcess_id(), jsonObject.getAll_process().get(i).getProcess_name());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            ArrayAdapter<String> locationDashboardArrayAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_white_text, processDashboardArrayList);
+            locationDashboardArrayAdapter.setDropDownViewResource(R.layout.spinner_checked_textview);
+            toolbarProcess_spinner.setAdapter(locationDashboardArrayAdapter);
+        }catch (Exception e){
+        }
+    }
+
+    @OnItemSelected(R.id.toolbarProcess_spinner)
+    public void processNameSelected(Spinner spinner, int position)
+    {
+        selectedProcessDashboard = spinner.getSelectedItem().toString();
+        for (Map.Entry<String, String> e : processMap.entrySet()) {
+            Object key = e.getKey();
+            Object value = e.getValue();
+            if(value.equals(selectedProcessDashboard)) {
+                selectedProcessDashboardId = (String) key;
+                Log.i("Selected CSE : ",selectedProcessDashboardId);
+
+                toolbarProcess_tv.setVisibility(View.VISIBLE);
+                toolbarProcess_tv.setText("Selected Process : " + selectedProcessDashboard);
+
+                loginPresenter.saveProcessInfo((String)key, (String) value, SharedPreferenceManager.getInstance(getActivity()));
+            }
+            dashboardPresenter.getDashboardHeaderLocationList(getActivity());
+            dashboardPresenter.getLocationSpinnerList(selectedLocToolDashboardId,selectedProcessDashboardId,getActivity());
+        }
+
+    }
+
+
     @OnItemSelected(R.id.locationWiseDashboard_spinner)
     public void locationNameSelected(Spinner spinner, int position)
     {
@@ -146,13 +293,16 @@ public class DashboardFragment extends Fragment implements IView.LoginView{
         for (Map.Entry<String, String> e : locationMap.entrySet()) {
             Object key = e.getKey();
             Object value = e.getValue();
-            if(value.equals(selectedLocationDashboard)) {
+            if (value.equals(selectedLocationDashboard)) {
                 selectedLocationDashboardId = (String) key;
-                Log.i("Selected CSE : ",selectedLocationDashboardId);
-             //   loginPresenter.saveLocationInfo((String)key, (String) value, SharedPreferenceManager.getInstance(this));
+                Log.i("Selected CSE : ", selectedLocationDashboardId);
+                //   loginPresenter.saveLocationInfo((String)key, (String) value, SharedPreferenceManager.getInstance(this));
             }
-            dashboardPresenter.getDashboardLocationList(selectedLocationDashboardId, getActivity());
-
+            if (selectedLocationDashboardId.equals("Select Location")) {
+                dashboardPresenter.getDashboardLocationList("", getActivity());
+            }else{
+                dashboardPresenter.getDashboardLocationList(selectedLocationDashboardId, getActivity());
+            }
         }
 
     }

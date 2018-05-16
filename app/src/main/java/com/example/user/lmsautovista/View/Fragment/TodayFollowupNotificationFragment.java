@@ -1,14 +1,15 @@
 package com.example.user.lmsautovista.View.Fragment;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,18 +24,30 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class TodayFollowupNotificationFragment extends Fragment implements IView.TodayLeadCallingTaskView{
 
-    ProgressDialog progressDialog;
     TodayFollowUpPresenter todayFollowupPresenter;
+
+    @BindView(R.id.search_cardView)
+    CardView search_cardView;
 
     @BindView(R.id.customerDetails_ListView)
     RecyclerView customerDetails_ListView;
 
     @BindView(R.id.searchViaDateHeading_TextView)
     TextView searchViaDateHeading_TextView;
+
+    @BindView(R.id.currentFollowUp_txtView)
+    TextView currentFollowUp_txtView;
+
+    @BindView(R.id.todayFollowUp_txtView)
+    TextView todayFollowUp_txtView;
+
+    @BindView(R.id.callTodayBtn_ll)
+    LinearLayout callTodayBtn_ll;
 
     View view;
     ArrayList<CallingTaskNewLeadBean.Lead_Details> dashboardCountList = new ArrayList<CallingTaskNewLeadBean.Lead_Details>();
@@ -52,48 +65,63 @@ public class TodayFollowupNotificationFragment extends Fragment implements IView
     private void initialiseUI(){
         todayFollowupPresenter = new TodayFollowUpPresenter(this);
 
-        progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Loading...");
-        progressDialog.setCanceledOnTouchOutside(false);
+        search_cardView.setVisibility(View.GONE);
+        callTodayBtn_ll.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onResume() {
         super.onResume();
         if (NetworkUtilities.isInternet(getActivity())) {
+            todayFollowup();
             todayFollowupPresenter.getTodayCallingTaskList(getActivity());
         } else {
             Toast.makeText(getActivity(), "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
     }
 
+    @OnClick(R.id.currentFollowUp_txtView)
+    public void currentFollowup(){
 
-   /* @Override
-    public void ShowDashboardDetailCount(CallingTaskNewLeadBean jsonObject) {
-        dashboardCountList.clear();
-        dashboardCountList.addAll(jsonObject.getLead_details());
-        searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
-
-       CallingTaskDetailAdapter dashboardAdapter = new CallingTaskDetailAdapter(getActivity(),jsonObject.getLead_details());
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        customerDetails_ListView.setLayoutManager(mLayoutManager);
-        customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
-        customerDetails_ListView.setAdapter(dashboardAdapter);
-
+    currentFollowUp();
+        todayFollowupPresenter.getCurrentTodayTaskList(getActivity());
     }
-    */
 
+    private void currentFollowUp(){
+        currentFollowUp_txtView.setTextColor(getResources().getColor(R.color.lightGrey1));
+        currentFollowUp_txtView.setBackgroundColor(getResources().getColor(R.color.darkBlueWebsite));
+
+        todayFollowUp_txtView.setBackgroundColor(getResources().getColor(R.color.lightGrey1));
+        todayFollowUp_txtView.setTextColor(getResources().getColor(R.color.darkBlueWebsite));
+    }
+
+    private void todayFollowup(){
+        todayFollowUp_txtView.setBackgroundColor(getResources().getColor(R.color.darkBlueWebsite));
+        todayFollowUp_txtView.setTextColor(getResources().getColor(R.color.lightGrey1));
+
+        currentFollowUp_txtView.setTextColor(getResources().getColor(R.color.darkBlueWebsite));
+        currentFollowUp_txtView.setBackgroundColor(getResources().getColor(R.color.lightGrey1));
+    }
+
+
+    @OnClick(R.id.todayFollowUp_txtView)
+    public void todayFollowUp(){
+       todayFollowup();
+        todayFollowupPresenter.getTodayCallingTaskList(getActivity());
+    }
     @Override
     public void ShowTodayLeadDetailCount(CallingTaskNewLeadBean jsonObject) {
+        try{
         dashboardCountList.clear();
         dashboardCountList.addAll(jsonObject.getLead_details());
-        searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
+     //   searchViaDateHeading_TextView.setText("Total Leads: " +jsonObject.getLead_details_count().get(0).getCount_lead());
 
         CallingTaskDetailAdapter dashboardAdapter = new CallingTaskDetailAdapter(getActivity(),jsonObject.getLead_details());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         customerDetails_ListView.setLayoutManager(mLayoutManager);
         customerDetails_ListView.setItemAnimator(new DefaultItemAnimator());
         customerDetails_ListView.setAdapter(dashboardAdapter);
-
+        }catch(Exception e){
+        }
     }
 }

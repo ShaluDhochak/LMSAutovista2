@@ -5,6 +5,7 @@ package com.example.user.lmsautovista.View.Adapter;
 */
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.user.lmsautovista.Model.SearchCustomerBean;
 import com.example.user.lmsautovista.R;
+import com.example.user.lmsautovista.View.Activity.CheckFlowSearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -131,11 +133,11 @@ public class SearchViaContcatNoAdapter extends BaseAdapter {
         viewHolder.checkFlowBoxSearch_textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              /*  Intent intent = new Intent(context, CheckFlowSearchActivity.class);
+                Intent intent = new Intent(context, CheckFlowSearchActivity.class);
                 intent.putExtra("position",position);
                 intent.putExtra("bean", allFollowupDetailsBeanList.get(position));
                 context.startActivity(intent);
-                */
+
             }
         });
 

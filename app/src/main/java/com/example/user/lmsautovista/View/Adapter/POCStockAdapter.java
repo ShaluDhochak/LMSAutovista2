@@ -5,13 +5,17 @@ package com.example.user.lmsautovista.View.Adapter;
 */
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.example.user.lmsautovista.Model.POCarStockBean;
 import com.example.user.lmsautovista.R;
+import com.example.user.lmsautovista.View.Activity.POCStockListDetailsActivity;
+
 import java.util.List;
 
 public class POCStockAdapter extends RecyclerView.Adapter<POCStockAdapter.MyViewHolder>{
@@ -34,7 +38,7 @@ public class POCStockAdapter extends RecyclerView.Adapter<POCStockAdapter.MyView
     public void onBindViewHolder(POCStockAdapter.MyViewHolder holder,final int position) {
         final POCarStockBean.Poc_stock bean = dashboardList.get(position);
 
-        holder.newCarStockSubModel_TextView.setText(bean.getSubmodel().toString());
+        holder.newCarStockSubModel_TextView.setText(bean.getMake_name().toString()+ " " +bean.getSubmodel().toString());
         holder.fuelTypeNewCarStockString_TextView.setText(bean.getFuel_type());
         holder.VehicleStatusNewCarStockString_TextView.setText(bean.getVehicle_status());
         holder.loctaionNewCarStockString_TextView.setText(bean.getStock_location());
@@ -43,6 +47,15 @@ public class POCStockAdapter extends RecyclerView.Adapter<POCStockAdapter.MyView
         holder.colorStrinfNewCarStock_TextView.setText(bean.getColor());
         holder.lastUpdateDateNewCarStockString_TextView.setText(bean.getCreated_date());
         holder.imageTextSeparator.setVisibility(View.VISIBLE);
+
+        holder.newCarStockSubModel_TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, POCStockListDetailsActivity.class);
+                intent.putExtra("bean", dashboardList.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
