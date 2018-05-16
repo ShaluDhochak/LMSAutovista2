@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkBlueWebsite">
+
+
+    <Spinner
+        android:id="@+id/toolbarProcess_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        />
+
+    <Spinner
+            android:id="@+id/toolbarLocation_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarProcess_spinner"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            />
+
+    <TextView
+        android:id="@+id/toolbarProcess_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/toolbarLocation_spinner"
+        android:text="Process: "
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/toolbarLocation_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/toolbarProcess_tv"
+        android:text="Location: "
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>
