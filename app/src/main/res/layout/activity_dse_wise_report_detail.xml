@@ -40,7 +40,7 @@
                     android:textSize="17sp"
                     android:background="@drawable/outline_blue_curved_rectangle"
                     />
-                <View
+                <TextView
                     android:id="@+id/separator0_view"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"

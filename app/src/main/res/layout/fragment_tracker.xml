@@ -117,7 +117,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/outline_blue_curved_rectangle"
-                    android:text="@string/searchLeads"
+                    android:text="@string/search"
                     android:textAlignment="center"
                     android:textColor="@color/darkBlueWebsite"
                     android:textSize="14sp" />

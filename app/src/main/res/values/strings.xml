@@ -135,7 +135,7 @@
     <string name="accidentalClaim">Accidental Claim</string>
 
     <!--String for calling task-->
-    <string name="searchLeads">Search Leads</string>
+    <string name="searchLeads">Search Leads via contact No.</string>
 
     <!--String for Tracker-->
     <string name="DateFrom">Date From</string>
