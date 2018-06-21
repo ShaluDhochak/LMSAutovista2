@@ -18,7 +18,6 @@
     <string name="openDrawer">open_drawer</string>
     <string name="closeDrawer">close_drawer</string>
 
-
     <string-array name="nav_item_activity_titles">
         <item>DashBoard</item>
         <item>Calling Task</item>
@@ -37,6 +36,7 @@
         <item>Send Message To DSE</item>
         <item>DSE Daily Report</item>
         <item>DSE Daily Report View</item>
+        <item>Daily Productivity Report</item>
     </string-array>
 
 
@@ -54,9 +54,10 @@
     <string name="nav_daily_report">Daily Report</string>
     <string name="nav_monthly_report">Monthly Report</string>
     <string name="nav_dseWise_report">DSE Wise Report</string>
-    <string name="nav_dseDailyWise_report">DSE Daily Report</string>
+    <string name="nav_dseDailyWise_report">Add DSE Daily Report</string>
     <string name="nav_dseDailyReportView">DSE Daily Report View</string>
     <string name="nav_Lead_report">Lead Report</string>
+    <string name="nav_daily_productivity_report">Daily Productivity Report</string>
 
 
     <string name="nav_change_password">Change Password</string>
@@ -78,6 +79,7 @@
     <string name="ServiceDetail">Service Detail</string>
     <string name="financeDetail">Finance Detail</string>
     <string name="accessoriesDetail">Accessories Detail</string>
+    <string name="newCarDetails">New Car Detail</string>
     <string name="interested_in">Interested In</string>
     <string name="feedbackStatus">Feedback Status</string>
     <string name="NotMentioned">Not Mentioned</string>
@@ -85,6 +87,7 @@
     <string name="currentUser">Current User</string>
     <string name="calldate">Call Date</string>
     <string name="nfd">Next FollowUp Date</string>
+    <string name="nft">Next FollowUp Time</string>
     <string name="Remark">Remark</string>
 
     <!-- String for fab-->
@@ -93,8 +96,23 @@
     <string name="followUpBy">FollowUp By</string>
     <string name="newModel">New Model</string>
     <string name="newVariant">New Variant</string>
+    <string name="oldModel">Old Model</string>
+    <string name="oldVariant">Old Variant</string>
+
+    <string name="buyModel">Old Model</string>
+    <string name="buyVariant">Old Variant</string>
+
     <string name="bookingWithinDays">Booking Within Days</string>
 
+    <!--String appointment-->
+    <string name="appointmentDetail">Appointment Details</string>
+    <string name="appointmentType">Appointment Type</string>
+    <string name="appointmentStatus">Appointment Status</string>
+    <string name="AppointmentAddress">Appointment Address</string>
+    <string name="AppointmentDate">Appointment Date</string>
+    <string name="AppointmentTime">Appointment Time</string>
+    <string name="appointmentFeedback">Appointment Feedback</string>
+    <string name="appointmentRating">Appointment Rating</string>
 
     <!--String for New Car Tracker-->
     <string name="leadSource">Lead Source</string>
@@ -103,6 +121,8 @@
     <string name="showroomLocation">Showroom Location</string>
     <string name="cseName">CSE Name</string>
     <string name="cseCallDate">CSE Call Date</string>
+    <string name="cseCallTime">CSE Call Time</string>
+    <string name="cseCallStatus">CSE Call Status</string>
     <string name="cseFeedback">CSE Feedback</string>
     <string name="cseNextAction">CSE Next Action</string>
     <string name="cseRemark">CSE Remark</string>
@@ -117,7 +137,7 @@
     <string name="dseNFD">DSE NFD</string>
     <string name="dseNFT">DSE NFT</string>
     <string name="auditorName">Auditor Name</string>
-    <string name="auditorFollowUpDate">Auditor FollowUp Date</string>
+    <string name="auditorFollowUpDate">Auditor Call Date</string>
     <string name="followUpPending">FollowUp Pending</string>
     <string name="callReceivesFromShowroom">Call Receives from Showroom</string>
     <string name="fakeUpdation">Fake Updation</string>
@@ -125,6 +145,7 @@
     <string name="auditorRemark">Auditor Remark</string>
     <string name="buyerType">Buyer Type</string>
     <string name="modelVariant">Model Variant</string>
+
 
     <!--String for used car tracker-->
     <string name="excehangeMakeModel">Exchange Make Model</string>
@@ -194,6 +215,16 @@
     <string name="description_spinner_title">Description</string>
     <string name="Reset">Reset</string>
 
+    <string name="escalationDetail">Escalation Details</string>
+    <string name="escalationType">Escalation Type</string>
+    <string name="escalationRemark">Escalaltion Remark</string>
+
+    <string name="otherDetails">Other Details</string>
+    <string name="interestedInFinance">Interested In Finance</string>
+    <string name="interestedInInsurance">Interested In Insurance</string>
+    <string name="interestedInAccessories">Interested In Accessories</string>
+    <string name="interestedInEw">Interested In Ew</string>
+
     <!--String values for all Spinner in all xml files-->
     <string name="process_transfer_title">Select Process</string>
     <string name="location_spinner_title">Select Location</string>
@@ -243,7 +274,7 @@
     <string name="carVariant">LXi</string>
     <string name="carMake">Maruti</string>
     <string name="buyer_type_here">First</string>
-    <string name="mfg_Year">2006-2016</string>
+    <string name="mfg_Year">Mfg Year</string>
     <string name="bookingStatusHeading">Booking Status</string>
     <string name="bookingStatus">No</string>
     <string name="location">Location</string>
@@ -326,6 +357,8 @@
     <string name="deal">Deal</string>
     <string name="undecided">Undecided</string>
     <string name="not_interested">Not Interested</string>
+    <string name="interested">Interested</string>
+    <string name="busy">Busy</string>
     <string name="already_booked_from_us">Already Booked From Us</string>
     <string name="lost_to_codealer">Lost To Codealer</string>
     <string name="color_model_availability">Colour and Model Availability</string>
@@ -347,14 +380,16 @@
     <string name="Insurance">Insurance  </string>
     <string name="InsuranceExpiry">Insurance Expiry  </string>
     <string name="Category">Category  </string>
+    <string name="vehicleStatus">Vehicle Status</string>
     <string name="StockLocation">Stock Location </string>
-    <string name="ExptSelling">Expt Selling  </string>
-    <string name="TotalPendingCost">Pending Cost </string>
+    <string name="ExptSelling">Expt Selling Price</string>
+    <string name="TotalPendingCost">Total landing Cost</string>
     <string name="Ageing">Ageing </string>
     <string name="LastUpdate">Last Update </string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_register_push">RegisterPushActivity</string>
 
 </resources>

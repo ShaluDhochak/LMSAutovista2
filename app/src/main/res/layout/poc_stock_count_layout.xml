@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <LinearLayout
+        android:id="@+id/pocStockCountList_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        >
+
+        <TextView
+            android:id="@+id/makeNameStockCount_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/CarMake"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/modelNameStockCount_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/carModel"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+
+            />
+
+        <TextView
+            android:id="@+id/countStockCount_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Count"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

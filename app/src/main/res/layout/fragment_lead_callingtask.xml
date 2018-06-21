@@ -45,13 +45,32 @@
 
             </RelativeLayout>
 
+            <TextView
+                android:id="@+id/NoRecordFoundHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="No Record Found"
+                android:textSize="15dp"
+                android:textColorHint="@color/darkBlueWebsite"
+                android:textColor="@color/darkBlueWebsite"
+                android:textAlignment="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_margin="10dp"
+                android:inputType="textNoSuggestions"
+                android:background="@drawable/outline_blue_curved_rectangle"
+                android:layout_below="@+id/leadHeading_RelativeLayout"
+                android:visibility="gone"
+                />
+
             <android.support.v7.widget.CardView
                 android:id="@+id/search_cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardElevation="4sp"
                 app:cardCornerRadius="4sp"
-                android:layout_margin="10dp">
+                android:layout_margin="10dp"
+                android:layout_below="@+id/NoRecordFoundHeading_TextView">
 
 
             <RelativeLayout

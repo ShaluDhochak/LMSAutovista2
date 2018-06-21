@@ -299,6 +299,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -335,6 +336,8 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/booking_60Report_linearLayoout"
@@ -342,6 +345,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -378,6 +383,8 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/booking_greater_60Report_linearLayoout"
@@ -385,6 +392,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -422,6 +431,8 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+
+                        android:visibility="gone"
                         />
 
 
@@ -431,6 +442,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -468,6 +481,8 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/follow_upLeadReport_linearLayoout"
@@ -519,6 +534,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -555,6 +572,8 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/showroom_visitReport_linearLayoout"
@@ -562,6 +581,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -598,6 +619,8 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/test_driveReport_linearLayoout"
@@ -605,6 +628,8 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -641,6 +666,7 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/evaluation_allottedReport_linearLayoout"
@@ -648,6 +674,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -685,6 +712,7 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/dealReport_linearLayoout"
@@ -692,6 +720,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -728,6 +757,7 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/undecidedReport_linearLayoout"
@@ -735,6 +765,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -771,6 +802,8 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+
+                        android:visibility="gone"
                         />
 
                     <LinearLayout
@@ -786,7 +819,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
-                            android:text="@string/not_interested"
+                            android:text="@string/interested"
                             android:textSize="14sp"
                             android:textColor="@color/edittextcolor"
                             android:padding="3sp"
@@ -817,7 +850,7 @@
                         android:background="@color/edittextcolor"
                         />
                     <LinearLayout
-                        android:id="@+id/already_booked_from_usReport_linearLayoout"
+                        android:id="@+id/busyReport_linearLayoout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
@@ -825,11 +858,11 @@
                         >
 
                         <TextView
-                            android:id="@+id/already_booked_from_usReportHeading_textView"
+                            android:id="@+id/busyReportHeading_textView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
-                            android:text="@string/already_booked_from_us"
+                            android:text="@string/busy"
                             android:textSize="14sp"
                             android:textColor="@color/edittextcolor"
                             android:padding="3sp"
@@ -838,7 +871,7 @@
                             />
 
                         <TextView
-                            android:id="@+id/already_booked_from_usValueReport_textView"
+                            android:id="@+id/busyValueReport_textView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -850,7 +883,6 @@
                             android:textColor="@color/edittextcolor"
                             android:padding="3sp"
                             android:paddingLeft="5sp"/>
-
                     </LinearLayout>
                     <View
                         android:id="@+id/separator17_view"
@@ -901,6 +933,7 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
 
                     <LinearLayout
@@ -909,6 +942,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -939,13 +973,13 @@
                             android:paddingLeft="5sp"/>
 
                     </LinearLayout>
-
                     <View
                         android:id="@+id/separator19_view"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/budget_issueReport_linearLayoout"
@@ -953,6 +987,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -989,6 +1024,7 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/nearest_dealershipReport_linearLayoout"
@@ -996,6 +1032,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -1032,6 +1069,7 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
                     <LinearLayout
                         android:id="@+id/outstation_purchaseReport_linearLayoout"
@@ -1039,6 +1077,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView
@@ -1075,6 +1114,7 @@
                         android:layout_height="1dp"
                         android:layout_margin="10dp"
                         android:background="@color/edittextcolor"
+                        android:visibility="gone"
                         />
 
                     <LinearLayout
@@ -1084,6 +1124,7 @@
                         android:orientation="horizontal"
                         android:layout_marginBottom="10dp"
                         android:weightSum="4"
+                        android:visibility="gone"
                         >
 
                         <TextView

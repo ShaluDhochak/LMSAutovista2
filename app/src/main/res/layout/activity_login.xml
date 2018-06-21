@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.lmsautovista.View.Activity.LoginActivity">
+    tools:context="com.excell.lms.lmsautovista.View.Activity.LoginActivity">
 
     <LinearLayout
         android:id="@+id/userId_LinearLayout"
@@ -36,7 +36,6 @@
             android:paddingLeft="15dp"
             android:textSize="15sp"
             android:hint="@string/userID"
-            android:text="admin@autovista.in"
             android:textColor="@color/darkBlueWebsite"
             android:background="@drawable/outline_blue_curved_rectangle"
             android:textColorHint="@color/edittextcolor"
@@ -56,7 +55,6 @@
             android:layout_marginBottom="15dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
-            android:text="admin@1323"
             android:paddingLeft="15dp"
             android:textSize="15sp"
             android:inputType="textPassword"

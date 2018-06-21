@@ -12,41 +12,147 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Activity.SplashActivity">
+        <activity
+            android:name=".View.Activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.Activity.LoginActivity" />
+        <activity
+            android:name=".View.Activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".View.Activity.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".View.Activity.CallingTaskActivity" />
-        <activity android:name=".View.Activity.NewLeadDashboardActivity" />
-        <activity android:name=".View.Activity.UnassignedDashboardLeadActivity" />
-        <activity android:name=".View.Activity.CallTodayDashboardActivity" />
-        <activity android:name=".View.Activity.PendingNewLeadActivity" />
-        <activity android:name=".View.Activity.PendingFollowUpDashboardActivity" />
-        <activity android:name=".View.Activity.DashboardCountDetailActivity" />
-        <activity android:name=".View.Activity.CustomerDetailActivity" />
-        <activity android:name=".View.Activity.TrackerDetailActivity" />
-        <activity android:name=".View.Activity.CustomerDetailsActivity" />
-        <activity android:name=".View.Activity.ChangePasswordActivity" />
-        <activity android:name=".View.Activity.FollowUpDetailsActivity" />
-        <activity android:name=".View.Activity.AddFollowUpActivity" />
-        <activity android:name=".View.Activity.SearchLeadViaContactNoActivity" />
-        <activity android:name=".View.Activity.CheckFlowSearchActivity" />
-        <activity android:name=".View.Activity.EditCustomerListDetailActivity" />
-        <activity android:name=".View.Activity.EditCustomerDetailActivity" />
-        <activity android:name=".View.Activity.ViewMessageActivity" />
-        <activity android:name=".View.Activity.SubmitMessageActivity" />
-        <activity android:name=".View.Activity.DailyReportDetailActivity" />
-        <activity android:name=".View.Activity.DseWiseReportDetailActivity" />
-        <activity android:name=".View.Activity.NavigationDrawer" />
-        <activity android:name=".View.Activity.POCStockListDetailsActivity"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.CallingTaskActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.NewLeadDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.UnassignedDashboardLeadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.CallTodayDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.PendingNewLeadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.PendingFollowUpDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.DashboardCountDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.CustomerDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.TrackerDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.CustomerDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.FollowUpDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.AddFollowUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.SearchLeadViaContactNoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.CheckFlowSearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.EditCustomerListDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.EditCustomerDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.ViewMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.SubmitMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.DailyReportDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.DseWiseReportDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.NavigationDrawer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".View.Activity.POCStockListDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- Firebase Notifications -->
+        <service android:name=".Services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".View.Activity.RegisterPushActivity"
+            android:label="@string/title_activity_register_push"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.CustomTableLayout" />
+        <activity android:name=".View.Activity.POCCarStockCountDetailActivity" />
+        <activity android:name=".View.Activity.NewCarStockCountDetailActivity" />
+        <activity android:name=".View.Activity.HomeVisitDashboardActivity" />
+        <activity android:name=".View.Activity.TestDriveDashboardActivity" />
+        <activity android:name=".View.Activity.ShowroomVisitDashboardActivity" />
+        <activity android:name=".View.Activity.EvaluationDashboardActivity" />
+        <activity android:name=".View.Activity.EscalationLevel1Activity" />
+        <activity android:name=".View.Activity.EscalationLevel2Activity" />
+        <activity android:name=".View.Activity.EscalationLevel3Activity"></activity>
     </application>
 
 </manifest>

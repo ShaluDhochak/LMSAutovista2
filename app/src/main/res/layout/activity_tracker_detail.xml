@@ -176,10 +176,44 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/addressTrackerDetail_LinearLayout"
+                            android:id="@+id/leadAltContactnoTrackerDetail_LinearLayout"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/leadContactnoTrackerDetail_LinearLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/leadAltContactnoTrackerDetail_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/contact_no" />
+
+                            <TextView
+                                android:id="@+id/leadAltContactnoTrackerDetail_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@id/leadAltContactnoTrackerDetail_ImageView"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Alternate ContactNo"
+                                android:inputType="number"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/addressTrackerDetail_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadAltContactnoTrackerDetail_LinearLayout"
                             android:orientation="horizontal">
 
                             <ImageView
@@ -269,28 +303,28 @@
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/leadBookingDayTrackerDetail_LinearLayout"
+                            android:id="@+id/leadTimeTrackerDetail_LinearLayout"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/leadDateTrackerDetail_LinearLayout"
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:id="@+id/leadBookingDayTrackerDetail_ImageView"
+                                android:id="@+id/leadTimeTrackerDetail_ImageView"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:paddingLeft="10dp"
                                 android:src="@drawable/calendar" />
 
                             <TextView
-                                android:id="@+id/leadBookingDayTrackerDetail_TextView"
+                                android:id="@+id/leadTimeTrackerDetail_TextView"
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_alignRight="@+id/leadDateTrackerDetail_ImageView"
+                                android:layout_alignRight="@+id/leadTimeTrackerDetail_ImageView"
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginRight="15dp"
                                 android:backgroundTint="@android:color/transparent"
-                                android:hint="Booking withIn days"
+                                android:hint="Lead Time"
                                 android:inputType="textNoSuggestions"
                                 android:paddingBottom="5dp"
                                 android:paddingLeft="10dp"
@@ -371,6 +405,38 @@
                                 android:backgroundTint="@android:color/transparent"
                                 android:hint="Not Mentioned"
                                 android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/leadBookingDayTrackerDetail_LinearLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadSourceTrackerDetails_RelativeLayout"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/leadBookingDayTrackerDetail_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:paddingLeft="10dp"
+                                android:src="@drawable/calendar" />
+
+                            <TextView
+                                android:id="@+id/leadBookingDayTrackerDetail_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@+id/leadDateTrackerDetail_ImageView"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Booking withIn days"
+                                android:inputType="textNoSuggestions"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
                                 android:paddingTop="5dp"
                                 android:textColorHint="@color/edittextcolor"
                                 android:textSize="12sp" />
@@ -1636,7 +1702,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:paddingLeft="5dp"
-                    android:text="@string/financeDetail"
+                    android:text="@string/newCarDetails"
                     android:textColor="@color/darkBlueWebsite"
                     android:textSize="15sp" />
 
@@ -1681,6 +1747,7 @@
                         android:textSize="12sp" />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/assReqNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
@@ -1764,7 +1831,7 @@
 
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/showroomLocNewCarTrackerDetails_RelativeLayout"
+                    android:id="@+id/leadAssignedDateNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/customerLocNewCarTrackerDetails_RelativeLayout"
@@ -1772,7 +1839,7 @@
                     android:weightSum="4">
 
                     <TextView
-                        android:id="@+id/showroomLocNewCarTrackerDetails_TextView"
+                        android:id="@+id/leadAssignedDateNewCarTrackerDetails_TextView"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
@@ -1785,12 +1852,12 @@
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
                         android:paddingTop="5dp"
-                        android:text="@string/showroomLocation"
+                        android:text="Assigned Date"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
                     <TextView
-                        android:id="@+id/showroomLocNewCarTrackerString_TextView"
+                        android:id="@+id/leadAssignedDateNewCarTrackerString_TextView"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="15dp"
@@ -1805,10 +1872,52 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/leadAssignedTimeNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leadAssignedDateNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/leadAssignedTimeNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Assigned Time"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/leadAssignedTimeNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:id="@+id/cseNameNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/showroomLocNewCarTrackerDetails_RelativeLayout"
+                    android:layout_below="@id/leadAssignedTimeNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -1886,10 +1995,91 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/cseFeedbackNewCarTrackerDetails_RelativeLayout"
+                    android:id="@+id/cseCallTimeNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/cseCallDateNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseCallTimeNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/cseCallTime"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseCallTimeNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cseCallStatusNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseCallTimeNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/cseCallStatusNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/cseCallStatus"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cseCallStatusNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cseFeedbackNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cseCallStatusNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -2087,8 +2277,9 @@
                         android:textSize="12sp"  />
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:id="@+id/tdHvDateNewCarTrackerDetails_RelativeLayout"
+                    android:id="@+id/appTypeTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/cseNFTNewCarTrackerDetails_RelativeLayout"
@@ -2096,7 +2287,7 @@
                     android:weightSum="4">
 
                     <TextView
-                        android:id="@+id/tdHvDateNewCarTrackerDetails_TextView"
+                        android:id="@+id/appTypeTrackerDetails_TextView"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
@@ -2109,12 +2300,12 @@
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
                         android:paddingTop="5dp"
-                        android:text="@string/tdHvDate"
+                        android:text="Appointment Type"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
                     <TextView
-                        android:id="@+id/tdHvDateNewCarTrackerString_TextView"
+                        android:id="@+id/appTypeTrackerString_TextView"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="15dp"
@@ -2124,7 +2315,294 @@
                         android:hint="Not Mentioned"
                         android:paddingTop="5dp"
                         android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/appDateTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appTypeTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/appDateTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Appointment Date"
+                        android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/appDateTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/appTimeTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appDateTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/appTimeTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Appointment Time"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/appTimeTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/appAddressTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appTimeTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/appAddressTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Appointment Address"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/appAddressTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/appStatusTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appAddressTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/appStatusTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Appointment Status"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/appStatusTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/appRatingTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appStatusTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/appRatingTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Appointment Rating"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/appRatingTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/appFeedbackTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appRatingTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/appFeedbackTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/appointmentFeedback"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/appFeedbackTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/showroomLocNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appFeedbackTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/showroomLocNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/showroomLocation"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/showroomLocNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
 
                 </LinearLayout>
 
@@ -2132,7 +2610,7 @@
                     android:id="@+id/dseNameNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tdHvDateNewCarTrackerDetails_RelativeLayout"
+                    android:layout_below="@id/showroomLocNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -2168,11 +2646,94 @@
                         android:textSize="12sp" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/leadAssignDateNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseNameNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/leadAssignDateNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Lead Assigned Date"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/leadAssignDateNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/leadAssignTimeNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leadAssignDateNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/leadAssignTimeNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Lead Assigned Time"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/leadAssignTimeNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/dseCallDateNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/dseNameNewCarTrackerDetails_RelativeLayout"
+                    android:layout_below="@id/leadAssignTimeNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -2210,10 +2771,92 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/dseFeedbackNewCarTrackerDetails_RelativeLayout"
+                    android:id="@+id/dseCallTimeNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/dseCallDateNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseCallTimeNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Dse Call Time"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseCallTimeNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dseCallStatusNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseCallTimeNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseCallStatusNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Dse Call Status"
+                        android:textColor="@color/edittextcolor"
+                       android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseCallStatusNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dseFeedbackNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseCallStatusNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -2249,6 +2892,7 @@
                         android:textSize="12sp"  />
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/dseNextActionNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
@@ -2292,10 +2936,52 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/dseNFDNewCarTrackerDetails_RelativeLayout"
+                    android:id="@+id/dseRemarkNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/dseNextActionNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/dseRemarkNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="DSE Remark"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/dseRemarkNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dseNFDNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dseRemarkNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -2458,10 +3144,94 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/followUpPendingNewCarTrackerDetails_RelativeLayout"
+                    android:id="@+id/auditorFollowTimeNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/auditorFollowDateNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/auditorFollowTimeNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Auditor Call Time"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/auditorFollowTimeNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/auditorFollowStatusNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/auditorFollowTimeNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/auditorFollowStatusNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="Auditor Call Status"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/auditorFollowStatusNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/followUpPendingNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/auditorFollowStatusNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 
@@ -2661,11 +3431,176 @@
                         android:textSize="12sp" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interestInFinanceNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/auditorRemarkNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/interestInFinanceNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/interestedInFinance"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/interestInFinanceNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interestInAccessoriesNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/interestInFinanceNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/interestInAccessoriesRemarkNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/interestedInAccessories"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/interestInAccessoriesNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interestInInsuranceNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/interestInAccessoriesNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/interestInInsuranceRemarkNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/interestedInInsurance"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/interestInInsuranceNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interestInEWNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/interestInInsuranceNewCarTrackerDetails_RelativeLayout"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/interestInEWRemarkNewCarTrackerDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="textNoSuggestions"
+                        android:paddingTop="5dp"
+                        android:text="@string/interestedInEw"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/interestInEWNewCarTrackerString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Not Mentioned"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/buyerTypeNewCarTrackerDetails_RelativeLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/auditorRemarkNewCarTrackerDetails_RelativeLayout"
+                    android:layout_below="@id/interestInEWNewCarTrackerDetails_RelativeLayout"
                     android:orientation="horizontal"
                     android:weightSum="4">
 

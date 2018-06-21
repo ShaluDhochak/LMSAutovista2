@@ -176,7 +176,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/leadSourceSearch_linearlayout"
+            android:id="@+id/locationSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -186,6 +186,112 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_below="@+id/leadaddressSearch_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/locationSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/LeadSource"
+                android:text="@string/location"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/locationSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/assistanceRequiredSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/locationSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/assistanceRequiredSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/LeadSource"
+                android:text="@string/assitanceRequired"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/assistanceRequiredSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bookingWithinDaysSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/assistanceRequiredSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/bookingWithinDaysSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/LeadSource"
+                android:text="@string/bookingWithinDays"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/bookingWithinDaysSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/leadSourceSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/bookingWithinDaysSearch_linearlayout"
             >
 
             <TextView
@@ -211,6 +317,41 @@
                 />
 
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/leadDateSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/leadSourceSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/leadDateSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/LeadSource"
+                android:text="Lead Date"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/leadDateSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/showroomLocationSearch_linearlayout"
@@ -220,7 +361,7 @@
             android:weightSum="2"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/leadSourceSearch_linearlayout"
+            android:layout_below="@+id/leadDateSearch_linearlayout"
             >
 
             <TextView
@@ -277,7 +418,6 @@
                 android:hint="@string/NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
 
@@ -300,7 +440,6 @@
                 android:text="@string/CseCallDate"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
             <TextView
                 android:id="@+id/cseCallDateSearchString_textView"
@@ -310,12 +449,10 @@
                 android:hint="@string/NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/cseNextActionSearch_linearlayout"
+            android:id="@+id/cseFeedBackSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -325,6 +462,38 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_below="@+id/cseCallDateSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseFeedBackSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/CseFeedback"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+            <TextView
+                android:id="@+id/cseFeedBackSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/cseNextActionSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseFeedBackSearch_linearlayout"
             >
 
             <TextView
@@ -350,38 +519,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/cseFeedBackSearch_linearlayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_below="@+id/cseNextActionSearch_linearlayout"
-            >
-
-            <TextView
-                android:id="@+id/cseFeedBackSearchHeading_textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/CseFeedback"
-                android:textSize="12sp"
-                android:textColor="@color/edittextcolor"
-
-                />
-            <TextView
-                android:id="@+id/cseFeedBackSearchString_textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/NotMentioned"
-                android:textSize="12sp"
-                android:textColor="@color/edittextcolor"
-
-                />
-        </LinearLayout>
-        <LinearLayout
             android:id="@+id/cseRemarkSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -391,7 +528,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/cseFeedBackSearch_linearlayout"
+            android:layout_below="@+id/cseNextActionSearch_linearlayout"
             >
 
             <TextView
@@ -416,8 +553,40 @@
                 />
         </LinearLayout>
 
+
         <LinearLayout
-            android:id="@+id/cseTDHVDateSearch_linearlayout"
+            android:id="@+id/cseNFDSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseRemarkSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseNFDSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cseNFD"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/cseNFDSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cseNFTSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -426,7 +595,38 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/cseRemarkSearch_linearlayout"
+            android:layout_below="@+id/cseNFDSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/cseNFTSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cseNFT"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/cseNFTSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cseTDHVDateSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/cseNFTSearch_linearlayout"
             >
 
             <TextView
@@ -437,7 +637,6 @@
                 android:text="@string/tdHvDate"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
             <TextView
                 android:id="@+id/cseTDHVDateSearchString_textView"
@@ -447,10 +646,8 @@
                 android:hint="@string/NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/dseNameSearch_linearlayout"
@@ -458,6 +655,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_below="@+id/cseTDHVDateSearch_linearlayout"
@@ -471,7 +670,6 @@
                 android:text="@string/dseName"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
             <TextView
                 android:id="@+id/dseNameSearchString_textView"
@@ -481,7 +679,6 @@
                 android:hint="@string/NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
 
@@ -491,12 +688,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_below="@+id/dseNameSearch_linearlayout"
             >
-
             <TextView
                 android:id="@+id/dseCallDateSearchHeading_textView"
                 android:layout_width="match_parent"
@@ -506,7 +701,6 @@
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
                 />
-
             <TextView
                 android:id="@+id/dseCallDateSearchString_textView"
                 android:layout_width="match_parent"
@@ -516,11 +710,10 @@
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
                 />
-
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/dseNextActionSearch_linearlayout"
+            android:id="@+id/dseFeedBackSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -530,6 +723,38 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_below="@+id/dseCallDateSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/dseFeedBackSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dseFeedback"
+                android:textColor="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/dseFeedBackSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dseNextActionSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseFeedBackSearch_linearlayout"
             >
 
             <TextView
@@ -554,39 +779,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/dseFeedBackSearch_linearlayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_below="@+id/dseNextActionSearch_linearlayout"
-            >
-
-            <TextView
-                android:id="@+id/dseFeedBackSearchHeading_textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dseFeedback"
-                android:textColor="@color/edittextcolor"
-                android:textSize="12sp"
-
-                />
-
-            <TextView
-                android:id="@+id/dseFeedBackSearchString_textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="NotMentioned"
-                android:textSize="12sp"
-                android:textColor="@color/edittextcolor"
-
-                />
-        </LinearLayout>
-        <LinearLayout
             android:id="@+id/dseRemarkSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -596,7 +788,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/dseFeedBackSearch_linearlayout"
+            android:layout_below="@+id/dseNextActionSearch_linearlayout"
             >
 
             <TextView
@@ -607,7 +799,6 @@
                 android:text="@string/dseRemark"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
             <TextView
                 android:id="@+id/dseRemarkSearchString_textView"
@@ -617,9 +808,9 @@
                 android:hint="NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/dseNFDSearch_linearlayout"
             android:layout_width="match_parent"
@@ -652,30 +843,190 @@
 
                 />
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/bookingWithInDaysSearch_linearlayout"
+            android:id="@+id/dseNFTSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_below="@+id/dseNFDSearch_linearlayout"
             >
 
             <TextView
-                android:id="@+id/bookingWithInDaysSearchHeading_textView"
+                android:id="@+id/dseNFTSearchHeading_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/bookingWithinDays"
+                android:text="@string/dseNfd"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/dseNFTSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/auditorNameSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/dseNFTSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/auditorNameSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/auditorName"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/auditorNameSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/auditorFollowUpDateSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/auditorNameSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/auditorFollowUpDateSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/auditorFollowUpDate"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/auditorFollowUpDateSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/followUpPendingSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/auditorFollowUpDateSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/followUpPendingSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/followUpPending"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/followUpPendingSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callReceivedFromShowroomSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/followUpPendingSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/callReceivedFromShowroomSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call Received From Showroom"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/callReceivedFromShowroomSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fakeUpdationSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/callReceivedFromShowroomSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/fakeUpdationSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fake Updation"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
 
                 />
             <TextView
-                android:id="@+id/bookingWithInDaysSearchString_textView"
+                android:id="@+id/fakeUpdationSearchString_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -685,6 +1036,70 @@
 
                 />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/serviceFeedbackSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/fakeUpdationSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/serviceFeedbackSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Service Feedback"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/serviceFeedbackSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/auditorRemarkSearch_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/serviceFeedbackSearch_linearlayout"
+        >
+
+        <TextView
+            android:id="@+id/auditorRemarkSearchHeading_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Auditor Remark"
+            android:textSize="12sp"
+            android:textColor="@color/edittextcolor"
+            />
+        <TextView
+            android:id="@+id/auditorRemarkSearchString_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/NotMentioned"
+            android:textSize="12sp"
+            android:textColor="@color/edittextcolor"
+            />
+    </LinearLayout>
         <LinearLayout
             android:id="@+id/buyerTypeSearch_linearlayout"
             android:layout_width="match_parent"
@@ -695,7 +1110,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/bookingWithInDaysSearch_linearlayout"
+            android:layout_below="@+id/auditorRemarkSearch_linearlayout"
             >
 
             <TextView
@@ -706,7 +1121,6 @@
                 android:text="@string/buyerType"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
             <TextView
                 android:id="@+id/buyerTypeSearchString_textView"
@@ -716,7 +1130,6 @@
                 android:hint="@string/NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
 
@@ -739,7 +1152,6 @@
                 android:text="@string/modelVariant"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
             <TextView
                 android:id="@+id/modelVariantSearchString_textView"
@@ -749,12 +1161,11 @@
                 android:hint="@string/NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/exchangeMakeModelSearch_linearlayout"
+            android:id="@+id/exchangeModelVariantSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -767,48 +1178,209 @@
             >
 
             <TextView
-                android:id="@+id/exchangeMakeModelSearchHeading_textView"
+                android:id="@+id/exchangeModelVariantSearchHeading_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/exchangeMakeModel"
+                android:text="@string/excehangeMakeModel"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
                 />
             <TextView
-                android:id="@+id/exchangeMakeModelSearchString_textView"
+                android:id="@+id/exchangeModelVariantSearchString_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/NotMentioned"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
-
                 />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/manufacturingYearSearch_linearlayout"
+            android:id="@+id/mfgYearSearch_linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@+id/exchangeMakeModelSearch_linearlayout"
+            android:layout_below="@+id/exchangeModelVariantSearch_linearlayout"
             >
+
             <TextView
-                android:id="@+id/manufacturingYearSearchHeading_textView"
+                android:id="@+id/mfgYearSearchHeading_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/manufacturingYear"
+                android:text="@string/manufacturingYr"
                 android:textSize="12sp"
                 android:textColor="@color/edittextcolor"
                 />
             <TextView
-                android:id="@+id/manufacturingYearSearchString_textView"
+                android:id="@+id/mfgYearSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ownershipSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/mfgYearSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/ownershipSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ownership"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/ownershipSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kmSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/ownershipSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/kmSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/km"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/kmSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/budgetFromSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/kmSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/budgetFromSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/budgetFrom"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/budgetFromSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/budgetToSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/budgetFromSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/budgetToSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/budgetTo"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/budgetToSearchString_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/accidentalClaimSearch_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/budgetToSearch_linearlayout"
+            >
+
+            <TextView
+                android:id="@+id/accidentalClaimSearchHeading_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/accidentalClaim"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                />
+            <TextView
+                android:id="@+id/accidentalClaimSearchString_textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -823,7 +1395,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/lightGrey1"
-            android:layout_below="@+id/manufacturingYearSearch_linearlayout"
+            android:layout_below="@+id/accidentalClaimSearch_linearlayout"
             />
     </RelativeLayout>
 

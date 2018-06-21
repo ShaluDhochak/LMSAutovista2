@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        applicationId "com.example.user.lmsautovista"
+        applicationId "com.excell.lms.lmsautovista"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -25,7 +25,6 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
-
     implementation 'com.android.support:support-v4:26.1.0'
     implementation 'com.android.support:design:26.1.0'
 
@@ -43,4 +42,8 @@ dependencies {
     compile 'com.github.clans:fab:1.6.2'
 
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+
+    compile 'com.google.firebase:firebase-core:12.0.1'
+    compile 'com.google.firebase:firebase-messaging:12.0.1'
 }
+apply plugin: 'com.google.gms.google-services'

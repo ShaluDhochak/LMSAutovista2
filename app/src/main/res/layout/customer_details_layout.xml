@@ -160,15 +160,49 @@
                         android:layout_below="@+id/addFollowUpName_TextView"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="160dp"
+                        android:padding="10dp"
                         android:src="@drawable/contact_no"
                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/NavigationLeadAltContactno_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NavigationLeadContactno_LinearLayout"
+                    android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/NavigationLeadAltContactno_ImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/contact_no" />
+
+                <TextView
+                    android:id="@+id/NavigationLeadAltContactno_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/NavigationLeadContactno_ImageView"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="Alt Contact No"
+                    android:inputType="textNoSuggestions"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:textColorHint="@color/edittextcolor"
+                    android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/NavigationLeadAddressModel_LinearLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/NavigationLeadContactno_LinearLayout"
+                    android:layout_below="@id/NavigationLeadAltContactno_LinearLayout"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -253,7 +287,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/buyerType_cardView"
+                android:id="@+id/newCar_cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/navigationLeadDetails_cardView"
@@ -311,6 +345,7 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginStart="17dp"
                         android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp"
                         android:layout_weight="2"
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
@@ -333,122 +368,12 @@
                         android:textColorHint="@color/edittextcolor"
                         android:textSize="12sp" />
                 </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/newModelCustomerDetails_RelativeLayout"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/followupByNotificationCustomerDetails_RelativeLayout"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
-
-                    <TextView
-                        android:id="@+id/newModelHeadingCustomerDetails_TextView"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginLeft="17dp"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:inputType="textNoSuggestions"
-                        android:paddingTop="5dp"
-                        android:text="@string/newModel"
-                        android:textColor="@color/edittextcolor"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/newModelCustomerDetails_TextView"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:hint="Not Mentioned"
-                        android:inputType="textNoSuggestions"
-                        android:paddingTop="5dp"
-                        android:textColorHint="@color/edittextcolor"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/newVariantCustomerDeatils_LinearLayout"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/newModelCustomerDetails_RelativeLayout"
-                    android:orientation="horizontal"
-                    android:weightSum="4">
-
-                    <TextView
-                        android:id="@+id/newVariantCustomerDetailsHeading_TextView"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:inputType="textNoSuggestions"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="5dp"
-                        android:text="@string/newVariant"
-                        android:textColorHint="@color/edittextcolor"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/newVaraintCustomerDetails_TextView"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:hint="@string/NotMentioned"
-                        android:inputType="textNoSuggestions"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="5dp"
-                        android:textColorHint="@color/edittextcolor"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nextActionCustomerDetails_LinearLayout"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/newVariantCustomerDeatils_LinearLayout"
-                    android:weightSum="4">
-
-                    <TextView
-                        android:id="@+id/nextActionCustomerDetailsHeading_TextView"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:paddingBottom="10dp"
-                        android:text="@string/nextActionHeading"
-                        android:textColor="@color/edittextcolor"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:id="@+id/nextActionCustomerDetailsString_TextView"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:hint="@string/NotMentioned"
-                        android:paddingBottom="10dp"
-                        android:textColor="@color/edittextcolor"
-                        android:textSize="12sp" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/feedbackStatusCustomerDetails_LinearLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/nextActionCustomerDetails_LinearLayout"
+                    android:layout_below="@id/followupByNotificationCustomerDetails_RelativeLayout"
                     android:weightSum="4">
 
                     <TextView
@@ -458,8 +383,8 @@
                         android:layout_marginLeft="15dp"
                         android:layout_weight="2"
                         android:backgroundTint="@android:color/transparent"
-                        android:paddingBottom="10dp"
                         android:text="@string/feedbackStatus"
+                        android:paddingBottom="10dp"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
@@ -468,19 +393,48 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:layout_marginTop="5dp"
                         android:backgroundTint="@android:color/transparent"
                         android:hint="@string/NotMentioned"
-                        android:paddingBottom="10dp"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
                 </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/nextActionCustomerDetails_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/feedbackStatusCustomerDetails_LinearLayout"
+                    android:weightSum="4">
 
+                    <TextView
+                        android:id="@+id/nextActionCustomerDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
+                        android:paddingBottom="10dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:text="@string/nextActionHeading"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/nextActionCustomerDetailsString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/callDateNotificationCustomerDetails_LinearLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/feedbackStatusCustomerDetails_LinearLayout"
+                    android:layout_below="@id/nextActionCustomerDetails_LinearLayout"
                     android:weightSum="4">
 
                     <TextView
@@ -489,8 +443,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
                         android:paddingBottom="10dp"
+                        android:backgroundTint="@android:color/transparent"
                         android:text="@string/calldate"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
@@ -500,14 +454,12 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:layout_marginTop="5dp"
                         android:backgroundTint="@android:color/transparent"
                         android:hint="@string/NotMentioned"
-                        android:paddingBottom="10dp"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
                 </LinearLayout>
-
-
 
                 <LinearLayout
                     android:id="@+id/nfdNotificationCustomerDetails_LinearLayout"
@@ -523,8 +475,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
+                        android:layout_marginTop="5dp"
                         android:paddingBottom="10dp"
+                        android:backgroundTint="@android:color/transparent"
                         android:text="@string/nfd"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
@@ -534,9 +487,41 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:layout_marginTop="5dp"
                         android:backgroundTint="@android:color/transparent"
                         android:hint="@string/NotMentioned"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nftNotificationCustomerDetails_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nfdNotificationCustomerDetails_LinearLayout"
+                    android:weightSum="4"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/nftNotificationCustomerDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="2"
                         android:paddingBottom="10dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:text="@string/nft"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/nftNotificationCustomerDetailsString_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="@string/NotMentioned"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -545,7 +530,7 @@
                     android:id="@+id/remarkNotificationCustomerDetails_LinearLayout"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/nfdNotificationCustomerDetails_LinearLayout"
+                    android:layout_below="@id/nftNotificationCustomerDetails_LinearLayout"
                     android:weightSum="4">
 
                     <TextView
@@ -555,7 +540,6 @@
                         android:layout_marginLeft="15dp"
                         android:layout_weight="2"
                         android:backgroundTint="@android:color/transparent"
-                        android:paddingBottom="10dp"
                         android:text="@string/Remark"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
@@ -565,9 +549,9 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:layout_marginTop="5dp"
                         android:backgroundTint="@android:color/transparent"
                         android:hint="@string/NotMentioned"
-                        android:paddingBottom="10dp"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -575,6 +559,1496 @@
             </RelativeLayout>
 
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/usedCar_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newCar_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/buyerTypeUsedCar_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NavigationLeadDetails_RelativeLayout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/usedModel_RelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/usedInquiry_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/Details"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/followupByUsedCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/usedModel_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/followupByHeadingUsedLeadCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/followUpBy"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/followupByUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/feedbackStatusUsedCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/followupByUsedCustomerDetails_RelativeLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/feedbackStatusUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/feedbackStatus"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/feedbackStatusUsedCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nextActionUsedCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/feedbackStatusUsedCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/nextActionUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/nextActionHeading"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/nextActionUsedCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/callDateUsedNotificationCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nextActionUsedCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/callDateUsedNotificationCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/calldate"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/callDateUsedNotificationCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nfdUsedNotificationCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/callDateUsedNotificationCustomerDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/nfdUsedNotificationCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/nfd"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/nfdUsedNotificationCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nftUsedNotificationCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nfdUsedNotificationCustomerDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/nftUsedNotificationCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/nft"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/nftUsedNotificationCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remarkUsedNotificationCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nftUsedNotificationCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/remarkUsedNotificationCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="10dp"
+                            android:text="@string/Remark"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/remarkUsedNotificationCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/buyerTypeCarDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usedCar_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/buyerTypeCarDetails_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/buyerTypeCarDetails_txtView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Buyer Type"
+                        android:textSize="14sp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/darkBlueWebsite"
+                        />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/newCarDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buyerTypeCarDetails_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/newCarDetails_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/newCarDetails_txtView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="New car Details"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/darkBlueWebsite"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/newModelUsedCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_below="@+id/newCarDetails_txtView">
+
+                        <TextView
+                            android:id="@+id/newModelUsedHeadingCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/newModel"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/newModelCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/newVariantUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/newModelUsedCustomerDetails_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/newVariantUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/newVariant"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/newVaraintCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/oldCarDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newCarDetails_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/usedCarDetails_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/usedCarDetails_txtView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Old car Details"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/darkBlueWebsite"
+                        />
+                    <LinearLayout
+                        android:id="@+id/oldModelUsedCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_below="@+id/usedCarDetails_txtView">
+
+                        <TextView
+                            android:id="@+id/oldModelUsedHeadingCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/CarMake"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/oldModelUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/oldVariantUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/oldModelUsedCustomerDetails_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/oldVariantUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/carModel"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/oldVaraintUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ownershipUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/oldVariantUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/ownershipUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/ownership"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/ownershipUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/mfgYrUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ownershipUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/mfgYrUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/mfg_Year"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/mfgYrUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/anyAccClaimUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mfgYrUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/anyAccClaimUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/accidentalClaim"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/anyAccClaimUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/kmsUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/anyAccClaimUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/kmsUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/km"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/kmsUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/buyUsedCarDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oldCarDetails_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/buyUsedCarDetails_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/buyUsedCarDetails_txtView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Buy Used car Details"
+                        android:textSize="15sp"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/darkBlueWebsite"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/buyModelUsedCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buyUsedCarDetails_txtView"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/buyModelUsedHeadingCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/CarMake"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/buyModelUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/buyVariantUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buyModelUsedCustomerDetails_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/buyVariantUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/car_model"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/buyVaraintUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/budgetFromBuyUsedCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buyVariantUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/budgetFromUsedHeadingCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/budgetFrom"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/budgetFromUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/budgetToUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/budgetFromBuyUsedCustomerDetails_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/budgetToUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:text="@string/budgetTo"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/budgetToUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/appointmentDetail_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buyUsedCarDetails_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/appointmentDetailMain_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NavigationLeadDetails_RelativeLayout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/appointmentDetail_RelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="DuplicateIds">
+
+                        <TextView
+                            android:id="@+id/appointmentDetail_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/appointmentDetail"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appointmentTypeCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentDetail_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/appointmentTypeHeadingUsedLeadCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/appointmentType"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/appointmentTypeUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/appointmentStatusCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentTypeCustomerDetails_RelativeLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/appointmentStatusCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/appointmentStatus"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/appointmentStatusCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appointmentDateCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentStatusCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/appointmentDateCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/AppointmentDate"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/appointmentDateCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appointmentRatingCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentDateCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/appointmentRatingCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/appointmentRating"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/appointmentRatingCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appointmentTimeCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentRatingCustomerDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/appointmentTimeCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/AppointmentTime"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/appointmentTimeCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appointmentFeedbackCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentTimeCustomerDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/appointmentFeedbackCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/appointmentFeedback"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/appointmentFeedbackCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appointmentAddressCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentFeedbackCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/appointmentAddressCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/AppointmentAddress"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/appointmentAddressCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/otherDetail_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appointmentDetail_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/otherDetailMain_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/otherDetail_RelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="DuplicateIds">
+
+                        <TextView
+                            android:id="@+id/otherDetail_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/otherDetails"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/interestedInFinanceCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/otherDetail_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/interestedInFinanceCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/interestedInFinance"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/interestedInFinanceHeadingCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/interestedInInsuranceCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/interestedInFinanceCustomerDetails_RelativeLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/interestedInInsuranceCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/interestedInInsurance"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/interestedInInsuranceCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/interestedInAccessoriesCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/interestedInInsuranceCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/interestedInAccessoriesCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/interestedInAccessories"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/interestedInAccessoriesCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/interestedInEwCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/interestedInAccessoriesCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/interestedInEwCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="@string/interestedInEw"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/interestedInEwCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/financeDetail_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otherDetail_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_margin="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/financeDetailMain_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/financeDetail_RelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="DuplicateIds">
+
+                        <TextView
+                            android:id="@+id/financeDetail_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="@string/financeDetail"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/customerTypeFinanceCustomerDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/financeDetail_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/customerTypeFinanceCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="Customer Type"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/customerTypeFinanceHeadingCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/corporateNameFinanceCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/customerTypeFinanceCustomerDetails_RelativeLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/corporateNameFinanceCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="Corporate Name"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/corporateNameFinanceCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/customerDesignationFinanceCustomerDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/corporateNameFinanceCustomerDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/customerDesignationFinanceCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="Customer Designation"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/customerDesignationFinanceCustomerDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
         </RelativeLayout>
 
     </ScrollView>

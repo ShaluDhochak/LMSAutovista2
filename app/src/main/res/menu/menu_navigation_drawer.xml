@@ -46,6 +46,12 @@
             android:id="@+id/nav_Lead_report"
             android:title="@string/nav_Lead_report"
             />
+
+        <item
+           android:id="@+id/nav_Daily_Productivity_Report"
+           android:title="@string/nav_daily_productivity_report"
+            />
+
         <item
             android:id="@+id/nav_lead_management_lead"
             android:icon="@drawable/call_center"

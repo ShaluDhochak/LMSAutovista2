@@ -23,7 +23,8 @@
             android:text="Count"
             android:textSize="12sp"
             android:textAlignment="center"
-            android:layout_margin="10dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="12dp"
             android:textColor="@color/darkBlueWebsite"
             />
 
@@ -124,9 +125,6 @@
             android:layout_below="@+id/separatorBelowPending_view"
             />
 
-
     </LinearLayout>
-
-
 
 </LinearLayout>
