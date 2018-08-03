@@ -1,6 +1,5 @@
 package com.excell.lms.lmsautovista.View.Activity;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -26,23 +25,16 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class ShowroomVisitDashboardActivity extends AppCompatActivity  implements IView.DashboardDetailView{
-
-
-    ProgressDialog progressDialog;
     DashboardDetailPresenter dashboardPresenter;
 
     @BindView(R.id.notificationLead_ListView)
     RecyclerView notificationLead_ListView;
-
     @BindView(R.id.lmsheading_TextView)
     TextView lmsheading_TextView;
-
     @BindView(R.id.totalLeadHeading_TextView)
     TextView totalLeadHeading_TextView;
-
     @BindView(R.id.backButton_ImageView)
     ImageView backButton_ImageView;
-
     @BindView(R.id.nextPreviousBtnNotification_linearlayout)
     LinearLayout nextPreviousBtnNotification_linearlayout;
 
@@ -58,12 +50,7 @@ public class ShowroomVisitDashboardActivity extends AppCompatActivity  implement
 
         nextPreviousBtnNotification_linearlayout.setVisibility(View.GONE);
         lmsheading_TextView.setText("Showroom Visit Leads");
-        //  bean = UnassignedLeadDashboardActivity.this.getIntent().getParcelableExtra("bean");
         dashboardPresenter = new DashboardDetailPresenter(ShowroomVisitDashboardActivity.this);
-
-        progressDialog = new ProgressDialog(ShowroomVisitDashboardActivity.this);
-        progressDialog.setMessage("Loading...");
-        progressDialog.setCanceledOnTouchOutside(false);
     }
 
     @Override
@@ -89,19 +76,6 @@ public class ShowroomVisitDashboardActivity extends AppCompatActivity  implement
     }
 
     @Override
-    public void showProgressDialog() {
-        if (progressDialog != null && !progressDialog.isShowing())
-            progressDialog.show();
-    }
-
-    @Override
-    public void dismissProgressDialog() {
-        if (progressDialog != null && progressDialog.isShowing()) {
-            progressDialog.dismiss();
-        }
-    }
-
-    @Override
     public void ShowDashboardDetailCount(CallingTaskNewLeadBean jsonObject) {
         try {
             dashboardCountList.clear();
@@ -114,7 +88,6 @@ public class ShowroomVisitDashboardActivity extends AppCompatActivity  implement
             notificationLead_ListView.setItemAnimator(new DefaultItemAnimator());
             notificationLead_ListView.setAdapter(dashboardAdapter);
         }catch (Exception e){
-
         }
     }
 }

@@ -111,9 +111,7 @@
             <item
                 android:id="@+id/nav_change_password"
                 android:title="@string/nav_change_password" />
-            <item
-                android:id="@+id/nav_register_MobileNo"
-                android:title="@string/nav_register_mobileno" />
+
             <item
                 android:id="@+id/nav_logout"
                 android:title="@string/action_logout" />

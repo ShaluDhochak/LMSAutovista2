@@ -1,6 +1,5 @@
 package com.excell.lms.lmsautovista.View.Activity;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -26,22 +25,16 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class EvaluationDashboardActivity extends AppCompatActivity  implements IView.DashboardDetailView{
-
-    ProgressDialog progressDialog;
     DashboardDetailPresenter dashboardPresenter;
 
     @BindView(R.id.notificationLead_ListView)
     RecyclerView notificationLead_ListView;
-
     @BindView(R.id.lmsheading_TextView)
     TextView lmsheading_TextView;
-
     @BindView(R.id.totalLeadHeading_TextView)
     TextView totalLeadHeading_TextView;
-
     @BindView(R.id.backButton_ImageView)
     ImageView backButton_ImageView;
-
     @BindView(R.id.nextPreviousBtnNotification_linearlayout)
     LinearLayout nextPreviousBtnNotification_linearlayout;
 
@@ -52,17 +45,11 @@ public class EvaluationDashboardActivity extends AppCompatActivity  implements I
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_lead_detail_list);
-
         ButterKnife.bind(this);
 
         nextPreviousBtnNotification_linearlayout.setVisibility(View.GONE);
         lmsheading_TextView.setText("Evaluation Leads");
-        //  bean = UnassignedLeadDashboardActivity.this.getIntent().getParcelableExtra("bean");
         dashboardPresenter = new DashboardDetailPresenter(EvaluationDashboardActivity.this);
-
-        progressDialog = new ProgressDialog(EvaluationDashboardActivity.this);
-        progressDialog.setMessage("Loading...");
-        progressDialog.setCanceledOnTouchOutside(false);
     }
 
     @Override
@@ -88,19 +75,6 @@ public class EvaluationDashboardActivity extends AppCompatActivity  implements I
     }
 
     @Override
-    public void showProgressDialog() {
-        if (progressDialog != null && !progressDialog.isShowing())
-            progressDialog.show();
-    }
-
-    @Override
-    public void dismissProgressDialog() {
-        if (progressDialog != null && progressDialog.isShowing()) {
-            progressDialog.dismiss();
-        }
-    }
-
-    @Override
     public void ShowDashboardDetailCount(CallingTaskNewLeadBean jsonObject) {
         try {
             dashboardCountList.clear();
@@ -113,7 +87,6 @@ public class EvaluationDashboardActivity extends AppCompatActivity  implements I
             notificationLead_ListView.setItemAnimator(new DefaultItemAnimator());
             notificationLead_ListView.setAdapter(dashboardAdapter);
         }catch (Exception e){
-
         }
     }
 }

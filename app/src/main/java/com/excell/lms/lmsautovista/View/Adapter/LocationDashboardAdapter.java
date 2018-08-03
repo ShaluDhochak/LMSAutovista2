@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.excell.lms.lmsautovista.Manager.SharedPreferenceManager;
 import com.excell.lms.lmsautovista.Model.LocationWiseDashboardCountBean;
 import com.excell.lms.lmsautovista.R;
+import com.excell.lms.lmsautovista.Utils.Constants;
 import com.excell.lms.lmsautovista.View.Activity.CallTodayDashboardActivity;
 import com.excell.lms.lmsautovista.View.Activity.EscalationLevel1Activity;
 import com.excell.lms.lmsautovista.View.Activity.EscalationLevel2Activity;
@@ -56,6 +58,17 @@ public class LocationDashboardAdapter  extends RecyclerView.Adapter<LocationDash
         holder.pendingFollowUpLead_tv.setText(bean.getPending_followup());
         holder.pendingNewLead_tv.setText(bean.getPending_new_leads());
         holder.unassignedLead_tv.setText(bean.getUnassigned_leads());
+
+        if ((SharedPreferenceManager.getInstance(context).getPreference(Constants.PROCESS_ID, "").equals("8")) ){
+            holder.showroomVisitCountLead_tv.setVisibility(View.GONE);
+            holder.homeVisitCountLead_tv.setVisibility(View.GONE);
+            holder.testDriveCountLead_tv.setVisibility(View.GONE);
+            holder.evaluationCountLead_tv.setVisibility(View.GONE);
+            holder.separatorBelowevaluationCount_view.setVisibility(View.GONE);
+            holder.separatorBelowtestDrive_view.setVisibility(View.GONE);
+            holder.separatorBelowhomeVisit_view.setVisibility(View.GONE);
+            holder.separatorBelowShowroomVisit_view.setVisibility(View.GONE);
+        }
 
         holder.showroomVisitCountLead_tv.setText(bean.getShowroom_visit_count());
         holder.homeVisitCountLead_tv.setText(bean.getHome_visit_count());
@@ -231,6 +244,8 @@ public class LocationDashboardAdapter  extends RecyclerView.Adapter<LocationDash
         TextView pendingFollowUpLead_tv,unassignedLead_tv, newLead_tv,callTodayLead_tv,pendingNewLead_tv,countHeading_tv, escalatedL2Lead_tv, escalatedL1Lead_tv ;
         TextView escalatedL3Lead_tv, showroomVisitCountLead_tv,homeVisitCountLead_tv,testDriveCountLead_tv,evaluationCountLead_tv;
 
+        View separatorBelowevaluationCount_view,separatorBelowtestDrive_view,separatorBelowhomeVisit_view,separatorBelowShowroomVisit_view;
+
         public MyViewHolder(View itemView) {
             super(itemView);
 
@@ -246,6 +261,11 @@ public class LocationDashboardAdapter  extends RecyclerView.Adapter<LocationDash
             homeVisitCountLead_tv = (TextView) itemView.findViewById(R.id.homeVisitCountLead_tv);
             testDriveCountLead_tv = (TextView) itemView.findViewById(R.id.testDriveCountLead_tv);
             evaluationCountLead_tv = (TextView) itemView.findViewById(R.id.evaluationCountLead_tv);
+
+            separatorBelowevaluationCount_view = (View) itemView.findViewById(R.id.separatorBelowevaluationCount_view);
+            separatorBelowtestDrive_view = (View) itemView.findViewById(R.id.separatorBelowtestDrive_view);
+            separatorBelowhomeVisit_view = (View) itemView.findViewById(R.id.separatorBelowhomeVisit_view);
+            separatorBelowShowroomVisit_view = (View) itemView.findViewById(R.id.separatorBelowShowroomVisit_view);
 
             escalatedL3Lead_tv = (TextView) itemView.findViewById(R.id.escalatedL3Lead_tv);
             escalatedL2Lead_tv = (TextView) itemView.findViewById(R.id.escalatedL2Lead_tv);

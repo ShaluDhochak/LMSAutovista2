@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,19 +27,16 @@ public class POCCarStockCountDetailActivity extends AppCompatActivity implements
 
     @BindView(R.id.newCarStockFilterDetails_ListView)
     RecyclerView newCarStockFilterDetails_ListView;
-
     @BindView(R.id.backButton_ImageView)
     ImageView backButton_ImageView;
-
     @BindView(R.id.lmsheading_TextView)
     TextView lmsheading_TextView;
 
     PocStockCountPresenter pocStockPresenter;
     ArrayList<POCStockCountDetailListBean.Poc_Stock_List> newStockList = new ArrayList<POCStockCountDetailListBean.Poc_Stock_List>();
-
     POCCarStockCountBean.Poc_Stock_Count bean;
 
-    String make,model, ageing, owner, mfg_year, stock_location, price;
+    String model;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +53,6 @@ public class POCCarStockCountDetailActivity extends AppCompatActivity implements
         if (NetworkUtilities.isInternet(POCCarStockCountDetailActivity.this)) {
 
             bean = getIntent().getParcelableExtra("bean");
-            Log.i("Selected Bean:", bean.getMake_name());
             model = bean.getSubmodel().toString();
 
             if(model.equals("")){

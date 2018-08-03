@@ -1,8 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.user.lmsautovista.View.Fragment.DseDailyReportViewFragment">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/dseDailyReportView_rl"
@@ -16,14 +15,34 @@
             android:orientation="vertical"
             >
 
+            <RelativeLayout
+                android:id="@+id/locationDseDailyView_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                >
             <Spinner
                 android:id="@+id/locationDseDailyView_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/selectDseDailyDashboard_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                >
             <Spinner
                 android:id="@+id/selectDseDailyDashboard_spinner"
                 android:layout_width="match_parent"
@@ -33,18 +52,32 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
                 />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dateSelectionDSEDailyReport_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                >
             <EditText
                 android:id="@+id/dateSelectionDSEDailyReport_txtview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:textSize="12sp"
                 android:hint="Select Date"
                 android:layout_marginLeft="10dp"
                 android:background="@android:color/transparent"
                 />
+            </RelativeLayout>
             <Button
                 android:id="@+id/dseDailyReportSearch_btn"
                 android:layout_width="match_parent"

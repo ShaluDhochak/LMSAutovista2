@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.excell.lms.lmsautovista">
+    package="com.excell.lms.lmsautovista"
+    android:versionCode="9"
+    android:versionName="2.5"
+    >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,7 +16,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label= "@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -33,10 +40,6 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".View.Activity.CallingTaskActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
             android:name=".View.Activity.NewLeadDashboardActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
@@ -58,10 +61,6 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".View.Activity.DashboardCountDetailActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".View.Activity.CustomerDetailActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
@@ -143,16 +142,36 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".View.Activity.CustomTableLayout" />
-        <activity android:name=".View.Activity.POCCarStockCountDetailActivity" />
-        <activity android:name=".View.Activity.NewCarStockCountDetailActivity" />
-        <activity android:name=".View.Activity.HomeVisitDashboardActivity" />
-        <activity android:name=".View.Activity.TestDriveDashboardActivity" />
-        <activity android:name=".View.Activity.ShowroomVisitDashboardActivity" />
-        <activity android:name=".View.Activity.EvaluationDashboardActivity" />
-        <activity android:name=".View.Activity.EscalationLevel1Activity" />
-        <activity android:name=".View.Activity.EscalationLevel2Activity" />
-        <activity android:name=".View.Activity.EscalationLevel3Activity"></activity>
+        <activity android:name=".View.Activity.CustomTableLayout"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.POCCarStockCountDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.NewCarStockCountDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.HomeVisitDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.TestDriveDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.ShowroomVisitDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.EvaluationDashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.EscalationLevel1Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.EscalationLevel2Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".View.Activity.EscalationLevel3Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>

@@ -27,18 +27,14 @@ public class NewCarStockCountDetailActivity extends AppCompatActivity implements
 
     @BindView(R.id.newCarStockFilterDetails_ListView)
     RecyclerView newCarStockFilterDetails_ListView;
-
     @BindView(R.id.backButton_ImageView)
     ImageView backButton_ImageView;
-
     @BindView(R.id.lmsheading_TextView)
     TextView lmsheading_TextView;
 
     NewCarStockCountDetailPresenter newCarStockCountDetailPresenter;
     ArrayList<NewCarStockCountDetailsBean.New_Stock_List> newStockList = new ArrayList<NewCarStockCountDetailsBean.New_Stock_List>();
-
     NewCarStockCountDetailsBean.New_Stock_List bean;
-
     NewCarStock1Bean.New_stock_Count bean1;
 
     String ageing, model, location, visit_status, price;
@@ -57,29 +53,15 @@ public class NewCarStockCountDetailActivity extends AppCompatActivity implements
 
         lmsheading_TextView.setText("New Car Stock Details");
         if (NetworkUtilities.isInternet(NewCarStockCountDetailActivity.this)) {
-/*
- intent.putExtra("bean", dashboardList.get(position));
-                intent.putExtra("filterAgeing", filterBean.getAgeing());
-                intent.putExtra("mfgYear", filterBean.getMfg_year());
-                intent.putExtra("price", filterBean.getPrice());
-                intent.putExtra("make", filterBean.getMake());
-                intent.putExtra("model", filterBean.getModel());
-                intent.putExtra("stock_location", filterBean.getStock_location());
-                intent.putExtra("owner", filterBean.getOwner());
- */
             bean1 = getIntent().getParcelableExtra("bean");
-
             model = bean1.getSubmodel().toString();
             location = bean1.getAssigned_location().toString();
             if (model.equals("")){
                 newCarStockCountDetailPresenter.getNewCarStockCountDetail(NewCarStockCountDetailActivity.this);
             }else{
                 newCarStockCountDetailPresenter.getNewCarStockCountModelDetail(model,NewCarStockCountDetailActivity.this);
-
             }
-
-            //pocStockPresenter.getPocCarStockCount(model,stock_location,mfg_year,owner,ageing,price,POCCarStockCountDetailActivity.this);
-        } else {
+         } else {
             Toast.makeText(NewCarStockCountDetailActivity.this, "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
         }
     }

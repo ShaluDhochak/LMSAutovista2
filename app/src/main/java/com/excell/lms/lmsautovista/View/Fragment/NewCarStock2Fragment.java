@@ -98,7 +98,6 @@ public class NewCarStock2Fragment extends Fragment implements IView.NewCarStockF
         priceNewStockFilter_spinner = (Spinner) view.findViewById(R.id.priceNewStockFilter_spinner);
         ageingNewStockFilter_spinner = (Spinner) view.findViewById(R.id.ageingNewStockFilter_spinner);
         vehicleStatusNewStockFilter_spinner = (Spinner) view.findViewById(R.id.vehicleStatusNewStockFilter_spinner);
-
         applyStockFilterNewStock_txtView = (TextView) view.findViewById(R.id.applyStockFilterNewStock_txtView);
         cancelStockFilterNewStock_txtView = (TextView) view.findViewById(R.id.cancelStockFilterNewStock_txtView);
 
@@ -147,7 +146,6 @@ public class NewCarStock2Fragment extends Fragment implements IView.NewCarStockF
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedPrice = (String) parent.getItemAtPosition(position);
                 //     selectedDateTypeId = String.valueOf(position);
-
                 if (selectedPrice.equals("Price")){
                     selectedPriceId= "";
                 }else if (selectedPrice.equals("Less than 4 lakh")){
@@ -164,12 +162,11 @@ public class NewCarStock2Fragment extends Fragment implements IView.NewCarStockF
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-
     }
 
     public void getVisitStatusDetails(){
         ArrayList<String> visitStatusArrayList = new ArrayList<>();
-        visitStatusArrayList.add("Visit Status");
+        visitStatusArrayList.add("Vehicle Status");
         visitStatusArrayList.add("Free");
         visitStatusArrayList.add("Blocked");
         ArrayAdapter<String> visitStatusArrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item, visitStatusArrayList);
@@ -181,7 +178,7 @@ public class NewCarStock2Fragment extends Fragment implements IView.NewCarStockF
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 visitStatusSpinner = (String) parent.getItemAtPosition(position);
                 //     selectedDateTypeId = String.valueOf(position);
-                if (visitStatusSpinner.equals("Visit Status")){
+                if (visitStatusSpinner.equals("Vehicle Status")){
                     visitStatusSpinnerId= "";
                 }else if (visitStatusSpinner.equals("Free")){
                     visitStatusSpinnerId = "1";

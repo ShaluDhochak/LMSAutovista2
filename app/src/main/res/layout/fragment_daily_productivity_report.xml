@@ -35,12 +35,20 @@
                     android:visibility="gone"
                     />
 
+                <RelativeLayout
+                    android:id="@+id/fromDateLeadReport_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_margin="5dp"
+                    >
                 <Spinner
                     android:id="@+id/locationWiseDailyProdReport_spinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     />
+                </RelativeLayout>
 
                 <RadioGroup
                     android:id="@+id/DailyProdReport_radioBtn"

@@ -9,9 +9,9 @@ import com.excell.lms.lmsautovista.Utils.Config;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
-/**
- * Created by User on 5/18/2018.
- */
+/*
+  Created by Shalu Dhochak on 5/18/2018.
+*/
 
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
     private static final String TAG = MyFirebaseInstanceIDService.class.getSimpleName();

@@ -20,7 +20,6 @@
             android:layout_margin="5dp"
             app:cardCornerRadius="4sp"
             app:cardElevation="4sp"
-
             >
         <LinearLayout
             android:id="@+id/followUpDetailsHeading_LinearLayout"
@@ -112,7 +111,6 @@
                     />
             </RelativeLayout>
         </LinearLayout>
-
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView

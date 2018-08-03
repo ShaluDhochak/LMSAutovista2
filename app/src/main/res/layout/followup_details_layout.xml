@@ -42,6 +42,39 @@
 
 
 
+
+
+        <LinearLayout
+            android:id="@+id/callStatusFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/followUpByFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/callStatusFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Call Status"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/callStatusFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/callDateFollowUpDetails_LinearLayout"
             android:layout_width="match_parent"
@@ -51,7 +84,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
-            android:layout_below="@+id/followUpByFollowUpDetails_LinearLayout">
+            android:layout_below="@+id/callStatusFollowUpDetails_LinearLayout">
             <TextView
                 android:id="@+id/callDateFollowUpDetailsHeading_TextView"
                 android:layout_width="match_parent"
@@ -74,7 +107,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/callStatusFollowUpDetails_LinearLayout"
+            android:id="@+id/callTimeFollowUpDetails_LinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -84,46 +117,16 @@
             android:layout_marginTop="5dp"
             android:layout_below="@+id/callDateFollowUpDetails_LinearLayout">
             <TextView
-                android:id="@+id/callStatusFollowUpDetailsHeading_TextView"
+                android:id="@+id/callTimeFollowUpDetailsHeading_TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Call Status"
+                android:text="Call Time"
                 android:textColor="@color/dark_grey"
                 android:textSize="12sp"/>
 
             <TextView
-                android:id="@+id/callStatusFollowUpDetailsString_TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/NotMentioned"
-                android:textColorHint="@color/edittextcolor"
-                android:textSize="12sp"
-                />
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/nFDFollowUpDetails_LinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_below="@+id/callStatusFollowUpDetails_LinearLayout">
-            <TextView
-                android:id="@+id/nFDFollowUpDetailsHeading_TextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="N.F.D."
-                android:textColor="@color/dark_grey"
-                android:textSize="12sp"/>
-
-            <TextView
-                android:id="@+id/nFDFollowUpDetailsString_TextView"
+                android:id="@+id/callTimeFollowUpDetailsString_TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -142,13 +145,13 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
-            android:layout_below="@+id/nFDFollowUpDetails_LinearLayout">
+            android:layout_below="@+id/callTimeFollowUpDetails_LinearLayout">
             <TextView
                 android:id="@+id/feedbackStatusFollowUpDetailsHeading_TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-                android:text="Feedback Status"
+                android:text="Feedback"
                 android:textColor="@color/dark_grey"
                 android:textSize="12sp"/>
 
@@ -163,6 +166,7 @@
                 />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/nextActionFollowUpDetails_LinearLayout"
             android:layout_width="match_parent"
@@ -194,6 +198,68 @@
 
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/nFDFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/nextActionFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/nFDFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="N.F.D."
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/nFDFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nFtFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/nFDFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/nFtFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="N.F.T."
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/nFtFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
             android:id="@+id/remarkFollowUpDetails_LinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -203,7 +269,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:layout_below="@+id/nextActionFollowUpDetails_LinearLayout">
+            android:layout_below="@+id/nFtFollowUpDetails_LinearLayout">
             <TextView
                 android:id="@+id/remarkFollowUpDetailsHeading_TextView"
                 android:layout_width="match_parent"

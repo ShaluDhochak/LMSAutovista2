@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.user.lmsautovista.View.Fragment.DSEReportFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/dseWiseReport_relativeLayout"
@@ -26,6 +25,15 @@
 
             android:orientation="vertical">
 
+            <RelativeLayout
+                android:id="@+id/locationReport_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                >
             <Spinner
                 android:id="@+id/locationReport_Spinner"
                 android:layout_width="fill_parent"
@@ -36,7 +44,17 @@
                 android:paddingBottom="2dp"
                 android:paddingLeft="6dp"
                 />
+            </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/fromDateReport_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                >
             <TextView
                 android:id="@+id/fromDateReport_TextView"
                 android:layout_width="fill_parent"
@@ -52,7 +70,14 @@
                 android:textColor="@color/edittextcolor"
                 android:textColorHint="@color/edittextcolor"
                 android:textSize="12sp" />
-
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/toDateReport_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_margin="5dp"
+                >
             <TextView
                 android:id="@+id/toDateReport_TextView"
                 android:layout_width="fill_parent"
@@ -68,6 +93,8 @@
                 android:textColor="@color/edittextcolor"
                 android:textColorHint="@color/edittextcolor"
                 android:textSize="12sp" />
+            >
+            </RelativeLayout>
 
             <Button
                 android:id="@+id/searchReport_Button"

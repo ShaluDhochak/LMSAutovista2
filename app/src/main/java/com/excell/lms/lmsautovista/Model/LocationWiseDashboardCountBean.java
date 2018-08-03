@@ -2,24 +2,29 @@ package com.excell.lms.lmsautovista.Model;
 
 import java.util.ArrayList;
 
-/**
- * Created by User on 5/29/2018.
+/*
+  Created by Shalu Dhochak on 5/29/2018.
  */
 
 public class LocationWiseDashboardCountBean {
-
-    public ArrayList<New_Dashboard> getNew_Dashboard() {
+    public ArrayList<New_Dashboard> getNew_dashboard() {
         return new_dashboard;
     }
 
-    public void setNew_Dashboard(ArrayList<New_Dashboard> new_dashboard) {
+    public void setNew_dashboard(ArrayList<New_Dashboard> new_dashboard) {
         this.new_dashboard = new_dashboard;
     }
 
     public ArrayList<New_Dashboard> new_dashboard;
-
     public static class New_Dashboard{
-        String id;
+        String id,role,location_name,fname,lname,unassigned_leads,new_leads,call_today,pending_new_leads,pending_followup;
+        String evaluation_count;
+        String test_drive_count;
+        String home_visit_count;
+        String showroom_visit_count;
+        String escalation_level_1;
+        String escalation_level_2;
+        String escalation_level_3;
 
         public String getId() {
             return id;
@@ -101,23 +106,6 @@ public class LocationWiseDashboardCountBean {
             this.pending_followup = pending_followup;
         }
 
-        String role;
-        String location_name;
-        String fname;
-        String lname;
-        String unassigned_leads;
-        String new_leads;
-        String call_today;
-        String pending_new_leads;
-        String pending_followup;
-        String escalation_level_1;
-        String escalation_level_2;
-        String escalation_level_3;
-        String evaluation_count;
-        String test_drive_count;
-        String home_visit_count;
-        String showroom_visit_count;
-
         public String getEvaluation_count() {
             return evaluation_count;
         }
@@ -173,8 +161,6 @@ public class LocationWiseDashboardCountBean {
         public void setEscalation_level_3(String escalation_level_3) {
             this.escalation_level_3 = escalation_level_3;
         }
-
     }
-
 }
 

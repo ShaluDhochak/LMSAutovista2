@@ -91,7 +91,7 @@
             android:id="@+id/leadDate_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lead Date"
+            android:text="Lead Date:"
             android:textColor="@color/edittextcolor"
             android:textSize="12sp"
             android:layout_below="@id/interestInString_TextView"

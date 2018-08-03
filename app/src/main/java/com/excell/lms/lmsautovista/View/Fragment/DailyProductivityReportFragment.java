@@ -37,26 +37,20 @@ import butterknife.OnClick;
 import butterknife.OnItemSelected;
 
 public class DailyProductivityReportFragment extends Fragment  implements IView.DailyProductivityReportPresnter {
-
     View view;
     ProgressDialog progressDialog;
     DailyProductivityReportPresenter dashboardPresenter;
 
     @BindView(R.id.countDailyProdReport_ListView)
     RecyclerView countDailyProdReport_ListView;
-
     @BindView(R.id.locationWiseDailyProdReport_spinner)
     Spinner locationWiseDailyProdReport_spinner;
-
     @BindView(R.id.DailyProdReport_radioBtn)
     RadioGroup DailyProdReport_radioBtn;
-
     @BindView(R.id.radioDailyProdReport_tl)
     RadioButton radioDailyProdReport_tl;
-
     @BindView(R.id.radioDailyProdReport_dse)
     RadioButton radioDailyProdReport_dse;
-
     //used as Submit Btn
     @BindView(R.id.SubmitDailyProdReport_btn)
     Button SubmitDailyProdReport_btn;
@@ -64,26 +58,19 @@ public class DailyProductivityReportFragment extends Fragment  implements IView.
     ArrayList<DailyProductivityReportBean.Daily_Productivity_resport> CountList = new ArrayList<DailyProductivityReportBean.Daily_Productivity_resport>();
     Map<String, String> locationMap = new HashMap<>();
     String selectedLocationDashboard, selectedLocationDashboardId = "";
-    String rolestr;
-
-    String selectedRadio;
-
+    String rolestr, selectedRadio;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_daily_productivity_report, container, false);
         ButterKnife.bind(this, view);
-
         dashboardPresenter = new DailyProductivityReportPresenter(this);
         countDailyProdReport_ListView.setNestedScrollingEnabled(false);
-
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
         progressDialog.setCanceledOnTouchOutside(false);
-        // Inflate the layout for this fragment
         return view;
-
     }
 
     @OnClick(R.id.SubmitDailyProdReport_btn)
@@ -103,25 +90,21 @@ public class DailyProductivityReportFragment extends Fragment  implements IView.
                 }
 
                 if (!(selectedLocationDashboard.equals("Select Location"))) {
+                    progressDialog.show();
                     dashboardPresenter.getDailyProductivityReportList(selectedRadio, selectedLocationDashboardId, getActivity());
                 }else{
                     Toast.makeText(getActivity(), "Please select Location.", Toast.LENGTH_SHORT).show();
                 }
-
-                // Toast.makeText(getActivity(), selectedRadio, Toast.LENGTH_LONG).show(); // print the value of selected super star
-            }
+         }
         });
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
         rolestr = SharedPreferenceManager.getInstance(getActivity()).getPreference(Constants.ROLE_ID, "");
-
         if (NetworkUtilities.isInternet(getActivity())) {
             dashboardPresenter.getLocationSpinnerList(getActivity());
-
             dashboardPresenter.getDailyProductivityReportList(selectedRadio,"", getActivity());
         } else {
             Toast.makeText(getActivity(), "Check Internet connectivity.", Toast.LENGTH_SHORT).show();
@@ -145,7 +128,6 @@ public class DailyProductivityReportFragment extends Fragment  implements IView.
                     }
                 }
             }
-
             ArrayAdapter<String> locationDashboardArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, locationDashboardArrayList);
             locationDashboardArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             locationWiseDailyProdReport_spinner.setAdapter(locationDashboardArrayAdapter);
@@ -155,17 +137,16 @@ public class DailyProductivityReportFragment extends Fragment  implements IView.
 
     @Override
     public void showDashboardCount(DailyProductivityReportBean jsonObject) {
+        progressDialog.dismiss();
         try {
             CountList.clear();
             CountList.addAll(jsonObject.getDaily_productivity_report());
-
             DailyProductivityReportAdapter dashboardRepsAdapter = new DailyProductivityReportAdapter(getActivity(), jsonObject.getDaily_productivity_report());
             RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL , false);
             countDailyProdReport_ListView.setLayoutManager(mLayoutManager);
             countDailyProdReport_ListView.setItemAnimator(new DefaultItemAnimator());
             countDailyProdReport_ListView.setAdapter(dashboardRepsAdapter);
         }catch (Exception e){
-
         }
     }
 
@@ -185,7 +166,6 @@ public class DailyProductivityReportFragment extends Fragment  implements IView.
                     //   dashboardPresenter.getDashboardLocationList(selectedLocationDashboardId, getActivity());
                 }
             }
-
         }
     }
 

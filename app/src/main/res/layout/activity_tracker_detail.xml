@@ -1852,7 +1852,7 @@
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
                         android:paddingTop="5dp"
-                        android:text="Assigned Date"
+                        android:text="Assigned Date(CSE)"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
@@ -1893,7 +1893,7 @@
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
                         android:paddingTop="5dp"
-                        android:text="Assigned Time"
+                        android:text="Assigned Time(CSE)"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
@@ -2218,7 +2218,7 @@
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
                         android:paddingTop="5dp"
-                        android:text="@string/cseNextAction"
+                        android:text="@string/cseNFD"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
@@ -2669,7 +2669,7 @@
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
                         android:paddingTop="5dp"
-                        android:text="Lead Assigned Date"
+                        android:text="Assigned Date(DSE)"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
@@ -2710,7 +2710,7 @@
                         android:backgroundTint="@android:color/transparent"
                         android:inputType="textNoSuggestions"
                         android:paddingTop="5dp"
-                        android:text="Lead Assigned Time"
+                        android:text="Assigned Time(DSE)"
                         android:textColor="@color/edittextcolor"
                         android:textSize="12sp" />
 
@@ -3270,43 +3270,34 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/callReceivedSrNewCarTrackerDetails_RelativeLayout"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
                     android:layout_below="@id/followUpPendingNewCarTrackerDetails_RelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:weightSum="4">
+                    android:weightSum="2">
 
                     <TextView
                         android:id="@+id/callReceivedSrNewCarTrackerDetails_TextView"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
+                        android:layout_weight="1"
+                        android:text="Call Received From Showroom"
+                        android:textSize="12sp"
                         android:layout_marginLeft="17dp"
                         android:layout_marginStart="17dp"
                         android:layout_marginTop="5dp"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:inputType="textNoSuggestions"
-                        android:paddingTop="5dp"
-                        android:text="@string/callReceivesFromShowroom"
-                        android:textColor="@color/edittextcolor"
-                        android:textSize="12sp" />
+                        android:textColor="@color/edittextcolor" />
 
                     <TextView
                         android:id="@+id/callReceivedSrNewCarTrackerString_TextView"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:hint="@string/NotMentioned"
+                        android:textSize="12sp"
                         android:layout_marginTop="5dp"
-                        android:layout_weight="2"
-                        android:backgroundTint="@android:color/transparent"
-                        android:hint="Not Mentioned"
-                        android:inputType="textNoSuggestions"
-                        android:paddingTop="5dp"
-                        android:textColorHint="@color/edittextcolor"
-                        android:textSize="12sp" />
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/edittextcolor" />
 
                 </LinearLayout>
 

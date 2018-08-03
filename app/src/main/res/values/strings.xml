@@ -1,20 +1,17 @@
 <resources>
-    <string name="app_name">LMSAutovista</string>
+    <string name="app_name">LMS Autovista</string>
 
     <string name="userID">User ID</string>
     <string name="password">Password</string>
     <string name="login">LOGIN</string>
     <string name="title_activity_home">HomeActivity</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_finance">Finance</string>
     <string name="action_service">Service</string>
     <string name="action_accessories">Accessories</string>
     <string name="action_newcar">New Car</string>
     <string name="action_used_car">Used Car</string>
-
     <string name="openDrawer">open_drawer</string>
     <string name="closeDrawer">close_drawer</string>
 
@@ -39,7 +36,6 @@
         <item>Daily Productivity Report</item>
     </string-array>
 
-
     <!--String for navigation Drawer-->
     <string name="nav_location_wise">Dashboard</string>
     <string name="nav_calling_task">Calling Task</string>
@@ -58,8 +54,6 @@
     <string name="nav_dseDailyReportView">DSE Daily Report View</string>
     <string name="nav_Lead_report">Lead Report</string>
     <string name="nav_daily_productivity_report">Daily Productivity Report</string>
-
-
     <string name="nav_change_password">Change Password</string>
     <string name="nav_register_mobileno">Register MobileNo</string>
     <string name="action_logout">Logout</string>
@@ -70,7 +64,6 @@
     <string name="nav_new_car_stock">New Car Stock</string>
     <string name="nav_poc_stock">POC Stock</string>
     <string name="nav_add_message">Send Message To DSE</string>
-
     <string name="nav_add_lead">Add New Lead</string>
 
     <!--String for Dashboard Count-->
@@ -81,7 +74,7 @@
     <string name="accessoriesDetail">Accessories Detail</string>
     <string name="newCarDetails">New Car Detail</string>
     <string name="interested_in">Interested In</string>
-    <string name="feedbackStatus">Feedback Status</string>
+    <string name="feedbackStatus">Feedback</string>
     <string name="NotMentioned">Not Mentioned</string>
     <string name="nextActionHeading">Next Action</string>
     <string name="currentUser">Current User</string>
@@ -98,10 +91,11 @@
     <string name="newVariant">New Variant</string>
     <string name="oldModel">Old Model</string>
     <string name="oldVariant">Old Variant</string>
+    <string name="evaluationLocation">Evaluation Location</string>
+
 
     <string name="buyModel">Old Model</string>
     <string name="buyVariant">Old Variant</string>
-
     <string name="bookingWithinDays">Booking Within Days</string>
 
     <!--String appointment-->
@@ -116,7 +110,7 @@
 
     <!--String for New Car Tracker-->
     <string name="leadSource">Lead Source</string>
-    <string name="assitanceRequired">Assitance Required</string>
+    <string name="assitanceRequired">Assistance Required</string>
     <string name="customerLocation">Customer Location</string>
     <string name="showroomLocation">Showroom Location</string>
     <string name="cseName">CSE Name</string>
@@ -139,13 +133,12 @@
     <string name="auditorName">Auditor Name</string>
     <string name="auditorFollowUpDate">Auditor Call Date</string>
     <string name="followUpPending">FollowUp Pending</string>
-    <string name="callReceivesFromShowroom">Call Receives from Showroom</string>
+    <string name="callReceivesFromShowroom">Call Received from Showroom</string>
     <string name="fakeUpdation">Fake Updation</string>
     <string name="serviceFeedback">Service Feedback</string>
     <string name="auditorRemark">Auditor Remark</string>
     <string name="buyerType">Buyer Type</string>
     <string name="modelVariant">Model Variant</string>
-
 
     <!--String for used car tracker-->
     <string name="excehangeMakeModel">Exchange Make Model</string>
@@ -182,10 +175,8 @@
     <string name="disburseAmount">Disburse Amount</string>
     <string name="processingFee">Processing Fee</string>
     <string name="emi">EMI</string>
-
     <string name="accessoriesList">Accessories List</string>
     <string name="accessoriesPrice">Accessories Price</string>
-
     <string name="km">KM</string>
     <string name="serviceType">Service Type</string>
     <string name="pickUpRequired">PickUp Required</string>
@@ -208,22 +199,20 @@
 
     <!--Add Follow Up-->
     <string name="name">Name :</string>
-    <string name="click_here_to_send_quotations">Click here to Send Quotations </string>
+    <string name="click_here_to_send_quotations">Send Quotation </string>
     <string name="newCarDeatils">New Car Details</string>
     <string name="oldCarDetails">Old Car Details</string>
     <string name="buyUsedCarDetails">Buy Used Car Details</string>
     <string name="description_spinner_title">Description</string>
     <string name="Reset">Reset</string>
-
     <string name="escalationDetail">Escalation Details</string>
     <string name="escalationType">Escalation Type</string>
-    <string name="escalationRemark">Escalaltion Remark</string>
-
+    <string name="escalationRemark">Escalation Remark</string>
     <string name="otherDetails">Other Details</string>
-    <string name="interestedInFinance">Interested In Finance</string>
-    <string name="interestedInInsurance">Interested In Insurance</string>
-    <string name="interestedInAccessories">Interested In Accessories</string>
-    <string name="interestedInEw">Interested In Ew</string>
+    <string name="interestedInFinance">Interested in Finance</string>
+    <string name="interestedInInsurance">Interested in Insurance</string>
+    <string name="interestedInAccessories">Interested in Accessories</string>
+    <string name="interestedInEw">Interested in Ew</string>
 
     <!--String values for all Spinner in all xml files-->
     <string name="process_transfer_title">Select Process</string>
@@ -253,7 +242,6 @@
     <string name="downPayment">DownPayment</string>
     <string name="BankInterestRate">Bank Interest Rate</string>
     <string name="PayBackPeriod">Pay Back period (in month)</string>
-
     <string name="send_price_quotes_and_emi">Send Price Quotes and EMI</string>
 
     <!--Add Follow Up details-->
@@ -289,7 +277,8 @@
     <string name="NextFollowUpDateNotScheduled">Not Scheduled</string>
     <string name="StatusHeading">Status</string>
     <string name="StatusEntry">Not Yet</string>
-    <string name="click_here_to_transfer_locations_details">Click here toTransfer Lead</string>
+    <string name="click_here_to_transfer_locations_details">Transfer Lead</string>
+    <string name="click_here_to_evaluation_locations_details">Evaluation Lead</string>
     <string name="transferReason_spinner_title">Transfer Reason</string>
 
     <!--Change Password-->
@@ -371,7 +360,6 @@
     <string name="assign_to">Assign To</string>
     <string name="assign_by">Assign By</string>
     <string name="transfer_date">Transfer Date</string>
-
     <string name="FuelType">Fuel Type  </string>
     <string name="VehicleStatus">Vehicle Status  </string>
     <string name="CarMake"> Car Make</string>
@@ -386,7 +374,6 @@
     <string name="TotalPendingCost">Total landing Cost</string>
     <string name="Ageing">Ageing </string>
     <string name="LastUpdate">Last Update </string>
-
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
