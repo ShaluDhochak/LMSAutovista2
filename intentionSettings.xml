@@ -10,10 +10,5 @@
     <ignoreAction name="Java/Declaration/Move assignment to field declaration" />
     <ignoreAction name="Java/Refactorings/Encapsulate field" />
     <ignoreAction name="Android/Add library dependency" />
-    <ignoreAction name="XML/Add Xsi schema location for external resource" />
-    <ignoreAction name="Java/Imports/Add Single-Member Static Import" />
-    <ignoreAction name="Java/Declaration/Split Declaration" />
-    <ignoreAction name="Language Injection/Inject language or reference" />
-    <ignoreAction name="Java/Declaration/Create field for parameter" />
   </component>
 </application>
