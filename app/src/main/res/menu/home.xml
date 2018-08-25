@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <item
+        android:id="@+id/action_current"
+        android:orderInCategory="100"
+        android:title="current item"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_finance"
+        android:orderInCategory="100"
+        android:title="@string/action_finance"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_service"
+        android:orderInCategory="100"
+        android:title="@string/action_service"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_accessories"
+        android:orderInCategory="100"
+        android:title="@string/action_accessories"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_new_car"
+        android:orderInCategory="100"
+        android:title="@string/action_newcar"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_used_car"
+        android:orderInCategory="100"
+        android:title="@string/action_used_car"
+        app:showAsAction="never" />
+
+</menu>

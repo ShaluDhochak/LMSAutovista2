@@ -1,0 +1,220 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.excell.lms.lmsautovista.View.Fragment.DailyProductivityReportFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView_locdashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/locationDashboard_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:id="@+id/locDailyProdReport_Relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 >
+
+                <TextView
+                    android:id="@+id/locationHeadingDailyProdReport_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nav_location_wise"
+                    android:textAlignment="center"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/fromDateLeadReport_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_margin="5dp"
+                    >
+                <Spinner
+                    android:id="@+id/locationWiseDailyProdReport_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    />
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/DailyProdReport_radioBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioDailyProdReport_tl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:checked="true"
+                        android:text="TL"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton android:id="@+id/radioDailyProdReport_dse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DSE"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:checked="true"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+           <Button
+               android:id="@+id/SubmitDailyProdReport_btn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/locDailyProdReport_Relativelayout"
+               android:text="@string/search"
+               android:textSize="17sp"
+               android:background="@drawable/outline_blue_curved_rectangle"
+               android:layout_margin="10dp"
+               />
+
+            <RelativeLayout
+                android:id="@+id/leadListLocDailyProdReport_lineralayout"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/SubmitDailyProdReport_btn"
+                android:background="@drawable/outline_blue_curved_rectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/headingDailyProdReport_relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <LinearLayout
+                        android:id="@+id/headingDailyProdReport_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="6"
+
+                        >
+
+                    <TextView
+                        android:id="@+id/leadHeadingLoc_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="User Name"
+                        android:textAlignment="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:layout_weight="1.5"
+                        />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/edittextcolor"/>
+
+                        <TextView
+                            android:id="@+id/totalCallHeadingLoc_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Called"
+                            android:textAlignment="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:textSize="15sp"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:layout_weight="1.5"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/edittextcolor"/>
+
+
+                        <TextView
+                            android:id="@+id/connectedHeadingLoc_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Connected"
+                            android:textAlignment="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:textSize="15sp"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:layout_weight="1.5"
+                            />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/edittextcolor"/>
+
+
+                        <TextView
+                            android:id="@+id/notconnectedHeadingLoc_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Not Connected"
+                            android:textAlignment="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginRight="2dp"
+                            android:textSize="15sp"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:layout_weight="1.5"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/separatorBelowLeadHeadingLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/headingDailyProdReport_ll"/>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/countDailyProdReport_ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="303dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/headingDailyProdReport_relativeLayout"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

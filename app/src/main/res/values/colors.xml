@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#236098</color>
+    <color name="colorPrimaryDark">#08457E</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorHeader">#eaeaea</color>
+
+    <color name="darkBlueWebsite">#08457E</color>
+    <color name="edittextcolor">#757575</color>
+    <color name="colorPlatinum">#E5E4E2</color>
+    <color name="dark_grey">#555555</color>
+    <color name="lightGrey1">#EEEEEE</color>
+
+    <color name="green">#196F3D</color>
+    <color name="yellow">#e5f211</color>
+    <color name="red">#e11010</color>
+
+</resources>

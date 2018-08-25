@@ -1,0 +1,1875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false"
+    tools:context="com.excell.lms.lmsautovista.View.Activity.AddFollowUpActivity"
+    >
+
+    <ScrollView
+        android:id="@+id/add_followUp_ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/addFollowUp_RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/addFollowUpHeading_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_margin="10dp"
+                >
+
+            <LinearLayout
+                android:id="@+id/addFollowUpHeading_LinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/addFollowUpHeading_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/add_followup"
+                    android:textAlignment="center"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/AddFollowUpHeadingSeparator_View"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/darkBlueWebsite" />
+
+                <RelativeLayout
+                    android:id="@+id/addFollowupName_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/AddFollowUpHeadingSeparator_View">
+
+                    <ImageView
+                        android:id="@+id/addFollowUpNameImage_ImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/name" />
+
+                    <TextView
+                        android:id="@+id/addFollowUpName_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/addFollowUpNameImage_ImageView"
+                        android:layout_marginLeft="10dp"
+                        android:hint="@string/name"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/addContcatNo_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/addFollowUpNameImage_ImageView"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                        android:id="@+id/addFollowUpPhoneImage_ImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/contact_no" />
+
+                        <LinearLayout
+                            android:id="@+id/contactNoString_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/addFollowUpPhoneImage_ImageView"
+                            android:layout_marginLeft="10dp"
+                            android:paddingBottom="3dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            >
+                            <TextView
+                                android:id="@+id/addFollowUpContactNo_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/contact_no"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp"
+                                android:layout_weight="2.5"
+                                android:layout_gravity="left"/>
+
+                            <TextView
+                                android:id="@+id/callContactNo_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="Call"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/darkBlueWebsite"
+                                android:textSize="12sp"
+                                android:layout_weight="0.5"
+                                android:layout_gravity="right"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/dialContact_Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="180dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/phone_call"
+                            android:layout_weight="1"
+                            />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/alternateContactNo_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/addContcatNo_rl"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/addFollowUpAlternatePhoneImage_ImageView"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/contact_no" />
+
+                        <RelativeLayout
+                            android:id="@+id/alternateContactString_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/addFollowUpAlternatePhoneImage_ImageView"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginLeft="10dp"
+                            >
+
+                            <EditText
+                                android:id="@+id/addFollowUpAlternateContactNo_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/addFollowUpAltContactNoHeading_TextView"
+                                android:layout_marginLeft="10dp"
+                                android:hint="Alternate Contact No"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp"
+                                android:background="@android:color/transparent"
+                                android:textColorHint="@color/edittextcolor"
+                                android:inputType="number"
+                                />
+
+                            <TextView
+                                android:id="@+id/addFollowUpAltContactNoHeading_TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="Alternate Contact No "
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/addFollowUpEmailImage_ImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/alternateContactNo_rl"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="18dp"
+                        android:src="@drawable/email" />
+
+                    <EditText
+                        android:id="@+id/emailAddFollowUpDetails_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alternateContactNo_rl"
+                        android:layout_toRightOf="@id/addFollowUpEmailImage_ImageView"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Email"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+
+                    <ImageView
+                        android:id="@+id/addFollowUpAddressImage_ImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/addFollowUpEmailImage_ImageView"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="18dp"
+                        android:src="@drawable/address" />
+
+                    <EditText
+                        android:id="@+id/addressAddFollowUpDetails_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/emailAddFollowUpDetails_TextView"
+                        android:layout_toRightOf="@id/addFollowUpAddressImage_ImageView"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Address"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/addFollowUpBookingId_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/addressAddFollowUpDetails_TextView"
+                        android:hint="bookingId"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/followUpDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/addFollowUpHeading_cardView"
+                >
+
+            <RelativeLayout
+                android:id="@+id/followUpdeatils_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/feedbackStatusAddFollowUpDetails_RL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    >
+                    <Spinner
+                        android:id="@+id/feedbackStatusAddFollowUpDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nextActionAddFollowUpDetails_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/feedbackStatusAddFollowUpDetails_RL"
+                    >
+                <Spinner
+                    android:id="@+id/nextActionAddFollowUpDetails_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp"
+                    android:prompt="@string/status_spinner_title"
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/callStatusAddFollowUpDetails_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/nextActionAddFollowUpDetails_rl"
+                    >
+                <Spinner
+                    android:id="@+id/callStatusAddFollowUpDetails_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp"
+                    android:prompt="@string/activity_spinner_title"
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/booking60DaysAddFollowUpDetails_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/callStatusAddFollowUpDetails_rl"
+                    >
+                <Spinner
+                    android:id="@+id/booking60DaysAddFollowUpDetails_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp"
+                    android:prompt="@string/eagerness_spinner_title" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nfdAddFollowUpDetails_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/booking60DaysAddFollowUpDetails_rl"
+                    >
+                <TextView
+                    android:id="@+id/nfdAddFollowUpDetails_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/NextFollowUpDate"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/edittextcolor"
+                    android:textColorHint="@color/edittextcolor"
+                    android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nftAddFollowUpDetails_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/nfdAddFollowUpDetails_rl"
+                    >
+
+                <TextView
+                    android:id="@+id/nftAddFollowUpDetails_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/NextFollowUpTime"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/edittextcolor"
+                    android:textColorHint="@color/edittextcolor"
+                    android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/remarksAddFollowUpDetails_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/nftAddFollowUpDetails_rl"
+                    >
+                <EditText
+                    android:id="@+id/remarksAddFollowUpDetails_EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="Remark"
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@color/edittextcolor"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/addEscalation_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click here to add Escalation"
+                    android:textSize="12sp"
+                    android:textColor="@color/edittextcolor"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/remarksAddFollowUpDetails_rl"
+                    />
+            </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/appointmentDetailsAddFollowUp_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/followUpDetails_cardView"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/appointmentDetailsAddFollowUp_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    >
+                    <TextView
+                        android:id="@+id/appointmentDetailsAddFollowUpHeading_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:text="Appointment Details"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                    <CheckBox
+                        android:id="@+id/clickhereAppointmentDetails_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/appointmentDetailsAddFollowUpHeading_TextView"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="143dp"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/appointmentDetailsAddFollowUpSpinner_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appointmentDetailsAddFollowUpHeading_TextView"
+                        android:visibility="visible">
+
+
+                        <RelativeLayout
+                            android:id="@+id/appointmentTypeAddFollowUp_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            >
+                        <Spinner
+                            android:id="@+id/appointmentTypeAddFollowUp_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:visibility="visible"
+                            />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/appointmentDateAddFollowUp_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/appointmentTypeAddFollowUp_rl"
+                            >
+                        <TextView
+                            android:id="@+id/appointmentDateAddFollowUp_txtView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/AppointmentDate"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textColorHint="@color/edittextcolor"
+                            />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/appointmentTimeAddFollowUp_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@id/appointmentDateAddFollowUp_rl"
+                            >
+
+                        <TextView
+                            android:id="@+id/appointmentTimeAddFollowUp_txtView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/AppointmentTime"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="10dp"
+                            android:textColorHint="@color/edittextcolor"
+                            />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/appointmentStatusAddFollowUp_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_below="@id/appointmentTimeAddFollowUp_rl"
+                            >
+                        <Spinner
+                            android:id="@+id/appointmentStatusAddFollowUp_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="4dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:visibility="visible"/>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/buyerType_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/appointmentDetailsAddFollowUp_cardView"
+                >
+
+                <Spinner
+                    android:id="@+id/buyerTypeAddFollowUp_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp"
+                    />
+            </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                android:id="@+id/buyerType_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/buyerType_cardView">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/clickhereToSendBroucher_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="4sp"
+                        app:cardCornerRadius="4sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone"
+                        >
+                        <RelativeLayout
+                            android:id="@+id/clickHereToSendBroucher_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/clickhereToSendBroucher_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Click here To send Brochure"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark_grey"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/clickhereSendBroucher_checkBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/clickhereToSendBroucher_textView"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:layout_marginLeft="90dp"
+                            />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/newCarDetails_cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                <RelativeLayout
+                    android:id="@+id/newCarDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/newCarDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="@string/newCarDeatils"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/newCarModelDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/newCarDetails_TextView"
+                        >
+                    <Spinner
+                        android:id="@+id/newCarModelDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/newCarVariantDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/newCarModelDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/newCarVariantDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/oldCarDetails_cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="4sp"
+                    app:cardCornerRadius="4sp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                <RelativeLayout
+                    android:id="@+id/oldCarDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/oldCarDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="@string/oldCarDetails"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/carMakeOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/oldCarDetails_TextView"
+                        >
+                    <Spinner
+                        android:id="@+id/carMakeOldCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/carModelOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/carMakeOldCarDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/carModelOldCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/mfgOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/carModelOldCarDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/mfgOldCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ownershipOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/mfgOldCarDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/ownershipOldCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/anyAssidentailClaimOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/ownershipOldCarDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/anyAssidentailClaimOldCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/kmsOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/anyAssidentailClaimOldCarDetails_rl"
+                        >
+
+                    <EditText
+                        android:id="@+id/kmsOldCarDetails_EditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:hint="Kms"
+                        android:inputType="number"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:textColorHint="@color/edittextcolor"
+                        android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/evaluationWithinDaysOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/kmsOldCarDetails_rl"
+                        >
+                        <Spinner
+                            android:id="@+id/evaluationWithinDaysOldCarDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="8dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/fuelTypeOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/evaluationWithinDaysOldCarDetails_rl"
+                        >
+                        <Spinner
+                            android:id="@+id/fuelTypeOldCarDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="8dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/colorOldCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/fuelTypeOldCarDetails_rl"
+                        >
+
+                        <EditText
+                            android:id="@+id/colorOldCarDetails_EditText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Color"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/buyUsedCarDetails_cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                <RelativeLayout
+                    android:id="@+id/buyUsedCarDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/buyUsedCarDetailsHeading_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:padding="10dp"
+                        android:text="@string/buyUsedCarDetails"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/carMakeBuyUsedCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/buyUsedCarDetailsHeading_TextView"
+                        >
+
+                    <Spinner
+                        android:id="@+id/carMakeBuyUsedCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/carModelBuyUsedCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/carMakeBuyUsedCarDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/carModelBuyUsedCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/budgetFromBuyUsedCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/carModelBuyUsedCarDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/budgetFromBuyUsedCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/budgetToBuyUsedCarDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/budgetFromBuyUsedCarDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/budgetToBuyUsedCarDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+            android:id="@+id/escalationDetail_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buyerType_RelativeLayout"
+            app:cardElevation="4sp"
+            app:cardCornerRadius="4sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            >
+
+        <RelativeLayout
+            android:id="@+id/escalationMainDetail_RelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            >
+
+        <TextView
+            android:id="@+id/escalationDetailHeading_TextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/escalationDetail"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/escalationDetails_RelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/escalationDetailHeading_TextView"
+            android:visibility="visible">
+
+            <Spinner
+                android:id="@+id/escalationType_Spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="6dp"
+                android:prompt="@string/location_spinner_title"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/escalationRemark_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/escalationRemark"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@android:color/transparent"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:paddingBottom="0dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@+id/escalationType_Spinner"
+                />
+
+        </RelativeLayout>
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/otherDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/escalationDetail_cardView"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/otherDetailsMain_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/otherDetailsHeading_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/otherDetails"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <CheckBox
+                        android:id="@+id/clickhereOtherDetails_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/otherDetailsHeading_TextView"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="183dp"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/otherDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/otherDetailsHeading_TextView"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/interestedInFinanceOtherDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            >
+
+                        <Spinner
+                            android:id="@+id/interestedInFinanceOtherDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/location_spinner_title"
+                            android:visibility="visible" />
+                        </RelativeLayout>
+
+                         <RelativeLayout
+                                android:id="@+id/interestedInInsuranceOtherDetails_rl"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/light_rectangle_outline"
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@+id/interestedInFinanceOtherDetails_rl"
+                                >
+
+                        <Spinner
+                            android:id="@+id/interestedInInsuranceOtherDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/location_spinner_title"
+                            android:visibility="visible" />
+                            </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/interestedInAccessoriesOtherDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/interestedInInsuranceOtherDetails_rl"
+                            >
+
+                        <Spinner
+                            android:id="@+id/interestedInAccessoriesOtherDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/location_spinner_title"
+                            android:visibility="visible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/interestedInEWOtherDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_below="@+id/interestedInAccessoriesOtherDetails_rl"
+                            >
+
+                        <Spinner
+                            android:id="@+id/interestedInEWOtherDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/location_spinner_title"
+                            android:visibility="visible" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+            android:id="@+id/financeDetails_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otherDetails_cardView"
+            app:cardElevation="4sp"
+            app:cardCornerRadius="4sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+        <RelativeLayout
+            android:id="@+id/financeDetailsMain_RelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            >
+
+        <TextView
+            android:id="@+id/financeDetailsHeading_TextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/financeDetail"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/financeDetails_RelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/financeDetailsHeading_TextView"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/customerTypeFinanceOtherDetails_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginTop="5dp"
+                >
+
+            <Spinner
+                android:id="@+id/customerTypeFinanceOtherDetails_Spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="6dp"
+                android:prompt="@string/location_spinner_title"
+                android:visibility="visible" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/corporateNameFinanceOtherDetails_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/customerTypeFinanceOtherDetails_rl"
+                >
+
+            <Spinner
+                android:id="@+id/corporateNameFinanceOtherDetails_Spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="6dp"
+                android:prompt="@string/location_spinner_title"
+                android:visibility="visible" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/customerDesignation_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/light_rectangle_outline"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/corporateNameFinanceOtherDetails_rl"
+                >
+            <EditText
+                android:id="@+id/customerDesignation_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Customer Designation"
+                android:textSize="12sp"
+                android:textColor="@color/edittextcolor"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@android:color/transparent"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:paddingBottom="0dp"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/edittextcolor"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sendQuotation_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/financeDetails_cardView"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+               >
+
+            <RelativeLayout
+                android:id="@+id/sendQuotation_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/clickHereToSendQuotation_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/click_here_to_send_quotations"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <CheckBox
+                    android:id="@+id/clickhereQuotationDetails_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/clickHereToSendQuotation_TextView"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="170dp"
+                  />
+
+                <RelativeLayout
+                    android:id="@+id/clickHereToSendQuotationDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clickHereToSendQuotation_TextView"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/locationClickHereToSendQuotation_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        >
+                    <Spinner
+                        android:id="@+id/locationClickHereToSendQuotation_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        android:prompt="@string/location_spinner_title"
+                        android:visibility="visible" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/carModelClickHereToSendQuotation_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/locationClickHereToSendQuotation_rl"
+                        >
+
+                    <Spinner
+                        android:id="@+id/carModelClickHereToSendQuotation_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        android:prompt="@string/carModel_spinner_title"
+                        android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/descriptionClickHereToSendQuotation_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/carModelClickHereToSendQuotation_rl"
+                        >
+
+                    <Spinner
+                        android:id="@+id/descriptionClickHereToSendQuotation_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        android:prompt="@string/description_spinner_title"
+                        android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/accessoriesPackageClickHereToSendQuotation_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_below="@+id/descriptionClickHereToSendQuotation_rl"
+                        >
+
+                    <Spinner
+                        android:id="@+id/accessoriesPackageClickHereToSendQuotation_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        android:prompt="@string/description_spinner_title"
+                        android:visibility="visible" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/transferLocatinDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sendQuotation_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+            <RelativeLayout
+                android:id="@+id/transferLocationDetails_RelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/clickHereToTransferLocationsDetails_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="@string/click_here_to_transfer_locations_details"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <CheckBox
+                    android:id="@+id/clickhereTransferLocation_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/clickHereToTransferLocationsDetails_TextView"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="170dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/clickHereToTransferLocationDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/clickHereToTransferLocationsDetails_TextView"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/transferProcessAddFollowUpDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        >
+                    <Spinner
+                        android:id="@+id/transferProcessAddFollowUpDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        android:prompt="@string/process_transfer_title"
+                        android:visibility="visible" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/transferlocationAddFollowUpDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_margin="5dp"
+                        android:layout_below="@+id/transferProcessAddFollowUpDetails_rl"
+                        >
+
+                    <Spinner
+                        android:id="@+id/transferlocationAddFollowUpDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        android:prompt="@string/location_spinner_title"
+                        android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/assignToAddFollowUpDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_below="@+id/transferlocationAddFollowUpDetails_rl"
+                        >
+                    <Spinner
+                        android:id="@+id/assignToAddFollowUpDetails_Spinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="6dp"
+                        android:prompt="@string/assignTo_spinner_title"
+                        android:visibility="visible" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/evaluationTransferDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/clickHereToTransferLocationDetails_RelativeLayout"
+                    >
+
+                    <TextView
+                        android:id="@+id/clickHereToEvaluationTransferDetails_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/click_here_to_evaluation_locations_details"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <CheckBox
+                        android:id="@+id/clickhereEvaluationTransferDetails_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/clickHereToEvaluationTransferDetails_TextView"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="100dp"
+                        android:visibility="gone"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/clickHereToEvaluationTransferDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/clickHereToEvaluationTransferDetails_TextView"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/evaluationProcessAddFollowUpDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_margin="5dp"
+                            >
+
+                        <Spinner
+                            android:id="@+id/evaluationProcessAddFollowUpDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/process_transfer_title"
+                            android:visibility="visible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/evaluationlocationAddFollowUpDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_below="@+id/evaluationProcessAddFollowUpDetails_rl"
+                            >
+                        <Spinner
+                            android:id="@+id/evaluationlocationAddFollowUpDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/location_spinner_title"
+                            android:visibility="visible" />
+                            </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/assignToEvaluationAddFollowUpDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_rectangle_outline"
+                            android:layout_margin="5dp"
+                            android:layout_below="@+id/evaluationlocationAddFollowUpDetails_rl"
+                            >
+                        <Spinner
+                            android:id="@+id/assignToEvaluationAddFollowUpDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/assignTo_spinner_title"
+                            android:visibility="visible" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/evaluationLocationDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transferLocatinDetails_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/evaluationLocationDetails_cardView"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/submitAddFollowUpDetails_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    android:text="@string/submit"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/modifyAddFollowUpDetails_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    android:text="@string/Reset"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        app:backgroundTint="@color/darkBlueWebsite"
+        app:menu_animationDelayPerItem="55"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="#08457E"
+        app:menu_colorPressed="#08457E"
+        app:menu_colorRipple="#99d4d4d4"
+        app:menu_fab_size="normal"
+        app:menu_icon="@drawable/car"
+        app:menu_labels_colorNormal="@color/lightGrey1"
+        app:menu_labels_colorPressed="#444"
+        app:menu_labels_colorRipple="#66efecec"
+        app:menu_labels_cornerRadius="3dp"
+        app:menu_labels_ellipsize="none"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_margin="0dp"
+        app:menu_labels_maxLines="-1"
+        app:menu_labels_padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="@color/edittextcolor"
+        app:menu_labels_textSize="15sp"
+        app:menu_openDirection="up"
+        app:menu_shadowColor="@color/lightGrey1"
+        app:menu_shadowRadius="4dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="4dp"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/customerDetails_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/followup"
+            app:fab_colorNormal="@color/darkBlueWebsite"
+            app:fab_colorPressed="@color/darkBlueWebsite"
+            app:fab_label="@string/customerDetails"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/followUpDetail_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone_call"
+            app:fab_colorNormal="@color/darkBlueWebsite"
+            app:fab_colorPressed="@color/darkBlueWebsite"
+            app:fab_label="FollowUp Details"
+            app:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>
+

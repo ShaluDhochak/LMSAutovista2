@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/leadSourceCardSearch_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/editCustomerDetails_RelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+
+            <TextView
+                android:id="@+id/nameEditCustomerDetailsList_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="15sp"
+                android:textColor="@color/darkBlueWebsite"
+                />
+
+            <TextView
+                android:id="@+id/contactNoEditCustomer_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_no"
+                android:textColor="@color/edittextcolor"
+                android:textSize="14sp"
+                android:layout_below="@+id/nameEditCustomerDetailsList_txtView"
+                />
+
+            <TextView
+                android:id="@+id/emailEditCustomer_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textColor="@color/edittextcolor"
+                android:textSize="14sp"
+                android:layout_below="@+id/contactNoEditCustomer_txtView"
+                />
+
+            <TextView
+                android:id="@+id/addressEditCustomer_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="@color/edittextcolor"
+                android:textSize="14sp"
+                android:layout_below="@+id/emailEditCustomer_txtView"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/editBoxSearch_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/edittextcolor"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

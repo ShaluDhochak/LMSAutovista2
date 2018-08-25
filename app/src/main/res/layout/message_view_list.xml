@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/messageTxtString_txtView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/NotMentioned"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4sp"
+        />
+
+    <TextView
+        android:id="@+id/sendByString_txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/NotMentioned"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/messageTxtString_txtView"
+        />
+
+    <TextView
+        android:id="@+id/createDateString_txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/NotMentioned"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_below="@+id/messageTxtString_txtView"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/tracker_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/tracker_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/trackerSpinner_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                >
+
+            <LinearLayout
+                android:id="@+id/trackerSpinner_LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/campaignNameTracker_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    >
+                <Spinner
+                    android:id="@+id/campaignNameTracker_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/feedbackStatusTracker_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_margin="5dp"
+                    >
+                <Spinner
+                    android:id="@+id/feedbackStatusTracker_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp"
+                     />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nextActionTracker_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    >
+                <Spinner
+                    android:id="@+id/nextActionTracker_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp"
+                    />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fromDateTracker_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_margin="5dp"
+                    >
+                <TextView
+                    android:id="@+id/fromDateTracker_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/DateFrom"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/edittextcolor"
+                    android:textColorHint="@color/edittextcolor"
+                    android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/toDateTracker_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    >
+                <TextView
+                    android:id="@+id/toDateTracker_TextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/DateTo"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/edittextcolor"
+                    android:textColorHint="@color/edittextcolor"
+                    android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dateTypeTracker_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_margin="5dp"
+                    >
+                <Spinner
+                    android:id="@+id/dateTypeTracker_Spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="6dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/searchTracker_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    android:text="@string/search"
+                    android:textAlignment="center"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/resetTracker_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/outline_blue_curved_rectangle"
+                android:text="@string/reset"
+                android:textAlignment="center"
+                android:textColor="@color/darkBlueWebsite"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/trackerList_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

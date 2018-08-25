@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/followUpDetailsActivity_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/followUpByFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                android:id="@+id/followUpByFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="FollowUp By"
+                android:textColor="@color/darkBlueWebsite"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/followUpByFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColor="@color/darkBlueWebsite"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/callStatusFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/followUpByFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/callStatusFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Call Status"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/callStatusFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callDateFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/callStatusFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/callDateFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Call Date"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/callDateFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callTimeFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/callDateFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/callTimeFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Call Time"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/callTimeFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/feedbackStatusFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/callTimeFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/feedbackStatusFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Feedback"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/feedbackStatusFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nextActionFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/feedbackStatusFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/nextActionFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Next Action"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/nextActionFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/nFDFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/nextActionFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/nFDFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="N.F.D."
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/nFDFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nFtFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/nFDFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/nFtFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="N.F.T."
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/nFtFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/remarkFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/nFtFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/remarkFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Remark"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/remarkFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/escalationTypeFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/remarkFollowUpDetails_LinearLayout">
+
+            <TextView
+                android:id="@+id/escalationTypeFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Escalation Type"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/escalationTypeFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/escalationRemarkFollowUpDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/escalationTypeFollowUpDetails_LinearLayout">
+            <TextView
+                android:id="@+id/escalationRemarkFollowUpDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Escalation Remark"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/escalationRemarkFollowUpDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
