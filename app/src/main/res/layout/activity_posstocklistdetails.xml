@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pocStockMakeDetails_cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4sp"
+        app:cardElevation="4sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+    <RelativeLayout
+        android:id="@+id/pocStockMakeDetails_RelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            android:id="@+id/pocStockMakeDetails_TextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkBlueWebsite"
+            android:text="@string/CarMake"
+            android:paddingTop="10dp"
+            android:textSize="15sp"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/pocStockModelNameDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockMakeDetails_TextView"
+            >
+
+            <TextView
+                android:id="@+id/pocStockModelNameDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Model Name"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockModelNameDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocStockColorDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockModelNameDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockColorDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Color"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockColorDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pocStockFuelTypeDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockColorDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockFuelTypeDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FuelType"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockFuelTypeDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pocStockMfgYearDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockFuelTypeDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockMfgYearDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Mfg Year"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockMfgYearDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pocStockOwnerDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockMfgYearDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockOwnerDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ownership"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockOwnerDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pocStockMileageDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockOwnerDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockMileageDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Mileage"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockMileageDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pocStockOdoMeterDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockMileageDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockOdoMeterDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/OdoMeter"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockOdoMeterDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocStockInsuranceDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockOdoMeterDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockInsuranceDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Insurance"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockInsuranceDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocStockInsuranceExpiryDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockInsuranceDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockInsuranceExpiryDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/InsuranceExpiry"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockInsuranceExpiryDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pocStockCategoryDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockInsuranceExpiryDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockCategoryDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Category"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockCategoryDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocStockStockLocationDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockCategoryDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockStockLocationDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/StockLocation"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockStockLocationDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vehicleStatusStockLocationDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockStockLocationDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/vehicleStatusStockLocationDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vehicleStatus"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/vehicleStatusStockLocationDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pocStockExptSellingDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/vehicleStatusStockLocationDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockExptSellingDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ExptSelling"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockExptSellingDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocStockTotalPendingCostDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockExptSellingDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockTotalPendingCostDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TotalPendingCost"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockTotalPendingCostDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pocStockAgeingDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockTotalPendingCostDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockTotalAgeingDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Ageing"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockTotalAgeingDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pocStockLastUpdateDetails_LinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:layout_below="@id/pocStockAgeingDetails_LinearLayout"
+            >
+
+            <TextView
+                android:id="@+id/pocStockTotalLastUpdateDetailsHeading_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/LastUpdate"
+                android:layout_marginLeft="17dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp" />
+
+            <TextView
+                android:id="@+id/pocStockTotalLastUpdateDetailsString_TextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Not Mentioned"
+
+                android:layout_marginRight="15dp"
+                android:paddingTop="5dp"
+                android:textSize="12sp"
+                android:backgroundTint="@android:color/transparent"
+                android:textColorHint="@color/edittextcolor"
+                android:inputType="textNoSuggestions"
+                android:layout_weight="2"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

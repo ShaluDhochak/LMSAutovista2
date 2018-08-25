@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/escalationLevel1_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_blue_curved_rectangle"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:id="@+id/alreadySeleactedEscalationLevel1_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escalation Level 1"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/edittextcolor"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/escalationValueLevel1_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="escalation type here"
+            android:textColorHint="@color/edittextcolor"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/escalationLevel2_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_blue_curved_rectangle"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:id="@+id/alreadySeleactedEscalationLevel2_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escalation Level 2"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/edittextcolor"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/escalationValueLevel2_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="escalation type here"
+            android:textColorHint="@color/edittextcolor"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/escalationLevel3_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_blue_curved_rectangle"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/alreadySeleactedEscalationLevel3_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escalation Level 3"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/edittextcolor"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/escalationValueLevel3_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="escalation type here"
+            android:textColorHint="@color/edittextcolor"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/escalationType_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_blue_curved_rectangle"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+    <Spinner
+        android:id="@+id/escalationTypeFilter_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/escalationType"
+        android:layout_marginRight="10dp"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <EditText
+        android:id="@+id/escalationRemark_et"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:hint="Escalation Remark"
+        android:textColorHint="@color/edittextcolor"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/edittextcolor"
+        android:backgroundTint="@android:color/transparent"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/filterCancelApplyEscalation_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <TextView
+            android:id="@+id/cancelEscalationFilter_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/darkBlueWebsite"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            />
+
+        <TextView
+            android:id="@+id/applyEscalationFilter_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Apply"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlueWebsite"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

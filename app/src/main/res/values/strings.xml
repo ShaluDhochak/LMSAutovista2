@@ -1,0 +1,385 @@
+<resources>
+    <string name="app_name">LMS Autovista</string>
+
+    <string name="userID">User ID</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_finance">Finance</string>
+    <string name="action_service">Service</string>
+    <string name="action_accessories">Accessories</string>
+    <string name="action_newcar">New Car</string>
+    <string name="action_used_car">Used Car</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>DashBoard</item>
+        <item>Calling Task</item>
+        <item>Customer Operation</item>
+        <item>Tracker</item>
+        <item>Daily Report</item>
+        <item>Monthly Report</item>
+        <item>DSEWise Report</item>
+        <item>Lead Report</item>
+        <item>Add New Lead</item>
+        <item>Assign New Lead</item>
+        <item>Assign Transferred Lead</item>
+        <item>Edit Customer Detail</item>
+        <item>New Car Stock</item>
+        <item>POC Stock</item>
+        <item>Send Message To DSE</item>
+        <item>DSE Daily Report</item>
+        <item>DSE Daily Report View</item>
+        <item>Daily Productivity Report</item>
+    </string-array>
+
+    <!--String for navigation Drawer-->
+    <string name="nav_location_wise">Dashboard</string>
+    <string name="nav_calling_task">Calling Task</string>
+    <string name="nav_lead_management_lead">Lead Management</string>
+    <string name="nav_customer_operation">Customer Operation</string>
+    <string name="nav_search_customer">Search Customer</string>
+    <string name="nav_edit_customer">Edit Customer</string>
+    <string name="nav_tracker">Tracker</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_report">Report</string>
+    <string name="nav_daily_report">Daily Report</string>
+    <string name="nav_monthly_report">Monthly Report</string>
+    <string name="nav_dseWise_report">DSE Wise Report</string>
+    <string name="nav_dseDailyWise_report">Add DSE Daily Report</string>
+    <string name="nav_dseDailyReportView">DSE Daily Report View</string>
+    <string name="nav_Lead_report">Lead Report</string>
+    <string name="nav_daily_productivity_report">Daily Productivity Report</string>
+    <string name="nav_change_password">Change Password</string>
+    <string name="nav_register_mobileno">Register MobileNo</string>
+    <string name="action_logout">Logout</string>
+    <string name="nav_assign_lead">Assign Lead</string>
+    <string name="nav_assign_new_lead">>    New Lead</string>
+    <string name="nav_assign_transferred_lead">>    Transferred Lead</string>
+    <string name="nav_stock">Stock</string>
+    <string name="nav_new_car_stock">New Car Stock</string>
+    <string name="nav_poc_stock">POC Stock</string>
+    <string name="nav_add_message">Send Message To DSE</string>
+    <string name="nav_add_lead">Add New Lead</string>
+
+    <!--String for Dashboard Count-->
+    <string name="heading">Heading</string>
+    <string name="Details">Details</string>
+    <string name="ServiceDetail">Service Detail</string>
+    <string name="financeDetail">Finance Detail</string>
+    <string name="accessoriesDetail">Accessories Detail</string>
+    <string name="newCarDetails">New Car Detail</string>
+    <string name="interested_in">Interested In</string>
+    <string name="feedbackStatus">Feedback</string>
+    <string name="NotMentioned">Not Mentioned</string>
+    <string name="nextActionHeading">Next Action</string>
+    <string name="currentUser">Current User</string>
+    <string name="calldate">Call Date</string>
+    <string name="nfd">Next FollowUp Date</string>
+    <string name="nft">Next FollowUp Time</string>
+    <string name="Remark">Remark</string>
+
+    <!-- String for fab-->
+    <string name="followUpDetails">FollowUp Details</string>
+    <string name="add_followup">Add FollowUp</string>
+    <string name="followUpBy">FollowUp By</string>
+    <string name="newModel">New Model</string>
+    <string name="newVariant">New Variant</string>
+    <string name="oldModel">Old Model</string>
+    <string name="oldVariant">Old Variant</string>
+    <string name="evaluationLocation">Evaluation Location</string>
+
+
+    <string name="buyModel">Old Model</string>
+    <string name="buyVariant">Old Variant</string>
+    <string name="bookingWithinDays">Booking Within Days</string>
+
+    <!--String appointment-->
+    <string name="appointmentDetail">Appointment Details</string>
+    <string name="appointmentType">Appointment Type</string>
+    <string name="appointmentStatus">Appointment Status</string>
+    <string name="AppointmentAddress">Appointment Address</string>
+    <string name="AppointmentDate">Appointment Date</string>
+    <string name="AppointmentTime">Appointment Time</string>
+    <string name="appointmentFeedback">Appointment Feedback</string>
+    <string name="appointmentRating">Appointment Rating</string>
+
+    <!--String for New Car Tracker-->
+    <string name="leadSource">Lead Source</string>
+    <string name="assitanceRequired">Assistance Required</string>
+    <string name="customerLocation">Customer Location</string>
+    <string name="showroomLocation">Showroom Location</string>
+    <string name="cseName">CSE Name</string>
+    <string name="cseCallDate">CSE Call Date</string>
+    <string name="cseCallTime">CSE Call Time</string>
+    <string name="cseCallStatus">CSE Call Status</string>
+    <string name="cseFeedback">CSE Feedback</string>
+    <string name="cseNextAction">CSE Next Action</string>
+    <string name="cseRemark">CSE Remark</string>
+    <string name="cseNFD">CSE NFD</string>
+    <string name="cseNFT">CSE NFT</string>
+    <string name="tdHvDate">TD HV Date</string>
+    <string name="dseName">DSE Name</string>
+    <string name="dseCallDate">DSE Call Date</string>
+    <string name="dseFeedback">DSE Feedback</string>
+    <string name="dseNextAction">DSE NextAction</string>
+    <string name="dseRemark">DSE Remark</string>
+    <string name="dseNFD">DSE NFD</string>
+    <string name="dseNFT">DSE NFT</string>
+    <string name="auditorName">Auditor Name</string>
+    <string name="auditorFollowUpDate">Auditor Call Date</string>
+    <string name="followUpPending">FollowUp Pending</string>
+    <string name="callReceivesFromShowroom">Call Received from Showroom</string>
+    <string name="fakeUpdation">Fake Updation</string>
+    <string name="serviceFeedback">Service Feedback</string>
+    <string name="auditorRemark">Auditor Remark</string>
+    <string name="buyerType">Buyer Type</string>
+    <string name="modelVariant">Model Variant</string>
+
+    <!--String for used car tracker-->
+    <string name="excehangeMakeModel">Exchange Make Model</string>
+    <string name="manufacturingYr">Manufacturing year</string>
+    <string name="ownership">Ownership</string>
+    <string name="budgetFrom">Budget From</string>
+    <string name="budgetTo">Budget To</string>
+    <string name="accidentalClaim">Accidental Claim</string>
+    <string name="evaluation_within_days">Evaluation Within Days</string>
+    <string name="fuel_type">Fuel Type</string>
+    <string name="color">Color</string>
+
+    <!--String for calling task-->
+    <string name="searchLeads">Search Leads via contact No.</string>
+
+    <!--String for Tracker-->
+    <string name="DateFrom">Date From</string>
+    <string name="DateTo">Date To</string>
+    <string name="reset">Reset</string>
+
+    <!--String for tracker details-->
+    <string name="carModel">Car Model</string>
+    <string name="regNo">Reg No</string>
+    <string name="bankName">Bank Name</string>
+    <string name="loanType">Loan Type</string>
+    <string name="roi">ROI</string>
+    <string name="losNo">Los No</string>
+    <string name="tenure">Tenure</string>
+    <string name="amount">Amount</string>
+    <string name="dealerDsa">Dealer DSA</string>
+    <string name="cen">Collection Executive Name</string>
+    <string name="pickupDate">PickUp Date</string>
+    <string name="loginDate">Login Date</string>
+    <string name="loanStatus">Loan Status</string>
+    <string name="approvedDate">Approved Date</string>
+    <string name="disburseDate">Disburse Date</string>
+    <string name="disburseAmount">Disburse Amount</string>
+    <string name="processingFee">Processing Fee</string>
+    <string name="emi">EMI</string>
+    <string name="accessoriesList">Accessories List</string>
+    <string name="accessoriesPrice">Accessories Price</string>
+    <string name="km">KM</string>
+    <string name="serviceType">Service Type</string>
+    <string name="pickUpRequired">PickUp Required</string>
+    <string name="pickUpDate">PickUp Date</string>
+
+    <!--Add New Lead String-->
+    <string name="lead_details">Lead Details</string>
+    <string name="submit">Submit</string>
+    <string name="group">Group</string>
+
+    <!--Customer Details-->
+    <string name="customerDetails">Customer Details</string>
+    <!--Finance Details-->
+    <string name="modelName">Model Name</string>
+    <string name="registrationNo">Registration No</string>
+    <string name="service_center">Service Center</string>
+    <string name="car_model">Car Model</string>
+    <string name="service_type">Service Type</string>
+    <string name="kilometer">Kilometer</string>
+
+    <!--Add Follow Up-->
+    <string name="name">Name :</string>
+    <string name="click_here_to_send_quotations">Send Quotation </string>
+    <string name="newCarDeatils">New Car Details</string>
+    <string name="oldCarDetails">Old Car Details</string>
+    <string name="buyUsedCarDetails">Buy Used Car Details</string>
+    <string name="description_spinner_title">Description</string>
+    <string name="Reset">Reset</string>
+    <string name="escalationDetail">Escalation Details</string>
+    <string name="escalationType">Escalation Type</string>
+    <string name="escalationRemark">Escalation Remark</string>
+    <string name="otherDetails">Other Details</string>
+    <string name="interestedInFinance">Interested in Finance</string>
+    <string name="interestedInInsurance">Interested in Insurance</string>
+    <string name="interestedInAccessories">Interested in Accessories</string>
+    <string name="interestedInEw">Interested in Ew</string>
+
+    <!--String values for all Spinner in all xml files-->
+    <string name="process_transfer_title">Select Process</string>
+    <string name="location_spinner_title">Select Location</string>
+    <string name="leadSource_spinner_title">Select Lead Source</string>
+    <string name="assignTo_spinner_title">Select AssignTo</string>
+    <string name="cseName_spinner_title">Select AssignTo</string>
+    <string name="activity_spinner_title">Select Activity</string>
+    <string name="status_spinner_title">Select Status</string>
+    <string name="disposition_spinner_title">SelectDisposition</string>
+    <string name="eagerness_spinner_title">Eagerness</string>
+    <string name="nfd_spinner_title">N.F.D.</string>
+    <string name="carModel_spinner_title">Model Name</string>
+
+    <!--String Values For Calculte Emi xml File -->
+    <string name="click_here_to_calculate_emi">Click here To Calculate Emi</string>
+    <string name="ex_showRoomPrice">Ex-ShowRoom Price</string>
+    <string name="registrationPrice">Registration Price</string>
+    <string name="insurancePrice">Insurance</string>
+    <string name="addComponentsPrice">Add Components</string>
+    <string name="create_price_quote">Create Price Quote</string>
+    <string name="onRoadPrice">On-Road Price</string>
+    <string name="emi_on_the_car">EMI on the Car</string>
+    <string name="calculateEmi"> Calculate EMI</string>
+    <string name="loanAmount">Loan Amount</string>
+    <string name="enquiryFor">Enquiry For</string>
+    <string name="downPayment">DownPayment</string>
+    <string name="BankInterestRate">Bank Interest Rate</string>
+    <string name="PayBackPeriod">Pay Back period (in month)</string>
+    <string name="send_price_quotes_and_emi">Send Price Quotes and EMI</string>
+
+    <!--Add Follow Up details-->
+    <string name="Inquiry_Text">Inquiries</string>
+    <string name="details">Details</string>
+    <string name="visitBookedDate">Visit Booked Date</string>
+    <string name="saleStatus">Sale Status</string>
+    <string name="saleNOStatus">No</string>
+    <string name="carDelivery">Car Delivery</string>
+    <string name="search">Search</string>
+    <string name="contact_no">Contact No</string>
+    <string name="booked">Booked</string>
+    <string name="manager_remarks">Manager Remark</string>
+    <string name="noManagerRemark">No Remark</string>
+    <string name="eagerness">Eagerness</string>
+    <string name="eagernessHOT">Hot</string>
+    <string name="buyer_Type">Buyer Type</string>
+    <string name="carVariant">LXi</string>
+    <string name="carMake">Maruti</string>
+    <string name="buyer_type_here">First</string>
+    <string name="mfg_Year">Mfg Year</string>
+    <string name="bookingStatusHeading">Booking Status</string>
+    <string name="bookingStatus">No</string>
+    <string name="location">Location</string>
+    <string name="testDrive">Test Drive</string>
+    <string name="date">Date</string>
+    <string name="scheduled_by">Scheduled By</string>
+    <string name="follow_up">Followup</string>
+    <string name="ActivityFeed"> Activity Feed</string>
+    <string name="ShowedInterest">Showed Interest</string>
+    <string name="NextFollowUpDate">Next FollowUp Date</string>
+    <string name="NextFollowUpTime">Next FollowUp Time</string>
+    <string name="NextFollowUpDateNotScheduled">Not Scheduled</string>
+    <string name="StatusHeading">Status</string>
+    <string name="StatusEntry">Not Yet</string>
+    <string name="click_here_to_transfer_locations_details">Transfer Lead</string>
+    <string name="click_here_to_evaluation_locations_details">Evaluation Lead</string>
+    <string name="transferReason_spinner_title">Transfer Reason</string>
+
+    <!--Change Password-->
+    <string name="change_password">Change Password</string>
+    <string name="login_here">Login Here!!</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="current_password">Current Password</string>
+
+    <!--Search Operation-->
+    <string name="searchCustomer">Search Customer</string>
+    <string name="enterNameContactNo">Enter Name or Contact No</string>
+
+    <!--Search via Contact No-->
+    <string name="CseName">CSE Name</string>
+    <string name="CseCallDate">CSE Call Date</string>
+    <string name="CseNextAction">CSE Next Action</string>
+    <string name="CseFeedback">CSE Feedback</string>
+    <string name="CseRemark">CSE Remark</string>
+    <string name="LeadSource">Lead Source</string>
+    <string name="dseNfd">DSE NFD</string>
+    <string name="address">Address</string>
+    <string name="exchangeMakeModel">Exchange Make and Model</string>
+    <string name="manufacturingYear">Manufacturing Year</string>
+    <string name="email">Email</string>
+
+    <!--Edit Customer-->
+    <string name="editCustomerDetailHeading">Edit Customer Detail</string>
+
+    <!--Send message-->
+    <string name="listOfMessage">List of Message</string>
+    <string name="addMessageString">Add Message</string>
+
+    <string name="MoreDetails">More Details</string>
+    <string name="cse_name">CSE Name</string>
+
+    <!--Dse Lead  REPORT sTRING-->
+    <string name="pending_new">Pending New</string>
+    <string name="pending_followUp">Pending FollowUp</string>
+    <string name="bookedfrom_autovista">Booked From Autovista</string>
+    <string name="evaluation_alloted">Evaluation Allotted</string>
+
+    <string name="lost_to_competition_brand">Lost to Competition Brand</string>
+    <string name="color_and_model_available">Color and Model Available</string>
+    <string name="plan_cancelled">Plan Cancelled</string>
+    <string name="title_activity_check_flow_search">CheckFlowSearchActivity</string>
+
+    <!--Report Details -->
+    <string name="leadDetail">Lead Detail</string>
+
+    <!--LeadWise Report-->
+    <string name="total_leads">Total Leads</string>
+    <string name="total_unassigned_leads">Unassigned Leads</string>
+    <string name="total_pending_new_leads">Pending New Leads</string>
+    <string name="total_pending_followup_leads">Pending Followup Leads</string>
+    <string name="total_booking_30">Booking within 30 days</string>
+    <string name="total_booking_60">Booking within 60 days</string>
+    <string name="total_booking_greater_60">Booking within Greater than 60 days</string>
+
+    <string name="booked_from_autovista">Booked from Autovista</string>
+    <string name="home_visit">Home Visit</string>
+    <string name="showroom_visit">Showroom Visit</string>
+    <string name="test_drive">Test Drive</string>
+    <string name="evaluation_allotted">Evaluation Allotted</string>
+    <string name="deal">Deal</string>
+    <string name="undecided">Undecided</string>
+    <string name="not_interested">Not Interested</string>
+    <string name="interested">Interested</string>
+    <string name="busy">Busy</string>
+    <string name="already_booked_from_us">Already Booked From Us</string>
+    <string name="lost_to_codealer">Lost To Codealer</string>
+    <string name="color_model_availability">Colour and Model Availability</string>
+    <string name="budget_issue">Budget Issue</string>
+    <string name="nearest_dealership">Nearest Dealership Available</string>
+    <string name="outstation_purchase">Outstation Purchase</string>
+    <string name="plan_cancel">Plan Cancelled</string>
+
+    <!--Search Transsferrred Lead Details-->
+    <string name="assign_to">Assign To</string>
+    <string name="assign_by">Assign By</string>
+    <string name="transfer_date">Transfer Date</string>
+    <string name="FuelType">Fuel Type  </string>
+    <string name="VehicleStatus">Vehicle Status  </string>
+    <string name="CarMake"> Car Make</string>
+    <string name="Mileage">Mileage  </string>
+    <string name="OdoMeter">Odo Meter </string>
+    <string name="Insurance">Insurance  </string>
+    <string name="InsuranceExpiry">Insurance Expiry  </string>
+    <string name="Category">Category  </string>
+    <string name="vehicleStatus">Vehicle Status</string>
+    <string name="StockLocation">Stock Location </string>
+    <string name="ExptSelling">Expt Selling Price</string>
+    <string name="TotalPendingCost">Total landing Cost</string>
+    <string name="Ageing">Ageing </string>
+    <string name="LastUpdate">Last Update </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_register_push">RegisterPushActivity</string>
+
+</resources>

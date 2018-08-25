@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/viewMessageList_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/messageNameList_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="name"
+            android:paddingTop="5dp"
+            android:textSize="14sp"
+            android:layout_marginRight="70dp"
+            android:textColor="@color/dark_grey"
+            />
+
+        <CheckBox
+            android:id="@+id/deleteMsgFromList_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/darkBlueWebsite"
+            android:textSize="14sp"
+            />
+
+        <LinearLayout
+            android:id="@+id/locationHeadingMessageList_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/messageNameList_textView"
+            >
+
+            <TextView
+                android:id="@+id/locationHeadingMessageList_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="15sp"
+                android:textAlignment="textStart"
+                android:paddingLeft="10dp"
+                android:layout_weight="2.5"
+                android:gravity="left"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/dseTlHeadingMessage_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DSE TL"
+                android:textSize="15sp"
+                android:textAlignment="textStart"
+                android:paddingLeft="10dp"
+
+                android:layout_weight="1.25"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/dseHeadingMessage_txtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DSE"
+                android:textSize="15sp"
+                android:textAlignment="textEnd"
+                android:paddingLeft="10dp"
+                android:layout_weight="1.25"
+                android:paddingRight="10dp"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/location_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/messageNameList_textView"
+            android:padding="10dp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

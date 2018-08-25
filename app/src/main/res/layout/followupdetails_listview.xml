@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/followupDetails_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4sp"
+        app:cardElevation="4sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+    <RelativeLayout
+        android:id="@+id/followUpDetailsInner_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <TextView
+            android:id="@+id/followUpName_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="name"
+            android:paddingTop="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/dark_grey"
+            />
+        <TextView
+            android:id="@+id/followUpContactNo_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_no"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/dark_grey"
+            android:layout_below="@id/followUpName_TextView"
+            />
+        <TextView
+            android:id="@+id/bookingWithInDays_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Booking Within Days"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/darkBlueWebsite"
+            android:textSize="14sp"
+
+            />
+        <TextView
+            android:id="@+id/followUpInterestedIn_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="@string/interested_in"
+            android:textColor="@color/edittextcolor"
+            android:layout_below="@id/followUpContactNo_TextView"
+            android:paddingLeft="10dp"
+            android:paddingBottom="3dp"
+            />
+        <TextView
+            android:id="@+id/followUpInterestInString_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/followUpInterestedIn_TextView"
+            android:text="insterest in string here...."
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/followUpLeadDate_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lead Date : "
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            android:layout_below="@id/followUpInterestInString_TextView"
+            android:paddingLeft="10dp"
+            android:paddingBottom="3dp"
+            />
+
+        <TextView
+            android:id="@+id/followUpLeadDateString_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/followUpLeadDate_TextView"
+            android:layout_below="@id/followUpInterestInString_TextView"
+            android:text="@string/NotMentioned"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/followUpStatus_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/followUpLeadDate_TextView"
+            android:text="Feedback Status:"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/followUpStatusString_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/followUpLeadDate_TextView"
+            android:layout_toRightOf="@id/followUpStatus_TextView"
+            android:text="@string/NotMentioned"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/followUpNextAction_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/followUpStatus_TextView"
+            android:text="@string/nextActionHeading"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/followUpNextActionString_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:text="@string/NotMentioned"
+            android:textColor="@color/edittextcolor"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <View
+            android:id="@+id/imageTextSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/followUpNextAction_TextView"
+            android:background="@color/edittextcolor"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/customerDetails_ImageView"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:src="@drawable/customer_details"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/imageTextSeparator"
+            android:visibility="visible"
+            android:layout_alignEnd="@+id/imageTextSeparator"
+            android:layout_alignRight="@+id/imageTextSeparator" />
+        <ImageView
+            android:id="@+id/addFollowUp_ImageView"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:src="@drawable/followup_phone"
+            android:layout_toLeftOf="@+id/customerDetails_ImageView"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/imageTextSeparator"
+            android:visibility="visible"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/modelNewStockFilter_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/modelVariant"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="6dp"
+        android:layout_marginLeft="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/locationNewStockFilter_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/modelVariant"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="6dp"
+        android:layout_marginLeft="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/vehicleStatusNewStockFilter_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/modelVariant"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="6dp"
+        android:layout_marginLeft="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/ageingNewStockFilter_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/modelVariant"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="6dp"
+        android:layout_marginLeft="8dp"
+        />
+
+    <Spinner
+        android:id="@+id/priceNewStockFilter_spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/modelVariant"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="6dp"
+        android:layout_marginLeft="8dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/filterCancelApplyNewStock_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <TextView
+            android:id="@+id/cancelStockFilterNewStock_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="@color/darkBlueWebsite"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            />
+
+        <TextView
+            android:id="@+id/applyStockFilterNewStock_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Apply"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            android:textColor="@color/darkBlueWebsite"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

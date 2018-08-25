@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerSerchContactNo_relativeLayout">
+
+        <RelativeLayout
+            android:id="@+id/leadSourceCardSearch_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+            <LinearLayout
+                android:id="@+id/assignToSearch_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/assignToSearchHeading_textView"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/assign_to"
+                    android:textSize="12sp"
+                    android:textColor="@color/edittextcolor"
+                    />
+
+                <TextView
+                    android:id="@+id/assignToSearchString_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/NotMentioned"
+                    android:textSize="12sp"
+                    android:textColor="@color/edittextcolor"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/assignBySearch_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/assignToSearch_linearlayout"
+                >
+
+                <TextView
+                    android:id="@+id/assignBySearchHeading_textView"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/assign_by"
+                    android:textSize="12sp"
+                    android:textColor="@color/edittextcolor"
+
+                    />
+                <TextView
+                    android:id="@+id/assignBySearchString_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/NotMentioned"
+                    android:textSize="12sp"
+                    android:textColor="@color/edittextcolor"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transferDateSearch_linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/assignBySearch_linearlayout"
+                >
+
+                <TextView
+                    android:id="@+id/transferDateSearchHeading_textView"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/transfer_date"
+                    android:textSize="12sp"
+                    android:textColor="@color/edittextcolor"
+
+                    />
+                <TextView
+                    android:id="@+id/transferDateSearchString_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/NotMentioned"
+                    android:textSize="12sp"
+                    android:textColor="@color/edittextcolor"
+
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

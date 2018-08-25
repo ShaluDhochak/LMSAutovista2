@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/locationTlDseString_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/locationAddMessageString_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@color/edittextcolor"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:layout_weight="1"
+            android:layout_gravity="start"
+            />
+        <CheckBox
+            android:id="@+id/dseTlAddMessageString_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            />
+
+        <CheckBox
+            android:id="@+id/dseAddMessageString_checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="2"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

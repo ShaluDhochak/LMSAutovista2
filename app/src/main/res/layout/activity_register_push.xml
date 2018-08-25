@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.excell.lms.lmsautovista.View.Activity.RegisterPushActivity">
+
+    <LinearLayout
+        android:id="@+id/header_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <include
+            layout="@layout/header_withback_btn_layout"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <EditText
+            android:id="@+id/mobileno_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_LinearLayout"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:textSize="15sp"
+            android:hint="Mobile No"
+            android:textColor="@color/darkBlueWebsite"
+            android:background="@drawable/outline_blue_curved_rectangle"
+            android:textColorHint="@color/edittextcolor"
+            android:inputType="textEmailAddress"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/registerDevice_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register Device"
+            android:textColor="@color/colorPlatinum"
+            android:background="@drawable/blue_round_curved_rectangle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:textSize="15sp"
+            android:layout_below="@+id/mobileno_editText"
+            />
+
+        <TextView
+            android:id="@+id/token_txtView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="token here"
+            android:layout_below="@+id/registerDevice_btn"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
