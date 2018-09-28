@@ -86,6 +86,26 @@
                 app:fab_colorNormal="@color/darkBlueWebsite"
                 app:fab_colorPressed="@color/darkBlueWebsite" />
 
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/add_auditor_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Add Auditor"
+                app:fab_size="mini"
+                android:src="@drawable/phone_call"
+                app:fab_colorNormal="@color/darkBlueWebsite"
+                app:fab_colorPressed="@color/darkBlueWebsite" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/auditor_details_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_label="Auditor Details"
+                app:fab_size="mini"
+                android:src="@drawable/phone_call"
+                app:fab_colorNormal="@color/darkBlueWebsite"
+                app:fab_colorPressed="@color/darkBlueWebsite" />
+
         </com.github.clans.fab.FloatingActionMenu>
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

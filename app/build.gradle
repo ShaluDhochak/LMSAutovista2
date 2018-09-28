@@ -7,8 +7,8 @@ android {
         applicationId "com.excell.lms.lmsautovista"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 11
-        versionName "2.7"
+        versionCode 13
+        versionName "2.9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -21,7 +21,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //noinspection GradleCompatible

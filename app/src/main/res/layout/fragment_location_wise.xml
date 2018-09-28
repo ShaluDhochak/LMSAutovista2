@@ -1,0 +1,721 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.excell.lms.lmsautovista.View.Fragment.LocationWiseFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView_locdashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/locationDashboard_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/headerLocDashboard_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include
+                    layout="@layout/process_header_layout"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/locWiseDashboard_Relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/headerLocDashboard_rl"
+                >
+
+                <TextView
+                    android:id="@+id/locationHeadingLocDashoard_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nav_location_wise"
+                    android:textAlignment="center"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/locationWiseLocDashboard_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/light_rectangle_outline"
+                    android:layout_margin="10dp"
+                    >
+                <Spinner
+                    android:id="@+id/locationWiseLocDashboard_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radio_tl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:text="TL"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton android:id="@+id/radio_dse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Executive"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <RadioButton android:id="@+id/totalCount_dse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Count"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:textColor="@color/edittextcolor"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LeadFollowUpLocDetails_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/locWiseDashboard_Relativelayout"
+                >
+
+                <Button
+                    android:id="@+id/LeadFollowUpLocDetails_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textSize="14sp"
+                    android:textColor="@color/dark_grey"
+                    android:textAlignment="center"
+                    android:layout_margin="5dp"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/leadListLoc_lineralayout"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_below="@+id/LeadFollowUpLocDetails_RelativeLayout"
+                android:background="@drawable/outline_blue_curved_rectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/countHeadingLoc_relativeLayout"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/countLocationWiseLoc_ListView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/leadHeadingLoc_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="Lead"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="@color/darkBlueWebsite"
+                        />
+
+                    <View
+                        android:id="@+id/separatorBelowLeadHeadingLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/leadHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/unassignedLeadHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorBelowLeadHeadingLoc_view"
+                        android:text="Unassigned"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorUnassignedLeadLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/unassignedLeadHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/newLeadHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorUnassignedLeadLoc_view"
+                        android:text="New Lead"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorNewLeadLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/newLeadHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/callTodayLeadHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorNewLeadLoc_view"
+                        android:text="Call Today"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorCallTodayLeadLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/callTodayLeadHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/pendingNewLeadHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorCallTodayLeadLoc_view"
+                        android:text="Pending New"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorPendingNewLeadLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/pendingNewLeadHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/pendingFollowUpLeadHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorPendingNewLeadLoc_view"
+                        android:text="Pending FollowUp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorEvaluationCountLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/pendingFollowUpLeadHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/evaluationCountHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEvaluationCountLoc_view"
+                        android:text="Evaluation Count"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorTestDriveLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/evaluationCountHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/testDriveHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorTestDriveLoc_view"
+                        android:text="Test Drive"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorHomeVisitLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/testDriveHeadingLoc_tv"/>
+                    <TextView
+                        android:id="@+id/homeVisitHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorHomeVisitLoc_view"
+                        android:text="Home Visit"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorShowroomVisitLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/homeVisitHeadingLoc_tv"/>
+                    <TextView
+                        android:id="@+id/showroomVisitHeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorShowroomVisitLoc_view"
+                        android:text="Showroom Visit"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorEscalatedCase1LeadLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/showroomVisitHeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/escalatedCase1HeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEscalatedCase1LeadLoc_view"
+                        android:text="Escalation Level 1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorEscalatedCase2LeadLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/escalatedCase1HeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/escalatedCase2HeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEscalatedCase2LeadLoc_view"
+                        android:text="Escalation Level 2"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorEscalatedCase3LeadLoc_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/escalatedCase2HeadingLoc_tv"/>
+
+                    <TextView
+                        android:id="@+id/escalatedCase3HeadingLoc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEscalatedCase3LeadLoc_view"
+                        android:text="Escalation Level 3"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/separatorRightLeadLoc_view"
+                    android:layout_width="1dp"
+                    android:layout_height="430dp"
+                    android:background="@color/dark_grey"
+                    android:layout_toRightOf="@+id/countHeadingLoc_relativeLayout"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/countLocationWiseLoc_ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="430dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/separatorRightLeadLoc_view"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/leadListLoc2_lineralayout"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_below="@+id/LeadFollowUpLocDetails_RelativeLayout"
+                android:background="@drawable/outline_blue_curved_rectangle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/countHeadingLoc2_relativeLayout"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/countLocationWiseLoc2_ListView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/leadHeadingLoc2_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="Lead"
+                        android:textSize="12sp"
+                        android:textAlignment="center"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="@color/darkBlueWebsite"
+                        />
+
+                    <View
+                        android:id="@+id/separatorBelowLeadHeadingLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/leadHeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/unassignedLeadHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorBelowLeadHeadingLoc2_view"
+                        android:text="Unassigned"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorUnassignedLeadLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/unassignedLeadHeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/newLeadHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorUnassignedLeadLoc2_view"
+                        android:text="New Lead"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorNewLeadLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/newLeadHeadingLoc2_tv"
+                        android:background="@color/dark_grey" />
+
+                    <TextView
+                        android:id="@+id/callTodayLeadHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorNewLeadLoc2_view"
+                        android:text="Call Today"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorCallTodayLeadLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/callTodayLeadHeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/pendingNewLeadHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorCallTodayLeadLoc2_view"
+                        android:text="Pending New"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorPendingNewLeadLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/pendingNewLeadHeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/pendingFollowUpLeadHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorPendingNewLeadLoc2_view"
+                        android:text="Pending FollowUp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorEvaluationCountLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/pendingFollowUpLeadHeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/evaluationCountHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEvaluationCountLoc2_view"
+                        android:text="Evaluation Count"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorTestDriveLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/evaluationCountHeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/testDriveHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorTestDriveLoc2_view"
+                        android:text="Test Drive"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorHomeVisitLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/testDriveHeadingLoc2_tv"/>
+                    <TextView
+                        android:id="@+id/homeVisitHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorHomeVisitLoc2_view"
+                        android:text="Home Visit"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorShowroomVisitLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/homeVisitHeadingLoc2_tv"/>
+                    <TextView
+                        android:id="@+id/showroomVisitHeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorShowroomVisitLoc2_view"
+                        android:text="Showroom Visit"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorEscalatedCase1LeadLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/showroomVisitHeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/escalatedCase1HeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEscalatedCase1LeadLoc2_view"
+                        android:text="Escalation Level 1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/separatorEscalatedCase2LeadLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/escalatedCase1HeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/escalatedCase2HeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEscalatedCase2LeadLoc2_view"
+                        android:text="Escalation Level 2"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                    <View
+                        android:id="@+id/separatorEscalatedCase3LeadLoc2_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:background="@color/dark_grey"
+                        android:layout_below="@+id/escalatedCase2HeadingLoc2_tv"/>
+
+                    <TextView
+                        android:id="@+id/escalatedCase3HeadingLoc2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/separatorEscalatedCase3LeadLoc2_view"
+                        android:text="Escalation Level 3"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/separatorRightLeadLoc2_view"
+                    android:layout_width="1dp"
+                    android:layout_height="430dp"
+                    android:background="@color/dark_grey"
+                    android:layout_toRightOf="@+id/countHeadingLoc2_relativeLayout"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/countLocationWiseLoc2_ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="430dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/separatorRightLeadLoc2_view"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/viewMessageLoc_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click here to View Message"
+            android:textSize="15sp"
+            android:textColor="@color/darkBlueWebsite"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_below="@+id/locationDashboard_rl"
+            />
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

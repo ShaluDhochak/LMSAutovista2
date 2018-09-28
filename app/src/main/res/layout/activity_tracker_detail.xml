@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.user.lmsautovista.View.Activity.TrackerDetailActivity">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -331,6 +330,1021 @@
                                 android:paddingTop="5dp"
                                 android:textColorHint="@color/edittextcolor"
                                 android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/complaintDetailTrackerDescription_cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nameTrackerDetail_cardView"
+                    app:cardCornerRadius="4sp"
+                    app:cardElevation="4sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/complaintDetailsTracker_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/complaintDetailTracker_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="Complaint Details"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:id="@+id/leadSourceComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/complaintDetailTracker_TextView"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/leadSourceComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="@string/leadSource"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/leadSourceComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/complaintTypeComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadSourceComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/complaintTypeComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Complaint Type"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/complaintTypeComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/serviceCenterComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/complaintTypeComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/serviceCenterComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Service Center"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/serviceCenterComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/customerRemarkComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/serviceCenterComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/customerRemarkComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Customer Remark"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/customerRemarkComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/leadAssignedDateComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/customerRemarkComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/leadAssignedDateComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Assigned Date(CSE)"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/leadAssignedDateComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/leadAssignedTimeComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadAssignedDateComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/leadAssignedTimeComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Assigned Time(CSE)"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/leadAssignedTimeComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/currentUserComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/leadAssignedTimeComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/currentUserComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Current User"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/currentUserComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/callDateComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/currentUserComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/callDateComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Call Date"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/callDateComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/feedbackStatusComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/callDateComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/feedbackStatusComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Feedback Status"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/feedbackStatusComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/nextActionComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/feedbackStatusComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/nextActionComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Next Action"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/nextActionComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nfdComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nextActionComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/nfdComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="N.F.D."
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/nfdComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/nftComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nfdComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/nftComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="N.F.T."
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/nftComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/remarkComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nftComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/remarkComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Remark"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/remarkComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/regNoComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/remarkComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/regNoComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Registration No"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/regNoComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/complaintLocationComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/regNoComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/complaintLocationComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Complaint Location"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/complaintLocationComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/auditorNameComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/complaintLocationComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/auditorNameComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Auditor Name"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/auditorNameComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/auditorCallDateComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/auditorNameComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/auditorCallDateComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Auditor Call Date"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/auditorCallDateComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/auditorCallTimeComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/auditorCallDateComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/auditorCallTimeComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Auditor Call Time"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/auditorCallTimeComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/auditorCallStatusComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/auditorCallTimeComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/auditorCallStatusComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Auditor Call Status"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/auditorCallStatusComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/followUpPendingComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/auditorCallStatusComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/followUpPendingComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Follow Up Pending"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/followUpPendingComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/callReceivedShowroomComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/followUpPendingComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/callReceivedShowroomComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Call Received From Showroom"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/callReceivedShowroomComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fakeUpdationComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/callReceivedShowroomComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/fakeUpdationComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Fake Updation"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/fakeUpdationComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/serviceFeedbackComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/fakeUpdationComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/serviceFeedbackComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Service Feedback"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/serviceFeedbackComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/auditorRemarkComplaintTrackerDetails_rl"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/serviceFeedbackComplaintTrackerDetails_rl"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/auditorRemarkComplaintTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Auditor Remark"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/auditorRemarkComplaintTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp"  />
+
                         </LinearLayout>
 
                     </RelativeLayout>
@@ -1673,7 +2687,7 @@
 
                 </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
+                <android.support.v7.widget.CardView
                 android:id="@+id/newCarDetailTrackerDescription_relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -4093,6 +5107,133 @@
 
                             <TextView
                                 android:id="@+id/colorEvaluationTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/regNoEvaluationTrackerDetails_RelativeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_below="@id/colorEvaluationTrackerDetails_RelativeLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/regNoEvaluationTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Registration No"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/regNoEvaluationTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/quotePriceEvaluationTrackerDetails_RelativeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_below="@id/regNoEvaluationTrackerDetails_RelativeLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/quotePriceEvaluationTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Quotation Price"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/quotePriceEvaluationTrackerString_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:hint="Not Mentioned"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:textColorHint="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/expectedPriceEvaluationTrackerDetails_RelativeLayout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_below="@id/quotePriceEvaluationTrackerDetails_RelativeLayout"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/expectedPriceEvaluationTrackerDetails_TextView"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="17dp"
+                                android:layout_marginStart="17dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="2"
+                                android:backgroundTint="@android:color/transparent"
+                                android:inputType="textNoSuggestions"
+                                android:paddingTop="5dp"
+                                android:text="Expected Price"
+                                android:textColor="@color/edittextcolor"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/expectedPriceEvaluationTrackerString_TextView"
                                 android:layout_width="fill_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="15dp"

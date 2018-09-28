@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!--<color name="colorPrimary">#397890</color>
+    <color name="colorPrimaryDark">#5ba0ba</color>
+     -->
+    <color name="colorAccent">#9cd4ea</color>
+    <color name="colorPrimary">#236098</color>
+    <color name="colorPrimaryDark">#08457E</color>
+
+    <color name="blueColorCode">#08457E</color>
+    <color name="lightBlueColorCode">#236098</color>
+    <color name="lightBlueColor">#9cd4ea</color>
+    <color name="lightgrey">#E5E4E2</color>
+    <color name="textGreyColor">#757575</color>
+
+    <color name="btm_grey_color">#555555</color>
+</resources>

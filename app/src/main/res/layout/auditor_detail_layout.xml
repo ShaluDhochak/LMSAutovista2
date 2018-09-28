@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/auditorDetailsActivity_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/followUpByAuditorDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                android:id="@+id/followUpByAuditorDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="FollowUp By"
+                android:textColor="@color/darkBlueWebsite"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/followUpByAuditorDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColor="@color/darkBlueWebsite"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/followupDateAuditorDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/followUpByAuditorDetails_LinearLayout">
+            <TextView
+                android:id="@+id/followupDateAuditorDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="FollowUp Date"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/followupDateAuditorDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pendingFollowUpAuditorDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/followupDateAuditorDetails_LinearLayout">
+            <TextView
+                android:id="@+id/pendingFollowUpAuditorDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Pending"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/pendingFollowUpAuditorDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/callReceivedAuditorDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/pendingFollowUpAuditorDetails_LinearLayout">
+            <TextView
+                android:id="@+id/callReceivedAuditorDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Call Received from Showroom"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/callReceivedAuditorDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fakeUpdationAuditorDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/callReceivedAuditorDetails_LinearLayout">
+            <TextView
+                android:id="@+id/fakeUpdationAuditorDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Fake Updation"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/fakeUpdationAuditorDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/serviceFeedbackAuditorDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/fakeUpdationAuditorDetails_LinearLayout">
+            <TextView
+                android:id="@+id/serviceFeedbackAuditorDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Service Feedback"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/serviceFeedbackAuditorDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/remarkAuditorDetails_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/serviceFeedbackAuditorDetails_LinearLayout">
+            <TextView
+                android:id="@+id/remarkAuditorDetailsHeading_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Remark"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/remarkAuditorDetailsString_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/NotMentioned"
+                android:textColorHint="@color/edittextcolor"
+                android:textSize="12sp"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/edittextcolor"
+            android:layout_below="@+id/remarkAuditorDetails_LinearLayout"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

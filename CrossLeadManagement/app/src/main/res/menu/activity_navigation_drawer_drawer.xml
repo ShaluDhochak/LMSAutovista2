@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_add_new_lead"
+            android:icon="@drawable/add_new_testi"
+            android:title="Add New Lead" />
+        <item
+            android:id="@+id/nav_lead_status"
+            android:icon="@drawable/videos"
+            android:title="Lead Status" />
+        <item
+            android:id="@+id/nav_master"
+            android:icon="@drawable/about"
+            android:title="Master" />
+
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/profile"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="LogOut" />
+
+    </group>
+
+</menu>

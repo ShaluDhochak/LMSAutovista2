@@ -284,7 +284,638 @@
                 </LinearLayout>
 
             </RelativeLayout>
+
             </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/complainCustomerLeadDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_below="@+id/navigationLeadDetails_cardView"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/ComplainCustomerLeadDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/ComplainCustomerLeadDetails_TextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:text="Customer Follow Up Details"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="15sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/nameCustomerComplainLeadname_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ComplainCustomerLeadDetails_TextView"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/nameCustomerComplainLeadname_ImageView"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:src="@drawable/name" />
+
+                        <TextView
+                            android:id="@+id/nameCustomerComplainLeadname_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/nameCustomerComplainLeadname_ImageView"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Name"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/emailCustomerComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nameCustomerComplainLeadname_LinearLayout"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/emailCustomerComplainDetails_ImageView"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:paddingLeft="10dp"
+                            android:src="@drawable/email" />
+
+                        <TextView
+                            android:id="@+id/emailCustomerComplainDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/emailCustomerComplainDetails_ImageView"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Email"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/contactNoCustomerComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/emailCustomerComplainDetails_LinearLayout"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/contactNoCustomerComplainDetails_ImageView"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:src="@drawable/contact_no" />
+
+                        <TextView
+                            android:id="@+id/contactNoCustomerComplainDetails_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/contactNoCustomerComplainDetails_ImageView"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="ContactNo"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                        <ImageView
+                            android:id="@+id/dialCustomerComplainDetails_Button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/addFollowUpName_TextView"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="160dp"
+                            android:padding="5dp"
+                            android:src="@drawable/contact_no"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/altContactCustomerComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contactNoCustomerComplainDetails_LinearLayout"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/altContactCustomerComplainDetails_ImageView"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:src="@drawable/contact_no" />
+
+                        <TextView
+                            android:id="@+id/altContactCustomerComplainDetails_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/altContactCustomerComplainDetails_ImageView"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Alt Contact No"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addressCustomerComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/altContactCustomerComplainDetails_LinearLayout"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/addressCustomerComplainDetails_ImageView"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:src="@drawable/address" />
+
+                        <TextView
+                            android:id="@+id/addressCustomerComplainDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignRight="@id/addressCustomerComplainDetails_ImageView"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Address"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/enqIdCustomerComplainDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="engid"
+                            android:inputType="textNoSuggestions"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/complainDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/complainCustomerLeadDetails_cardView"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/complainDetailsHeading_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/NavigationLeadDetails_RelativeLayout"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/complainDetailsString_RelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/complainDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="5dp"
+                            android:text="Complains Details"
+                            android:textColor="@color/darkBlueWebsite"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/leadSourceComplainDetails_RelativeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/complainDetailsString_RelativeLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/leadSourceComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginStart="17dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingBottom="10dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="Lead Source"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/leadSourceComplainDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/complaintDateComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/leadSourceComplainDetails_RelativeLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/complaintDateComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="Complait Date"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/complaintDateComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/serviceCenterComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/complaintDateComplainDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/serviceCenterComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="Service Center"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/serviceCenterComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/customerRemarkComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/serviceCenterComplainDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/customerRemarkComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="Call Time"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/customerRemarkComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/feedbackStatusComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/customerRemarkComplainDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/feedbackStatusComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="@string/feedbackStatus"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/feedbackStatusComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginRight="15dp"
+
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Not Mentioned"
+                            android:inputType="textNoSuggestions"
+
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/nextActionComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/feedbackStatusComplainDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/nextActionComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="@string/nextActionHeading"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/nextActionComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/currentUserComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nextActionComplainDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/currentUserComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="Current User"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/currentUserComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/callDateComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/currentUserComplainDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/callDateComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="Call Date"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/callDateComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nfdComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/callDateComplainDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/nfdComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="@string/nfd"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/nfdComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/nftComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nfdComplainDetails_LinearLayout"
+                        android:weightSum="4"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/nftComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:paddingBottom="10dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="@string/nft"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/nftComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remarkComplainDetails_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nftComplainDetails_LinearLayout"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/remarkComplainDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:text="@string/Remark"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/remarkComplainDetailsString_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginTop="5dp"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
 
             <android.support.v7.widget.CardView
                 android:id="@+id/newCar_cardView"
@@ -1272,13 +1903,127 @@
                             android:backgroundTint="@android:color/transparent"
                             android:inputType="textNoSuggestions"
                             android:paddingTop="5dp"
-                            android:paddingBottom="5dp"
                             android:text="@string/km"
                             android:textColorHint="@color/edittextcolor"
                             android:textSize="12sp" />
 
                         <TextView
                             android:id="@+id/kmsUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/regNoUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/kmsUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/regNoUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="Registration No."
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/regNoUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/quotePriceUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/regNoUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/quotePriceUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:text="Quotation Price"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/quotePriceUsedCustomerDetails_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="@string/NotMentioned"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expectedPriceUsedCustomerDeatils_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/quotePriceUsedCustomerDeatils_LinearLayout"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/expectedPriceUsedCustomerDetailsHeading_TextView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="2"
+                            android:backgroundTint="@android:color/transparent"
+                            android:inputType="textNoSuggestions"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Quotation Price"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/expectedPriceUsedCustomerDetails_TextView"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="15dp"

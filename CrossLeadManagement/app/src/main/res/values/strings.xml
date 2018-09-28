@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">CrossLeadManagement</string>
+
+    <string name="title_activity_main2">UserProfile</string>
+
+    <string name="facebook_login">Login With Facebook</string>
+    <string name="facebook_signUp">SignUp with Facebook</string>
+    <string name="facebook_logout">Logout</string>
+
+    <string name="signIn">Sign In</string>
+    <string name="signUp">Sign Up</string>
+
+    <string name="emailAddress">Email Address</string>
+    <string name="password">Password</string>
+    <string name="or">OR</string>
+    <string name="loginTwitter">Login with Google</string>
+    <string name="loginFB">Login with Facebook</string>
+    <string name="tryForFree">Try for Free</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- Add New Lead String -->
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+
+    <!--SignUp Detait-->
+    <string name="name">Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="sendOtp">Send OTP</string>
+    <string name="otp_here">Confirm OTP</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="signup_withtwitter">SignUp with Google</string>
+    <string name="signUp_withfacebook">SignUp with Facebook</string>
+
+    <string name="facebook_app_id">204984990233862</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Contact String-->
+    <string name="contactName_heading">Contact Name</string>
+    <string name="headerLeft">LeftHeading</string>
+    <string name="headerCenter">HeaderCenter</string>
+    <string name="headerRight">HeaderRight</string>
+
+    <!-- Bottom String-->
+    <string name="btmLeft">LeftHeading</string>
+    <string name="btmCenter">Done</string>
+    <string name="btmRight">HeaderRight</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Profile String -->
+    <string name="aboutUs">About Us</string>
+    <string name="aboutUsDetails">About Us Details</string>
+    <string name="myInfo">My Info</string>
+    <string name="address1">Address1</string>
+    <string name="address2">address2</string>
+    <string name="editProfile">Edit</string>
+    <string name="changePassword">Change Password</string>
+
+    <string name="city">City</string>
+    <string name="email">Email:</string>
+    <string name="details">Details</string>
+
+    <!--Master String-->
+    <string name="product_type">Category</string>
+    <string name="Company">Company</string>
+    <string name="Product">Product</string>
+    <string name="Rights">Rights</string>
+    <string name="incentiveSchemes">Incentive Schemes</string>
+    <string name="incentiveApprovals">Incentive Approvals</string>
+
+    <!-- Category Form-->
+    <string name="addCategory">Add New Category</string>
+
+
+</resources>

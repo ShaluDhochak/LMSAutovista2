@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+     >
+
+    <ScrollView
+        android:id="@+id/add_auditor_ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/addauditor_RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/addAuditorHeading_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4sp"
+                app:cardCornerRadius="4sp"
+                android:layout_margin="10dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/addAuditorHeading_LinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/addAuditorHeading_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Add Auditor"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkBlueWebsite"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/AddAuditorHeadingSeparator_View"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/darkBlueWebsite" />
+
+                    <RelativeLayout
+                        android:id="@+id/addAuditorName_LinearLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/AddAuditorHeadingSeparator_View">
+
+                        <ImageView
+                            android:id="@+id/addAuditorNameImage_ImageView"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/name" />
+
+                        <TextView
+                            android:id="@+id/addAuditorName_TextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/addAuditorNameImage_ImageView"
+                            android:layout_marginLeft="10dp"
+                            android:hint="@string/name"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/addContcatNoAuditor_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/addAuditorNameImage_ImageView"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:id="@+id/addAuditorPhoneImage_ImageView"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/contact_no" />
+
+                            <LinearLayout
+                                android:id="@+id/contactNoAuditorString_rl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/addAuditorPhoneImage_ImageView"
+                                android:layout_marginLeft="10dp"
+                                android:paddingBottom="3dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3"
+                                >
+                                <TextView
+                                    android:id="@+id/addAuditorContactNo_TextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/contact_no"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/edittextcolor"
+                                    android:textSize="12sp"
+                                    android:layout_weight="2.5"
+                                    android:layout_gravity="left"/>
+
+                                <TextView
+                                    android:id="@+id/callContactNoAuditor_TextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Call"
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="10dp"
+                                    android:textColor="@color/darkBlueWebsite"
+                                    android:textSize="12sp"
+                                    android:layout_weight="0.5"
+                                    android:visibility="gone"
+                                    android:layout_gravity="right"/>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/dialContactAuditor_Button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="180dp"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/phone_call"
+                                android:layout_weight="1"
+                                />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/addAuditorBookingId_TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/addContcatNoAuditor_rl"
+                            android:hint="bookingId"
+                            android:paddingBottom="3dp"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/edittextcolor"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/auditorDetails_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4sp"
+                app:cardElevation="4sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/addAuditorHeading_cardView"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/auditorDetails_RelativeLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/followupPendingAuditorDetails_RL"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        >
+                        <Spinner
+                            android:id="@+id/followupPendingAuditorDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/callReceivedShowroomAuditorDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/followupPendingAuditorDetails_RL"
+                        >
+                        <Spinner
+                            android:id="@+id/callReceivedShowroomAuditorDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/status_spinner_title"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/fakeUpdationAuditorDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/callReceivedShowroomAuditorDetails_rl"
+                        >
+                        <Spinner
+                            android:id="@+id/fakeUpdationAuditorDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/activity_spinner_title"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/serviceFeedbackAuditorDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/fakeUpdationAuditorDetails_rl"
+                        >
+                        <Spinner
+                            android:id="@+id/serviceFeedbackAuditorDetails_Spinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="6dp"
+                            android:prompt="@string/eagerness_spinner_title" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/remarksAuditorDetails_rl"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/light_rectangle_outline"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/serviceFeedbackAuditorDetails_rl"
+                        >
+                        <EditText
+                            android:id="@+id/remarksAuditorDetails_EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:backgroundTint="@android:color/transparent"
+                            android:hint="Remark"
+                            android:inputType="textMultiLine"
+                            android:maxLines="4"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="10dp"
+                            android:textColorHint="@color/edittextcolor"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="20dp"
+                            />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/auditorDetails_cardView"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/submitAuditorDetails_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    android:text="@string/submit"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/modifyAuditorDetails_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/outline_blue_curved_rectangle"
+                    android:text="@string/Reset"
+                    android:textColor="@color/darkBlueWebsite"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        app:backgroundTint="@color/darkBlueWebsite"
+        app:menu_animationDelayPerItem="55"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="#08457E"
+        app:menu_colorPressed="#08457E"
+        app:menu_colorRipple="#99d4d4d4"
+        app:menu_fab_size="normal"
+        app:menu_icon="@drawable/car"
+        app:menu_labels_colorNormal="@color/lightGrey1"
+        app:menu_labels_colorPressed="#444"
+        app:menu_labels_colorRipple="#66efecec"
+        app:menu_labels_cornerRadius="3dp"
+        app:menu_labels_ellipsize="none"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_margin="0dp"
+        app:menu_labels_maxLines="-1"
+        app:menu_labels_padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="@color/edittextcolor"
+        app:menu_labels_textSize="15sp"
+        app:menu_openDirection="up"
+        app:menu_shadowColor="@color/lightGrey1"
+        app:menu_shadowRadius="4dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="4dp"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/customerAuditorDetails_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/followup"
+            app:fab_colorNormal="@color/darkBlueWebsite"
+            app:fab_colorPressed="@color/darkBlueWebsite"
+            app:fab_label="@string/customerDetails"
+            app:fab_size="mini" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/addFollowUpAuditorDetail_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone_call"
+            app:fab_colorNormal="@color/darkBlueWebsite"
+            app:fab_colorPressed="@color/darkBlueWebsite"
+            app:fab_label="Add FollowUp"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/followUpDetailAuditor_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone_call"
+            app:fab_colorNormal="@color/darkBlueWebsite"
+            app:fab_colorPressed="@color/darkBlueWebsite"
+            app:fab_label="FollowUp Details"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/auditorDetailAuditorDetail_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone_call"
+            app:fab_colorNormal="@color/darkBlueWebsite"
+            app:fab_colorPressed="@color/darkBlueWebsite"
+            app:fab_label="Auditor Details"
+            app:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

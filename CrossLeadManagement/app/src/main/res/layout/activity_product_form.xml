@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ProductFormActivity">
+
+    <LinearLayout
+        android:id="@+id/header_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/header_plusbtn"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/addNewProductHome_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/header_ll"
+        >
+
+        <RelativeLayout
+            android:id="@+id/addNewProductSearch_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/search_bg"
+            >
+            <ImageView
+                android:id="@+id/searchIconAddNewProduct_imgView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/addNewProductSearch_editView"
+                android:background="@drawable/searchicon"
+                android:layout_marginRight="10dp"
+                />
+            <EditText
+                android:id="@+id/addNewProductSearch_editView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Search"
+                android:layout_centerInParent="true"
+                android:textSize="14sp"
+                android:lines="1"
+                android:maxLength="30"
+                android:background="@android:color/transparent"
+                />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/addNewProduct_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/addNewProductSearch_rl"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

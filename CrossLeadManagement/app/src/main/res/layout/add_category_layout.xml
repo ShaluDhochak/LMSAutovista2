@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_addCategory_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/addCategory_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:hint="Enter Category"
+            android:lines="1"
+            android:maxLength="30"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/cancelDoneChangePassword_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/cancelAddCategory_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/cancel"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/round_corner_rectangle"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            />
+
+        <TextView
+            android:id="@+id/saveAddCategory_txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/done"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/round_corner_rectangle"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            />
+    </LinearLayout>
+</LinearLayout>

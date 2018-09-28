@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.MyProfileFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/innerScrollView_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <RelativeLayout
+                android:id="@+id/myProfileImage_rl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/blueColorCode"
+                >
+
+                <ImageView
+                    android:id="@+id/profileImage_iv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/userNameMyProfile_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:layout_below="@+id/profileImage_iv"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    android:hint="name here"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/locationMyProfile_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_below="@+id/userNameMyProfile_tv"
+                    >
+
+                    <ImageView
+                        android:id="@+id/locationImageProfile_iv"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/mapwhite"
+                        />
+
+                    <TextView
+                        android:id="@+id/locationProfile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:hint="address"
+                        android:textColorHint="@android:color/white"
+                        android:textColor="@android:color/white"
+                        />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/aboutusProfile_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/myProfileImage_rl">
+
+                <RelativeLayout
+                    android:id="@+id/aboutUsProfile_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/aboutUsMyProfileHeading_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/aboutUs"
+                        android:textStyle="bold"
+                        android:textColor="@color/btm_grey_color"
+                        android:textSize="15sp"
+                        />
+                    <TextView
+                        android:id="@+id/editMyProfileText_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toLeftOf="@+id/editIcon_imgView"
+                        android:text="@string/editProfile"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp" />
+                    <ImageView
+                        android:id="@+id/editIcon_imgView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edit"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/aboutUsDetailMyProfile_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aboutUsMyProfileHeading_tv"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/aboutUsDetails"
+                    android:lineSpacingExtra="4sp"
+                    android:textColor="@color/btm_grey_color" />
+
+                <View
+                    android:id="@+id/separator11_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/aboutUsDetailMyProfile_tv"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/darker_gray" />
+
+                <RelativeLayout
+                    android:id="@+id/myInfoMyProfile_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/separator11_view"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/myInfoMyProfileHeading_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/myInfo"
+                        android:textStyle="bold"
+                        android:textColor="@color/btm_grey_color"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/nameMyInfoProfile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/myInfoMyProfileHeading_tv"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="full name here"
+                        android:textColor="@color/btm_grey_color"
+                        />
+                    <TextView
+                        android:id="@+id/address1MyInfoProfile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nameMyInfoProfile_tv"
+                        android:layout_marginBottom="2dp"
+                        android:hint="address line 1"
+                        android:textColor="@color/btm_grey_color"
+                        />
+                    <TextView
+                        android:id="@+id/address2MyInfoProfile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/address1MyInfoProfile_tv"
+                        android:layout_marginBottom="2dp"
+                        android:hint="address line 2"
+                        android:textColor="@color/btm_grey_color"
+                        />
+                    <TextView
+                        android:id="@+id/phoneMyInfoProfile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/address2MyInfoProfile_tv"
+                        android:layout_marginBottom="2dp"
+                        android:hint="phone"
+                        android:textColor="@color/btm_grey_color"
+                        />
+                    <TextView
+                        android:id="@+id/emailMyInfoProfile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phoneMyInfoProfile_tv"
+                        android:layout_marginBottom="2dp"
+                        android:hint="email id here"
+                        android:textColor="@color/btm_grey_color"
+                        />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/changePassword_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="2">
+                    <TextView
+                        android:id="@+id/changePasswordProfile_txtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/changePassword"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/btn_large"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

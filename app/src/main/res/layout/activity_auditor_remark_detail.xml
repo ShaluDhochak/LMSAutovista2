@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activity.AddAuditorRemarkDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/headerAuditor_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <include
+            layout="@layout/header_withback_btn_layout"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bodyAuditor_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerAuditor_LinearLayout">
+        <include
+            layout="@layout/add_auditor_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footerAuditor_LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/bottom_prev_next"/>
+    </LinearLayout>
+
+</RelativeLayout>
